@@ -8,13 +8,17 @@
    "sha256": "086a2a42f2dd1542382e643020882d2c74c734536d0df14eb4f32828f429f125",
    "size": 106173
   },
+  "state/GITHUB_BACKUP.md": {
+   "sha256": "2ded07fb511e3fa70b61e93f7b3208a907b51ad628a9447d3fe11206e97dc8f5",
+   "size": 2628
+  },
   "state/MOAT_LOOP.md": {
    "sha256": "71eef32cff7296894bc4f30a7c87f279f07a643add122686af8e634f78c7188f",
    "size": 41717
   },
   "state/KERNEL_WATCH.md": {
-   "sha256": "0b662c65ed63bd0f63a25679ec28e5e91e2dddde104825a9a6c36b523d389bfd",
-   "size": 72476
+   "sha256": "f9e9fb2b9ef2a4488422f16734706496b9badcfa30cc32a3f015b1d43ae11af5",
+   "size": 73069
   },
   "state/RESEARCH_STATE.md": {
    "sha256": "3d9aa216d9b3d5f9d3d27653c65c7a7be148980fbfd9a53de509b3e728a1915e",
@@ -45,8 +49,8 @@
    "size": 2188
   },
   "harness/CONTINUE_PROMPT.md": {
-   "sha256": "4ec766327f2697dc9f141a5243d04889175d4c652e243855ee6ff374e5e49931",
-   "size": 8997
+   "sha256": "328d454b6a32e5096450f36beda3b87166b994a8d3c1363e08af3537ba63190a",
+   "size": 10269
   },
   "harness/watch_public.sh": {
    "sha256": "9f1b3aacf513b81328e460c1accc816ba33f0313ed579ac5f19d74cd424dc7dc",

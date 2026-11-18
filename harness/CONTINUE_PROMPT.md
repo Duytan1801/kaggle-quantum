@@ -137,6 +137,25 @@ Drop the incremental work and do ONE deep strategic pass:
 - maoxin123 owns the invsqrt rescheduler and iterates fastest; asterios /
   boristown / ozertuu watch too. Their next move is our easiest +GM.
 
+## Durable backup lane (every wake — systematic, not optional)
+`/tmp/opencode` is volatile and this campaign outlives any single context.
+Every wake, AFTER the status line, run:
+  `bash harness/gh_sync.sh "wake sync <hypothesis> <what changed>"`
+It mirrors to GitHub repo **`Duytan1801/kaggle-quantum`** (branch `main`):
+- `state/` — ledgers (KERNEL_WATCH, MOAT_LOOP, RESEARCH) + the live hypothesis
+  queue (RESEARCH_STATE.md) + GOALS.md + RESEARCH_DOCTRINE.md + CALIBRATION.md
+- `harness/` — this wake prompt + mechanical gates (submit_gate.sh) + scripts
+- `tools/` — work/tools scripts (the campaign's actual capability)
+- `trees/vN/` — the **gated** submission zip (exact submitted bytes, uploaded as
+  a release asset because kmb files exceed GitHub's 100 MB blob limit) +
+  SHA_TABLE.json + RECEIPT.json + MANIFEST.json with sha256 of everything
+- Token lives in `~/.config/qcc/gh_token` (mode 600) — NEVER write it into any
+  repo file, the prompt, or the ledgers.
+If the sync fails, note it in the status line and retry next wake; a failed
+backup is an operational defect, not a reason to stop working.
+GitHub is the durable copy; local disk remains the working copy. Both must
+reconstruct the campaign state — treat any divergence as a bug to fix.
+
 ## Status line (post one, then IMMEDIATELY continue)
 Append a one-line status to the ledgers: row/rank, submissions used/left today
 with refs, current hypothesis + test, next action. Then keep looping — do not
