@@ -1,0 +1,37 @@
+{
+ "portfolio": "v131-asterios-28-18084",
+ "shas_ok": true,
+ "verifiers": [
+  "verify_submission_dqi.py",
+  "verify_submission_invsqrt.py"
+ ],
+ "verifies": {
+  "dqi": {
+   "status": "PASS",
+   "score": 346404203610.1118,
+   "value_errors": 0,
+   "phase_errors": 0,
+   "verified_shots": 102400,
+   "num_ops": 57520839,
+   "max_toffoli_count": 367983
+  }
+ },
+ "verify_dt": {
+  "dqi": 197.7
+ },
+ "verify_tails": {
+  "dqi": "e_errors\": 0,\n  \"phase_errors\": 0,\n  \"empirical_error_rate\": 0.0,\n  \"effective_error_rate\": 0.0008660587301657926,\n  \"log2_delta\": -128.0,\n  \"repetition_factor\": 1.1912604648115832,\n  \"mean_error_weight\": 31.046737331746634,\n  \"toffoli_count\": 367110.16626953124,\n  \"max_toffoli_count\": 367983,\n  \"reaction_depth\": 40147,\n  \"num_ops\": 57520839,\n  \"shot_operation_counts\": {\n    \"NEG\": 102519,\n    \"BIT_INVERT\": 570231961601,\n    \"BIT_STORE0\": 286534497926,\n    \"BIT_STORE1\": 2997326310,\n    \"X\": 10998160408,\n    \"Z\": 2066971817,\n    \"R\": 4880071422,\n    \"HMR\": 7316048270,\n    \"CX\": 3059013875249,\n    \"CZ\": 26896983806,\n    \"SWAP\": 25843942998,\n    \"CCX\": 36982530028,\n    \"CCZ\": 609550998,\n    \"POP_CONDITION\": 261991731200,\n    \"PUSH_CONDITION\": 261991731200\n  },\n  \"num_qubits\": 890,\n  \"num_bits\": 66730,\n  \"circuit_sha256\": \"5f901c556cafd02dc11641eee7766171a454e3a0b6687d890ff9f99944e1934c\"\n}\n\n"
+ },
+ "dfthcsos_in_kernel": {
+  "status": "PASS",
+  "score": 294642299.7630277,
+  "lambda_eff": 46.92158337179646,
+  "toffoli_count": 14706.0,
+  "num_qubits": 427,
+  "dt": 24.5,
+  "raw_tail": "    \"outer_state_prep_toffoli\": 317,\n    \"inner_state_prep_toffoli\": 4095,\n    \"givens_rotations_toffoli\": 2250,\n    \"outer_state_prep_persistent_qubits\": 40,\n    \"outer_state_prep_temporary_qubits\": 90,\n    \"outer_state_prep_qubits\": 130,\n    \"inner_state_prep_persistent_qubits\": 44,\n    \"inner_state_prep_temporary_qubits\": 303,\n    \"inner_state_prep_qubits\": 347,\n    \"heuristic_persistent_qubits\": 84,\n    \"heuristic_temporary_qubits\": 303,\n    \"heuristic_toffoli\": 6662,\n    \"heuristic_qubits\": 387,\n    \"persistent_qubits\": 124,\n    \"temporary_qubits\": 303,\n    \"toffoli\": 14706.0,\n    \"qubits\": 427,\n    \"angles_within_cap\": true\n  },\n  \"metrics\": {\n    \"error_1\": 0.019999999900000568,\n    \"error_2\": 0.01999999990013515,\n    \"Lambda\": 283.14421121705783,\n    \"E_SOS\": -22144.1882480001,\n    \"E_gap\": 3.9148980001009477,\n    \"lambda_eff\": 46.92158337179646,\n    \"gap_in_domain\": true\n  }\n}\n\n"
+ },
+ "dqi_ok": true,
+ "invsqrt_ok": true,
+ "verdict": "V131-RECEIPT-PASS"
+}
