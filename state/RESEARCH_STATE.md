@@ -7,22 +7,26 @@
 
 H1 | DQI width is compressible below 890 | score = rep×Q²×T (verify_submission_dqi.py:420); Q² dominates
     | +1–2 GM if Q→750; dead end if width is genuinely simultaneous | per-wire live-span anatomy of
-    base_5f901c55.kmb (479 MB, columnar kmb — wa4.py in /tmp/opencode/gp_tools, packet-index bug to fix:
-    qqq0/qq0/q0 arrays are indexed by payload order not op position) → if peak-live << 890, relabel/repack
-    is mechanical; if peak-live ≈ 890, H1 dies | TESTING | extra-0 measure-out = 0 served (both 575b043f
-    and 5f901c55); extra-1 = net loss (+0.22% Q² cost vs 0.044% T saving) — so only true width cuts pay
-    | 2026-11-18
+    base_5f901c55.kmb (wa4.py) → KILL if peak-live ≈ 890; SUCCESS if peak-live << 890 | **KILLED
+    2026-11-18 — evidence: ALL 890 wires first-touched within op window [351793, 352459] (a 667-op
+    window at 0.6% into the circuit) and last-touched ≥52.86M of 57.52M ops; zero untouched wires;
+    peak-live = 890 = declared width (cumsum sweep; note: np.maximum.accumulate on ±1 deltas is a
+    running-max bug trap — use cumsum); spans overlap for 889/890 wire pairs. The circuit is FLAT-WIDE
+    by construction: no live-span slack exists for mechanical relabel/repack. Head ops [0,351793) are
+    all type-194 (0xC2) bit-writes.** Any width cut must come from generator-level redesign (H3:
+    what top-2 does differently) — this is now the only DQI width path | 2026-11-18
 
-H2 | invsqrt Q43 reachable by re-implementing minand_sat.py | Syed generator source local + byte-exact
+H2 | invsqrt Q45/43 reachable by re-implementing minand_sat.py | Syed generator source local + byte-exact
     (74 s rebuild); maoxin proved 46→44 exists | +0.08–0.16 GM direct — BUT its real value is the
     STEPPING-STONE: exact-AND retirement machinery + endpoint surgery is the scaffold class needed for
-    the DQI width attack (Navier–Stokes pattern: solve Euler first, then prompt the big problem with the
-    Euler solution) | implement ANF-based exact-AND synthesizer (schema fully known from v9_form_e2.json /
+    any future width attack (Navier–Stokes pattern: solve Euler first, then prompt the big problem with
+    the Euler solution) | implement ANF-based exact-AND synthesizer (schema fully known from v9_form_e2.json /
     hret_s15k7a_s15.json: gates = AND of two XOR-sets, output = XOR of terms; validity exactly checkable
     over full domain), then endpoint retirement of a 4th bit (v8 — note ordering conflict: v8 feeds v9's
     rebuild form) + solve the product-forward carry peak (needs 1 wire at Q45: h0-pack gets body to 45,
-    carry wants 46) | NEW | Q45 probe rc=1 at patch_proddisp→arithmetic._compute_carry alloc (45+1>45);
-    PACK=True loader fit confirmed (25+20=45) | 2026-11-18
+    carry wants 46) | TESTING | Q45 probe rc=1 at patch_proddisp→arithmetic._compute_carry alloc (45+1>45);
+    PACK=True loader fit confirmed (25+20=45); NOW TOP after H1 killed — all effort points here
+    | 2026-11-18
 
 H3 | Top-2 mechanism is discoverable from public traces | aadi_stonks 31.50404 / Z³C¹oherence 31.42723;
     gap = ×2.87 product; if all-DQI-width ⇒ Q≈526 (41% cut) — likely a mix (their invsqrt/chem also better?)

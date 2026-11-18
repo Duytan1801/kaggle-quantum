@@ -1,0 +1,356 @@
+{
+ "files": {
+  "state/RESEARCH_DOCTRINE.md": {
+   "sha256": "ab10662a0f625b45ca2e117011da4bf876aa98a6ccd7c48a18b55939bff9b706",
+   "size": 5281
+  },
+  "state/RESEARCH.md": {
+   "sha256": "086a2a42f2dd1542382e643020882d2c74c734536d0df14eb4f32828f429f125",
+   "size": 106173
+  },
+  "state/MOAT_LOOP.md": {
+   "sha256": "71eef32cff7296894bc4f30a7c87f279f07a643add122686af8e634f78c7188f",
+   "size": 41717
+  },
+  "state/KERNEL_WATCH.md": {
+   "sha256": "0b662c65ed63bd0f63a25679ec28e5e91e2dddde104825a9a6c36b523d389bfd",
+   "size": 72476
+  },
+  "state/RESEARCH_STATE.md": {
+   "sha256": "3d9aa216d9b3d5f9d3d27653c65c7a7be148980fbfd9a53de509b3e728a1915e",
+   "size": 5206
+  },
+  "state/CALIBRATION.md": {
+   "sha256": "bf6bbb0c677c771ad0dafac9d74733ac3dafc126578eb79db0b7d5fec4938709",
+   "size": 564
+  },
+  "state/GOALS.md": {
+   "sha256": "3d46f825d196c74994c0c7b0308d10bd841de418b6361774283b3b799360e49f",
+   "size": 1799
+  },
+  "harness/harvest_kernels.sh": {
+   "sha256": "90ee480f25f8de3a7dbfc40d32f7e369f9804fa43b9b5352de49bd72810288d7",
+   "size": 3128
+  },
+  "harness/submit_gate.sh": {
+   "sha256": "1ee9b5972228e6c6f520b8df3b9e8b7b4eaa292c3760bf084c9fff01b6fc1e5a",
+   "size": 3249
+  },
+  "harness/poll_score_58487983.sh": {
+   "sha256": "d3c334c0227dc98ed9f3371c26c43fcb7887961595080559bfb9485bf8b1d981",
+   "size": 656
+  },
+  "harness/run_capped.sh": {
+   "sha256": "fc2ecbe3590ec43e36a56b8da86e09589a2a379eeddda03dbf77891c3f70f73c",
+   "size": 2188
+  },
+  "harness/CONTINUE_PROMPT.md": {
+   "sha256": "4ec766327f2697dc9f141a5243d04889175d4c652e243855ee6ff374e5e49931",
+   "size": 8997
+  },
+  "harness/watch_public.sh": {
+   "sha256": "9f1b3aacf513b81328e460c1accc816ba33f0313ed579ac5f19d74cd424dc7dc",
+   "size": 1595
+  },
+  "harness/poll_submission.sh": {
+   "sha256": "6656cb3483e3d735560a59c06f8a7557c2ddd7837a25aef33e8f4f711445e800",
+   "size": 712
+  },
+  "harness/campaign_wake.sh": {
+   "sha256": "a2be8146d8f9e1beb5239ba9d2902489ce41b358761150a1f814f5fa18e5254a",
+   "size": 3136
+  },
+  "tools/quad_pair.py": {
+   "sha256": "95d097e2d36ab3c87c22c9bded935f91dac4182cd0fc197595267e46c09bd37b",
+   "size": 4823
+  },
+  "tools/nb_lint.py": {
+   "sha256": "4fbaba0078794bdc512a11e36ef0641a9a85c7b004f8962665ecd29411a9ce14",
+   "size": 2457
+  },
+  "tools/dump_invsqrt_profile.py": {
+   "sha256": "7f2c920a5e3080ac5009aa9badeb42f800eb5e349b6e069ab73228adf5e38c16",
+   "size": 7331
+  },
+  "tools/kmb_align.py": {
+   "sha256": "18b4159bc99d93257d4692c8dcd66721f5baf033a899c37106da370dad5e468d",
+   "size": 2409
+  },
+  "tools/scratch_s_map.py": {
+   "sha256": "bf11bac23f65ac2ecd38b0312640257239efc3626d226c47fa881a33c501d7c8",
+   "size": 2571
+  },
+  "tools/sweep_chem_sets.py": {
+   "sha256": "b0198c72570584ffbf0404747a8cffa82bca757ac836406e13675296b7f6a5d4",
+   "size": 4523
+  },
+  "tools/invq_live.py": {
+   "sha256": "bf0e231dabc006fa2bd41c7ffb388b9e6cbc8f40513e2c4c417c8d576af8a7eb",
+   "size": 3460
+  },
+  "tools/chem_shapes.py": {
+   "sha256": "d8c034bee30d6935cce986dabb0cc28ac49924e528de96bb2415b47a78d92b22",
+   "size": 5284
+  },
+  "tools/assemble_v130.py": {
+   "sha256": "9d274b521ceb9580ae98f5943c3f9b3cdf1fb5ef9a8f5765d533cbc9a79c1f00",
+   "size": 8554
+  },
+  "tools/used_qubits.py": {
+   "sha256": "ceccf0e06519afd6b7f6d563e0017c592b6494e63fce625a2ad16d460cb20895",
+   "size": 3157
+  },
+  "tools/rebuild_chem_npz.py": {
+   "sha256": "43a85828dfb7199f889168b969e62a1e3d973e1cbf7458145d70f1f38bb1953f",
+   "size": 1367
+  },
+  "tools/merge_scan_kmx.py": {
+   "sha256": "6b4debfd30fda42a8b1197e53d490a8b34b7b134ea68de50a34defcc2089ce0c",
+   "size": 2781
+  },
+  "tools/patch_dqi.py": {
+   "sha256": "5d497ee3025a4393256a7193e2ec0adf114c09040a2a0f6cfb1b5a8ff004a865",
+   "size": 10535
+  },
+  "tools/rot_angles.py": {
+   "sha256": "3a1f77c6bd6c2fb15a3d27d5bce9f1615e9f794c63698806d36c5e0cbd5787ba",
+   "size": 2572
+  },
+  "tools/invq_dead.py": {
+   "sha256": "0437fcaf9cba5fb75ae96f7c541e8256400c2d68e9fbad26c74b89556f85e448",
+   "size": 3747
+  },
+  "tools/build_moat_v123.py": {
+   "sha256": "2e4ddbe57739779569c0b4d0079f03932ddaa1fa9cdbb4298cbfd2000bf530ac",
+   "size": 7244
+  },
+  "tools/assemble_v122.py": {
+   "sha256": "7419382ea979cc19392cade0f1c50f28c4a3435a50661ef76eb2bcc2f31a7943",
+   "size": 3150
+  },
+  "tools/assemble_v129.py": {
+   "sha256": "2170f2c46865fd52fa1d23fc62e78b6f1ccc56bd573965d919901fda8186ff55",
+   "size": 8026
+  },
+  "tools/harvest_dqi_pool.sh": {
+   "sha256": "86868a0763579b6aa42a3664387403987b39809bb622001711180b0687202aba",
+   "size": 1419
+  },
+  "tools/build_moat_v127.py": {
+   "sha256": "c370ab02e43150dbf694631ac53760e4888f401a0605a0c44c33e311ae872c2c",
+   "size": 7922
+  },
+  "tools/scratch_funcs.py": {
+   "sha256": "d6df1048539d5ef50b8d3b62f93e0a7867ccef7f48b813a04a06be303bce1708",
+   "size": 3529
+  },
+  "tools/dirty_width.py": {
+   "sha256": "c9c6d4bd89d5118a35abf3b81dcd271ea8b6ac0d978c7d43dec918737dbc3fc9",
+   "size": 4606
+  },
+  "tools/invsqrt_dead.py": {
+   "sha256": "4b09a61686362d99eceead623d2de47884bed4e94dd20c5ead89589e53fd4feb",
+   "size": 4352
+  },
+  "tools/deadwrite.py": {
+   "sha256": "c1101d9618e5e8e67bcd5753964412bb8d3b9147d70b235f6f178fc8d94e7d49",
+   "size": 5584
+  },
+  "tools/const_one_wires.py": {
+   "sha256": "ef83a7daf1caae50702dd67379526f9d7df59951afe42f2b30a693197149a01b",
+   "size": 3749
+  },
+  "tools/dqi_ops.py": {
+   "sha256": "05b219ffe18559109a8b3db4dbca491bd59fcb99a519a29b4fd5644e0570f449",
+   "size": 2928
+  },
+  "tools/extract_artifacts.py": {
+   "sha256": "589e834492195f03583e293a512279d5f4dcbaf1a63e567b9ba6ab28ad6a0164",
+   "size": 4235
+  },
+  "tools/build_moat_v120.py": {
+   "sha256": "8d93278b768500f162bac9872651d0e1e731370754c94322049aa6326754f8c0",
+   "size": 7698
+  },
+  "tools/gh_push.py": {
+   "sha256": "71b1cb28acaa8f3567ceae3a7610887445b2e0bc29976a18e2255f3ff1229798",
+   "size": 7390
+  },
+  "tools/drift_check.py": {
+   "sha256": "ae2d826f82a2801b172b142544d00325e6a434f743928324f8f6b941d38439eb",
+   "size": 4196
+  },
+  "tools/nb_pull_file.py": {
+   "sha256": "8a5fde1152d43c55d1e1e1a118f4440405c9ac8d23e64dd5045fddbc2757bb83",
+   "size": 2664
+  },
+  "tools/build_moat_v122.py": {
+   "sha256": "ff43af7ed1d26e3690e2c21ac47be6a787a232cbca92f88b2466064e07b95433",
+   "size": 8551
+  },
+  "tools/assemble_v123.py": {
+   "sha256": "fd875eecbc089852efcbedadaccc0363853e5840bb95a50e755cc94432b42d62",
+   "size": 2886
+  },
+  "tools/assemble_v125.py": {
+   "sha256": "4fc4b68026f1b8c946097e5007face7ce62582588d47bffad16403f3555354fc",
+   "size": 6524
+  },
+  "tools/build_moat_v126.py": {
+   "sha256": "20493466b394cdf36fd4dcbe22f384592ad68a8d4aa47f04633a23683bbbb816",
+   "size": 7898
+  },
+  "tools/assemble_v128.py": {
+   "sha256": "0ce5638e32e44f09c5735830e1272ec2370c5ae3767f3208e4f823512981e950",
+   "size": 7535
+  },
+  "tools/list_ds_files.py": {
+   "sha256": "128e1cc885c4275d918bd490a70b406bd571dace06ba40e04ef975617d14377b",
+   "size": 1997
+  },
+  "tools/scan_loader_toffoli.py": {
+   "sha256": "7c78734f27f2a9316ee3892e0cc4d0e11fe99c66817e8dcf5a6d52b29baadb4b",
+   "size": 7393
+  },
+  "tools/liveness.py": {
+   "sha256": "8377583b598a75362b023f56dd641f2be9a30919e331e5cf682850dae8a8202b",
+   "size": 7502
+  },
+  "tools/build_moat_v121.py": {
+   "sha256": "d044a72fa91e84a0de5b62b3909fa07b95c24f13f1351c2d7faee214fd29263b",
+   "size": 8543
+  },
+  "tools/probe_chain.py": {
+   "sha256": "77f2c85df3131a442ea8fc3aa716d2147ef4de508d302d601b5f8023a457a150",
+   "size": 1436
+  },
+  "tools/assemble_v124.py": {
+   "sha256": "c7866a2af39132a97e8009fd3cb86fdffa2dd14fdddd370ff7fddd52aa0258c9",
+   "size": 5377
+  },
+  "tools/kmb_cols.py": {
+   "sha256": "c2e4860d03b2258f88de2af18cc15d8d267b98ca29f692108b9cfcf0d47cd98e",
+   "size": 3352
+  },
+  "tools/nbtext.py": {
+   "sha256": "2b3bf6776e3af7a80ecc3314b4759d9ac6568c4a48cfc77d42699b4b995ff326",
+   "size": 1534
+  },
+  "tools/ds_headers.py": {
+   "sha256": "00568622e7fb44af021683419dfbc61b045a4c3afa3fa2fd08ae93a731a4a7ce",
+   "size": 3146
+  },
+  "tools/invsqrt_toffoli_scan.py": {
+   "sha256": "2fb6787c9880b552b448d660bd73ba07525e0b8a2cba9bb676e3116306fbedcc",
+   "size": 7213
+  },
+  "tools/build_moat_v130.py": {
+   "sha256": "51f1568f96638e8f2675edc28fddcdeb8204bca62ba436a599f743f051f56244",
+   "size": 7970
+  },
+  "tools/sweep_invsqrt.py": {
+   "sha256": "dcb254d89e61a13731e8c45fee9c256e6b590367f16f964bfd3168008a8ae287",
+   "size": 3549
+  },
+  "tools/peak_runs.py": {
+   "sha256": "35a7680489bd422ff294e7c4b8623b5e2e6c8d627bde2d1febb3fff5f7735307",
+   "size": 1294
+  },
+  "tools/chem_brot_probe.py": {
+   "sha256": "5ad92d08b0b53de35d58efec9ca85ddf80365d55c899cabfd4262271b4c22c40",
+   "size": 2948
+  },
+  "tools/scan_dqi_pool.py": {
+   "sha256": "7193cf2d567174239a6c978a698bbc5ef1b6e7b0931e819a2676d886e9a8c6ed",
+   "size": 3014
+  },
+  "tools/rotations.py": {
+   "sha256": "44c008faf9a9213d6df3a8a4f645e7520dd5ef4b35ec8382e1bf2034874ddaa6",
+   "size": 1352
+  },
+  "tools/rot_merge.py": {
+   "sha256": "41cc2a74d728c8c02ef504e024cc644b60bec7f4a5be857734b74e84bb1c9e03",
+   "size": 2174
+  },
+  "tools/build_dqi_probe.py": {
+   "sha256": "1b0886ccef7dd32d240d2c2cc1bea7c52849012e1c86d9be150eb59d94e05f28",
+   "size": 9927
+  },
+  "tools/find_factoring.py": {
+   "sha256": "8ca827dee8f546f8d54e03ab1d2e78146648e21330ca887d106319a6576bdafa",
+   "size": 4296
+  },
+  "tools/build_moat_v131.py": {
+   "sha256": "2c9d45a97e9cfcd19dfd3102c2a1c700bad85d1b8abaf1d0d07968d6c13dfdbb",
+   "size": 8008
+  },
+  "tools/analyze_dqi.py": {
+   "sha256": "f8ef1efc6f4b3262edf9ce8413a180c2c3da8f3d8f948179438a25de8be5c24d",
+   "size": 2972
+  },
+  "tools/build_moat_v124.py": {
+   "sha256": "a5cafaed121f0e5024294c6e21e379d89f80197097fae3cc4112aa936c790e24",
+   "size": 8017
+  },
+  "tools/build_moat_v129.py": {
+   "sha256": "7397d1de28203fd1fae48a8eb1f2aff2745a1ef28e116e3fb896ff9baadcecec",
+   "size": 7954
+  },
+  "tools/assemble_v126.py": {
+   "sha256": "7e7cb5746d2c7ec37d9c25283f5c29ae6f8a51108559ef2c61cc441310d4596a",
+   "size": 6613
+  },
+  "tools/assemble_v127.py": {
+   "sha256": "9dc9cd3039b66e1d6e2837145ce51a902e995b6291f0ce9458e824f39f41631d",
+   "size": 7308
+  },
+  "tools/live_overlap.py": {
+   "sha256": "da7bcee292a7dc7b760738eb7dee0513992b49bc2fb6416475b9ec9c078596d8",
+   "size": 4446
+  },
+  "tools/find_factoring2.py": {
+   "sha256": "4ede6bdf442708108a38028052f44da884783851c41ada5cf377c3b6b55b46d6",
+   "size": 4203
+  },
+  "tools/hw27_scan.py": {
+   "sha256": "a2a48a9b79a793edb0193e56aa290b61eefeaefdc02662d4a129cd4d9530db8e",
+   "size": 8259
+  },
+  "tools/build_moat_v125.py": {
+   "sha256": "da924f8b8ca37ef5b484269859866a232d67370243d04d9900b3361ef23543c1",
+   "size": 7852
+  },
+  "tools/build_moat_v128.py": {
+   "sha256": "19ef17a848b351e46eb127992e6afaaf5101d4e00e53001a3a45a87e0f69e683",
+   "size": 7938
+  },
+  "tools/sweep_invsqrt_fast.py": {
+   "sha256": "8e19d195917d34c3935131423a5204b1ede0418d81d563aa9fd30d6647d2885c",
+   "size": 12302
+  },
+  "tools/assemble_v121.py": {
+   "sha256": "a6e690ef50d56a8cae4220466fc7f9d1442b877dd418795d18c2b353d9ccbbce",
+   "size": 2726
+  },
+  "tools/wire_writes.py": {
+   "sha256": "46b1cd9733027ef2c0186c245ec58b5466141016b6167aafa891eea15bb5a83b",
+   "size": 2170
+  },
+  "tools/test_loader_rewrite.py": {
+   "sha256": "3954b5afe22bc0334bdf76870a8183d53a1954f75363acaf9cba3a7fbf11a9bc",
+   "size": 4029
+  },
+  "tools/hold_spots.py": {
+   "sha256": "d606f5c90444e5fc1829885fe793c2ccec4b632b7ab9104f3931364cb75c262b",
+   "size": 6196
+  },
+  "tools/tail_probe.py": {
+   "sha256": "b746c03266dafd898b2eeb0d51502ef9e8469d138c7454827c980dbc0d79d9b1",
+   "size": 4406
+  },
+  "tools/build_dqi_build_kernel.py": {
+   "sha256": "e310629db53491ef837903fe6110e4ea850b93aa46bea8ac149b7a742f9cc62e",
+   "size": 8924
+  }
+ }
+}

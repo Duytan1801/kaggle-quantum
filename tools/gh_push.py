@@ -18,28 +18,60 @@ Layout convention for the campaign (staging dirs):
 import base64, json, os, sys, urllib.request
 
 REPO_LIMIT = 95 * 1024 * 1024
+BLOB_LIMIT = 10 * 1024 * 1024   # above this, upload as a release asset (raw binary)
+
 
 class GH:
     def __init__(self, repo, token):
         self.repo, self.tok = repo, token
         self.n = 0
-    def req(self, method, path, body=None, raw=False):
-        url = f"https://api.github.com/repos/{self.repo}/{path}"
-        data = None if body is None else json.dumps(body).encode()
-        r = urllib.request.Request(url, data=data, method=method, headers={
+    def req(self, method, path, body=None, raw=False, data=None, ctype=None):
+        url = path if path.startswith("http") else f"https://api.github.com/repos/{self.repo}/{path}"
+        payload = data if data is not None else (None if body is None else json.dumps(body).encode())
+        hdrs = {
             "Authorization": f"Bearer {self.tok}",
             "Accept": "application/vnd.github+json",
-            "Content-Type": "application/json",
-        })
+        }
+        if payload is not None:
+            hdrs["Content-Type"] = ctype or "application/json"
+        r = urllib.request.Request(url, data=payload, method=method, headers=hdrs)
         with urllib.request.urlopen(r) as resp:
             self.n += 1
             b = resp.read()
-            return json.loads(b) if b and not raw else (b, resp.status)
+            if raw:
+                return b, resp.status
+            return json.loads(b) if b else None
     def blob(self, path):
-        h = hashlib(path)
         content = base64.b64encode(open(path, "rb").read()).decode()
         j = self.req("POST", "git/blobs", {"content": content, "encoding": "base64"})
-        return j["sha"], h, os.path.getsize(path)
+        return j["sha"], hashlib(path), os.path.getsize(path)
+
+    def upload_asset(self, rel_path, src, label):
+        """Big file → release asset (raw binary upload, up to 2GB)."""
+        tag = "assets"
+        try:
+            rel = self.req("GET", f"releases/tags/{tag}")
+        except urllib.error.HTTPError:
+            rel = None
+        if not rel:
+            rel = self.req("POST", "releases", {
+                "tag_name": tag, "name": "campaign-assets",
+                "body": "Binary assets too large for the git blob API (kmb/zip trees)."})
+        upload_url = rel["upload_url"].split("{")[0]
+        name = rel_path.replace("/", "__")
+        import urllib.parse
+        q = urllib.parse.urlencode({"name": name, "label": label[:100]})
+        # delete pre-existing asset with same name
+        for a in rel.get("assets", []):
+            if a["name"] == name:
+                self.req("DELETE", f"releases/assets/{a['id']}")
+        with open(src, "rb") as f:
+            data = f.read()
+        out, status = self.req("POST", f"{upload_url}?{q}", data=data,
+                               ctype="application/octet-stream", raw=True)
+        j = json.loads(out)
+        print(f"asset {rel_path} {len(data)}B → {j.get('browser_download_url')} (id {j.get('id')})", flush=True)
+        return j.get("id")
 
 def hashlib(path):
     import hashlib
@@ -66,36 +98,57 @@ def main():
     staging, repo, branch, msg = sys.argv[1:]
     tok = os.environ.get("GH_TOKEN", "")
     if not tok:
-        print("GH_TOKEN not set"); sys.exit(1)
+        # durable fallback: ~/.config/qcc/gh_token (mode 600, never committed)
+        try:
+            tok = open(os.path.expanduser("~/.config/qcc/gh_token")).read().strip()
+        except Exception:
+            tok = ""
+    if not tok:
+        print("GH_TOKEN not set (and ~/.config/qcc/gh_token missing)"); sys.exit(1)
     gh = GH(repo, tok)
 
-    files = collect(staging)
-    skipped, tree_entries = [], []
-    for rel, p in files:
-        sz = os.path.getsize(p)
-        if sz > REPO_LIMIT:
-            skipped.append((rel, sz)); continue
-        bsha, lsha, lsz = gh.blob(p)
-        tree_entries.append({"path": rel, "mode": "100644", "type": "blob", "sha": bsha})
-        print(f"blob {rel} {lsz}B sha={lsha[:12]}", flush=True)
-    for rel, sz in skipped:
-        print(f"SKIP (>100MB limit): {rel} {sz/1e6:.0f}MB — record its sha + how to rebuild instead", flush=True)
-
-    # base commit (empty repo → 409 on ref get)
+    # ref check FIRST: empty repo must be bootstrapped before blob creation
     parents = []
     try:
         ref = gh.req("GET", f"git/ref/heads/{branch}")
         parents = [ref["object"]["sha"]]
     except Exception as e:
         try:
-            body = json.loads(getattr(e, "read", lambda: b"{}")() or b"{}")
+            body = json.loads(e.read() or b"{}")
         except Exception:
             body = {}
-        if body.get("message") not in ("Git Repository is empty.", None) and "empty" not in str(body.get("message", "")).lower():
+        if "empty" not in str(body.get("message", "")).lower():
             raise
+        print("empty repo → bootstrapping first commit via Contents API", flush=True)
+        files_pre = collect(staging)
+        small = min(files_pre, key=lambda f: os.path.getsize(f[1]))
+        if os.path.getsize(small[1]) > 1024 * 1024:
+            print("no small file to bootstrap with — abort"); sys.exit(1)
+        content = base64.b64encode(open(small[1], "rb").read()).decode()
+        gh.req("PUT", f"contents/{small[0]}", {"message": msg + " (bootstrap)", "content": content, "branch": branch})
+        parents = [gh.req("GET", f"git/ref/heads/{branch}")["object"]["sha"]]
 
-    tree = gh.req("POST", "git/trees", {"tree": tree_entries, "base_tree": parents[0] and None or None} if parents else {"tree": tree_entries})
-    # simpler: fetch full base tree when we have a parent
+    files = collect(staging)
+    skipped, assets, tree_entries = [], [], []
+    for rel, p in files:
+        sz = os.path.getsize(p)
+        if sz > REPO_LIMIT:
+            skipped.append((rel, sz)); continue
+        if sz > BLOB_LIMIT:
+            assets.append((rel, p)); continue
+        bsha, lsha, lsz = gh.blob(p)
+        tree_entries.append({"path": rel, "mode": "100644", "type": "blob", "sha": bsha})
+        print(f"blob {rel} {lsz}B sha={lsha[:12]}", flush=True)
+    for rel, p in assets:
+        gh.upload_asset(rel, p, msg)
+    for rel, sz in skipped:
+        print(f"SKIP (>100MB limit): {rel} {sz/1e6:.0f}MB — record its sha + how to rebuild instead", flush=True)
+
+    # base commit
+    if not parents:
+        parents = [gh.req("GET", f"git/ref/heads/{branch}")["object"]["sha"]]
+
+    tree = gh.req("POST", "git/trees", {"tree": tree_entries, "base_tree": parents[0]} if parents else {"tree": tree_entries})
     if parents:
         base = gh.req("GET", f"git/trees/{parents[0]}?recursive=1")
         have = {e["path"]: e for e in base["tree"] if e["type"] == "blob"}
@@ -109,7 +162,7 @@ def main():
         gh.req("PATCH", f"git/refs/heads/{branch}", {"sha": commit["sha"], "force": False})
     else:
         gh.req("POST", "git/refs", {"ref": f"refs/heads/{branch}", "sha": commit["sha"]})
-    print(f"PUSHED commit {commit['sha'][:12]} on {branch}: {len(tree_entries)} blobs, {len(skipped)} skipped, {gh.n} api calls")
+    print(f"PUSHED commit {commit['sha'][:12]} on {branch}: {len(tree_entries)} blobs, {len(assets)} assets, {len(skipped)} skipped, {gh.n} api calls")
 
 if __name__ == "__main__":
     main()
