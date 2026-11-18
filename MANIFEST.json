@@ -1,8 +1,8 @@
 {
  "files": {
   "state/RESEARCH_DOCTRINE.md": {
-   "sha256": "ab10662a0f625b45ca2e117011da4bf876aa98a6ccd7c48a18b55939bff9b706",
-   "size": 5281
+   "sha256": "5def48439c028b028c12a71c7e5d4a99e7333480a10d534cf2816d8d4acf654f",
+   "size": 10181
   },
   "state/RESEARCH.md": {
    "sha256": "086a2a42f2dd1542382e643020882d2c74c734536d0df14eb4f32828f429f125",
@@ -17,20 +17,20 @@
    "size": 41717
   },
   "state/KERNEL_WATCH.md": {
-   "sha256": "f9e9fb2b9ef2a4488422f16734706496b9badcfa30cc32a3f015b1d43ae11af5",
-   "size": 73069
+   "sha256": "1540850c2bfb41071241e2bdfb93f61a4de503f0f86e6a0f18888b1995c4135b",
+   "size": 74114
   },
   "state/RESEARCH_STATE.md": {
-   "sha256": "3d9aa216d9b3d5f9d3d27653c65c7a7be148980fbfd9a53de509b3e728a1915e",
-   "size": 5206
+   "sha256": "1747a2c31add5fc9164093a21ff719ed93c2862136f07f1ce494c4324f714d69",
+   "size": 10193
   },
   "state/CALIBRATION.md": {
    "sha256": "bf6bbb0c677c771ad0dafac9d74733ac3dafc126578eb79db0b7d5fec4938709",
    "size": 564
   },
   "state/GOALS.md": {
-   "sha256": "3d46f825d196c74994c0c7b0308d10bd841de418b6361774283b3b799360e49f",
-   "size": 1799
+   "sha256": "820e0892c2a3268d6e94309faa2f2570d4532cdf3464749178a54be2685c7ac4",
+   "size": 2448
   },
   "harness/harvest_kernels.sh": {
    "sha256": "90ee480f25f8de3a7dbfc40d32f7e369f9804fa43b9b5352de49bd72810288d7",
@@ -49,8 +49,8 @@
    "size": 2188
   },
   "harness/CONTINUE_PROMPT.md": {
-   "sha256": "328d454b6a32e5096450f36beda3b87166b994a8d3c1363e08af3537ba63190a",
-   "size": 10269
+   "sha256": "6b6b6d7a359a4a95f8552f8e5f9c74180c06dbc0f25c0cdb8f61ea64cefb1a58",
+   "size": 3265
   },
   "harness/watch_public.sh": {
    "sha256": "9f1b3aacf513b81328e460c1accc816ba33f0313ed579ac5f19d74cd424dc7dc",
@@ -61,8 +61,8 @@
    "size": 712
   },
   "harness/campaign_wake.sh": {
-   "sha256": "a2be8146d8f9e1beb5239ba9d2902489ce41b358761150a1f814f5fa18e5254a",
-   "size": 3136
+   "sha256": "cadb7763f95a2206356753063751e4c8c4c745fe19b16c9d74ae1b33c6707c10",
+   "size": 5727
   },
   "tools/quad_pair.py": {
    "sha256": "95d097e2d36ab3c87c22c9bded935f91dac4182cd0fc197595267e46c09bd37b",
@@ -264,6 +264,10 @@
    "sha256": "5ad92d08b0b53de35d58efec9ca85ddf80365d55c899cabfd4262271b4c22c40",
    "size": 2948
   },
+  "tools/evo_pop.py": {
+   "sha256": "99f609f9870e282f5ccfb46e9154a01325b27a1d2c041a8962d02f7f9838a169",
+   "size": 5020
+  },
   "tools/scan_dqi_pool.py": {
    "sha256": "7193cf2d567174239a6c978a698bbc5ef1b6e7b0931e819a2676d886e9a8c6ed",
    "size": 3014
@@ -283,6 +287,10 @@
   "tools/find_factoring.py": {
    "sha256": "8ca827dee8f546f8d54e03ab1d2e78146648e21330ca887d106319a6576bdafa",
    "size": 4296
+  },
+  "tools/minand_probe.py": {
+   "sha256": "28226ca81ee5a663ad0a4691fabaccdd7055c43db2cf99dbba90d57257ddf418",
+   "size": 3690
   },
   "tools/build_moat_v131.py": {
    "sha256": "2c9d45a97e9cfcd19dfd3102c2a1c700bad85d1b8abaf1d0d07968d6c13dfdbb",

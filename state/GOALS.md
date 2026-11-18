@@ -20,6 +20,13 @@ G2 (stepping stone, elevated): invsqrt Q45/43 via minand_sat — direct value +0
 G3: Identify the top-2 mechanism (recon + inference from cadence/score jumps). Even a partial answer
    re-ranks everything. Attack from multiple framings simultaneously (their A/B vs C/D variant fan-out).
 G4 (standing): Hold best-public-tree parity — adopt every better public leg within the same day.
+G5 (NEW, elevated): Evolutionary generator search (H6, AlphaEvolve-style) — evolve the GENERATOR
+   against the exact score formula with an automated evaluator, starting on the cheap invsqrt leg
+   (74 s rebuild). This is the only lane that attacks the generator-level gap the top-2 teams keep
+   private, and it is the only lane whose progress is measured rather than guessed.
+   Success metric: a variant that scores strictly better than baseline, reproducibly.
+   Precondition: the evaluator must be cheap and deterministic — build the population store
+   (work/evo/population.json) BEFORE generating variants, or the search dies of amnesia.
 
 ## Non-goals (with reasons)
 - Public-LB rank vanity: the $150k pays on the PRIVATE split at 2027-01-20; only tree quality at freeze

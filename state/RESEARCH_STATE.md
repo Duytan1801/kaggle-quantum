@@ -20,12 +20,46 @@ H2 | invsqrt Q45/43 reachable by re-implementing minand_sat.py | Syed generator 
     (74 s rebuild); maoxin proved 46→44 exists | +0.08–0.16 GM direct — BUT its real value is the
     STEPPING-STONE: exact-AND retirement machinery + endpoint surgery is the scaffold class needed for
     any future width attack (Navier–Stokes pattern: solve Euler first, then prompt the big problem with
-    the Euler solution) | implement ANF-based exact-AND synthesizer (schema fully known from v9_form_e2.json /
-    hret_s15k7a_s15.json: gates = AND of two XOR-sets, output = XOR of terms; validity exactly checkable
-    over full domain), then endpoint retirement of a 4th bit (v8 — note ordering conflict: v8 feeds v9's
-    rebuild form) + solve the product-forward carry peak (needs 1 wire at Q45: h0-pack gets body to 45,
-    carry wants 46) | TESTING | Q45 probe rc=1 at patch_proddisp→arithmetic._compute_carry alloc (45+1>45);
-    PACK=True loader fit confirmed (25+20=45); NOW TOP after H1 killed — all effort points here
+    the Euler solution) | exact-AND synthesizer + owner retirement + endpoint/cleanup helper scheduling,
+    then generator full-domain proof | **TESTING / INCONCLUSIVE** | v8-specific 9-dependency retirement
+    route KILLED (not repeated).  v10 product route has an exact 5-input/2-AND certificate (0/4096
+    mismatches).  Q45 progression reaches cleanup: h0 pack + v10 retirement + disposable divider
+    feed carry + alternate endpoint holds (`W2_E_HOLD=1,3,5,7,9,11`,
+    `W2_F_HOLD=0..7`) + borrow HMR-reset v11 for the last v9-form intermediate fit product,
+    divider forward, the full endpoint, and endpoint v9/v10 rebuild at Q45.  A full-emission trace found
+    and fixed one invalid CX(q,q) in the endpoint-borrow prototype (terminal v9 gate is already the
+    target); the corrected prototype still stops at cleanup sign-15, whose pinned form needs six live
+    helpers plus one output (46th qubit).  No full-domain proof yet, so NOT CONFIRMED.  Evidence:
+    work/recon/h2_v10_form.json, work/recon/h2_post_product_map.json,
+    work/recon/h2_q45_disposable_divider_build.log, work/recon/h2_q45_endpoint_borrow_build.log,
+    work/recon/h2_q45_prototype_recipe.md.
+    **CLEANUP TEST PRE-REGISTERED 2026-11-18 06:24 UTC:** derive/adapt the exact sign-15 cleanup form
+    (same Boolean function, no domain shortcut) to <=2 simultaneous helper wires, or borrow an
+    already-retired cleanup owner without semantic conflict.  SUCCESS = Q45 generator emission plus
+    `PASS_EXACT_NATIVE_TEXT_ALL_REQUESTED_INPUTS_ALL_HMR_TRANSCRIPTS`, then official verifier PASS.
+    INCONCLUSIVE = allocation fits but proof differs.  KILL this Q45 route if the exact cleanup form
+    provably needs >2 simultaneous helpers and no already-retired owner can be borrowed; do not spend a
+    submission slot before the full-domain proof.
+    **EXPLORATORY KEEP-SIGN15 RESULT 2026-11-18 06:55 UTC:** retaining (rather than retiring/rebuilding)
+    history sign 15 passes the entire divider cleanup at Q45 and reaches the second table loader.  The
+    next blocker is the pinned second-framed loader's work cap 19 (27+19=46).  This does not satisfy the
+    cleanup-form success criterion and is not a proof.
+    **LOADER TEST PRE-REGISTERED 2026-11-18 06:55 UTC:** search a second-framed loader certificate at
+    work cap 18 (27+18=45), using the published exact 128-row loader constructor in a disposable tree.
+    SUCCESS = complete cap-18 certificate with exact replay and native loader peak 45, followed by Q45
+    generator emission and the full-domain proof.  INCONCLUSIVE = bounded search finds no complete
+    certificate or replay differs; refine the loader/search only.  KILL this keep-sign15 branch if an
+    exact cap-18 second-framed loader is impossible, but do not kill the separate sign-15 synthesis route
+    **LOADER OUTCOME 2026-11-18 07:10 UTC:** SUCCESS at the loader subtest.  Eight seeds produced exact
+    cap-18 second-framed certificates; the selected seed has 92 Toffolis and independent exact replay PASS
+    (27+18=45).  Native Q45 integration passes the loader and exposes the next blocker: second coefficient
+    rows need an incoming and outgoing quantum carry simultaneously (45+1>45).
+    **COEFFICIENT TEST PRE-REGISTERED 2026-11-18 07:15 UTC:** retire v10 for the duration of the second
+    coefficient forward (v10 is not used by its five rows or overflow), restoring its exact quantum value
+    and HMR phase before H3 cleanup.  SUCCESS = Q45 emission beyond coefficient cleanup plus the generator
+    full-domain exact proof.  INCONCLUSIVE = allocation fits but phase/owner proof differs.  KILL this
+    v10-retirement route if v10 is in fact live in a row/overflow or the restored owner cannot repay the
+    HMR sign exactly; do not repeat it unchanged.  The separate sign-15 synthesis route remains active
     | 2026-11-18
 
 H3 | Top-2 mechanism is discoverable from public traces | aadi_stonks 31.50404 / Z³C¹oherence 31.42723;
@@ -33,6 +67,23 @@ H3 | Top-2 mechanism is discoverable from public traces | aadi_stonks 31.50404 /
     | unknown, potentially +1–2 GM | deep recon pass: pull ALL aadi_stonks + Z³C¹oherence public
     kernels/datasets/votes timestamps, diff submission cadence vs score jumps to infer per-leg improvements;
     check kaggle forum posts | NEW | only surface recon done (LB rows) | 2026-11-18
+
+H6 | GENERATOR-LEVEL EVOLUTIONARY SEARCH (AlphaEvolve-style) can beat hand-patched public trees |
+    LLM proposes CODE mutations to the generator; automated evaluator verifies+scores; a population
+    DB keeps the best; next-generation prompts are assembled from the best-so-far. Their closest
+    result to us: "proposed a Verilog rewrite that REMOVED UNNECESSARY BITS in a key, highly
+    optimized arithmetic circuit… must pass robust verification" (DeepMind, May 2025) |
+    +0.1–1.0 GM (any width cut at invsqrt or DQI; the objective function is exact, so every
+    improvement is measurable) | BUILD the evaluator + population harness for the CHEAP leg first
+    (invsqrt: 74 s rebuild + exact score formula) — cheapest discriminating test: evaluate ≥6
+    generator variants (knob settings + patch toggles) through ONE reproducible pipeline and
+    produce a scored ranking. SUCCESS = a variant scores strictly better than baseline
+    (→ SPRINT) or the harness proves baseline locally optimal (still a usable search substrate).
+    KILL = baseline score cannot be reproduced within ±0.01 across 2 runs (evaluator too noisy →
+    search impossible). NOTE: H1 proved the DQI circuit is flat-wide (no instance-level slack), so
+    the search MUST operate on the generator, not the instance — that is exactly what H6 does |
+    NEW | doctrine rules 22–26 added 2026-11-18; population store to live in work/evo/population.json |
+    2026-11-18
 
 H4 | DQI rep_factor has headroom | our 5f901c55 rep ≈ 1.1911 vs floor 1.19126 ⇒ likely ~0 room, but the
     formula R(eps) = ln2/−ln(½+2√eps) depends on decoder epsilon | tiny | read verify_submission_dqi.py
@@ -44,6 +95,10 @@ H5 | Public release ride | maoxin123 iterates fastest (v27→28.17 in one day, o
     | 2026-11-18
 
 ## KILLED (evidence recorded — DO NOT re-enter)
+- H2 v8-specific product retirement: after adding explicit post-product P/seed/h owners, v8 still
+  requires 9 independent dependencies (D6,D9,D11,v7,v11,h1,h2,h3,h4); the dependency certificate is
+  too wide for the critical interval.  Do not repeat this route (work/recon/h2_post_product_map.json,
+  2026-11-18).
 - Z_POW same-wire merges on 563d0583/0af21cb8: 0 mergeable pairs (work/tools/merge_scan_kmx.py; all 43
   angles exact 2⁻⁶⁴ multiples so merges would be phase-exact, but no candidates). 2026-11-18.
 - Functional Z_POW merge (Syed's merge_zpow.py, same-Boolean-feature, full-domain): groups_merged = 0 on
