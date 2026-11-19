@@ -14,9 +14,19 @@
 G1 (breakthrough): Reduce DQI width below 890 — even 850 = +0.26 GM, 750 = +1.0 GM.
    Success: one verified-narrower dqi.kmb. Falsified if live-span anatomy shows peak ≈ declared width
    AND no packing structure exists (then record and re-aim).
+   **RE-RANKED 2026-11-19 (H7, source-read):** the verifier WRITES the syndromes into the circuit's
+   S0..S_{n-1} registers and requires them restored ⇒ **Q ≥ 70·12 = 840 is a hard floor**; our 890 =
+   840 input wires + 50 ancillas ⇒ the width prize is capped at +1.1 GM, and the flat-wide anatomy (H1)
+   is explained (the input wires are held for the whole circuit).  ⇒ the DQI lever is **T (mean
+   Toffolis, 367,789)**, which needs a DQI generator that is not public.  G1 becomes: reduce ancillas
+   50→0 or cut T, both generator-level.
 G2 (stepping stone, elevated): invsqrt Q45/43 via minand_sat — direct value +0.08–0.16 GM, but the
    retirement/endpoint machinery is the SCAFFOLD for G1 (Euler→Navier–Stokes pattern). Build it once,
    transfer the method.
+   **RE-RANKED 2026-11-19:** the Q45 stack now reaches the TAIL (every phase fits 45 except the T2
+   donor-block replay, which needs 46).  But the *competitive* threshold is **Q42** (42×1743.42 = 73,206
+   < our public 74,560.91) — Q45 alone is 78,454 and is NOT a submission.  The tail needs a native
+   re-derivation with ≤5 simultaneous scratch wires (H2 kill criterion).  Method value only until Q43/Q42.
 G3: Identify the top-2 mechanism (recon + inference from cadence/score jumps). Even a partial answer
    re-ranks everything. Attack from multiple framings simultaneously (their A/B vs C/D variant fan-out).
 G4 (standing): Hold best-public-tree parity — adopt every better public leg within the same day.
@@ -27,6 +37,12 @@ G5 (NEW, elevated): Evolutionary generator search (H6, AlphaEvolve-style) — ev
    Success metric: a variant that scores strictly better than baseline, reproducibly.
    Precondition: the evaluator must be cheap and deterministic — build the population store
    (work/evo/population.json) BEFORE generating variants, or the search dies of amnesia.
+   **STATUS 2026-11-19: evaluator LIVE and reproducible** (baseline 80,565.24511023414 reproduced
+   exactly; ~10 s/variant; population v001–v015 with scores and artifact pointers).  Search space is
+   now MEASURED, not guessed: work/evo/WIDTH_MAP.md (per-stage live ledger + the four killed levers:
+   free-list reuse already in kickmix, loader work_cap is transient-only, divider is not the binding
+   phase, no Q43/44/45 exists in the tree).  Next generation must target the *cost* ledger at Q46/Q45
+   (need −7% Toffolis at Q46 to beat the public 44q) or a native tail re-derivation.
 
 ## Non-goals (with reasons)
 - Public-LB rank vanity: the $150k pays on the PRIVATE split at 2027-01-20; only tree quality at freeze

@@ -61,6 +61,24 @@ log() { echo "$(date -u '+%F %T') $*" >>"$LOG"; }
 # loudly so the change is never silent.
 SESSION=${SESSION:-ses_e40ca51eeffeZH1jOA0zacun2v}
 
+# Health probe BEFORE injecting into the canonical session. A failed attempt
+# would otherwise write its error into the canonical session — error spam in the
+# thread the user watches, and context pollution. The canary runs on a
+# throwaway archived session, so only productive wakes reach the campaign
+# session.
+canary() {
+  local model="$1"
+  local f=/tmp/opencode/harness/canary.$$.txt
+  timeout "${CANARY_TIMEOUT:-60}" "$OC" run --auto --archived -m "$model" "Reply with exactly: OK" >"$f" 2>&1
+  local rc=$?
+  if [ "$rc" -eq 0 ] && ! grep -qiE "$SOFT_RE|$QUOTA_RE" "$f"; then
+    rm -f "$f"; return 0
+  fi
+  if grep -qiE "$QUOTA_RE" "$f"; then rm -f "$f"; return 2; fi
+  if grep -qiE "$SOFT_RE" "$f"; then rm -f "$f"; return 1; fi
+  rm -f "$f"; return 3
+}
+
 # attempt <model> → 0 ok, 1 throttle(429), 2 quota, 3 other error
 attempt() {
   local model="$1"
@@ -93,10 +111,26 @@ log "wake START session=$SESSION A=$MODEL_A B=$MODEL_B"
 backoff=$RETRY_BASE
 a429=0
 while true; do
+  canary "$MODEL_A"; rc=$?
+  if [ "$rc" -ne 0 ]; then
+    # provider unhealthy: do NOT touch the canonical session
+    case "$rc" in
+      2) log "A ($MODEL_A) is out of quota (canary) → switching to B ($MODEL_B)"; break ;;
+      1) a429=$((a429 + 1))
+         if [ "$a429" -ge "$A_429_TRIES" ]; then
+           log "A throttled $a429× (canary) → falling through to B ($MODEL_B)"; break
+         fi
+         backoff=$(sleep_backoff "$backoff"); log "A throttled (canary, 429, try $a429) — retry in ${backoff}s"; sleep "$backoff"
+         backoff=$(( backoff * 2 )); [ "$backoff" -gt "$RETRY_CAP" ] && backoff=$RETRY_CAP ;;
+      3) backoff=$(sleep_backoff "$backoff"); log "A error (canary) — retry in ${backoff}s"; sleep "$backoff"
+         backoff=$(( backoff * 2 )); [ "$backoff" -gt "$RETRY_CAP" ] && backoff=$RETRY_CAP ;;
+    esac
+    continue
+  fi
   attempt "$MODEL_A"; rc=$?
   case "$rc" in
     0) log "wake served by A ($MODEL_A)"; log "wake END session=$SESSION rc=0"; exit 0 ;;
-    2) log "A ($MODEL_A) is out of quota → switching to B ($MODEL_B)"; break ;;
+    2) log "A ($MODEL_A) quota after canary passed → switching to B ($MODEL_B)"; break ;;
     1) a429=$((a429 + 1))
        if [ "$a429" -ge "$A_429_TRIES" ]; then
          log "A throttled $a429× → falling through to B ($MODEL_B)"; break
@@ -113,12 +147,15 @@ backoff=$RETRY_BASE
 tries=0
 while true; do
   tries=$((tries + 1))
-  attempt "$MODEL_B"; rc=$?
-  case "$rc" in
-    0) log "wake served by B ($MODEL_B) after $tries attempt(s)"; log "wake END session=$SESSION rc=0"; exit 0 ;;
-    *) backoff=$(sleep_backoff "$backoff")
-       log "B ($MODEL_B) unavailable (rc=$rc, try $tries) — retry in ${backoff}s (forever)"
-       sleep "$backoff"
-       backoff=$(( backoff * 2 )); [ "$backoff" -gt "$RETRY_CAP" ] && backoff=$RETRY_CAP ;;
-  esac
+  canary "$MODEL_B"; rc=$?
+  if [ "$rc" -eq 0 ]; then
+    attempt "$MODEL_B"; rc=$?
+    if [ "$rc" -eq 0 ]; then
+      log "wake served by B ($MODEL_B) after $tries attempt(s)"; log "wake END session=$SESSION rc=0"; exit 0
+    fi
+  fi
+  backoff=$(sleep_backoff "$backoff")
+  log "B ($MODEL_B) unavailable (canary/attempt rc=$rc, try $tries) — retry in ${backoff}s (forever)"
+  sleep "$backoff"
+  backoff=$(( backoff * 2 )); [ "$backoff" -gt "$RETRY_CAP" ] && backoff=$RETRY_CAP
 done

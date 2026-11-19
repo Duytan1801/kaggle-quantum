@@ -60,7 +60,25 @@ H2 | invsqrt Q45/43 reachable by re-implementing minand_sat.py | Syed generator 
     full-domain exact proof.  INCONCLUSIVE = allocation fits but phase/owner proof differs.  KILL this
     v10-retirement route if v10 is in fact live in a row/overflow or the restored owner cannot repay the
     HMR sign exactly; do not repeat it unchanged.  The separate sign-15 synthesis route remains active
-    | 2026-11-18
+    **WAKE 2026-11-19 07:xx UTC — THE Q45 STACK NOW REACHES THE TAIL; ONLY THE TAIL REMAINS.**
+    The previous wake's stack (h0 packing + v10 retirement + endpoint borrow + disposable divider +
+    exact cap-18 second loader + dirty-terminal coefficient inverse + keep-sign15) was reconstructed
+    as work/evo/configs/v013.json and instrumented with a width profiler
+    (work/evo/patches/patch_width_profile.py).  Every phase now fits Q45 EXCEPT the tail: the T2
+    donor-block replay (agents/width/plans/T2_decoder_capture.json + agents/width/src/block_replay.py)
+    allocates 7 donor scratch wires (q8,q21,q34,q36,q38,q47,b276), 2 freed by ZERO items, so **6 are
+    simultaneously live → tail peak = 40 base + 6 scratch = 46**.  The published Q46 build peaks at the
+    same place, so the tail is binding in both.  Our live set at A_restored is EXACTLY the 40 wires the
+    plan maps (v8+h10+flags4+A13+H5) and all 40 are live again at block exit (45 = v12+h10+flags4+A13+H5
+    +phase_snapshot1), so no entry wire can be freed.  **Stage map: work/evo/WIDTH_MAP.md.**
+    **KILL CRITERION for the tail: the T2 tail needs a native re-derivation with ≤5 simultaneous scratch
+    wires, or ≥5 extra "wire is identically zero" points in the donor block (the plan records only 2 ZERO
+    items).  The alternative SNAPSHOT2_TAIL path is unusable — decoder_snapshot_cleanup_q48.py is absent
+    from the published tree.**  COST REALITY CHECK (new, important): even a successful Q45 emission is NOT
+    a score win — Q45×1743.42 = 78,454 vs our public leg 74,560.91 (Q44).  The competitive threshold is
+    **Q42** (73,206 ✓) or Q43 with ≤1733.9/shot (−10 Toffolis) or Q44 with ≤1694.6 (−49 Toffolis).  The
+    invsqrt lane therefore needs **3 more wires** below the Q45 stack, i.e. Q45 is a method milestone, not
+    a submission milestone | 2026-11-19
 
 H3 | Top-2 mechanism is discoverable from public traces | aadi_stonks 31.50404 / Z³C¹oherence 31.42723;
     gap = ×2.87 product; if all-DQI-width ⇒ Q≈526 (41% cut) — likely a mix (their invsqrt/chem also better?)
@@ -83,9 +101,53 @@ H6 | GENERATOR-LEVEL EVOLUTIONARY SEARCH (AlphaEvolve-style) can beat hand-patch
     search impossible). NOTE: H1 proved the DQI circuit is flat-wide (no instance-level slack), so
     the search MUST operate on the generator, not the instance — that is exactly what H6 does |
     NEW | doctrine rules 22–26 added 2026-11-18; population store to live in work/evo/population.json |
-    2026-11-18
+    **TESTING 2026-11-19 — EVALUATOR LIVE AND REPRODUCIBLE.** work/tools/evo_build.py (emit + exact
+    cost model) + evo_sweep.py (build → score → population DB → ranking) + evo_pop.py (population store)
+    work; baseline v001 reproduces EXACTLY: cost_model 80,565.24511023414, kmb_sha256 5bd8d9d3… in ~10 s
+    per variant (reproducibility criterion met; same bytes → same score, as the no-resampling rule
+    requires).  Population work/evo/population.json holds v001–v015 with scores, score parts and
+    artifact pointers (SCORED = emitted+modelled; VERIFIED is reserved for the proved ones).  Sweep
+    ranking so far (lower cost is better): v001 baseline 80,565.25 · v004 (retire 13,14,15) 80,565.25
+    (byte-identical kmb — retiring 15 is a no-op because _SAT already forces 15 into RETIRE) · v005
+    (W2_V10_G1=0) 80,611.25 (worse).  **Four cheap kills recorded:** (a) kickmix's builder ALREADY reuses
+    freed wire indices (alloc3→free q1→alloc1 returns q1) ⇒ a free-list wrapper is not an untapped
+    lever; (b) loader work_cap only sets the TRANSIENT peak (the loader frees all but its 16 outputs) ⇒
+    lowering the cap does not lower the global peak unless the loader's own transient peak binds; (c) the
+    divider is NOT the binding phase (39–40 live while the global peak is 46) ⇒ retiring MORE signs
+    cannot lower the global peak, and retiring fewer (v002/v003) overflows at 47; (d) the published syed
+    tree contains NO Q43/Q44/Q45 variant anywhere (all research artifacts are Q48/Q49) ⇒ Q46 is the
+    narrowest available configuration.  Full stage map: work/evo/WIDTH_MAP.md.  H6 is therefore
+    CONFIRMED as a working search substrate but has NOT yet produced a better variant; the search space
+    is now measured (width ledger + cost ledger), not guessed | 2026-11-19
+
+H7 | DQI width is bounded by the verifier's syndrome INPUTS: Q ≥ n·b = 70·12 = 840 | the verifier
+    writes the syndromes into the circuit's S0..S_{n-1} registers (verify_submission_dqi.py:376-382:
+    write_across_shots(syndrome_array, input_syndromes) then requires them restored) and
+    validate_registers forces exactly those registers to exist ⇒ our 890 = 840 input wires + 50
+    ancillas; the DQI width prize is therefore capped at (890/840)² = 1.121× ⇒ **+1.1 GM max**, and the
+    real DQI lever is T (mean Toffolis, currently 367,789) and not Q | +1.1 GM (width) / up to +3 GM (T)
+    | read the DQI verifier's score formula and our dqi.kmb's register map; confirm 840 input wires and
+    count our ancilla wires | **CONFIRMED (source-read) 2026-11-19** — the width ceiling is 840; H1's
+    flat-wide finding is now explained (the 840 input wires are held for the whole circuit).  ⇒ any DQI
+    improvement must come from fewer ancillas (50 → 0) or fewer Toffolis; both need a DQI *generator*,
+    which is not public | 2026-11-19
+
+H8 | invsqrt rotation cost is a function of the circuit's numerical MARGIN, not of its gate count |
+    official verifier: eps = π·min_margin/2^64/n_rot, price = 0.56·log2(1/eps)+5.3, score =
+    Q·(toffolis + T/4 + n_rot·price/4).  min_margin = min over shots of (tol(x) − |phase error(x)|) in
+    units of 2^-64 turns ⇒ **a more accurate circuit (bigger margin) has CHEAPER rotations.**  Our syed
+    emit: margin 124,370,688 units ⇒ eps 6.42e-13 ⇒ charge 230.85/shot.  tol(x) = 2^-24·β/√x, so
+    tol_min ≈ 6.2e8 units ⇒ the best achievable charge is ≈219 (−12/shot = −0.7% of the leg) | +0.08 GM
+    if the public leg's margin is at the syed level | read the official verifier's reported rotation_eps
+    and margin for our PUBLIC 44q file and compare with the syed emit | NEW — cheapest test is one
+    verifier run with a margin report; the prize is bounded and small, so it only matters if the public
+    file's margin is far from tol_min | 2026-11-19
 
 H4 | DQI rep_factor has headroom | our 5f901c55 rep ≈ 1.1911 vs floor 1.19126 ⇒ likely ~0 room, but the
+    formula R(eps) = ln2/−ln(½+2√eps) depends on decoder epsilon | tiny | read verify_submission_dqi.py
+    scoring path end-to-end; check if rep is schedule-controllable | NEW | — | 2026-11-18
+
+
     formula R(eps) = ln2/−ln(½+2√eps) depends on decoder epsilon | tiny | read verify_submission_dqi.py
     scoring path end-to-end; check if rep is schedule-controllable | NEW | — | 2026-11-18
 
