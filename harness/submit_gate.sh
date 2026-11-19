@@ -13,6 +13,7 @@
 # With --submit as the last arg: submits to Kaggle AFTER the gate, with message.
 set -eu
 
+PROJ=${PROJ:-/home/bandoc/Downloads/opencode}
 MODE="gate"
 if [ "${1:-}" = "--submit" ]; then MODE="submit"; shift; fi
 TREE="$1"; TABLE="$2"; RECEIPT="$3"; LABEL="$4"; MSG="${5:-$LABEL}"
@@ -70,6 +71,21 @@ with zipfile.ZipFile(zipp) as z:
 EOF
 ZIPSHA=$(python3 -c "import hashlib;print(hashlib.sha256(open('$ZIP','rb').read()).hexdigest()[:16])")
 echo "GATE-OK $ZIPSHA $ZIP  (label: $LABEL)"
+
+# Persist the gated zip durably.  /tmp/opencode is volatile and the GitHub
+# mirror must hold the EXACT submitted bytes; without this, the mirror's
+# "latest tree" was whichever stale gate_zip.* directory happened to sort
+# first.  The path is derived from the sha-table name (sha_table_v132.txt ->
+# work/trees/v132/submission.zip).
+TSLOT=$(basename "$TABLE" .txt | sed 's/^sha_table_//')
+if [ -n "$TSLOT" ]; then
+  KEEP="$PROJ/work/trees/$TSLOT"
+  mkdir -p "$KEEP"
+  cp -f "$ZIP" "$KEEP/submission.zip"
+  cp -f "$TABLE" "$KEEP/SHA_TABLE.json"
+  cp -f "$RECEIPT" "$KEEP/RECEIPT.json"
+  echo "GATE-KEEP $KEEP/submission.zip  zipsha=$ZIPSHA"
+fi
 
 if [ "$MODE" = "submit" ]; then
   export PATH="$HOME/.local/bin:$PATH"

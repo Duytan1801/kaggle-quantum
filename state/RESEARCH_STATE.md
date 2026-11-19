@@ -5,6 +5,70 @@
 
 ## QUEUE (ranked)
 
+H9 | **The public `asteriospanoras/qcc-circuit-atlas` dataset contains a full 18-file tree at GM 28.23162 — a
+    submission-grade +0.0508 GM over our row** | dataset published 2026-11-19 00:39 UTC (after our last harvest
+    sweep) and is NOT gated (`kaggle datasets download -d asteriospanoras/qcc-circuit-atlas`, 536 MB, Apache-2.0);
+    it ships `frontier/qcc_28_23162_submission/` = the exact submission.zip that scored 28.23162, plus
+    `receipt.json` with SHA-256 of every file and the official verifier results of that build | +0.0508 GM,
+    immediate | **CONFIRMED AND SUBMITTED 2026-11-19 03:33 UTC — ref 58539070.**  All 18 files match the
+    atlas receipt byte for byte.  OUR OWN official invsqrt verifier: PASS, score 74,405.67238374705,
+    200,540,928 shots, worst_error_over_tolerance 0.9994556024653497, sha d0227f3c… — identical to the atlas
+    receipt.  OUR OWN official dfthcsos verifier: PASS, score 294,642,170.565169, lambda_eff 46.921562797126406 —
+    identical to the atlas receipt.  OUR OWN official dqi verifier: PASS, score 345,256,821,433.9815, 102,400
+    shots, 0 value / 0 phase errors — identical to the atlas receipt.  **GM 28.180837 → 28.231630 = +0.050793.**
+    TWO RECEIPTS: (1) static 18-file sha table work/sha_tables/sha_table_v132.txt; (2) moat-lab kernel v49
+    in-kernel receipt work/receipts/V132_MOAT_RECEIPT.json — verdict V132-RECEIPT-PASS, shas_ok true,
+    dqi PASS @102400 (127 s), dfthcsos in-kernel PASS (20.9 s), GM pred 28.23163020066719.  Snapshot dataset
+    badboyhalo1801/qcc-release-v132 published (v2: moat-lab-compatible QCC_RELEASE_MANIFEST).  Gated zip
+    persisted durably at work/trees/v132/submission.zip (zipsha 333ef190248cd5a2).  **We still owe this lane
+    a re-check: the radar has since caught `ozertuu/28-23163` and `manvenderraparia/vqcc-28-23163` —
+    a HIGHER published score than 28.23162.  Adjudicate both (H11).** | 2026-11-19
+
+H11 | **The public-release radar was blind and unwired; a better public tree was sitting in plain sight for days**
+    | `harness/watch_public.sh` polled `kaggle datasets list --sort-by dateCreated` and `--sort-by dateUpdated`
+    — BOTH INVALID Kaggle sort keys (valid: hottest|votes|updated|active|published).  Every dataset poll failed
+    on every cycle, and `poll()` sent stderr to /dev/null, so the failure was silent.  The dataset channel
+    produced ZERO detections in its entire life — while competitors release trees as DATASETS.  Worse: the
+    findings went to `/tmp/opencode/watch/new_releases.log` and NOTHING EVER READ THAT FILE; the wake prompt
+    asked "Public tree changed?" with no sensor wired to the answer.  The watcher DID detect
+    `ozertuu/28-23163` (23:49 UTC 2026-11-18) and `manvenderraparia/vqcc-28-23163` (01:45 UTC 2026-11-19),
+    both BETTER than the tree we adopted hours later — both unread | a full day with no submission
+    (last was 2026-11-18 00:48 UTC) | **CONFIRMED + FIXED 2026-11-19.**  New durable radar
+    `harness/watch_public.py`: valid sort keys only; every poll VALIDATED (a bad answer is a loud POLL-FAILED
+    line, never a silent no-op); durable state in `work/harvest/` (survives reboot); VERSION-AWARE keys so a
+    dataset updated after we saw it re-enters the queue; SELF-GROWING publisher list so a new publisher cannot
+    hide; QCC-relevance filter so the global head does not flood the queue; output = `work/harvest/PENDING.tsv`,
+    which the wake prompt now REQUIRES the agent to read and adjudicate (`work/tools/harvest_queue.py
+    list|take|done|add`).  Wired into `harness/campaign_wake.sh` (Stage 0, with a 15-min freshness guard so the
+    wake never burns 7 min on a sweep the service just did) and into the systemd service
+    `watchpub.service`/`.timer` (every 10 min, OnBootSec=2min).  Also: `work/tools/ds_scan.py` scans any
+    downloaded dataset for a candidate tree; `submit_gate.sh` now persists the gated zip durably; `gh_sync.sh`
+    now backs up `work/harvest/` + `watch_public.py` + the atlas toolkit.  **Verified live: 123 QCC-relevant
+    releases queued, 0 duplicates, 0 false failures, 0 non-QCC noise; the radar caught
+    `boristown/qcc-gap-3-residue-repair-and-c43-native-compiler` (a C43 invsqrt compiler — our top lever)
+    within minutes of it being published.**  Remaining: adjudicate the 123 queued releases, and in particular
+    the two 28.23163 releases and the new DQI candidates found in the datasets | 2026-11-19
+
+H10 | Compiled-circuit surgery on the Q44 invsqrt yields ≥1 GM | the atlas ships `tools/qccscope/` (numpy-only
+    liveness, motif detectors, sampled value scan, exact cost model) and `tools/kmsim.py` (exact simulator that
+    reproduces the official verifier's worst error/tolerance), plus 58 invsqrt `.kmx` text forms and two proven
+    edit recipes (a splice and a dead-write fix) | up to +0.2168 GM for one wire (Q44→Q43), +0.0939 GM per
+    Toffoli | `qccscope report --task invsqrt` on the frontier Q44 kmx, then apply the findings and confirm with
+    `kmsim.py` over all 3,133,452 inputs | **TESTING 2026-11-19 01:5x UTC — FIRST REPORT DONE on the frontier Q44
+    tree (work/atlas/kmx/invsqrt/frontier_28_23162.kmx, 20,526 ops, 44 q, 477 bits).**  Static 1,549 Toffoli-like
+    (187 conditional); executed Toffoli mean 1,451.29 over 256 sampled inputs; inputs restored, 0 dirty ancillas,
+    0 bad resets.  **All four exact Toffoli motifs are ZERO: A1 Toffoli-erased AND 0, A2 cancelling Toffoli pair 0,
+    A3 dead write 0, A4s statically-zero control 0.**  (The atlas's own dead-write win was on a DIFFERENT, Q46 tree
+    — `dcde70780434` — which is already spent.)  Sampled-only candidates (NOT proven, not submittable yet): A4v 4
+    rare-active Toffolis, A5 9 affine Toffolis, A7+0 6 repeated products that fit with 0 extra qubits
+    (+0.0320 pts, sampled).  **WIDTH IS THE OPEN LEVER: static peak 44 with 433 peak episodes; the greedy idle-gap
+    cover is `[(wire 24, 428 episodes, 5,258 ops), (wire 0, 5, 35)]` with `uncoverable_episodes = 0`** — i.e. every
+    peak episode has a live-but-untouched wire, so a Q43 re-allocation may be possible.  Kill criterion: if the
+    idle-gap cover does not yield a provable Q43 (44→43) circuit that `kmsim.py` confirms over all inputs, close
+    the compiled-level width lane and fall back to the generator lane.  Also note R1: the 33 rotations consume
+    231.5 of 1,712.3 Toffoli-equivalent (13.5%) — the rotation synthesis budget is the single largest cost block
+    and the margin headroom is 15.98× (H8) | 2026-11-19
+
 H1 | DQI width is compressible below 890 | score = rep×Q²×T (verify_submission_dqi.py:420); Q² dominates
     | +1–2 GM if Q→750; dead end if width is genuinely simultaneous | per-wire live-span anatomy of
     base_5f901c55.kmb (wa4.py) → KILL if peak-live ≈ 890; SUCCESS if peak-live << 890 | **KILLED

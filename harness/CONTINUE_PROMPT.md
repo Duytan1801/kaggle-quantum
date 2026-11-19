@@ -8,6 +8,7 @@ files, it does not restate them.
 ## Re-orient (bounded reads only — never dump whole files)
 ```bash
 cd /home/bandoc/Downloads/opencode
+cat work/harvest/PENDING.tsv          # PUBLIC RELEASES not yet adjudicated (see below)
 tail -40 work/RESEARCH_STATE.md   # live hypothesis queue (ranked, with kill criteria)
 tail -25 work/GOALS.md            # leverage map + ranked goals
 tail -15 KERNEL_WATCH.md          # operational log + last status
@@ -27,17 +28,40 @@ tail -20 work/RESEARCH_DOCTRINE.md # binding rules (read when a rule is in quest
 
 ## This wake
 1. `kaggle competitions submissions` — if PENDING, arm a background poller, keep working.
-2. Public tree changed? → full adoption gate (sha table → snapshot dataset → moat-lab
+2. **PUBLIC-RELEASE QUEUE — check this FIRST, every wake.**
+   `work/harvest/PENDING.tsv` is the radar's durable queue: every new/updated public
+   **kernel or dataset** seen since you last adjudicated it. The radar was DEAD on its
+   dataset channel until 2026-11-19 (invalid `--sort-by` keys → silent failure), so
+   better public trees were sitting unseen for days. **Never assume the queue is empty
+   because you did not notice a release.**
+   - For each entry: pull it (`kaggle kernels pull <ref> -p <dir>` or
+     `kaggle datasets download -d <ref> -p <dir> --force`), extract, and scan for a
+     candidate tree (`work/tools/ds_scan.py <dir>`).
+   - **Datasets are where competitors release trees** — a dataset can contain the exact
+     18-file submission tree plus its own receipt. Always check datasets.
+   - A candidate is adopted only through the full two-receipt gate (below). Any tree
+     whose local official-verifier score beats ours is a submission candidate.
+   - **When you adjudicate an entry, delete its line from `work/harvest/PENDING.tsv`**
+     and append a line to `work/harvest/ADOPTED.tsv` (ref, verdict, score). Leaving it
+     queued is how a release gets rediscovered forever; marking it is how we learn.
+   - If the queue is large, triage by title/version string (a higher published score in
+     the title, e.g. "28.23163", outranks a generic one) and by publication date.
+3. Public tree changed? → full adoption gate (sha table → snapshot dataset → moat-lab
    SHA_TABLE patch → push → on FULL PASS submit). Otherwise:
-3. Take the **top `TESTING`/`NEW` hypothesis** in `work/RESEARCH_STATE.md` and advance its
+4. Take the **top `TESTING`/`NEW` hypothesis** in `work/RESEARCH_STATE.md` and advance its
    **cheapest discriminating test** — the smallest experiment that changes what we do next.
    Pre-registered kill/success criteria are already in the entry; honor them.
    - CONFIRMED → promote to a build lane and concentrate effort there.
    - KILLED → record the evidence in the entry and move on. **Never re-run a killed test.**
    - INCONCLUSIVE → refine the test.
-4. If everything is blocked → generate new hypotheses or build the missing capability that
+5. If everything is blocked → generate new hypotheses or build the missing capability that
    unblocks the top one. Never idle, never re-do logged work.
-5. Update `work/RESEARCH_STATE.md` (status + evidence + re-rank), append a one-line status to
+6. **NO-SILENT-DAY RULE.** If the most recent submission in `kaggle competitions submissions`
+   is more than 24 h old, you MUST either (a) put a better gated tree through the gate and
+   submit it, or (b) record in `KERNEL_WATCH.md` the specific public release you are
+   adopting toward it, or (c) record the concrete research result that explains why no
+   submission is possible today. "Nothing to do" is not an acceptable outcome.
+7. Update `work/RESEARCH_STATE.md` (status + evidence + re-rank), append a one-line status to
    `KERNEL_WATCH.md`, then `bash harness/gh_sync.sh "wake sync <hypothesis> <what changed>"`.
 
 ## Working rules (details in `work/RESEARCH_DOCTRINE.md`)

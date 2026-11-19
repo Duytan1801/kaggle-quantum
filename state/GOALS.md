@@ -1,14 +1,36 @@
 # GOALS — breakthrough goals + leverage map (agent-maintained; rewrite freely)
-# Last refresh: 2026-11-18 (post v131 = 28.18084; public harvest complete)
+# Last refresh: 2026-11-19 (post v132 = 28.23163; the public-release radar was repaired)
 
 ## Leverage map (cost-formula anatomy, GM per unit)
+Reference values (maoxin123's public notebook, `REFERENCE` dict):
+`invsqrt 2,076,774.233715 · dqi 24,439,463,583,672.93 · dfthcsos 3,355,599,588.3155375`
+`GM = (Π REF_i / cost_i)^(1/3)`; the marginal value of a *fractional* cost cut in one
+leg is `dGM = GM/3 × d(cost)/cost`.
+
+**CORRECTION 2026-11-19:** the old "+0.077 GM/qubit" for invsqrt was 2.8× too small
+(it was computed with the wrong marginal formula). The exact numbers:
+
+| move | dGM |
+|---|---|
+| **invsqrt: −1 wire (Q44→Q43)** | **+0.2168** |
+| invsqrt: −1 wire (Q46→Q45) | +0.2042 |
+| invsqrt: −1 wire (Q48→Q47) | +0.1928 |
+| DQI: −1 wire (Q890→Q889) | +0.0211 |
+| DQI: width → 840 hard floor | +1.1075 |
+| invsqrt: −1% Toffoli at Q44 | +0.0939 |
+| invsqrt: −1 rotation at Q44 | ~+0.05 |
+
+⇒ **one invsqrt wire is worth TEN DQI wires.** The invsqrt leg is the highest-leverage
+known lever by a wide margin.
+
 | Leg | Score formula | Dominant factor | Marginal value |
 |-----|--------------|-----------------|----------------|
-| invsqrt | Q × (T_mean + T/4 + n_rot·price/4) | Q | +0.077 GM/qubit; rotations ~+0.05 each |
-| DQI | rep × Q² × T_mean | **Q² (quadratic)** | +0.021 GM/qubit; +2.6e-5 GM/toffoli |
+| invsqrt | Q × (T_mean + T/4 + n_rot·price/4) | Q (linear) | **+0.2168 GM/wire @Q44**; +0.0939 per 1% Toffoli |
+| DQI | rep × Q² × T_mean | **Q² (quadratic)** | +0.0211 GM/wire @Q890; +1.1075 total to the Q840 floor |
 | chem | λ_eff × (T + qubit terms) | analytic-pinned | ~0 public headroom |
 
-⇒ WIDTH is the currency of this competition. Toffoli micro-cuts are dust.
+⇒ WIDTH is the currency of this competition, and **invsqrt width is the cheapest
+currency** (one wire = ten DQI wires). Toffoli micro-cuts are dust by comparison.
 
 ## Goals (ranked)
 G1 (breakthrough): Reduce DQI width below 890 — even 850 = +0.26 GM, 750 = +1.0 GM.

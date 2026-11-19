@@ -107,6 +107,32 @@ sleep_backoff() {  # $1 = current backoff → echoes next
 
 log "wake START session=$SESSION A=$MODEL_A B=$MODEL_B"
 
+# ---- Stage 0: refresh the public-release radar ----------------------------
+# The wake prompt asks "Public tree changed?".  Until 2026-11-19 that question
+# had NO sensor: the radar's dataset channel was dead (invalid --sort-by keys)
+# and nothing ever read its output.  Now the radar writes a durable queue at
+# work/harvest/PENDING.tsv and the wake refreshes it before the agent runs, so
+# the question is answered by a file the agent reads, not by luck.
+# A failure here must never abort the wake — it is best-effort.
+#
+# The watchpub.service already refreshes every 10 min; a full sweep costs several
+# minutes of Kaggle API latency, so only re-sweep when the service has not run
+# recently (e.g. the service was down).
+RADAR_LOG=$PROJ/work/harvest/watch.log
+RADAR_MAX_AGE=${RADAR_MAX_AGE:-900}
+radar_age=999999
+if [ -f "$RADAR_LOG" ]; then
+  radar_age=$(( $(date +%s) - $(stat -c %Y "$RADAR_LOG" 2>/dev/null || echo 0) ))
+fi
+if [ "$radar_age" -gt "$RADAR_MAX_AGE" ] && [ -f "$PROJ/harness/watch_public.py" ]; then
+  radar_start=$(date +%s)
+  timeout 900 python3 "$PROJ/harness/watch_public.py" --once --fast >>"$LOG" 2>&1 \
+    || log "public radar refresh FAILED (rc=$?) — continuing with the stale queue"
+  log "public radar refreshed in $(( $(date +%s) - radar_start ))s (pending=$(grep -c . "$PROJ/work/harvest/PENDING.tsv" 2>/dev/null || echo 0))"
+else
+  log "public radar fresh (age ${radar_age}s) — reusing work/harvest/PENDING.tsv"
+fi
+
 # ---- Stage 1: primary model A ----------------------------------------------
 backoff=$RETRY_BASE
 a429=0

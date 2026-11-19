@@ -17,28 +17,48 @@
    "size": 41717
   },
   "state/KERNEL_WATCH.md": {
-   "sha256": "80b1d45764153697a9c3a37e6d78b39d0bb59907afd56447132e02e9a8ec23d0",
-   "size": 76246
+   "sha256": "26ffa809c49fe48a582b0135eb1ee0ef9beb3dc6aac66a4729e40c2eae6b7d5f",
+   "size": 79559
   },
   "state/RESEARCH_STATE.md": {
-   "sha256": "a3e4161effe7a92da1a4c991c1995b8f433c8e1c922063b9dadf0e111646715a",
-   "size": 16125
+   "sha256": "1d93be4f79558cc3677e430e0c10f09fafb704057dcef2020525b856135d73b2",
+   "size": 22686
   },
   "state/CALIBRATION.md": {
-   "sha256": "bf6bbb0c677c771ad0dafac9d74733ac3dafc126578eb79db0b7d5fec4938709",
-   "size": 564
+   "sha256": "cdc8a0e885cbf031c04a0251c316de803ab59dc8eb6a36ffd761b95916ae5c44",
+   "size": 2664
   },
   "state/GOALS.md": {
-   "sha256": "fca5c8274bac101e0316d0643344e82304667d76d364ac7ad16ccc46e528cf34",
-   "size": 4009
+   "sha256": "56ca73ad814b71dcfef95c5cec7da5d10f25774917514ce09927852138c7e529",
+   "size": 5050
+  },
+  "harvest/ADOPTED.tsv": {
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "size": 0
+  },
+  "harvest/watch.log": {
+   "sha256": "8ca3c8211e898459764148a3393a8311ae3b23f88f5fb7ba8b7d938dbe1519a7",
+   "size": 2454
+  },
+  "harvest/PENDING.tsv": {
+   "sha256": "4681305ba7905a79e9f1428952a188a3cde12a6e2a8600069be68e1858e34cf2",
+   "size": 190936
+  },
+  "harvest/SEEN.tsv": {
+   "sha256": "00e2347afc1f4a9dc069d504e3bd20723fe27ab8f6753b340bfb9287f18527d8",
+   "size": 92692
+  },
+  "harvest/AUTHORS.txt": {
+   "sha256": "77060c1e336cf1bbd9d0050ce6fb2b33d9533f9276750bc3a59f69b135bd7178",
+   "size": 1256
   },
   "harness/harvest_kernels.sh": {
    "sha256": "90ee480f25f8de3a7dbfc40d32f7e369f9804fa43b9b5352de49bd72810288d7",
    "size": 3128
   },
   "harness/submit_gate.sh": {
-   "sha256": "1ee9b5972228e6c6f520b8df3b9e8b7b4eaa292c3760bf084c9fff01b6fc1e5a",
-   "size": 3249
+   "sha256": "96b85980474066bfbb14d022f5f6ded3729e28dd482898effdbc4ef0b57e9ae2",
+   "size": 3940
   },
   "harness/poll_score_58487983.sh": {
    "sha256": "d3c334c0227dc98ed9f3371c26c43fcb7887961595080559bfb9485bf8b1d981",
@@ -49,20 +69,24 @@
    "size": 2188
   },
   "harness/CONTINUE_PROMPT.md": {
-   "sha256": "6b6b6d7a359a4a95f8552f8e5f9c74180c06dbc0f25c0cdb8f61ea64cefb1a58",
-   "size": 3265
+   "sha256": "5a35aa9929a7ae6d6485c5e7247be63520ad9bf40d4f0f4cb7bc8f93b1f58d8a",
+   "size": 5202
   },
   "harness/watch_public.sh": {
-   "sha256": "9f1b3aacf513b81328e460c1accc816ba33f0313ed579ac5f19d74cd424dc7dc",
-   "size": 1595
+   "sha256": "3231755f4e78934c23bc7132c6a372f043c093d3b32f1dc58b883c920b275e94",
+   "size": 1889
   },
   "harness/poll_submission.sh": {
    "sha256": "6656cb3483e3d735560a59c06f8a7557c2ddd7837a25aef33e8f4f711445e800",
    "size": 712
   },
+  "harness/watch_public.py": {
+   "sha256": "299735f0c021acba1a50754737d9f93ebf833623b984f84a8e4460525107a85f",
+   "size": 14090
+  },
   "harness/campaign_wake.sh": {
-   "sha256": "82e18a42eb481caa8d55cb1ac8074da34fc692bcaf6bbc4e1b97fce5d7d6ff68",
-   "size": 7427
+   "sha256": "f5da899f3bc818fe2e1d7cfb50a6fcad658f9c75c5cb3b3b6d26d36d44d91fe3",
+   "size": 8884
   },
   "tools/quad_pair.py": {
    "sha256": "95d097e2d36ab3c87c22c9bded935f91dac4182cd0fc197595267e46c09bd37b",
@@ -75,6 +99,10 @@
   "tools/dump_invsqrt_profile.py": {
    "sha256": "7f2c920a5e3080ac5009aa9badeb42f800eb5e349b6e069ab73228adf5e38c16",
    "size": 7331
+  },
+  "tools/build_moat_v132.py": {
+   "sha256": "5bddf3ef95443d3a1161ed6f061164658d88b0dd6df8fa7a1bb45efc72ea2a2b",
+   "size": 11452
   },
   "tools/kmb_align.py": {
    "sha256": "18b4159bc99d93257d4692c8dcd66721f5baf033a899c37106da370dad5e468d",
@@ -248,6 +276,14 @@
    "sha256": "2b3bf6776e3af7a80ecc3314b4759d9ac6568c4a48cfc77d42699b4b995ff326",
    "size": 1534
   },
+  "tools/build_snapshot_v132.py": {
+   "sha256": "ff56d3ca60283da18de21951984201dad4889031a3831acfca6c406bc6ba4d32",
+   "size": 4050
+  },
+  "tools/ds_scan.py": {
+   "sha256": "c0bc51ab1e1befc654e79b741785d7584164edb99f862113b31b8db950386272",
+   "size": 5115
+  },
   "tools/ds_headers.py": {
    "sha256": "00568622e7fb44af021683419dfbc61b045a4c3afa3fa2fd08ae93a731a4a7ce",
    "size": 3146
@@ -268,9 +304,17 @@
    "sha256": "cde6edec987c39b605eb48856fde4e7023b745b870ca2e2ed16cce780127906b",
    "size": 5718
   },
+  "tools/harvest_queue.py": {
+   "sha256": "35127b854d624f7a11724e19b3ae5deece732ed85ec3ea5641b88f153d1d5ef0",
+   "size": 3344
+  },
   "tools/peak_runs.py": {
    "sha256": "35a7680489bd422ff294e7c4b8623b5e2e6c8d627bde2d1febb3fff5f7735307",
    "size": 1294
+  },
+  "tools/width_probe.py": {
+   "sha256": "195b5a3b962c6d72914d10241a0b344902aae0a133b8f2da50e553c65f317922",
+   "size": 4209
   },
   "tools/chem_brot_probe.py": {
    "sha256": "5ad92d08b0b53de35d58efec9ca85ddf80365d55c899cabfd4262271b4c22c40",
@@ -303,6 +347,10 @@
   "tools/minand_probe.py": {
    "sha256": "28226ca81ee5a663ad0a4691fabaccdd7055c43db2cf99dbba90d57257ddf418",
    "size": 3690
+  },
+  "tools/build_receipt_v132.py": {
+   "sha256": "9592c1dbd5c02021a01a35c2b5805651c82822612a725dc9a51c9fa5860cbd53",
+   "size": 5406
   },
   "tools/build_moat_v131.py": {
    "sha256": "2c9d45a97e9cfcd19dfd3102c2a1c700bad85d1b8abaf1d0d07968d6c13dfdbb",
@@ -375,6 +423,174 @@
   "tools/build_dqi_build_kernel.py": {
    "sha256": "e310629db53491ef837903fe6110e4ea850b93aa46bea8ac149b7a742f9cc62e",
    "size": 8924
+  },
+  "tools/atlas_tools/atlas_family.py": {
+   "sha256": "19fe95cfff405fe4e83203db73cbebd882503d4d8e28bb4eeccdc7d4d46551af",
+   "size": 3109
+  },
+  "tools/atlas_tools/loader_check.py": {
+   "sha256": "4bd71eab26bc8cf2eee949aa114a55e5d3022beed2794e8b51c34f27e65577bc",
+   "size": 5853
+  },
+  "tools/atlas_tools/atlas_io.py": {
+   "sha256": "8d623635cf0192d6344f158a99fcad645071dcace4683c2d0f11511d2e8f3189",
+   "size": 4463
+  },
+  "tools/atlas_tools/liveness.py": {
+   "sha256": "14dce184df65a9c7cc8fbd623b5f6c59003ff50648c1ee68a59f3a6d9142ed13",
+   "size": 3098
+  },
+  "tools/atlas_tools/kmsim.py": {
+   "sha256": "33aab1993165c11efabdad08d9de42aab1c6b4b269c33df7e3764f56fb93fff4",
+   "size": 9895
+  },
+  "tools/atlas_tools/build_splice.py": {
+   "sha256": "99954ecd96ed39f254c9d501193526af0417a46f308e16781728230ae38c6893",
+   "size": 2429
+  },
+  "tools/atlas_tools/README.md": {
+   "sha256": "6c329ddea698403fa12ff3e296b87da4bd2da6b8fc4074daa22d97cac7ff6bd4",
+   "size": 3049
+  },
+  "tools/atlas_tools/width_probe.py": {
+   "sha256": "195b5a3b962c6d72914d10241a0b344902aae0a133b8f2da50e553c65f317922",
+   "size": 4209
+  },
+  "tools/atlas_tools/splice_dp.py": {
+   "sha256": "75f73d53fea6cf5d0c5e909eeb55acbcbd0d8ed4123952d99fff07078c563a10",
+   "size": 6429
+  },
+  "tools/atlas_tools/refit/al.py": {
+   "sha256": "d16c19fdf835404deb2de4da9eaff02c8b40bc1014716fad75f6c08bf9f44bfc",
+   "size": 4089
+  },
+  "tools/atlas_tools/refit/grg.py": {
+   "sha256": "ba97e86d4f23c5ed452efa39fd873a989084a314411bf79a09156764b06d4593",
+   "size": 8001
+  },
+  "tools/atlas_tools/refit/__main__.py": {
+   "sha256": "1f4b7ae2bfa2aa71ff2b7a94dbfcce53c2520b8274239e5b45ec446af6c028c7",
+   "size": 5434
+  },
+  "tools/atlas_tools/refit/__init__.py": {
+   "sha256": "f568eacaf5ff44f5afab6acf136c522ab4b43916cca897af650ed2b5ffde65d5",
+   "size": 1044
+  },
+  "tools/atlas_tools/refit/model.py": {
+   "sha256": "7fa0a58cdc4681d4cea1711517f52b40550fc7f798a094d39187747c7fc1c18a",
+   "size": 8037
+  },
+  "tools/atlas_tools/refit/grg2.py": {
+   "sha256": "adb6570b9fefa5e72403607cd6d9a3066e2b35d969cc1c0e7c5e19c410a1e9ca",
+   "size": 904
+  },
+  "tools/atlas_tools/refit/chemeval.py": {
+   "sha256": "8ae4be627d95478c44626483915cc67df25164a5b46c93b8a540944f860cdfca",
+   "size": 3967
+  },
+  "tools/atlas_tools/refit/README.md": {
+   "sha256": "b99ce87c1d8d7cde08da231e9e6c1b969f610ef375f41db6dc94f0477c3521c1",
+   "size": 4382
+  },
+  "tools/atlas_tools/refit/tests/test_refit.py": {
+   "sha256": "05c18405e7183db1af0ad87ad0fb528372c4da3d58b4c0017d2cc6f9856915c5",
+   "size": 4534
+  },
+  "tools/atlas_tools/refit/tests/__init__.py": {
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "size": 0
+  },
+  "tools/atlas_tools/tests/test_atlas_io.py": {
+   "sha256": "8e6e09f2bbe472536c817af26518289cbcf73e2f0b9ce2d41efaf1ac71989676",
+   "size": 1920
+  },
+  "tools/atlas_tools/tests/test_tools.py": {
+   "sha256": "59310d4352bd4e48683cabbccb2540cc9e331b609eba19cd4e4b4175863b9f9f",
+   "size": 3808
+  },
+  "tools/atlas_tools/qccscope/report.py": {
+   "sha256": "621ad98001b161733338ebbf2ef35a8f6f305f59d09349cd94ce40fbde631921",
+   "size": 10720
+  },
+  "tools/atlas_tools/qccscope/cost.py": {
+   "sha256": "2939cd435075bdd497a431984015cff9ec62ebfd5b2c4e37858378f33e559958",
+   "size": 5426
+  },
+  "tools/atlas_tools/qccscope/values.py": {
+   "sha256": "d1f5d82c902d3cc5cf3c0cb55cb44bd55f9924eaccd388926aa66a0d02e039d4",
+   "size": 22249
+  },
+  "tools/atlas_tools/qccscope/liveness.py": {
+   "sha256": "2bb91b00bea373ce0e3a7be64741f9b4ae35e575a6cc5e62ccbd3d4ff3d4d7bd",
+   "size": 8276
+  },
+  "tools/atlas_tools/qccscope/__main__.py": {
+   "sha256": "56ac5784592921ab4a82bf1a7971f7fa97dee38b321fcab43ace309ec7baa8a1",
+   "size": 1756
+  },
+  "tools/atlas_tools/qccscope/__init__.py": {
+   "sha256": "55c674fc7c77ee23097ea1772d5ee28f6418d27b899b61a705c42e05a8e78268",
+   "size": 463
+  },
+  "tools/atlas_tools/qccscope/structure.py": {
+   "sha256": "8e6e4f3b7038ee843dc99e3be2327b849a60efff667db81b22959f2ebf99e7ac",
+   "size": 13772
+  },
+  "tools/atlas_tools/qccscope/kmx.py": {
+   "sha256": "d7437d7c15b004d89dacd5ac186b6c2f182619a8765550aa6e014c192a09e7a6",
+   "size": 7566
+  },
+  "tools/atlas_tools/qccscope/README.md": {
+   "sha256": "723713b7e974de91885b382fa6c4345c44d9564586706fdbe5e40e660f562666",
+   "size": 2945
+  },
+  "tools/atlas_tools/qccscope/motifs.py": {
+   "sha256": "b168a56f6bdd539d2ca3244f1386a0bcd0b0169f6b034cd914f1f9bad50750b8",
+   "size": 6104
+  },
+  "tools/atlas_tools/qccscope/tests/__init__.py": {
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "size": 0
+  },
+  "tools/atlas_tools/qccscope/tests/test_qccscope.py": {
+   "sha256": "4490351c2eb3575b09cdba8d453bb094107567d4ba4ba666803fd5b3af957f34",
+   "size": 5323
+  },
+  "tools/atlas_tools/build/kmxstats.py": {
+   "sha256": "e1de9a9cf8d76ebe8b335f87ec29df69275370bfed62d9d4926f05db48f6122e",
+   "size": 909
+  },
+  "tools/atlas_tools/build/build_contrib.py": {
+   "sha256": "05f852cee053b6a2a306f9b28c18334b28f0f0de38422ef48d5204956c6408d1",
+   "size": 27581
+  },
+  "tools/atlas_tools/build/scan_local.py": {
+   "sha256": "62fa193793f8c08d084c5f446ac1db03d7cec03a375fb22dc0ae54f81efcbe32",
+   "size": 9480
+  },
+  "tools/atlas_tools/build/build_atlas.py": {
+   "sha256": "027e7ba1790557e43fec7872085b95e735d3b8adc78d4dc02a836eb04a51a500",
+   "size": 29425
+  },
+  "tools/atlas_tools/build/atlas_docs.py": {
+   "sha256": "a8f560ced582d4a89dd5645e68cb72dd9126d123db3d77b1f79f2ee7e473863d",
+   "size": 40687
+  },
+  "trees/v132/SHA_TABLE.json": {
+   "sha256": "9a3a353796ebcc8b18630ad89184a4f00088647a2d6dab0af85ce58bdde7d8a9",
+   "size": 2307
+  },
+  "trees/v132/RECEIPT.json": {
+   "sha256": "a025099a877c780461dfc38b68d40714c0a17c03c8f4e75b3184e2bbe94aa06d",
+   "size": 3205
+  },
+  "trees/v132/submission.zip": {
+   "sha256": "333ef190248cd5a2bfe907d49a190aa899b3f9bd8c0303f4a4f7be7e0f14b46f",
+   "size": 50391549
+  },
+  "trees/v132/README.txt": {
+   "sha256": "a646f55797590e4acc6a367730dbf1080b48c4dfa67d5b14bcc76c76bcd3dcf5",
+   "size": 81
   }
  }
 }

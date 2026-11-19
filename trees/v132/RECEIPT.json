@@ -1,0 +1,55 @@
+{
+ "portfolio": "v132_atlas_frontier_28_23162",
+ "shas_ok": true,
+ "verifiers": [
+  "verify_submission_dqi.py",
+  "verify_submission_invsqrt.py"
+ ],
+ "invsqrt_anchor": {
+  "status": "PASS",
+  "score": 74405.67238374705,
+  "num_qubits": 44,
+  "toffoli_count": 1451.4360825387225,
+  "rotation_count": 33.0,
+  "rotation_eps": 2.0054235445130315e-13,
+  "worst_error_over_tolerance": 0.9994556024653497,
+  "worst_x": 231,
+  "verified_shots": 200540928,
+  "circuit_sha256": "d0227f3c548ae7f1a409159a143cf4a401de56a2414a5230a3efc4b38e0a8160"
+ },
+ "verifies": {
+  "dqi": {
+   "status": "PASS",
+   "score": 345256821433.9815,
+   "value_errors": 0,
+   "phase_errors": 0,
+   "verified_shots": 102400,
+   "num_ops": 56854639,
+   "max_toffoli_count": 366216
+  }
+ },
+ "verify_dt": {
+  "dqi": 127.2
+ },
+ "verify_tails": {
+  "dqi": "rors\": 0,\n  \"empirical_error_rate\": 0.0,\n  \"effective_error_rate\": 0.0008660587301657926,\n  \"log2_delta\": -128.0,\n  \"repetition_factor\": 1.1912604648115832,\n  \"mean_error_weight\": 31.046737331746634,\n  \"toffoli_count\": 365894.20047851565,\n  \"max_toffoli_count\": 366216,\n  \"reaction_depth\": 39958,\n  \"num_ops\": 56854639,\n  \"shot_operation_counts\": {\n    \"NEG\": 102263,\n    \"BIT_INVERT\": 569770356528,\n    \"BIT_STORE0\": 286510308079,\n    \"BIT_STORE1\": 3001865917,\n    \"X\": 10926066844,\n    \"Z\": 2063454774,\n    \"R\": 4868501234,\n    \"HMR\": 7276319338,\n    \"CX\": 3034264689289,\n    \"CZ\": 25319255341,\n    \"SWAP\": 25696095721,\n    \"CSWAP\": 1061273600,\n    \"CCX\": 35747590314,\n    \"CCZ\": 658702215,\n    \"POP_CONDITION\": 261096243200,\n    \"PUSH_CONDITION\": 261096243200\n  },\n  \"num_qubits\": 890,\n  \"num_bits\": 74545,\n  \"circuit_sha256\": \"15a4b7403356092e0ef6cc61c9f18644864964daae9630575d77c29314f75c8b\"\n}\n\n"
+ },
+ "dfthcsos_in_kernel": {
+  "status": "PASS",
+  "score": 294642170.565169,
+  "lambda_eff": 46.921562797126406,
+  "toffoli_count": 14706.0,
+  "num_qubits": 427,
+  "dt": 20.9,
+  "raw_tail": "   \"outer_state_prep_toffoli\": 317,\n    \"inner_state_prep_toffoli\": 4095,\n    \"givens_rotations_toffoli\": 2250,\n    \"outer_state_prep_persistent_qubits\": 40,\n    \"outer_state_prep_temporary_qubits\": 90,\n    \"outer_state_prep_qubits\": 130,\n    \"inner_state_prep_persistent_qubits\": 44,\n    \"inner_state_prep_temporary_qubits\": 303,\n    \"inner_state_prep_qubits\": 347,\n    \"heuristic_persistent_qubits\": 84,\n    \"heuristic_temporary_qubits\": 303,\n    \"heuristic_toffoli\": 6662,\n    \"heuristic_qubits\": 387,\n    \"persistent_qubits\": 124,\n    \"temporary_qubits\": 303,\n    \"toffoli\": 14706.0,\n    \"qubits\": 427,\n    \"angles_within_cap\": true\n  },\n  \"metrics\": {\n    \"error_1\": 0.019999999800000907,\n    \"error_2\": 0.01999999979999996,\n    \"Lambda\": 283.1439644065389,\n    \"E_SOS\": -22144.188248003116,\n    \"E_gap\": 3.914898003116832,\n    \"lambda_eff\": 46.921562797126406,\n    \"gap_in_domain\": true\n  }\n}\n\n"
+ },
+ "ratios": {
+  "invsqrt": 27.91150415259101,
+  "dqi": 70.78633083096415,
+  "dfthcsos": 11.388728171120182
+ },
+ "gm_pred": 28.23163020066719,
+ "dqi_ok": true,
+ "invsqrt_ok": true,
+ "verdict": "V132-RECEIPT-PASS"
+}
