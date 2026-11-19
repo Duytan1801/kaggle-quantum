@@ -1,7 +1,7 @@
 # RESEARCH STATE — live hypothesis queue (agent-maintained; rewrite freely)
 # Format: H# | claim | mechanism | est GM | cheapest discriminating test | status | evidence | updated
 # Rules: never re-run a KILLED test; re-rank by expected-GM/effort after each resolution.
-# Last full re-rank: 2026-11-18 (post v131 = 28.18084, public harvest complete)
+# Last full re-rank: 2026-11-19 (post v133 = 28.23441; H12 killed, H15/H16/H17 live)
 
 ## QUEUE (ranked)
 
@@ -220,7 +220,66 @@ H5 | Public release ride | maoxin123 iterates fastest (v27→28.17 in one day, o
     → on any leg improvement: two-receipt gate → submit | ACTIVE (passive) | v130→v131 adoption gave +0.030
     | 2026-11-18
 
+
+H12 | **The chem leg's J (words per ANGLE circuit) is a free structural parameter — re-partitioning the same
+    75 angle columns into fewer, wider circuits cuts Toffolis with the chemistry untouched** | the dfthcsos
+    verifier scores `lambda_eff × T × Q`; `lambda_eff` comes from the FACTORIZATION npz, not from the
+    circuits, while `T` = angles_toffoli + heuristic(6662) and `Q` = 84 (heuristic persistent) + J×brot +
+    max(303, angles_temporary).  The verifier reads J from the CIRCUIT register layout, so J is free.  The
+    generator is public: `marculera/dfthc-merge-pipeline` `tensorqrom.build_family(words, brot, j=...)` | the
+    prize is up to −25% chem T ⇒ +1.2 GM, but J also adds 8 qubits per step (−0.176 GM/step) | rebuild our
+    own family at J = 4,6,7,8 from the shipped npz's `angle_words` and score each with the OFFICIAL verifier
+    (must reproduce the shipped 294,642,170.565 at J=5 first) | **KILLED 2026-11-19 — measured, see the
+    KILLED section below.**  The mechanism is real (J is free, lambda_eff is exactly preserved) but the
+    economics are negative with the public generator.
+
+H15 | **The public invsqrt frontier keeps moving (ecf908fec987b61a = 74,383.698758 is now the best) and
+    every new release is worth ~+0.003 GM** | maoxin123's 28.23 invsqrt lineage ships new .kmb releases
+    (the combo that carried it to 28.23441); the DQI and chem legs are already at their public optimum, so
+    invsqrt is the ONLY leg where a fresh public release still moves the row | +0.003 GM per release,
+    ~20 min to verify (200,540,928-shot official run) | harvest every release, run the official invsqrt
+    verifier, and adopt any circuit that beats 74,383.698758 | **ACTIVE** — v133 (ref 58555857) adopted
+    ecf908fec987b61a on 2026-11-19; the queue sweep is now mechanical, so new releases arrive adjudicated
+
+H16 | **A tree change does NOT re-draw the DQI salt: the DQI seed comes from the CIRCUIT's own SHA-256** |
+    `verify_submission_dqi.py::_initial_seed(circuit_hash, salt)` hashes the .kmb bytes (not the submission),
+    so the same DQI bytes give the same official draw; only a NEW DQI circuit is a new draw | removes the
+    "changing the other 17 files can flip our board-clean DQI" risk; makes DQI-circuit choice the only salt
+    risk | read the verifier source; confirm the sha in both receipts matches the tree file | **CONFIRMED
+    2026-11-19** — v133 reuses v132's DQI bytes (15a4b7403356092e) and therefore v132's clean draw; the
+    in-kernel moat-lab re-verified it (PASS, 0 value / 0 phase errors @102,400 shots)
+
+H17 | **Our shipped members have never been tested against a private salt — the $150k is exposed** | the
+    public board uses one salt; the private draw may differ, and one failed shot costs the whole submission
+    (alexchilton's 8-salt table).  Our exact members (invsqrt ecf908fec987b61a, dqi 15a4b740, chem
+    6ef06081) are NOT in that table | unknown; a single-shot DQI failure is catastrophic (≈ −9 GM) | run the
+    official verifiers with `--salt` at 4-8 different salts (the moat-lab kernel does 1 DQI run in 127 s
+    in-kernel, so 8 salts ≈ 20 min of kernel time) | **NEW — queued** (protects the prize, not the score)
+
+H18 | **The J lever might still be live on the OTHER loader generator** | our shipped loaders (8,044
+    angles_toffoli) beat marculera's tensorqrom at EVERY J (9,722 at J=6, 9,864 at J=5), so the good
+    generator is ~18% better per circuit than the public one.  If THAT generator has a J parameter, the
+    lever is worth ~+0.4 GM even with the Q cost | +0.4 GM if the source appears | find the source of the
+    4,022-Toffoli ANGLE loader family (ozertuu's "quantum-sim-linalg-cache") | **BLOCKED 2026-11-19** — that
+    dataset contains ONLY 18 .kmb + 1 .npz, no source code.  Re-open if a source release appears.
+
 ## KILLED (evidence recorded — DO NOT re-enter)
+- H12 chem J lever (re-partition the angle columns into fewer/wider circuits): **KILLED 2026-11-19 by
+  measurement.**  The mechanism is real and was verified end-to-end (the verifier scores the words it
+  RECOVERS FROM THE CIRCUITS, not the npz; `onebody.signed_gauge` transforms our table into the generator's
+  signed gauge with lambda_eff EXACTLY unchanged, 46.921562797126406, error_1/error_2 identical to 1e-13 —
+  the naive per-word bit flip is wrong and gives lambda_eff 187.4 / error_1 15.2).  But the economics are
+  negative with the public generator: J=5 (the shipped value) gives angles_toffoli 9,864 and Q=427
+  (score 331,106,793.88 = 12.4% WORSE than the shipped 294,642,170.565); J=6 gives angles_toffoli 9,722
+  (−1.4%) but Q=435 (+8 wires, +1.87%) ⇒ score 334,411,854.92, **13.5% worse**; J=7 uses 133 qubits and
+  J=8 uses 140, both ABOVE the verifier's hard 128-qubit ANGLE cap ⇒ REJECTED (not merely worse).  A
+  generator bug was found and worked around on the way: `tensorqrom.build_family` IGNORES its own `sizes`
+  argument for the non-coded path (`coded_layout` returns the hardcoded J=5 `SIZES`, which covers 35 of
+  the 7·J output bits and makes build_circuit assert "decomposition does not cover the tensor"); our sweep
+  installs the partition through the module global (work/tools/chem_j_sweep.py).  Do not re-enter this lane
+  unless H18 (the better loader generator's source) produces a J parameter.  Artifacts:
+  work/tools/chem_j_sweep.py, work/tools/chem_j_sizes.py, work/tools/chem_gauge_probe.py,
+  work/tools/chem_words_probe.py, /tmp/opencode/chem_j/sweep_results.json.
 - H2 v8-specific product retirement: after adding explicit post-product P/seed/h owners, v8 still
   requires 9 independent dependencies (D6,D9,D11,v7,v11,h1,h2,h3,h4); the dependency certificate is
   too wide for the critical interval.  Do not repeat this route (work/recon/h2_post_product_map.json,

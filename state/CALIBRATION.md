@@ -41,3 +41,37 @@ bytes reproduced all three legs to the last digit
 (invsqrt 74,405.67238374705 · dqi 345,256,821,433.9815 · dfthcsos 294,642,170.565169),
 so the local receipt and the moat-lab in-kernel receipt agree exactly.
 
+
+
+## 2026-11-19 — v133 adoption and the chem J lever (prediction vs actual)
+
+**v133 (public combo `ghazarosbarseghyan91/vqcc-combo-candidates`):** the publisher's notebook states
+invsqrt 74,383.70, dqi 3.45257e11 (zero-error), chem 294,642,169.51, expected GM 28.2344.  OUR OWN runs of
+the UNCHANGED official verifiers on the exact bytes:
+invsqrt **74,383.69875786705** (200,540,928 shots, PASS, 44 q, 33 rotations, eps 2.005423596e-13,
+worst err/tol 0.9994556024791729 at x=231) · dqi **345,256,821,433.9815** (102,400 shots, 0 value / 0 phase
+errors) · chem **294,642,169.5116752** (PASS, lambda_eff 46.92156262935824, T 14,706, Q 427) ⇒
+GM **28.23440992** (local) vs **28.234409967092166** (moat-lab in-kernel, kernel v50).  The two receipts
+agree to 7 decimals; the published numbers were right to their precision.
+
+**Chem J lever (H12) — PREDICTION FALSIFIED.**  marculera's design note claims fewer ANGLE circuits ⇒ fewer
+Toffolis.  Measured with the official verifier on our own words:
+| J | circuits | angles_toffoli | angles_qubits | Q_total | chem score | vs shipped |
+|---|---|---|---|---|---|---|
+| 4 (shipped) | 15 | **8,044** | 128 | 427 | **294,642,170.565** | — |
+| 5 (marculera) | 15 | 9,864 | 119 | 427 | 331,106,793.88 | +12.4% |
+| 6 (marculera) | 13 | 9,722 | 126 | 435 | 334,411,854.92 | +13.5% |
+| 7 (marculera) | 11 | — | 133 | — | REJECTED (>128-qubit cap) | — |
+| 8 (marculera) | 10 | — | 140 | — | REJECTED (>128-qubit cap) | — |
+So a J step buys −1.4% T but costs +1.87% Q, and J≥7 is structurally impossible (the 128-qubit ANGLE cap).
+
+**Leverage constants re-derived (chem leg, score = lambda_eff × T × Q, Q = 427):**
+1 chem Toffoli = **+0.000640 GM**; 1 chem qubit = **+0.02204 GM**; chem lambda_eff −1e-7 ≈ +0.0000001 GM.
+**invsqrt:** 1 unit of invsqrt cost = **+1.264e-4 GM**; 1 invsqrt Toffoli ≈ 55 cost units ≈ **+0.00695 GM**;
+1 invsqrt wire at Q=44 = **+0.2168 GM** (unchanged).  **DQI:** 1 DQI Toffoli ≈ **+2.6e-5 GM**; 1 DQI wire
+at Q=890 = +0.0211 GM (unchanged).  **v133's +0.00278 GM decomposes as:** invsqrt cost −21.97 → +0.002778,
+chem cost −1.05 → +0.0000004.
+
+**DQI salt fact (H16, CONFIRMED by source):** `verify_submission_dqi.py::_initial_seed(circuit_hash, salt)`
+hashes the .kmb bytes; the draw is a property of the DQI circuit alone, not of the 18-file tree.  Same DQI
+bytes ⇒ same draw ⇒ the board-clean v132/v133 DQI draw is preserved by any change to the other legs.

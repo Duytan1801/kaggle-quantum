@@ -1,0 +1,59 @@
+{
+ "portfolio": "v133_ghazaros_combo_28_23441",
+ "shas_ok": true,
+ "verifiers": [
+  "verify_submission_invsqrt.py",
+  "verify_submission_dqi.py",
+  "verifiers/dfthcsos/verify.py"
+ ],
+ "verifies": {
+  "invsqrt": {
+   "status": "PASS",
+   "score": 74383.69875786705,
+   "num_qubits": 44,
+   "toffoli_count": 1450.9367018237792,
+   "rotation_count": 33.0,
+   "rotation_eps": 2.0054235961209344e-13,
+   "verified_shots": 200540928,
+   "worst_error_over_tolerance": 0.9994556024791729,
+   "worst_x": 231,
+   "circuit_sha256": "ecf908fec987b61a9aee39ceba0d9082abf7236547997aebfde9018243773be5",
+   "published_score": 74383.7,
+   "note": "our own local run of the UNCHANGED official verifier (verify_submission_invsqrt.py, default 200,540,928 shots)"
+  },
+  "dqi": {
+   "status": "PASS",
+   "score": 345256821433.9815,
+   "num_qubits": 890,
+   "toffoli_count": 365894.20047851565,
+   "value_errors": 0,
+   "phase_errors": 0,
+   "verified_shots": 102400,
+   "effective_error_rate": 0.0008660587301657926,
+   "repetition_factor": 1.1912604648115832,
+   "circuit_sha256": "15a4b7403356092e0ef6cc61c9f18644864964daae9630575d77c29314f75c8b",
+   "note": "byte-identical to v132 dqi.kmb (sha 15a4b7403356092e); the DQI verifier derives its seed from the SHA-256 of the circuit itself, so the same bytes give the same official draw (v132: 0 value / 0 phase errors on the board)"
+  },
+  "dfthcsos": {
+   "status": "PASS",
+   "score": 294642169.5116752,
+   "num_qubits": 427,
+   "toffoli_count": 14706.0,
+   "lambda_eff": 46.92156262935824,
+   "batch_size": 5,
+   "published_score": 294642169.51,
+   "note": "our own local run of the UNCHANGED official verifier (verifiers/dfthcsos/verify.py --shots-per-address 1)"
+  }
+ },
+ "ratios": {
+  "invsqrt": 27.919749466550343,
+  "dqi": 70.78633083096415,
+  "dfthcsos": 11.388728211840608
+ },
+ "gm": 28.234409921329515,
+ "previous_gm": 28.23163020066719,
+ "delta_gm": 0.0027797206623247916,
+ "source": "ghazarosbarseghyan91/vqcc-combo-candidates (2026-11-19); invsqrt ecf908fec987b61a (maoxin123 lineage), dqi 15a4b7403356092e (ozertuu), chem npz 6ef06081cb9c5752 + the 4,022-Toffoli ANGLE loader family",
+ "sha_table": "work/sha_tables/sha_table_v133.txt",
+ "verdict": "V133-RECEIPT-PASS"
+}

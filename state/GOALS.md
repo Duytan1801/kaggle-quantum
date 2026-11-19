@@ -71,3 +71,21 @@ G5 (NEW, elevated): Evolutionary generator search (H6, AlphaEvolve-style) — ev
   matters. Rank is a sensor, not a target.
 - Toffoli-count micro-squeezes < +0.005 GM: dust; do not spend slots or wakes on them.
 - Re-running any KILLED experiment (see RESEARCH_STATE.md).
+
+
+## Leverage map refreshed 2026-11-19 (post v133 = 28.23441; measured, not guessed)
+
+| move | GM | note |
+|---|---|---|
+| invsqrt −1 wire @Q44 | **+0.2168** | 1 wire ≈ TEN DQI wires (2.8× correction already applied) |
+| invsqrt −1 Toffoli | +0.00695 | cost unit = 1.264e-4 GM |
+| invsqrt −1 cost unit | +1.264e-4 | the unit the public releases trade in (v133: −21.97) |
+| DQI −1 wire @Q890 | +0.0211 | hard floor Q ≥ 840 (840 input + 50 ancilla) |
+| DQI −1 Toffoli | +2.6e-5 | needs a NEW algorithm (varianceofx: M 7,668 → 5,462) |
+| chem −1 Toffoli | +0.000640 | T = angles_toffoli + 6662 heuristic |
+| chem −1 qubit @Q427 | +0.02204 | Q = 84 + J×8 + max(303, angles_temp); J steps cost 8 wires each |
+| chem λ_eff −1e-7 | +0.0000001 | λ_eff is pinned by the npz (46.9215626) |
+
+**Current best public mix (v133):** invsqrt ecf908fec987b61a 74,383.698758 · dqi 15a4b740 345,256,821,433.9815
+· chem npz 6ef06081 294,642,169.5117 ⇒ GM **28.23441**.  Leader #1 31.74002 ⇒ gap **+3.51 GM**, and
+varianceofx's measurement attributes the whole gap to DQI T.

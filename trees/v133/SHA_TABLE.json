@@ -1,0 +1,77 @@
+{
+ "tree": "v133 = ghazarosbarseghyan91/vqcc-combo-candidates (invsqrt ecf908fec987b61a 74,383.698758 + dqi 15a4b7403356092e 345,256,821,433.9815 board-clean + dfthcsos npz 6ef06081cb9c5752 + 15 loaders 294,642,169.5116752); GM 28.23441",
+ "files": {
+  "dfthcsos/angle_k_0.kmb": [
+   "ed6487084d30b0c772e8bd1109b56b501945d2bc708a343fd8bdf3551f3b7538",
+   180436
+  ],
+  "dfthcsos/angle_k_1.kmb": [
+   "8e3a04e0e0450dbaa4725dc421708291ad4cec1522611e363936c90121885fbd",
+   151084
+  ],
+  "dfthcsos/angle_k_10.kmb": [
+   "2926a709c9d0ed2824073bef29347d2beee6282e1e08aff5b982512e345f6220",
+   357811
+  ],
+  "dfthcsos/angle_k_11.kmb": [
+   "7aed38f94ef86b504f985dcee98ed33dd6b341114147c55d0407b88495a1015d",
+   354943
+  ],
+  "dfthcsos/angle_k_12.kmb": [
+   "d73ee72ed6661082acd273d3bbf4d3511330d688bec8e64e6a8d647a975b9655",
+   353554
+  ],
+  "dfthcsos/angle_k_13.kmb": [
+   "38b56f2fc07b7bd5a378c7d25650f62a430fe42d5595d6184d5ae930b258bec3",
+   353477
+  ],
+  "dfthcsos/angle_k_14.kmb": [
+   "ab06b98fc22fce8a33b591db9caf73e93d407342a6c0f3d2e2e1416dffffdfd7",
+   362314
+  ],
+  "dfthcsos/angle_k_2.kmb": [
+   "42ea507daa22d0464e16d8f8d8f091e684d025998a32b574fee34672414b18ad",
+   371346
+  ],
+  "dfthcsos/angle_k_3.kmb": [
+   "423968d4ab8219b164a27284c4b889b67a864ead9322b7703599fc839d7d8035",
+   368418
+  ],
+  "dfthcsos/angle_k_4.kmb": [
+   "cf7c413468b0fe51cfb7ff457b1f9ab76dc80df01dbfba87cd190c9686078d68",
+   356845
+  ],
+  "dfthcsos/angle_k_5.kmb": [
+   "8c8a6281407052dbc2bfaa2a90d7cc34f936b406ad83b11a3a0586f2d32f1896",
+   354694
+  ],
+  "dfthcsos/angle_k_6.kmb": [
+   "0ebb575aef372a33941a1a9b8e317351dda7746389ec31c1b52f40f2280ad329",
+   350614
+  ],
+  "dfthcsos/angle_k_7.kmb": [
+   "77c35bb2ee9c699693ee581a510b53f0c9cf4a3c3a58b02882913ca048fd09ab",
+   352233
+  ],
+  "dfthcsos/angle_k_8.kmb": [
+   "9c5ced81d9a7378b763603f0bdd61322369e1bc3c72628a224b0445486e48663",
+   357510
+  ],
+  "dfthcsos/angle_k_9.kmb": [
+   "611fe155e4e060d0cca795236b0f1abd6e41225b7bbca135cfaec8da5a4334f9",
+   354915
+  ],
+  "dfthcsos/submission.npz": [
+   "6ef06081cb9c5752ee7235c86d480ddfc5db027f01e5d5d66a544dbda85d1958",
+   1847692
+  ],
+  "dqi.kmb": [
+   "15a4b7403356092e0ef6cc61c9f18644864964daae9630575d77c29314f75c8b",
+   473123120
+  ],
+  "invsqrt.kmb": [
+   "ecf908fec987b61a9aee39ceba0d9082abf7236547997aebfde9018243773be5",
+   178891
+  ]
+ }
+}

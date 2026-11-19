@@ -15,7 +15,14 @@ set -eu
 
 PROJ=${PROJ:-/home/bandoc/Downloads/opencode}
 MODE="gate"
-if [ "${1:-}" = "--submit" ]; then MODE="submit"; shift; fi
+# --submit may appear anywhere (the wake prompt documents it as the LAST
+# argument, older copies of this script only looked at $1 and silently ran in
+# gate-only mode).  No gate check is changed by this.
+ARGS=()
+for a in "$@"; do
+  if [ "$a" = "--submit" ]; then MODE="submit"; else ARGS+=("$a"); fi
+done
+set -- ${ARGS[@]+"${ARGS[@]}"}
 TREE="$1"; TABLE="$2"; RECEIPT="$3"; LABEL="$4"; MSG="${5:-$LABEL}"
 
 fail() { echo "GATE-FAIL: $*" >&2; exit 1; }

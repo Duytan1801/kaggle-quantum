@@ -152,6 +152,7 @@ class Ledger:
     def __init__(self):
         self.seen: set[str] = set()
         self.pending: list[dict] = []
+        self.fresh: list[dict] = []      # rows detected during THIS run only
         if SEEN.exists():
             for line in SEEN.read_text().splitlines():
                 if line.strip():
@@ -183,19 +184,38 @@ class Ledger:
         if key in self.seen:
             return
         self.seen.add(key)
-        self.pending.append({'kind': kind, 'ref': ref,
-                             'when': time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime()),
-                             'title': title, 'author': author,
-                             'version': version, 'source': source})
+        row = {'kind': kind, 'ref': ref,
+               'when': time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime()),
+               'title': title, 'author': author,
+               'version': version, 'source': source}
+        self.pending.append(row)
+        self.fresh.append(row)
 
     def flush(self) -> None:
         H.mkdir(parents=True, exist_ok=True)
         SEEN.write_text('\n'.join(sorted(self.seen)) + '\n')
+        # MERGE, DO NOT OVERWRITE.  The adjudicator (work/tools/harvest_queue.py
+        # done / work/tools/queue_sweep.py) removes rows from PENDING.tsv when
+        # it closes them.  This process used to write back its own in-memory
+        # snapshot, which RESURRECTED every closed row on the next poll (378 of
+        # 379 queued refs were already adjudicated).  So: re-read the file from
+        # disk and merge only the rows detected during THIS run.
+        disk: list[dict] = []
+        if PENDING.exists():
+            for line in PENDING.read_text().splitlines():
+                if line.strip():
+                    f = line.split('\t')
+                    disk.append({'kind': f[0], 'ref': f[1], 'when': f[2],
+                                 'title': f[3] if len(f) > 3 else '',
+                                 'author': f[4] if len(f) > 4 else '',
+                                 'version': f[5] if len(f) > 5 else '',
+                                 'source': f[6] if len(f) > 6 else ''})
+        merged = disk + [r for r in self.fresh if r not in disk]
         # One row per (kind, ref): if a release was updated and re-queued, only
         # the NEWEST version stays visible, so the agent never adjudicates the
         # same release three times.
         latest: dict[tuple[str, str], dict] = {}
-        for p in self.pending:
+        for p in merged:
             k = (p['kind'], p['ref'])
             if k not in latest or p['version'] >= latest[k]['version']:
                 latest[k] = p
@@ -213,6 +233,11 @@ class Ledger:
                                     (p['author'] or '').replace('\t', ' ')[:80],
                                     p['version'], p['source']]))
         PENDING.write_text('\n'.join(lines) + ('\n' if lines else ''))
+        # The loop mode calls flush() every cycle; only the rows detected in
+        # THIS cycle may be re-added, otherwise the loop would resurrect every
+        # row it ever saw (and every row the adjudicator closed).
+        self.fresh.clear()
+        self.pending = merged
 
 
 def read_authors() -> list[str]:
