@@ -94,6 +94,9 @@ QCC_RE = re.compile(
     r'compil|toffoli|qubit|chemistr|atlas|frontier|portfolio|syndrome|'
     r'decoder|mbuc|pec|amplitude|rotation|shor|qaoa|ising', re.I)
 
+# The agent reads this file, so it must stay readable.
+MAX_QUEUE = 400
+
 
 def log(msg: str) -> None:
     line = f"{time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime())} {msg}"
@@ -165,6 +168,17 @@ class Ledger:
 
     def add(self, kind: str, ref: str, version: str, title: str, author: str,
             source: str) -> None:
+        # --- relevance gate -------------------------------------------------
+        # A competition KERNEL is always ours, even when its title is garbage
+        # ("notebook0a72b91d14") — it may embed a tree, so it always enters the
+        # queue.  A DATASET needs a QCC-looking ref or title: the per-author
+        # channel returns whatever that publisher last uploaded, and many of
+        # them also publish unrelated Kaggle datasets (Mars maps, LoRA
+        # adapters).  Without this gate the queue flooded to 1200 rows of which
+        # only 340 were ours.
+        if not (kind == 'kernel' and source.startswith('comp-kernels')):
+            if not (QCC_RE.search(ref) or QCC_RE.search(title or '')):
+                return
         key = f'{kind}|{ref}|{version}'
         if key in self.seen:
             return
@@ -185,8 +199,15 @@ class Ledger:
             k = (p['kind'], p['ref'])
             if k not in latest or p['version'] >= latest[k]['version']:
                 latest[k] = p
+        # Order by the release's OWN timestamp (most recently updated first):
+        # that is the actionable order, and it is stable across rebuilds.
+        rows = sorted(latest.values(),
+                      key=lambda p: (p['version'] or '', p['when']), reverse=True)
+        # Cap the queue: the agent reads this file, so it must stay readable.
+        # The newest rows are the actionable ones.
+        rows = rows[:MAX_QUEUE]
         lines = []
-        for p in latest.values():
+        for p in rows:
             lines.append('\t'.join([p['kind'], p['ref'], p['when'],
                                     (p['title'] or '').replace('\t', ' ')[:120],
                                     (p['author'] or '').replace('\t', ' ')[:80],

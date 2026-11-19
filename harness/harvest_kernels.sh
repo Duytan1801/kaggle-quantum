@@ -1,15 +1,18 @@
 #!/usr/bin/env bash
-# harvest_kernels.sh — automated public-release adoption radar.
+# harvest_kernels.sh — SUPERSEDED by harness/watch_public.py (2026-11-19).
 #
-# Every cycle:
-#   1. list the competition's kernels by lastRunTime
-#   2. pull any kernel we have not seen before
-#   3. extract every embedded circuit artifact (.kmb / .npz) from the notebook
-#   4. score each invsqrt-sized artifact with the OFFICIAL verifier and log the cost
-#      (dqi-sized artifacts are only logged: a 102,400-shot dqi check needs the kernel)
+# This script was never running as a service and duplicated part of the radar's
+# job (and only the KERNEL channel — the channel where competitors are LEAST
+# likely to release, since they publish their trees as DATASETS).  It also kept
+# its state in /tmp, which a reboot wipes.
 #
-# New artifacts are appended to /tmp/opencode/harvest/found_artifacts.tsv so the
-# campaign loop can adopt a better public file within minutes of its release.
+# The radar now lives in harness/watch_public.py:
+#   * valid Kaggle sort keys only, every poll VALIDATED (never a silent no-op)
+#   * kernels AND datasets AND a self-growing publisher list
+#   * durable state in work/harvest/ (survives reboot)
+#   * output = work/harvest/PENDING.tsv, which every wake reads
+#
+# Do NOT start this script.  It is kept only as a record of the old mechanism.
 set -u
 ROOT=/home/bandoc/Downloads/opencode
 KG=kaggle
@@ -29,6 +32,9 @@ mkdir -p "$KDIR" "$ART"
 BEST_COST=${BEST_COST:-75006.3658334007}
 
 log() { echo "$(date -u '+%Y-%m-%d %H:%M:%S') $*" >> "$LOG"; }
+
+echo "harvest_kernels.sh is SUPERSEDED by harness/watch_public.py — run that instead." >&2
+exit 2
 
 while :; do
   "$KG" kernels list --competition "$COMP" --sort-by dateRun --page-size 40 2>/dev/null \

@@ -37,24 +37,24 @@
    "size": 0
   },
   "harvest/watch.log": {
-   "sha256": "8ca3c8211e898459764148a3393a8311ae3b23f88f5fb7ba8b7d938dbe1519a7",
-   "size": 2454
+   "sha256": "d8b89e10c74f730512e491a1dde3ada4c6c1f2b647f40fb45c2a323913c79a50",
+   "size": 2519
   },
   "harvest/PENDING.tsv": {
-   "sha256": "4681305ba7905a79e9f1428952a188a3cde12a6e2a8600069be68e1858e34cf2",
-   "size": 190936
+   "sha256": "c3c56343548d2dd9d7bdaa4091e5db90586c15f3a7bed7410e5e0a0972d3725d",
+   "size": 58200
   },
   "harvest/SEEN.tsv": {
-   "sha256": "00e2347afc1f4a9dc069d504e3bd20723fe27ab8f6753b340bfb9287f18527d8",
-   "size": 92692
+   "sha256": "3a9923742e2ddb216e002a0bb4584195beb3821090691820210f775285376b6c",
+   "size": 27753
   },
   "harvest/AUTHORS.txt": {
-   "sha256": "77060c1e336cf1bbd9d0050ce6fb2b33d9533f9276750bc3a59f69b135bd7178",
-   "size": 1256
+   "sha256": "18e50aba0428514c46223a97b1cb9dfa93f5e4ef1be4602175997eae2615af88",
+   "size": 1265
   },
   "harness/harvest_kernels.sh": {
-   "sha256": "90ee480f25f8de3a7dbfc40d32f7e369f9804fa43b9b5352de49bd72810288d7",
-   "size": 3128
+   "sha256": "ff9d79fdbe96071916fd4b2eb214139178ee9b41bfd9782049fafc62a52e9a21",
+   "size": 3386
   },
   "harness/submit_gate.sh": {
    "sha256": "96b85980474066bfbb14d022f5f6ded3729e28dd482898effdbc4ef0b57e9ae2",
@@ -81,8 +81,8 @@
    "size": 712
   },
   "harness/watch_public.py": {
-   "sha256": "299735f0c021acba1a50754737d9f93ebf833623b984f84a8e4460525107a85f",
-   "size": 14090
+   "sha256": "0eff22efc5a15ba25499e49c1d7fabc5268ecac7abec8a756fd0347e88ac63c0",
+   "size": 15327
   },
   "harness/campaign_wake.sh": {
    "sha256": "f5da899f3bc818fe2e1d7cfb50a6fcad658f9c75c5cb3b3b6d26d36d44d91fe3",
