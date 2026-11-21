@@ -1,7 +1,7 @@
 # RESEARCH STATE — live hypothesis queue (agent-maintained; rewrite freely)
 # Format: H# | claim | mechanism | est GM | cheapest discriminating test | status | evidence | updated
 # Rules: never re-run a KILLED test; re-rank by expected-GM/effort after each resolution.
-# Last full re-rank: 2026-11-21 02:45 UTC (post v136 = 33.10022; H22 DQI-qubits is top, H19/H20 narrowed, H21 confirmed)
+# Last full re-rank: 2026-11-21 12:20 UTC (post H26 kill + H22 kill; H24 generator-lend is top, H25 is the last angle-level probe)
 
 ## QUEUE (ranked)
 
@@ -368,6 +368,86 @@ H23 | **NEW — DQI private-salt insurance (public-invisible, +0.05 GM expected)
     variant with the same clean cost and a lower failure rate is strictly
     better.  Test: run the official DQI verifier at 8+ salts on each candidate
     DQI and compare the number of failed shots, not the score.
+
+## FRONTIER UPDATE 2026-11-21 12:20 UTC (post H26 kill) — read this first
+
+| | v135 | v136 (actual board row) | board #1 | our rank |
+|---|---|---|---|---|
+| GM | 33.07531 | **33.10018** (predicted 33.100221) | 33.34845 | ~42 (the 33.10020 cluster is 40+ teams deep) |
+| invsqrt | 37 q / 60,955.33 | same | ? | |
+| dqi | 900 q / 3.0504e11 | same | ? | |
+| chem | 405 q / T 13,292 | same | ? | |
+
+H26 | **KILLED 2026-11-21 — the invsqrt rotation angles are ALREADY minimax-optimal.**
+    The phase error is a deterministic function of the angles (bit-identical
+    signed errors across 4 independent outcome streams — the outcome-dependent
+    part of the circuit lives entirely in the 17 free Clifford/T rotations, so
+    a priced-only refit is salt-invariant).  The exact linear model
+    `theta(x) = sum_k u_k V[k,x] + sign(x)` (sense matrix extracted in one
+    instrumented simulation, `work/tools/invsqrt_sens.py`) turns the score
+    objective into a Chebyshev LP: maximise `m` s.t. `|err(x)| <= tol(x)-m`.
+    The LP returns `m = 36,584,657.8` = the current margin, zero violations:
+    **no angle change can improve the margin.**  Worse, the lane's CEILING is
+    `min_x tol(x) = 6.21e8` units (factor 17, i.e. **+0.13 GM at best**) —
+    the +0.25 GM target was arithmetically impossible.  Dropping any priced
+    rotation drives the margin to **-1.45e11** (the 33 indicators are linearly
+    independent, Gram rank 33); adding bit-basis rotations costs more
+    (+274 to +5,989 score) than the margin they buy.  Evidence:
+    `work/recon/invsqrt_refit_2026-11-21.md`.
+
+H24 | **NEW, TOP PRIORITY — invsqrt generator 39 q -> 38/37 q (+0.15 / +0.45 GM).**
+    The public invsqrt generator (`/tmp/opencode/gens/x/invsqrt/`, sha
+    `68eb8c13ebc75c5e443ed5a8c6357c2c77e6676c499ed1324108bf025faf1489`)
+    builds a **39 q / 24,387 instr / 1,452 Toffoli-like** circuit worth
+    61,696 (worse than our 37 q tree only because of the 2 extra qubits).  At
+    38 q it would score 60,114 (GM 33.253) and at 37 q 58,532 (**GM 33.5518,
+    +0.45 over the board**).  The generator already ships the lend machinery
+    (`lend29.py` locate/transplant, `carry.py` `carry_window()`): a wire that
+    holds an AFFINE function of other live wires is XOR-ed out, reused as
+    scratch, and restored afterwards, so it does not need its own physical
+    wire.  The public patch `invsqrt_lend29.patch` does this for block 29 but
+    keeps 39 q (it only saves 0.5 Toffoli).  Success criterion: a rebuilt
+    generator circuit with **38 q** whose official verifier score <= 60,114 and
+    whose phase is identical to the 39 q build on all 3,133,452 inputs.
+    Kill criterion: if no second lendable affine wire exists (measured by a
+    per-wire affine-dependency scan of the 39 q build), the lane is dead and
+    invsqrt is closed at 37 q / 60,955.
+
+H25 | **NEW — the only surviving angle-level lever: an extra salt-invariant
+    basis function.**  H26 killed the *angle* refit, but the circuit's phase is
+    a sum of indicator functions and a NEW indicator (an extra Z_POW on a
+    scratch wire whose value is a function of x) enlarges the span.  The
+    x-register bit basis was tried and does not pay (margin x1.33 at best for
+    +22 rotations).  A scratch wire holding a half-cell-like function could do
+    far better.  Test: instrument the simulator to record every wire's value
+    at each of the 33 priced-rotation positions (keep only salt-invariant
+    ones), then run the LP with the best candidate added.  Break-even: one
+    extra rotation pays only if the margin improves by **> x2.96** (each
+    rotation costs ~268 score).  Kill criterion: if the best candidate gives
+    < x2.96, drop the lane for good (the +0.13 GM ceiling applies here too).
+
+H22 | **KILLED 2026-11-21 by measurement.**  The DQI generator reproduces
+    `4b572141` byte-for-byte locally; the assembled 69.8 M-line KMX shows
+    **900 simultaneously live wires** (840 syndrome + 60 ancillas), **0
+    disjoint pairs**, and *all 900 wires have their last use in the final
+    stage* `decoder/decoder_return.kmx.xz`.  The only editable quantum part
+    (the 4 D16 field sites) holds just 850 of 318,972 Toffolis (0.27 %), so
+    neither Q nor T is attackable with public tooling.  Evidence:
+    `/tmp/opencode/dqi_build/{liveness,stage_map}.json`,
+    `work/tools/dqi_liveness.py`, `work/tools/dqi_stage_map.py`.
+
+H19 | **KILLED for our 37 q lineage (36 q is the spec floor).**  All 37 wires
+    are live over ~80 % of the 60,790-gate stream; the x-register is fixed at
+    22 = 2*n_p+2 by the spec, so 36 is the floor.  The live successor is H24
+    (a different, cheaper circuit family).
+
+H26b | **KILLED — rotation merge.**  `work/tools/rot_merge_scan.py` with the
+    correct commutation rule (Z_POW is diagonal, so it commutes with diagonal
+    gates and control-only touches, but NOT with X/CX/CCX *targeting* the
+    wire, SWAP/CSWAP/H/HMR/R) finds **0 mergeable rotation pairs** on both
+    our 37 q circuit and the 39 q generator build.  A permissive first pass
+    wrongly showed 38 pairs; the refined rule kills them.
+
 
 ## KILLED (evidence recorded — DO NOT re-enter)
 - H12 chem J lever (re-partition the angle columns into fewer/wider circuits): **KILLED 2026-11-19 by

@@ -512,3 +512,51 @@
 2026-11-21 02:22:03	boristown/qcc-gap-3-residue-repair-and-c43-native-compiler	adopted	33.10022 GM public tree (chem T 13,292 via multi-block DAG splice, 8 rupam loaders at matching boundaries); invsqrt+dqi identical to v135; local chem verifier PASS 252,573,399.16210923; staged as v136
 2026-11-21 02:22:05	alexchilton/33-08-lb-which-circuits-survive-private-salt	pull-failed	To search for one, try 'kaggle search <query>'.
 2026-11-21 02:22:06	alexchilton/33-07-lb-which-circuits-survive-private-salt	pull-failed	To search for one, try 'kaggle search <query>'.
+2026-11-21 02:57:41	manwithacat/vqcc-private-dqi-candidates	rejected	scanned; no tree beats v136 (33.10022): see note in KERNEL_WATCH
+2026-11-21 02:57:41	manwithacat/vqcc-apache-public-circuits	rejected	scanned; no tree beats v136 (33.10022): see note in KERNEL_WATCH
+2026-11-21 02:57:41	alexchilton/33-10-lb-which-circuits-survive-private-salt	rejected	scanned; no tree beats v136 (33.10022): see note in KERNEL_WATCH
+2026-11-21 02:57:41	prvsiyan/vqcc-verified-best-of-circuits-1106a	rejected	scanned; no tree beats v136 (33.10022): see note in KERNEL_WATCH
+2026-11-21 03:00:32	thomasgamet/quantum-attempt-reset	rejected	no QCC tree or parts
+2026-11-21 03:00:48	evgendvorkin/google-quantum-ai-deep-eda-with-analogies	rejected	no QCC tree or parts
+2026-11-21 03:01:11	leotang09/vqcc-t7421-submission	rejected	no QCC tree or parts
+2026-11-21 03:02:22	cosmorin/qcc-31-67947-rank-48-frontier-portfolio	rejected	no QCC tree or parts
+2026-11-21 03:02:28	kindasomethin/santa-2026-exact-portfolio-checkpoints	rejected	no QCC tree or parts
+2026-11-21 03:02:33	asteriospanoras/qcc-33-06908-best-public-score-and-credits	rejected	no QCC tree or parts
+2026-11-21 03:03:32	ayman0al0araishi/notebook3639cceb7f	rejected	no QCC tree or parts
+2026-11-21 03:03:53	prvsiyan/verifier-guided-quantum-circuit-optimization	rejected	no QCC tree or parts
+2026-11-21 03:04:06	ozertuu/quantum-sim-linalg-cache	rejected	no QCC tree or parts
+2026-11-21 03:04:13	orecord/quantum-circuit-compilation-pipeline	rejected	no QCC tree or parts
+2026-11-21 03:04:14	manwithacat/the-real-150k-was-the-friends-we-made	rejected	no QCC tree or parts
+2026-11-21 03:04:40	malyshevdanil/squares-in-squares-living-atlas-of-tight-packings	rejected	no QCC tree or parts
+2026-11-21 03:04:45	pablodiegoo/santa-2026-puzzle-structure-atlas	rejected	no QCC tree or parts
+2026-11-21 03:04:55	pablodiegoo/santa-2026-deterministic-atlas-solver	rejected	no QCC tree or parts
+2026-11-21 03:05:00	manwithacat/vqcc-chemistry-negative-results	rejected	no QCC tree or parts
+2026-11-21 03:05:22	pablodiegoo/google-quantum-compilation-starter-notebook	rejected	no QCC tree or parts
+2026-11-21 03:05:49	ratnachand/vqcc-verified-floor-and-circuit-anatomy	rejected	no QCC tree or parts
+2026-11-21 03:06:09	ratnachand/vqcc-verified-public-floor	rejected	no QCC tree or parts
+2026-11-21 03:06:13	syed3000/vqcc-own-circuit-portfolio-notebook	rejected	no QCC tree or parts
+2026-11-21 03:06:28	ghazarosbarseghyan91/vqcc-28-23441-verified-portfolio	rejected	no QCC tree or parts
+2026-11-21 03:06:28	ghazarosbarseghyan91/vqcc-combo-candidates	rejected	no QCC tree or parts
+2026-11-21 03:06:41	vumaniacom/qcc-verified-portfolio-28145-entry	rejected	no QCC tree or parts
+2026-11-21 03:06:45	taylorclark637/ecoherence-meta-systems-qel-quantum-github	rejected	no QCC tree or parts
+2026-11-21 03:07:28	manwithacat/vqcc-hedge-wizardry-notebook	rejected	no QCC tree or parts
+2026-11-21 03:07:34	ghazarosbarseghyan91/vqcc-28-18965-explainability	rejected	no QCC tree or parts
+2026-11-21 03:07:36	vumaniacom/qcc-verified-portfolio-and-where-the-gap-to-32-is	rejected	no QCC tree or parts
+2026-11-21 03:07:52	rishabhbafnaiiitd/frontier-quantum-circuit-compilation	rejected	no QCC tree or parts
+2026-11-21 03:07:57	manwithacat/vqcc-negative-results	rejected	no QCC tree or parts
+2026-11-21 03:07:59	mzishran/google-quantum-ai-inside-the-iadd-circuit	rejected	no QCC tree or parts
+2026-11-21 03:09:20	evgendvorkin/spectra-to-structures-deep-eda-molecular-clues	rejected	no QCC tree or parts
+2026-11-21 03:09:21	aviral342/quantum-v3-kaggle-import	rejected	no QCC tree or parts
+2026-11-21 03:09:22	asteriospanoras/qcc-28-23162-what-we-tried-what-failed-and-why	pull-failed	To search for one, try 'kaggle search <query>'.
+2026-11-21 03:09:32	wenbodai/qcc-best-verified-portfolio-28-2344-lb	rejected	no QCC tree or parts
+2026-11-21 03:48:49	arumpuri/mol2spec	rejected	no QCC tree or parts
+2026-11-21 03:49:07	leotang09/vqcc-t7421-submission	rejected	no QCC tree or parts
+2026-11-21 03:49:15	cosmorin/qcc-32-91616-milestone-d-reproduction	rejected	no QCC tree or parts
+2026-11-21 03:52:24	orecord/quantum-circuit-compilation-pipeline	rejected	no QCC tree or parts
+2026-11-21 04:28:59	manwithacat/vqcc-apache-public-circuits	pull-failed	To search for one, try 'kaggle search <query>'.
+2026-11-21 04:29:24	adilshamim8/google-quantum-ai-101	rejected	no QCC tree or parts
+2026-11-21 04:29:30	malyshevdanil/squares-in-squares-living-atlas-of-tight-packings	rejected	no QCC tree or parts
+2026-11-21 04:32:52	thomasgamet/quantum-attempt-reset	rejected	no QCC tree or parts
+2026-11-21 04:55:45	bhaviklimani/widle-studio-verified-quantum-circuit-compilatio	pull-failed	To search for one, try 'kaggle search <query>'.
+2026-11-21 04:55:47	dataset066/polycystic-ovary-syndrome-pcos-dataset	rejected	no QCC tree or parts
+2026-11-21 04:56:03	cosmorin/qcc-33-10020-tie-portfolio-reproduction	rejected	no QCC tree or parts

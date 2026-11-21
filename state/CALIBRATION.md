@@ -160,3 +160,74 @@ The per-shot failure probability of this decoder is ~1e-5, so
 P(at least one failed shot at the unknown private salt) ~= 64 %, and the expected
 private-board penalty is ~ -0.05 GM (bounded, not a zero).
 See `work/recon/dqi_salt_probe_2026-11-21.md`.
+
+## 2026-11-21 — v135 / v136 predictions vs actual, and the corrected leverage map
+
+**v135 (ref 58645864):** predicted GM 33.07535601389506 (from our own three
+official-verifier runs).  The board scored **33.07531** — exact to the 5
+published decimals.  The verifier-dominated model is exact when the bytes are
+exact; the 5th decimal is the board's rounding.
+
+**v136 (ref 58646682):** boristown's multi-block chemistry splice, predicted
+GM **33.100220972901965**; our own local chemistry run reproduced
+252,573,399.16210923 exactly (T 13,292, Q 405, lambda 46.918298421794454) and
+the in-kernel moat-lab v52 run agreed.  Board row at adoption time: 33.10018
+(public best = 33.1002).
+
+### CORRECTION — the leverage table in earlier notes was 33x too small per Toffoli
+
+GM = (PROD REF_i / cost_i)^(1/3), and cost = Q * (Toffoli-equivalents).  So one
+Toffoli removed changes the leg cost by Q/cost = 1/T_eq, and the GM moves by
+GM/3 * 1/T_eq.  At the v136 operating point (GM 33.10022):
+
+| move | GM delta (correct) |
+|---|---:|
+| invsqrt -1 qubit @37 q | **+0.2984** |
+| invsqrt -1 rotation (29.07 T = 7.27 T_eq) | **+0.0487** |
+| invsqrt -1 Toffoli-equivalent | **+0.00670** |
+| invsqrt -1 T gate | +0.00168 |
+| dqi -1 qubit @900 q (cost ~ Q^2 T) | **+0.0245** |
+| dqi -1 failed-shot penalty (private board only) | up to **+0.0507** expected |
+| dqi -1 Toffoli (of 316,131) | +0.0000349 |
+| chem -1 qubit @405 q | **+0.0272** |
+| chem -1 % of T | **+0.110** |
+| chem -1 Toffoli (of 13,292) | +0.00083 |
+
+The earlier notes quoted the *relative* fractions (1/37, 1/405, 2/900) instead
+of the GM deltas, which made Toffoli-level moves look worthless.  They are not:
+**37 invsqrt Toffolis = 1 invsqrt qubit = 8.5 chem qubits = 300 chem Toffolis
+= 2.26 % of chem T = 10.1 DQI qubits = 2.5 % of DQI T.**
+
+Gap to #1 (Z3C1oherence 33.34845) from 33.10022 = **0.24823**, i.e. ONE invsqrt
+qubit, or 2.26 % of chem T, or 10.1 DQI qubits, or 5.1 invsqrt rotations.
+
+### Salt probe (H21, CONFIRMED) — see work/recon/dqi_salt_probe_2026-11-21.md
+
+Our DQI (4b572141) drew **1 value error** at 3 of 4 non-default salts.  The
+verifier's repetition factor then costs +0.459 % of the DQI leg (-0.051 GM).
+Per-shot failure probability ~1e-5, so P(at least one failure at the unknown
+private salt) ~ 64 %.  Expected private-board penalty ~ **-0.05 GM**, bounded,
+not a zero.
+
+### v136 board row (2026-11-21 12:0x UTC) — prediction vs actual
+
+| | predicted | actual board row | delta |
+|---|---:|---:|---:|
+| GM | 33.100220972901965 | **33.10018** | -0.00004 (board rounds to 5 decimals) |
+| invsqrt | 60,955.3267 @37 q | 60,955.33 (local official run, 200,540,928 shots) | exact |
+| dqi | 3.050416470113978e11 @900 q, 0 err | same bytes as v135 | exact |
+| chem | 252,573,399.16210923 @405 q, lambda 46.918298421794454 | same | exact |
+
+The prediction was right to the board's precision.  The rank is ~42 because
+~40 teams independently published the same boristown tree family (33.10020).
+
+### H26 (invsqrt angle refit) — predicted vs measured
+
+Predicted: "a minimax refit of the 33 priced angles enlarges min_margin; +0.25 GM
+needs a x256 margin factor, +0.5 GM needs x65,536."
+Measured: the margin factor ceiling is **x16.98** (`min_margin <= min_x tol(x)
+= tol(max_x) = 6.21e8 units`), and the LP found **no** improvement at all
+(m = 36,584,657.8 = the current optimum).  The prediction was wrong on the
+mechanism (the fit was already minimax-optimal) and wrong by 4x on the
+ceiling (+0.13 GM, not +0.25).  Lesson: before promising a margin-driven GM
+gain, compute the tolerance ceiling `min_x tol(x)` — it bounds the whole lane.

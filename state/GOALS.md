@@ -153,3 +153,65 @@ v136 33.10022 (ref 58646682).  Gap to #1: **0.24823**.
    generator (`tonylica/.../invsqrt/`) has the carry-borrow machinery
    (`lend29.py` transplants a free wire) that produced the last two steps.
 3. **DQI private-salt insurance** (+0.05 expected, invisible publicly).
+
+## Leverage map refreshed 2026-11-21 02:50 UTC (post v136 = 33.10022)
+
+| move | GM delta | note |
+|---|---:|---|
+| **invsqrt -1 qubit @37 q** | **+0.2984** | closes the whole 0.248 gap by itself |
+| invsqrt -1 rotation | +0.0487 | 33 rotations cost 959 T = 240 T_eq (14.6 % of the leg) |
+| invsqrt -1 Toffoli-equivalent | +0.00670 | 1,406.31 CCX + 8.50 T + 33 rotations |
+| **chem -1 % of T (13,292)** | **+0.110** | loaders 6,792 (2 x 3,396) + heuristic 6,500 |
+| chem -1 qubit @405 q | +0.0272 | 118 persistent + 287 temporary |
+| chem -1 Toffoli | +0.00083 | public loader floor reached at T = 13,292 |
+| dqi -1 qubit @900 q | +0.0245 | cost = R(eps) Q^2 T, R fixed at 1.19126 for a clean draw |
+| dqi -1 % of T (316,131) | +0.110 | |
+| dqi -1 Toffoli | +0.0000349 | |
+
+**Frontier:** #1 Z3C1oherence 33.34845, #2 Kotaro Terada 33.10520,
+#3 No Bodies 33.10223, #4-6 at 33.10018 (boristown's tree = our v136),
+#7 Dan Pavlides 33.09354.  Our rows: v135 33.07531, v136 33.10022 (pending).
+
+**Equivalent targets for the 0.24823 gap:** 1 invsqrt qubit | 37 invsqrt
+Toffolis | 5.1 invsqrt rotations | 2.26 % chem T | 300 chem Toffolis |
+8.5 chem qubits | 10.1 DQI qubits | 2.5 % DQI T.
+
+**Lanes closed this wake (evidence on disk):**
+- chemistry loader re-splice: floor is T = 13,292 with public bytes; the
+  unconstrained per-k minimum (3,393/pass) is NOT compatible with the base npz
+  (4 swap candidates all FAIL the official verifier) — work/recon/loader_floor_2026-11-21.md
+- loader ANF rewrite: dead, the 35 output bits are dense functions of the
+  11-bit address (~670 ANF monomials each) — same file
+- salt risk on the DQI: quantified at -0.05 GM expected, not zero —
+  work/recon/dqi_salt_probe_2026-11-21.md
+
+## Leverage map refreshed 2026-11-21 12:25 UTC (post H26 kill, post v136 = 33.10018)
+
+| move | GM delta | note |
+|---|---:|---|
+| **invsqrt generator 39 q -> 38 q** | **+0.153** | generator build 39 q / 24,387 instr / 1,452 Toffoli-like = 61,696; at 38 q it would be 60,114 (GM 33.253) |
+| **invsqrt generator 39 q -> 37 q** | **+0.452** | 58,532 -> GM 33.5518, BEATS the board #1 by 0.20 |
+| invsqrt -1 qubit @37 q (our lineage) | +0.2984 | DEAD: 36 is the spec floor for this lineage (all 37 wires live ~80 % of the stream) |
+| invsqrt -1 rotation | +0.0487 | **DEAD**: the 33 angles are minimax-optimal (H26), the basis is full rank |
+| invsqrt +1 salt-invariant basis function | +0.02..+0.05 | only if the margin improves > x2.96; ceiling for the whole leg is +0.13 GM |
+| chem -1 % of T (13,292) | +0.110 | DEAD: loaders are at the public floor (T 13,292), Q is verifier-pinned |
+| chem -1 qubit @405 q | +0.0272 | DEAD: Q = persistent + max(heuristic_temp, loader_temp); heuristic 287 > loader 82 |
+| dqi -1 qubit @900 q | +0.0245 | **DEAD (H22)**: 900 wires simultaneously live to the last stage, 0 disjoint pairs |
+| dqi -1 % of T (316,131) | +0.110 | the only editable quantum part holds 850 of 318,972 Toffolis (0.27 %) |
+| dqi salt insurance (cleaner draw) | +0.05 expected | OPEN (H23): a public DQI with fewer failed shots is strictly better at equal clean cost |
+
+**Frontier:** #1 Z3C1oherence 33.34845, #2 codebeforework 33.12761, #3 No Bodies
+33.11359, #4 Almond Labs 33.10687, #5 Frost Cerberus 33.10523, #6 VKAS 33.10522;
+~40 teams sit at 33.10020-33.10032 (the boristown tree family).  Our row: v136
+**33.10018** (predicted 33.100221 — the board rounds to 5 decimals), rank ~42.
+
+**Equivalent targets for the 0.24827 gap:** 1 invsqrt qubit in the GENERATOR
+lineage (38 q) | 2 generator qubits (37 q) | 2.26 % chem T | 10.1 DQI qubits |
+2.5 % DQI T | 5.1 invsqrt rotations.
+
+**Lanes closed this wake (evidence on disk):**
+- invsqrt angle refit (H26): the fit is minimax-optimal and the margin ceiling
+  is +0.13 GM — work/recon/invsqrt_refit_2026-11-21.md
+- DQI qubit cut (H22): 900 wires live to the last stage, 0 disjoint pairs
+- rotation merge: 0 mergeable pairs under the correct commutation rule
+- chemistry: Q verifier-pinned, T at the public loader floor

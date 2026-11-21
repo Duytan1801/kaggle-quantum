@@ -17,40 +17,40 @@
    "size": 41717
   },
   "state/KERNEL_WATCH.md": {
-   "sha256": "93b296fa7ac98c3eebcd36bb67b1cb2fb26cc37af8cc4fdfc0acb783fa03c4b7",
-   "size": 83469
+   "sha256": "4e317b09df99cb16caaf6c94dbf31521fdf37fbf92ec3aa157186ca62b79c5cb",
+   "size": 86963
   },
   "state/RESEARCH_STATE.md": {
-   "sha256": "a1a81e3387e963e51401000194a23a7affabeaf92d72f0d4b9473c9a20d76d4d",
-   "size": 34785
+   "sha256": "0398f8a203cb46e0dd771073d6b36c6f1182a012152245be3e22597362692b72",
+   "size": 39910
   },
   "state/CALIBRATION.md": {
-   "sha256": "9c8063d70ff1cc97e475b3e9a821918f88e032aca065d2e4fb6aee0aa17047d6",
-   "size": 9997
+   "sha256": "cfa59e5e487faf33bb905c74e2e547c649426c3a29aadd6d47563467c2d043b5",
+   "size": 13623
   },
   "state/GOALS.md": {
-   "sha256": "0cfd825d02559f640a5dbc34bad5f6247552e863ea1ccbefa4c5b55d2e91ce77",
-   "size": 9718
+   "sha256": "376949add642604b5b35797a23087469fc4f3fc1f0cbcf9a8636540bd4dcd937",
+   "size": 13724
   },
   "harvest/ADOPTED.tsv": {
-   "sha256": "66dddd9dc909667f86b0a6a920dd9ae58e371f30f4c914f9fd8be9b156639460",
-   "size": 49968
+   "sha256": "927ed601930d4a49617b9a321a1057201d74245096e16903aca027233e976c8f",
+   "size": 54885
   },
   "harvest/watch.log": {
-   "sha256": "c4f7b6885e2de234440932a01e90f0627d4c8c3c723452854cac08d97f0512c4",
-   "size": 5406
+   "sha256": "27a06235944ea00d3814ac617b925aa5bf28cd2986ab6d1494736882b518525a",
+   "size": 6140
   },
   "harvest/PENDING.tsv": {
-   "sha256": "79be07f8eef580aa9b700d23344ed7bde653dfe0c51362f3e32a1e8e3942533a",
-   "size": 6640
+   "sha256": "2b8c7bff914ba17f5821eaf9af5bc36de87969a6d935a9c0704657a7a9ad4165",
+   "size": 914
   },
   "harvest/SEEN.tsv": {
-   "sha256": "7ad5a8ec32fa58d0014d7d9d1ee50ba0fd5cb49c168f8166d7c1b837effa02a3",
-   "size": 47815
+   "sha256": "73625d7bcfb0e346bc6499742cbcc7e87a8534b9e8bd833bc89918fb4501f18a",
+   "size": 49064
   },
   "harvest/AUTHORS.txt": {
-   "sha256": "af4c6ce108ea76f5eca186ec5642b9ca6524cf9e4fb08c61a9210ed4af4ff0ac",
-   "size": 1794
+   "sha256": "595dcf3e689a5246ede0a7f2f97bddeaf93fa7f8bf6efe186f9c2ca1f0a64ff8",
+   "size": 1836
   },
   "harness/harvest_kernels.sh": {
    "sha256": "ff9d79fdbe96071916fd4b2eb214139178ee9b41bfd9782049fafc62a52e9a21",
@@ -148,6 +148,10 @@
    "sha256": "6b4debfd30fda42a8b1197e53d490a8b34b7b134ea68de50a34defcc2089ce0c",
    "size": 2781
   },
+  "tools/invsqrt_fit.py": {
+   "sha256": "cae40e245dce80a3912911bd185426349c17517f6dba47ede2282179456fc6a5",
+   "size": 9860
+  },
   "tools/build_moat_v133.py": {
    "sha256": "a3f8665cb01567583796d2012068ac291a6cf452b76cb57fc011d520d02b2528",
    "size": 7279
@@ -216,6 +220,10 @@
    "sha256": "ef83a7daf1caae50702dd67379526f9d7df59951afe42f2b30a693197149a01b",
    "size": 3749
   },
+  "tools/dqi_liveness.py": {
+   "sha256": "6b818edda3e0ca59227348dcbee39323caea83d02cab5a6b430007454bee661c",
+   "size": 5704
+  },
   "tools/dqi_ops.py": {
    "sha256": "05b219ffe18559109a8b3db4dbca491bd59fcb99a519a29b4fd5644e0570f449",
    "size": 2928
@@ -276,6 +284,14 @@
    "sha256": "4fc4b68026f1b8c946097e5007face7ce62582588d47bffad16403f3555354fc",
    "size": 6524
   },
+  "tools/dqi_stage_map.py": {
+   "sha256": "50e5b5d0ea1a52f0cd6bc24f26e22780d24690af9fd60d1271cbdc5779932003",
+   "size": 3467
+  },
+  "tools/invsqrt_lab.py": {
+   "sha256": "fc492a9e88ff4019e4b895f16664e662571d6577fc8be0a22b26fe08f6616327",
+   "size": 6503
+  },
   "tools/build_moat_v126.py": {
    "sha256": "20493466b394cdf36fd4dcbe22f384592ad68a8d4aa47f04633a23683bbbb816",
    "size": 7898
@@ -303,6 +319,10 @@
   "tools/liveness.py": {
    "sha256": "8377583b598a75362b023f56dd641f2be9a30919e331e5cf682850dae8a8202b",
    "size": 7502
+  },
+  "tools/invsqrt_rank.py": {
+   "sha256": "8e942e09199553b0ec4f436fdca0af4389b058d8e0cb1c7a88ac95d1e4231613",
+   "size": 3628
   },
   "tools/build_moat_v121.py": {
    "sha256": "d044a72fa91e84a0de5b62b3909fa07b95c24f13f1351c2d7faee214fd29263b",
@@ -396,6 +416,10 @@
    "sha256": "5ad92d08b0b53de35d58efec9ca85ddf80365d55c899cabfd4262271b4c22c40",
    "size": 2948
   },
+  "tools/invsqrt_shrink.py": {
+   "sha256": "82e48e3bd6bb8d2206b734decb6eaa0b4dec2aab8db9c97b571113ebf9774ee6",
+   "size": 7500
+  },
   "tools/evo_pop.py": {
    "sha256": "1a0c50eb3643988ff4360658364edc57f4b884b0ad7fb99fff1de0876f80b9a3",
    "size": 5449
@@ -428,6 +452,10 @@
    "sha256": "28226ca81ee5a663ad0a4691fabaccdd7055c43db2cf99dbba90d57257ddf418",
    "size": 3690
   },
+  "tools/invsqrt_refit.py": {
+   "sha256": "5d6940b1cd364ac68470d9ff9f690a550061a5ddfea916746197a8ca71d0b5d4",
+   "size": 10254
+  },
   "tools/build_receipt_v132.py": {
    "sha256": "9592c1dbd5c02021a01a35c2b5805651c82822612a725dc9a51c9fa5860cbd53",
    "size": 5406
@@ -436,6 +464,10 @@
    "sha256": "2c9d45a97e9cfcd19dfd3102c2a1c700bad85d1b8abaf1d0d07968d6c13dfdbb",
    "size": 8008
   },
+  "tools/rot_merge_scan.py": {
+   "sha256": "91f7c68a26050b9f53084f83328f7af7a640a76ec157bb24924dfac24f35aef3",
+   "size": 7393
+  },
   "tools/analyze_dqi.py": {
    "sha256": "f8ef1efc6f4b3262edf9ce8413a180c2c3da8f3d8f948179438a25de8be5c24d",
    "size": 2972
@@ -443,6 +475,10 @@
   "tools/build_moat_v124.py": {
    "sha256": "a5cafaed121f0e5024294c6e21e379d89f80197097fae3cc4112aa936c790e24",
    "size": 8017
+  },
+  "tools/invsqrt_sens.py": {
+   "sha256": "dfd47ae4c10731816a9e8310d5d38d046f238aadd06a7469680d876d7f5775e4",
+   "size": 4799
   },
   "tools/build_moat_v129.py": {
    "sha256": "7397d1de28203fd1fae48a8eb1f2aff2745a1ef28e116e3fb896ff9baadcecec",
@@ -485,12 +521,16 @@
    "size": 7938
   },
   "tools/queue_sweep.py": {
-   "sha256": "3ca4eb7c1a6903c9df1029bafe0cb98f5c8bf626fea00ead589c36cfb2f82130",
-   "size": 10755
+   "sha256": "2dd9e2b1f8d8a046cf2e5589b5bc1ff17e4c024f9cf5215050d038c5adb72c67",
+   "size": 11361
   },
   "tools/sweep_invsqrt_fast.py": {
    "sha256": "8e19d195917d34c3935131423a5204b1ede0418d81d563aa9fd30d6647d2885c",
    "size": 12302
+  },
+  "tools/kmxsim.py": {
+   "sha256": "2ee284839765dcbd33fa93d7b0c04456674c90c7fa04571bea5dffe7df3bf2a8",
+   "size": 12821
   },
   "tools/assemble_v121.py": {
    "sha256": "a6e690ef50d56a8cae4220466fc7f9d1442b877dd418795d18c2b353d9ccbbce",

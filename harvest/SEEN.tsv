@@ -32,6 +32,8 @@ dataset|arizalfirdaus123/vqcc-tuned-circuit-portfolio|2026-11-18T09:15:39.150000
 dataset|arsen123/casmi26-fraghub-novel-refs|2026-11-16T23:26:51.343000
 dataset|arsen123/casmi26-trainret-gate-calibration|2026-11-18T12:15:15.383000
 dataset|arsen123/qcc-hash-pinned-verification-harness|2026-11-21T00:17:30.993000
+dataset|arthjshah/guman-mam-specs-2|2026-11-21T04:31:25.203000
+dataset|arumpuri/mol2spec|2026-11-21T03:42:56.613000
 dataset|asteriospanoras/qcc-circuit-atlas|2026-11-18T23:56:10.370000
 dataset|asteriospanoras/qcc-circuit-atlas|2026-11-19T10:22:01.310000
 dataset|asteriospanoras/qcc-circuit-atlas|2026-11-19T11:18:01.620000
@@ -57,6 +59,7 @@ dataset|cosmorin/qcc-31-67947-frontier-set|2026-11-21T01:09:16.470000
 dataset|cosmorin/quantum-qcc-v7-circuits|2026-10-27T02:54:06.227000
 dataset|danishlynxthembones/vqcc-thembones-milestone-generators|2026-11-20T16:02:13.323000
 dataset|danishlynxthembones/vqcc-thembones-milestone-set|2026-11-20T14:05:07.303000
+dataset|dataset066/polycystic-ovary-syndrome-pcos-dataset|2026-11-21T04:44:55.503000
 dataset|deba10106/vqcc-s027-portfolio|2026-11-20T18:23:46.123000
 dataset|dehaiwang/vqcc-wb-milestone-circuit-set|2026-11-19T09:50:06.187000
 dataset|dehaiwang/vqcc-wb-milestone-circuit-set|2026-11-19T10:08:50.870000
@@ -138,6 +141,7 @@ dataset|manwithacat/vqcc-apache-public-circuits|2026-11-19T02:37:16.277000
 dataset|manwithacat/vqcc-apache-public-circuits|2026-11-19T04:50:31.117000
 dataset|manwithacat/vqcc-apache-public-circuits|2026-11-19T10:49:58.533000
 dataset|manwithacat/vqcc-apache-public-circuits|2026-11-21T00:16:56.063000
+dataset|manwithacat/vqcc-apache-public-circuits|2026-11-21T04:00:35.403000
 dataset|manwithacat/vqcc-bilinear-agent-evaluation|2026-10-31T23:15:32.900000
 dataset|manwithacat/vqcc-chemistry-negative-results|2026-11-18T18:09:14.117000
 dataset|manwithacat/vqcc-chemistry-negative-results|2026-11-20T17:26:20
@@ -251,6 +255,8 @@ kernel|abdelghanicharouiti/quantum-omni-v16-8-4-1|2026-11-20T23:14:10.197000
 kernel|abdelghanicharouiti/quantum-omni-v16-8-4-x|2026-11-20T22:58:21.120000
 kernel|abdelghanicharouiti/quantum-omni-v16-8-5|2026-11-20T23:33:51.700000
 kernel|abdelghanicharouiti/quantum-omni-v16-8-6|2026-11-20T23:56:39.233000
+kernel|adilshamim8/google-quantum-ai-101|2026-11-21T03:54:49.457000
+kernel|adilshamim8/google-quantum-ai-101|2026-11-21T03:55:50.200000
 kernel|ahmedberatozer/casmi26-lotus-npatlas-build|2026-10-21T17:24:51.283000
 kernel|ahmedberatozer/quantum-ai-df-thc-group-compression|2026-11-06T20:13:34.513000
 kernel|ahoirg/qcc-invk6-k6c|2026-11-19T01:55:08.300000
@@ -278,6 +284,7 @@ kernel|alexchilton/31-68-lb-which-circuits-survive-private-salt|2026-11-20T19:22
 kernel|alexchilton/33-07-lb-which-circuits-survive-private-salt|2026-11-21T01:47:16.440000
 kernel|alexchilton/33-08-lb-which-circuits-survive-private-salt|2026-11-21T02:02:23.823000
 kernel|alexchilton/33-10-lb-which-circuits-survive-private-salt|2026-11-21T02:19:35.177000
+kernel|alexchilton/33-10-lb-which-circuits-survive-private-salt|2026-11-21T02:35:39.507000
 kernel|almondlabs/almond-labs-qcc-31-69054-demonstrable-advantage|2026-11-20T19:50:34.373000
 kernel|almondlabs/almond-labs-qcc-31-69692-demonstrable-advantage|2026-11-20T23:19:16.277000
 kernel|almondlabs/almond-labs-qcc-31-70105-demonstrable-advantage|2026-11-20T23:57:45.767000
@@ -321,8 +328,11 @@ kernel|bhaviklimani/experiment-008-portfolio-optimization|2026-11-20T15:21:49.34
 kernel|bhaviklimani/experiment-013-dqi-exact-non-overlapping-toffo|2026-11-20T15:19:50.240000
 kernel|bhaviklimani/widle-quantum-ai-original-optimization-003|2026-11-20T15:22:50.987000
 kernel|bhaviklimani/widle-quantum-ai-research-optimization|2026-11-20T22:21:58.893000
+kernel|bhaviklimani/widle-quantum-ai-research-optimization|2026-11-21T04:51:17.487000
 kernel|bhaviklimani/widle-quantum-ai-submission-002-clean|2026-11-07T06:41:02.453000
 kernel|bhaviklimani/widle-studio-verified-quantum-circuit-compilatio|2026-11-21T00:05:28.027000
+kernel|bhaviklimani/widle-studio-verified-quantum-circuit-compilatio|2026-11-21T04:43:30.263000
+kernel|bhaviklimani/widle-verified-quantum-circuit-compilatio|2026-11-21T04:51:04.187000
 kernel|bingchenzhao/vqcc-31-68-verified-three-task-submission|2026-11-20T21:10:28.127000
 kernel|boristown/darkagi-vqcc-2026|2026-11-20T22:21:49.113000
 kernel|boristown/qcc-gap-3-residue-repair-and-c43-native-compiler|2026-11-19T03:57:34.927000
@@ -337,6 +347,8 @@ kernel|cosmorin/qcc-28-24101-prelude3-portfolio|2026-11-20T02:04:53.600000
 kernel|cosmorin/qcc-31-67947-rank-48-frontier-portfolio|2026-11-21T01:24:09.043000
 kernel|cosmorin/qcc-31-67947-rank-48-frontier-portfolio|2026-11-21T01:45:38.217000
 kernel|cosmorin/qcc-32-86114-milestone-reproduction|2026-11-21T01:10:04.347000
+kernel|cosmorin/qcc-32-91616-milestone-d-reproduction|2026-11-21T02:58:11.217000
+kernel|cosmorin/qcc-33-10020-tie-portfolio-reproduction|2026-11-21T04:29:04.957000
 kernel|cosmorin/quantum-heliosli-v58-reproduction-lb-23-36258|2026-10-31T14:49:21.857000
 kernel|cosmorin/quantum-somejoint-22-75-guard-verified|2026-10-29T14:48:56.387000
 kernel|danishlynxthembones/gift-from-thembones-vqcc-31-67924|2026-11-20T16:03:03.113000
@@ -421,6 +433,7 @@ kernel|leotang09/vqcc-t7421-submission|2026-11-19T04:21:31.637000
 kernel|leotang09/vqcc-t7421-submission|2026-11-19T09:48:45.753000
 kernel|leotang09/vqcc-t7421-submission|2026-11-21T00:39:10.107000
 kernel|leotang09/vqcc-t7421-submission|2026-11-21T01:42:26.467000
+kernel|leotang09/vqcc-t7421-submission|2026-11-21T02:58:51.843000
 kernel|liuzewen123/qcc-frontier-s|2026-11-17T20:56:24.213000
 kernel|liuzewen123/vqcc-31-68312-grg-and-gauge-chemistry|2026-11-20T21:16:05.780000
 kernel|liuzewen123/vqcc-31-69054-almond-release-reverified|2026-11-20T22:05:17.723000
@@ -433,6 +446,7 @@ kernel|malachiwmoody/vqcc-open-notes|2026-11-04T09:07:10.267000
 kernel|malyshevdanil/squares-in-squares-living-atlas-of-tight-packings|2026-11-16T07:14:23.807000
 kernel|malyshevdanil/squares-in-squares-living-atlas-of-tight-packings|2026-11-19T06:38:01.843000
 kernel|malyshevdanil/squares-in-squares-living-atlas-of-tight-packings|2026-11-20T23:21:29.730000
+kernel|malyshevdanil/squares-in-squares-living-atlas-of-tight-packings|2026-11-21T03:23:41.800000
 kernel|malyshevdanil/verifiable-quantum-compilation-getting-started|2026-10-22T23:34:46.573000
 kernel|manvenderraparia/vqcc-28-23163-lp-invsqrt-and-df-thc-refit|2026-11-19T01:25:39.250000
 kernel|manwithacat/dfthc-refit-reproduce-hw-21-and-hw-23|2026-11-06T08:57:24.860000
@@ -499,6 +513,7 @@ kernel|nursrijan/qcc-25-2268-verified-sota-portfolio|2026-11-10T12:35:18.357000
 kernel|orecord/quantum-circuit-compilation-pipeline|2026-11-21T01:12:56.553000
 kernel|orecord/quantum-circuit-compilation-pipeline|2026-11-21T01:39:02.410000
 kernel|orecord/quantum-circuit-compilation-pipeline|2026-11-21T02:14:16.397000
+kernel|orecord/quantum-circuit-compilation-pipeline|2026-11-21T03:12:32.373000
 kernel|ozertuu/28-23163-sota-verified-compilation-top-portfolio|2026-11-18T16:39:54.083000
 kernel|ozertuu/quantum-ai-fast-runner-starter-notebook|2026-11-18T17:37:18.403000
 kernel|ozertuu/santa-2026-138-867-1-sota-verified-portfolio|2026-11-19T08:45:52.510000
@@ -568,6 +583,7 @@ kernel|syed3000/vqcc-own-circuit-portfolio-notebook|2026-11-20T22:34:09.330000
 kernel|syehsyoh/vqcc-frontier-plus-solution-milestone-1|2026-11-20T23:44:16.307000
 kernel|taylorclark637/notebook2f60e4fa23|2026-11-18T19:52:16.357000
 kernel|thomasgamet/quantum-attempt-reset|2026-11-19T02:24:50.710000
+kernel|thomasgamet/quantum-attempt-reset|2026-11-20T12:37:56.497000
 kernel|thomasgamet/quantum-attempt-reset|2026-11-21T01:02:59.347000
 kernel|thomasgamet/quantum-attempt-reset|2026-11-21T02:17:37.340000
 kernel|tonylica/quantum-ai-32-85306-ready|2026-11-21T00:32:25.477000

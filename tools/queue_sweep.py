@@ -57,19 +57,30 @@ def write_pending(rows: list[list[str]]) -> None:
     PENDING.write_text('\n'.join('\t'.join(r) for r in rows) + ('\n' if rows else ''))
 
 
-def read_state() -> dict[str, str]:
-    st = {}
+def read_state() -> dict[tuple[str, str], str]:
+    """State is keyed by (ref, version): the radar is VERSION-AWARE, so a
+    re-uploaded dataset/kernels is a NEW release and must be swept again.
+
+    Legacy 2-column rows (`ref\\tverdict`, no version) are read as
+    (ref, '') and therefore do NOT block a row that carries a version stamp.
+    """
+    st: dict[tuple[str, str], str] = {}
     if STATE.exists():
         for line in STATE.read_text().splitlines():
-            if '\t' in line:
-                ref, verdict = line.split('\t', 1)[0], line.split('\t', 1)[1]
-                st[ref] = verdict
+            if '\t' not in line:
+                continue
+            parts = line.split('\t')
+            if len(parts) >= 3:
+                ref, version, verdict = parts[0], parts[1], parts[2]
+            else:
+                ref, version, verdict = parts[0], '', parts[1]
+            st[(ref, version)] = verdict
     return st
 
 
-def append_state(ref: str, verdict: str) -> None:
+def append_state(ref: str, verdict: str, version: str = '') -> None:
     with open(STATE, 'a') as f:
-        f.write(f'{ref}\t{verdict}\n')
+        f.write(f'{ref}\t{version}\t{verdict}\n')
 
 
 def mark_done(ref: str, verdict: str, note: str) -> None:
@@ -220,7 +231,7 @@ def main() -> int:
 
     rows = read_pending()
     state = read_state()
-    todo = [r for r in rows if len(r) >= 4 and r[1] not in state
+    todo = [r for r in rows if len(r) >= 4 and (r[1], r[5] if len(r) > 5 else '') not in state
             and (not a.only or a.only in r[1])]
     if a.limit:
         todo = todo[:a.limit]
@@ -242,7 +253,7 @@ def main() -> int:
                 verdict, note, _ = fut.result()
             except Exception as e:
                 verdict, note = 'error', f'{type(e).__name__}: {e}'[:200]
-            append_state(ref, verdict)
+            append_state(ref, verdict, r[5] if len(r) > 5 else '')
             if verdict == 'error':
                 # transient (verifier timeout / download hiccup): do not close it
                 print(f'  error        {ref}  {note[:120]}', flush=True)
