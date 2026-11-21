@@ -21,8 +21,8 @@
    "size": 86963
   },
   "state/RESEARCH_STATE.md": {
-   "sha256": "0398f8a203cb46e0dd771073d6b36c6f1182a012152245be3e22597362692b72",
-   "size": 39910
+   "sha256": "889c401f619c1856632154da66c977eb2eb84412865785c2fab5bdb56d077f79",
+   "size": 40573
   },
   "state/CALIBRATION.md": {
    "sha256": "cfa59e5e487faf33bb905c74e2e547c649426c3a29aadd6d47563467c2d043b5",
@@ -33,16 +33,16 @@
    "size": 13724
   },
   "harvest/ADOPTED.tsv": {
-   "sha256": "927ed601930d4a49617b9a321a1057201d74245096e16903aca027233e976c8f",
-   "size": 54885
+   "sha256": "1b2f397bcda725f5f21ba83a8e089ae40b14636b787afd5fafde81b466551de7",
+   "size": 55170
   },
   "harvest/watch.log": {
    "sha256": "27a06235944ea00d3814ac617b925aa5bf28cd2986ab6d1494736882b518525a",
    "size": 6140
   },
   "harvest/PENDING.tsv": {
-   "sha256": "2b8c7bff914ba17f5821eaf9af5bc36de87969a6d935a9c0704657a7a9ad4165",
-   "size": 914
+   "sha256": "47c55dbfa2f70e5861c1c9c170a34066fe2354c215dba10e605dbfcde38bb75b",
+   "size": 428
   },
   "harvest/SEEN.tsv": {
    "sha256": "73625d7bcfb0e346bc6499742cbcc7e87a8534b9e8bd833bc89918fb4501f18a",
@@ -399,6 +399,10 @@
   "tools/build_sha_table.py": {
    "sha256": "b206a6159cbfb1fb8c4039989e7a9d07c3d7b8ae7bc3574509472fab19c3b455",
    "size": 1626
+  },
+  "tools/invsqrt_affine.py": {
+   "sha256": "849e90001b892fcad6e8acf00f2e0b15efd1499bd29ba675a586d1f76ca08d9a",
+   "size": 5077
   },
   "tools/peak_runs.py": {
    "sha256": "35a7680489bd422ff294e7c4b8623b5e2e6c8d627bde2d1febb3fff5f7735307",

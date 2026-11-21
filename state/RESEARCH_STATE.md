@@ -395,7 +395,17 @@ H26 | **KILLED 2026-11-21 — the invsqrt rotation angles are ALREADY minimax-op
     (+274 to +5,989 score) than the margin they buy.  Evidence:
     `work/recon/invsqrt_refit_2026-11-21.md`.
 
-H24 | **NEW, TOP PRIORITY — invsqrt generator 39 q -> 38/37 q (+0.15 / +0.45 GM).**
+H24 | **TOP PRIORITY — invsqrt generator 39 q -> 38/37 q (+0.15 / +0.45 GM).
+    LEND MACHINERY CONFIRMED 2026-11-21 12:5x.**  New tool
+    `work/tools/invsqrt_affine.py` computes the GF(2) null space of the 39
+    wire-value bit-vectors (exact over all 3,133,452 inputs) and finds the
+    lend relation **q29 = q5^q7^q9^q10^q13^q14^1** at op indices 17.7k-18.3k —
+    exactly the loan in `carry.py`, disappearing the moment the loan is
+    executed and restored afterwards.  So the mechanism works on this
+    circuit; what is still open is whether a SECOND wire has a usable affine
+    window.  Full scan (975 points) running -> /tmp/opencode/affine39_full.json.
+    Evidence: `work/recon/invsqrt_lend_scan_2026-11-21.md`.
+    Original entry:
     The public invsqrt generator (`/tmp/opencode/gens/x/invsqrt/`, sha
     `68eb8c13ebc75c5e443ed5a8c6357c2c77e6676c499ed1324108bf025faf1489`)
     builds a **39 q / 24,387 instr / 1,452 Toffoli-like** circuit worth
