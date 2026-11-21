@@ -1,1 +1,50 @@
-kernel	cosmorin/qcc-28-23441-verified-portfolio	2026-11-19 10:22:51	QCC 28 23441 Verified Portfolio	cosmorin	2026-11-19T10:12:49.280000	comp-kernels
+kernel	boristown/qcc-gap-3-residue-repair-and-c43-native-compiler	2026-11-21 02:01:46	QCC: Gap-3 Residue Repair and C43 Native Compiler	暗黑AGI	2026-11-21T02:00:16.103000	comp-kernels
+kernel	alexchilton/33-07-lb-which-circuits-survive-private-salt	2026-11-21 01:51:24	33.07 LB | Which Circuits Survive Private Salt?	alex chilton	2026-11-21T01:47:16.440000	comp-kernels
+kernel	cosmorin/qcc-31-67947-rank-48-frontier-portfolio	2026-11-21 01:51:24	QCC 31 67947 Rank 48 Frontier Portfolio	cosmorin	2026-11-21T01:45:38.217000	comp-kernels
+kernel	leotang09/vqcc-t7421-submission	2026-11-21 01:51:24	VQCC T7421 Submission	Leo Tang	2026-11-21T01:42:26.467000	comp-kernels
+kernel	ayman0al0araishi/notebook3639cceb7f	2026-11-21 01:51:24	notebook3639cceb7f	Ayman Al-Araishi	2026-11-21T01:42:05.163000	comp-kernels
+kernel	orecord/quantum-circuit-compilation-pipeline	2026-11-21 01:51:24	Quantum circuit compilation pipeline 	Or4k2!	2026-11-21T01:39:02.410000	comp-kernels
+dataset	kindasomethin/santa-2026-exact-portfolio-checkpoints	2026-11-21 01:36:14	Santa 2026 Exact Portfolio Checkpoints	kindasomethin	2026-11-21T01:34:19.987000	user:kindasomethin
+kernel	asteriospanoras/qcc-33-06908-best-public-score-and-credits	2026-11-21 01:51:24	QCC 33.06908 | Best public score and credits	Asterios Panoras	2026-11-21T01:32:26.847000	comp-kernels
+kernel	thomasgamet/quantum-attempt-reset	2026-11-21 01:31:36	Quantum Attempt - Reset	ThomasG	2026-11-21T01:02:59.347000	comp-kernels
+kernel	prvsiyan/verifier-guided-quantum-circuit-optimization	2026-11-21 01:31:36	Verifier-Guided Quantum Circuit Optimization	prvsiyan	2026-11-21T00:32:59.290000	comp-kernels
+dataset	prvsiyan/vqcc-verified-best-of-circuits-1106a	2026-11-21 01:31:44	Circuits That Survived the Salt	prvsiyan	2026-11-21T00:30:12.107000	search:vqcc
+kernel	manwithacat/the-real-150k-was-the-friends-we-made	2026-11-21 01:31:36	The Real $150K Was the Friends We Made	manwithacat	2026-11-21T00:28:53.830000	comp-kernels
+dataset	manwithacat/vqcc-apache-public-circuits	2026-11-21 01:31:44	VQCC public circuits (Apache-2.0)	manwithacat	2026-11-21T00:16:56.063000	search:vqcc
+dataset	manwithacat/vqcc-private-dqi-candidates	2026-11-21 01:31:44	VQCC Quantum Voodoo	manwithacat	2026-11-20T23:31:20.327000	search:vqcc
+dataset	ozertuu/quantum-sim-linalg-cache	2026-11-21 01:31:46	Quantum Sim Linalg Cache	ozertuu	2026-11-20T23:27:31.437000	search:quantum circuit
+kernel	malyshevdanil/squares-in-squares-living-atlas-of-tight-packings	2026-11-21 01:36:55	Squares in Squares Living Atlas of Tight Packings	malyshevdanil	2026-11-20T23:21:29.730000	user:malyshevdanil
+kernel	syed3000/vqcc-own-circuit-portfolio-notebook	2026-11-21 01:31:36	VQCC Own-Circuit Portfolio Notebook	Syed Asad Ali	2026-11-20T22:34:09.330000	comp-kernels
+dataset	syed3000/vqcc-own-circuit-portfolio	2026-11-21 01:31:44	VQCC Own-Circuit Portfolio	syed3000	2026-11-20T22:31:21.850000	search:vqcc
+dataset	asteriospanoras/qcc-circuit-atlas	2026-11-21 01:31:42	QCC Circuit Atlas + Verified Refit Toolkit	asteriospanoras	2026-11-20T21:24:45.673000	search:qcc
+kernel	evgendvorkin/google-quantum-ai-deep-eda-with-analogies	2026-11-21 01:34:52	🧠 Google Quantum AI | Deep EDA with Analogies	evgendvorkin	2026-11-20T20:50:51.307000	user:evgendvorkin
+dataset	pablodiegoo/santa-2026-puzzle-structure-atlas	2026-11-21 01:38:33	Santa 2026: Puzzle Structure Atlas	pablodiegoo	2026-11-20T18:08:36.080000	user:pablodiegoo
+kernel	pablodiegoo/santa-2026-deterministic-atlas-solver	2026-11-21 01:38:35	Santa 2026: Deterministic Atlas Solver	pablodiegoo	2026-11-20T17:59:38.920000	user:pablodiegoo
+dataset	manwithacat/vqcc-chemistry-negative-results	2026-11-21 01:31:44	VQCC Negative Results	manwithacat	2026-11-20T17:26:20	search:vqcc
+kernel	pablodiegoo/google-quantum-compilation-starter-notebook	2026-11-21 01:38:35	Google Quantum Compilation Starter Notebook	pablodiegoo	2026-11-20T16:40:24.053000	user:pablodiegoo
+kernel	ratnachand/vqcc-verified-floor-and-circuit-anatomy	2026-11-21 01:39:07	VQCC verified floor and circuit anatomy	ratnachand	2026-11-20T16:01:13.370000	user:ratnachand
+dataset	ratnachand/vqcc-verified-public-floor	2026-11-21 01:31:46	VQCC verified public floor	ratnachand	2026-11-20T16:00:06.770000	search:quantum circuit
+kernel	ghazarosbarseghyan91/vqcc-28-18965-explainability	2026-11-21 01:35:06	VQCC 28.18965 explainability	ghazarosbarseghyan91	2026-11-20T11:34:54.387000	user:ghazarosbarseghyan91
+kernel	ghazarosbarseghyan91/vqcc-28-23441-verified-portfolio	2026-11-21 01:35:06	VQCC 28.23441 verified portfolio	ghazarosbarseghyan91	2026-11-20T11:25:10.137000	user:ghazarosbarseghyan91
+dataset	ghazarosbarseghyan91/vqcc-combo-candidates	2026-11-21 01:31:48	vqcc combo candidates	ghazarosbarseghyan91	2026-11-20T11:23:27.863000	search:invsqrt
+kernel	vumaniacom/qcc-verified-portfolio-and-where-the-gap-to-32-is	2026-11-21 01:40:54	QCC verified portfolio and where the gap to 32 is	vumaniacom	2026-11-20T00:12:09.377000	user:vumaniacom
+dataset	vumaniacom/qcc-verified-portfolio-28145-entry	2026-11-21 01:31:42	QCC verified portfolio 28.145 entry	vumaniacom	2026-11-20T00:10:38.653000	search:qcc
+dataset	taylorclark637/ecoherence-meta-systems-qel-quantum-github	2026-11-21 01:40:17	ECOherence-Meta-Systems — QEL / Quantum (GitHub)	taylorclark637	2026-11-19T21:54:58.243000	user:taylorclark637
+kernel	manwithacat/vqcc-hedge-wizardry-notebook	2026-11-21 01:37:03	VQCC Hedge Wizardry Notebook	manwithacat	2026-11-19T20:25:07.780000	user:manwithacat
+dataset	manwithacat/vqcc-hedge-wizardry	2026-11-21 01:31:49	VQCC Hedge Wizardry	manwithacat	2026-11-19T20:23:33.417000	search:dqi
+kernel	mzishran/google-quantum-ai-inside-the-iadd-circuit	2026-11-21 01:37:55	Google Quantum AI | Inside the iadd Circuit.	mzishran	2026-11-19T18:12:03.033000	user:mzishran
+kernel	rishabhbafnaiiitd/frontier-quantum-circuit-compilation	2026-11-21 01:39:23	Frontier Quantum Circuit Compilation	rishabhbafnaiiitd	2026-11-19T18:04:26.277000	user:rishabhbafnaiiitd
+kernel	manwithacat/vqcc-negative-results	2026-11-21 01:37:03	VQCC Negative Results	manwithacat	2026-11-19T16:42:47.533000	user:manwithacat
+kernel	mzishran/google-quantum-ai-verified-28-23-frontier-portfo	2026-11-21 01:37:55	Google Quantum AI | Verified 28.23 Frontier Portfo	mzishran	2026-11-19T14:01:43.737000	user:mzishran
+kernel	wenbodai/qcc-best-verified-portfolio-28-2344-lb	2026-11-21 01:41:03	QCC best verified portfolio (28.2344 LB)	wenbodai	2026-11-19T13:02:02.363000	user:wenbodai
+kernel	evgendvorkin/spectra-to-structures-deep-eda-molecular-clues	2026-11-21 01:34:52	🧬Spectra to Structures Deep EDA & Molecular Clues	evgendvorkin	2026-11-19T12:22:57.713000	user:evgendvorkin
+kernel	wenbodai/qcc-milestone-circuit-reproduction	2026-11-21 01:41:03	QCC milestone circuit reproduction	wenbodai	2026-11-19T12:07:05.277000	user:wenbodai
+kernel	wenbodai/qcc-28-2344-verified-three-task-portfolio-28234	2026-11-21 01:41:03	QCC 28.2344 verified three-task portfolio 28234	wenbodai	2026-11-19T11:57:58.100000	user:wenbodai
+kernel	aviral342/quantum-v3-kaggle-import	2026-11-19 11:30:03	Quantum_V3_Kaggle_Import	Aviral Trivedi	2026-11-19T11:27:05.053000	comp-kernels
+kernel	asteriospanoras/qcc-28-23162-what-we-tried-what-failed-and-why	2026-11-19 11:19:44	QCC 28.23162 | What we tried, what failed and Why	Asterios Panoras	2026-11-19T11:16:46.913000	comp-kernels
+dataset	dziyanavalenta/q2026-v150-dqi-generator	2026-11-21 01:34:46	Q2026 v150 dqi generator	dziyanavalenta	2026-11-18T07:20:17.403000	user:dziyanavalenta
+kernel	liuzewen123/qcc-frontier-s	2026-11-21 01:36:37	qcc-frontier-s	liuzewen123	2026-11-17T20:56:24.213000	user:liuzewen123
+kernel	areebbb/qai-fewer-toffolis-same-qubits-lb-28-06015	2026-11-21 01:32:42	QAI | Fewer Toffolis, Same Qubits | LB 28.06015	areebbb	2026-11-15T17:50:48.683000	user:areebbb
+kernel	topeseun100/quantum-circuit-compilation-work	2026-11-21 01:40:35	quantum-circuit-compilation-work	topeseun100	2026-11-09T01:47:41.767000	user:topeseun100
+kernel	loxigicck/breaking-frontier-lock-repro	2026-11-21 01:36:41	Breaking Frontier Lock Repro	loxigicck	2026-11-08T08:14:55.963000	user:loxigicck
+kernel	bhaviklimani/widle-quantum-ai-submission-002-clean	2026-11-21 01:33:31	Widle Quantum AI – Submission 002 – Clean	bhaviklimani	2026-11-07T06:41:02.453000	user:bhaviklimani

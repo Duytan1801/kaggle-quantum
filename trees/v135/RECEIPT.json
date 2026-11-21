@@ -1,0 +1,58 @@
+{
+ "portfolio": "v135_public_best_33_0753",
+ "shas_ok": true,
+ "verifiers": [
+  "verify_submission_invsqrt.py",
+  "verify_submission_dqi.py",
+  "verifiers/dfthcsos/verify.py"
+ ],
+ "verifies": {
+  "invsqrt": {
+   "status": "PASS",
+   "score": 60955.32670759028,
+   "num_qubits": 37,
+   "toffoli_count": 1406.3123148856675,
+   "toffoli_equivalent": 1647.4412623673047,
+   "rotation_count": 33.0,
+   "rotation_eps": 1.8880574198146154e-13,
+   "verified_shots": 200540928,
+   "worst_error_over_tolerance": 0.9994717987127908,
+   "worst_x": 252,
+   "circuit_sha256": "d2148a7cd7a4d0a004eca1e7b18f9fd1282df4ed3be4a9aa970842f9119fa307",
+   "note": "our own local run of the UNCHANGED official verifier (verify_submission_invsqrt.py, default 200,540,928 shots)"
+  },
+  "dqi": {
+   "status": "PASS",
+   "score": 305041647011.3978,
+   "num_qubits": 900,
+   "toffoli_count": 316131.2215625,
+   "value_errors": 0,
+   "phase_errors": 0,
+   "verified_shots": 102400,
+   "effective_error_rate": 0.0008660587301657926,
+   "repetition_factor": 1.1912604648115832,
+   "circuit_sha256": "4b5721411adc239f61fc11c773a2358b75dfe7cb15586efae4f0459c77d77e52",
+   "note": "our own in-kernel run of the UNCHANGED official verifier (moat-lab v51, default salt, 102,400 shots)"
+  },
+  "dfthcsos": {
+   "status": "PASS",
+   "score": 253143456.48793402,
+   "num_qubits": 405,
+   "toffoli_count": 13322.0,
+   "lambda_eff": 46.918298421794454,
+   "batch_size": 5,
+   "note": "our own local run of the UNCHANGED official verifier (verifiers/dfthcsos/verify.py --shots-per-address 1)"
+  }
+ },
+ "ratios": {
+  "invsqrt": 34.070430688983215,
+  "dqi": 80.11844881876,
+  "dfthcsos": 13.255723196919691
+ },
+ "gm": 33.07535601389506,
+ "previous_gm": 28.23441,
+ "delta_gm": 4.84094601389506,
+ "source": "OUTPUT of goodpjw2008/qcc-public-best-loader-table-swap-lb-33-0753 (LB 33.0753): invsqrt d2148a7cd7a4d0a0 (rithvikredrouthu/qcc-milestone-set), dqi 4b5721411adc239f (tonylica/quantum-ai-32-85306-ready), chemistry npz 6b9903dda33a + loader_k_2 046679fe (rupam2020 + almondlabs exchange)",
+ "sha_table": "work/sha_tables/sha_table_v135.txt",
+ "verdict": "V135-RECEIPT-PASS"
+}

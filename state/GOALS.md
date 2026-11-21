@@ -89,3 +89,30 @@ G5 (NEW, elevated): Evolutionary generator search (H6, AlphaEvolve-style) — ev
 **Current best public mix (v133):** invsqrt ecf908fec987b61a 74,383.698758 · dqi 15a4b740 345,256,821,433.9815
 · chem npz 6ef06081 294,642,169.5117 ⇒ GM **28.23441**.  Leader #1 31.74002 ⇒ gap **+3.51 GM**, and
 varianceofx's measurement attributes the whole gap to DQI T.
+
+## Leverage map refreshed 2026-11-21 (post v135 = 33.07536)
+
+| move | GM | why |
+|---|---|---|
+| **invsqrt -1 qubit @ 37 q** | **+0.30** | cost = Q x T_eq; the 44->37 step bought +4.8 GM |
+| invsqrt -1 Toffoli-equivalent | +0.0002 | 1/1647 of the cost |
+| dqi -1 qubit @ 900 q | +0.00074 | cost = rep x Q^2 x T |
+| dqi -1 Toffoli | +0.0000011 | needs a new decoder algorithm |
+| chem -1 qubit @ 405 q | +0.00082 | cost = lambda x T x Q |
+| chem -1 Toffoli | +0.000025 | T 13,322 = 6,822 loaders + 6,500 heuristic |
+| chem lambda_eff -1e-7 | +0.0000006 | refit-only, ~0.1 % total |
+
+**Frontier:** #1 Z3C1oherence 33.34845, #2 No Bodies 33.10223, #3 Nic Barthelemy
+33.10018, #4 Kotaro Terada 33.07974, #5 goodpjw2008 33.07404.  Public best tree
+33.07536 (v135, ours).  Gap to #1: **+0.27 GM**, one invsqrt qubit or ~2.5 % on
+one leg.
+
+**Generator sources now public (the real capability unlock):**
+- `tonylica/quantum-ai-32-85306-task-generators`: invsqrt (`build.py`, `carry.py`,
+  `divider.py`, `lend29.py`, `v50/apply_best.py`, `base_v90.kmx`), chemistry
+  (`build.py` + editable `W`/`H2_I`/`Hsym`/`tree_edges`/`angle_words`), DQI
+  (decoder stages + selector).
+- `prvsiyan/vqcc-verified-best-of-circuits-1106a`: refit code (`code/refit_grg.py`),
+  26 versions of salt-verified members, README with measured costs.
+- `alexchilton/33-08-lb-which-circuits-survive-private-salt`: the 8-salt table and
+  the per-circuit price history.

@@ -99,8 +99,23 @@ def pull(kind: str, ref: str, dest: pathlib.Path, timeout: int) -> tuple[bool, s
             return False, out.strip().splitlines()[-1][:200] if out.strip() else f'rc={r.returncode}'
     except subprocess.TimeoutExpired:
         return False, f'TIMEOUT after {timeout}s'
+    # A KERNEL publishes its tree in the kernel OUTPUT (submission.zip), not in
+    # the notebook source: `kaggle kernels pull` never fetches it.  That blind
+    # spot hid the best public DQI circuit (4471b493) inside
+    # leotang09/vqcc-t7421-submission's output.  So fetch the output too.
+    if kind == 'kernel':
+        outdir = dest / 'kernel_output'
+        try:
+            r2 = subprocess.run(['kaggle', 'kernels', 'output', ref, '-p', str(outdir)],
+                                capture_output=True, text=True, timeout=timeout, env=env)
+            if r2.returncode != 0:
+                print(f'  (kernel output unavailable for {ref}: '
+                      f'{(r2.stderr or "").strip().splitlines()[-1][:120] if (r2.stderr or "").strip() else "rc=" + str(r2.returncode)})',
+                      flush=True)
+        except subprocess.TimeoutExpired:
+            print(f'  (kernel output TIMEOUT for {ref})', flush=True)
     # extract every archive
-    for z in list(dest.glob('*.zip')):
+    for z in list(dest.rglob('*.zip')):
         try:
             subprocess.run(['unzip', '-o', '-q', str(z), '-d', str(dest / 'x')], timeout=600)
         except Exception:
@@ -118,7 +133,12 @@ def scan(dest: pathlib.Path) -> dict:
         if not root.exists():
             continue
         try:
-            r = subprocess.run([str(PY), str(DS_SCAN), str(root), '--out', str(dest / 'scan.json')],
+            # --skip-score: the official invsqrt verifier needs the full
+            # 200,540,928-shot run and times out under sweep load.  Triage only
+            # needs the shas + qubit counts; a candidate tree is scored through
+            # the full gate afterwards.
+            r = subprocess.run([str(PY), str(DS_SCAN), str(root), '--out', str(dest / 'scan.json'),
+                                '--skip-score'],
                                capture_output=True, text=True, timeout=900)
             txt = (r.stdout or '')
             i, j = txt.find('{'), txt.rfind('}')
@@ -133,7 +153,11 @@ def scan(dest: pathlib.Path) -> dict:
 def classify(scan_res: dict) -> tuple[str, str]:
     """-> (verdict, note).  'candidate' means a full tree that needs the gate."""
     if not scan_res:
-        return 'rejected', 'scan produced nothing'
+        return 'error', 'scan produced nothing (retry)'
+    if scan_res.get('error'):
+        # ds_scan failed (usually the invsqrt verifier timed out under load).
+        # This is NOT a verdict about the release: keep it queued for a retry.
+        return 'error', f"scan error (retry): {scan_res['error']}"[:300]
     cands = scan_res.get('candidates') or []
     parts = scan_res.get('parts') or []
     if cands:
@@ -156,7 +180,8 @@ def classify(scan_res: dict) -> tuple[str, str]:
     return 'rejected', 'no QCC tree or parts'
 
 
-def process(kind: str, ref: str, title: str, timeout: int, dry: bool) -> tuple[str, str, str]:
+def process(kind: str, ref: str, title: str, timeout: int, dry: bool,
+            size_cap_gb: float = 4.0) -> tuple[str, str, str]:
     dest = WORK / slug(ref)
     if dest.exists():
         shutil.rmtree(dest, ignore_errors=True)
@@ -173,7 +198,7 @@ def process(kind: str, ref: str, title: str, timeout: int, dry: bool) -> tuple[s
         size = sum(f.stat().st_size for f in files)
     except Exception:
         size = 0
-    if size > 4 * 1024**3:
+    if size > size_cap_gb * 1024**3:
         shutil.rmtree(dest, ignore_errors=True)
         return 'too-large', f'{size/1024**3:.1f} GB, not scanned', ''
     res = scan(dest)
@@ -189,6 +214,8 @@ def main() -> int:
     ap.add_argument('--timeout', type=int, default=300)
     ap.add_argument('--only', default='', help='substring filter on the ref')
     ap.add_argument('--dry-run', action='store_true')
+    ap.add_argument('--size-cap-gb', type=float, default=4.0,
+                    help='skip datasets larger than this (default 4)')
     a = ap.parse_args()
 
     rows = read_pending()
@@ -206,7 +233,8 @@ def main() -> int:
     done_n = 0
     t0 = time.time()
     with cf.ThreadPoolExecutor(max_workers=a.workers) as ex:
-        futs = {ex.submit(process, r[0], r[1], r[3], a.timeout, a.dry_run): r for r in todo}
+        futs = {ex.submit(process, r[0], r[1], r[3], a.timeout, a.dry_run,
+                                  a.size_cap_gb): r for r in todo}
         for fut in cf.as_completed(futs):
             r = futs[fut]
             kind, ref, title = r[0], r[1], r[3]
@@ -215,7 +243,10 @@ def main() -> int:
             except Exception as e:
                 verdict, note = 'error', f'{type(e).__name__}: {e}'[:200]
             append_state(ref, verdict)
-            if verdict == 'candidate':
+            if verdict == 'error':
+                # transient (verifier timeout / download hiccup): do not close it
+                print(f'  error        {ref}  {note[:120]}', flush=True)
+            elif verdict == 'candidate':
                 ts = time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime())
                 with open(CANDIDATES, 'a') as f:
                     f.write(f'{ts}\t{kind}\t{ref}\t{title}\t{note}\n')

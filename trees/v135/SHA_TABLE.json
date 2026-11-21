@@ -1,0 +1,77 @@
+{
+ "tree": "v135 = public best 33.0753 (goodpjw2008 kernel output): invsqrt d2148a7c 60,955.3267 @37q + dqi 4b572141 305,041,647,011 @900q 0err + chem npz 6b9903dd + exchanged loader_k_2 046679fe (405q, T 13,322, lambda 46.918298) = 253,143,456.4879; GM 33.075356",
+ "files": {
+  "dfthcsos/angle_k_0.kmb": [
+   "8df36485e020b9e30353142a694b69018dc7defdf81847a6b405cd0d9b152402",
+   492818
+  ],
+  "dfthcsos/angle_k_1.kmb": [
+   "b84a398bc050db8dd8b4caa5a73ebee8a1ff262453ce9397671775718863f492",
+   482551
+  ],
+  "dfthcsos/angle_k_10.kmb": [
+   "706df9b9dd42586bf78eda4b671ea192131ef0a93ae64cb3054125def250ce95",
+   265855
+  ],
+  "dfthcsos/angle_k_11.kmb": [
+   "5ac10d8f786b6e54f161ee52c7b6a3b42f6b3b76b06edbb9bb248f3f84217097",
+   477544
+  ],
+  "dfthcsos/angle_k_12.kmb": [
+   "6e85a07768f1d9c2aadea1f5cf4f6013678a190f2f96c99c008f0b9d5cbf27b7",
+   261042
+  ],
+  "dfthcsos/angle_k_13.kmb": [
+   "d4ff6058fe7b36a9b21e21d7f5b591966b44c5dd95ce56de6127f54042a2eac9",
+   475895
+  ],
+  "dfthcsos/angle_k_14.kmb": [
+   "022fcb8d0b2ba892c3dfecb77d9f782f78763295d093d113a29859c811166a9d",
+   477911
+  ],
+  "dfthcsos/angle_k_2.kmb": [
+   "046679fe31313ac2393df03c85e83f3e9a313909919a3288c0d4f109e09951e2",
+   312675
+  ],
+  "dfthcsos/angle_k_3.kmb": [
+   "8a241e9e0884bc32433ffd873afef74d7857198f5b34da217641de15578e7a6e",
+   266308
+  ],
+  "dfthcsos/angle_k_4.kmb": [
+   "517985499e517440036e6e080561e34e45364472ac86c19ef1f1472c990c6f88",
+   269441
+  ],
+  "dfthcsos/angle_k_5.kmb": [
+   "0718ed8e096bb8947de07341240448ba2b1ae399801bbc9426ab5e9fa8d789b4",
+   478039
+  ],
+  "dfthcsos/angle_k_6.kmb": [
+   "e476a76381494e6be9a4e046dfa5eaac06eda33a2251c59458d861e26d89a392",
+   265580
+  ],
+  "dfthcsos/angle_k_7.kmb": [
+   "18da4cf5c0c67ca2f169abea481c1aa6ba26db9d3e2fb79263267f7ca5d65dff",
+   477889
+  ],
+  "dfthcsos/angle_k_8.kmb": [
+   "005df3b85f43b06096226f4736fee0f6613d0737386a874e4aadfa83b6c68ec6",
+   477524
+  ],
+  "dfthcsos/angle_k_9.kmb": [
+   "085ec2716e8980aa5dfc36fe3131497f71ef7fb1a463311c143575c1d997a437",
+   265588
+  ],
+  "dfthcsos/submission.npz": [
+   "6b9903dda33a3912714b67c8323e1d1058b6e408db7b2b8d2ee1cb6454b8aa69",
+   1864776
+  ],
+  "dqi.kmb": [
+   "4b5721411adc239f61fc11c773a2358b75dfe7cb15586efae4f0459c77d77e52",
+   617641621
+  ],
+  "invsqrt.kmb": [
+   "d2148a7cd7a4d0a004eca1e7b18f9fd1282df4ed3be4a9aa970842f9119fa307",
+   523348
+  ]
+ }
+}

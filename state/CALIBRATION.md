@@ -75,3 +75,38 @@ chem cost −1.05 → +0.0000004.
 **DQI salt fact (H16, CONFIRMED by source):** `verify_submission_dqi.py::_initial_seed(circuit_hash, salt)`
 hashes the .kmb bytes; the draw is a property of the DQI circuit alone, not of the 18-file tree.  Same DQI
 bytes ⇒ same draw ⇒ the board-clean v132/v133 DQI draw is preserved by any change to the other legs.
+
+## 2026-11-21 — the 2-day frontier jump and v135 (prediction vs actual)
+
+**Why we were 838th.**  The radar was alive but the *adjudicator* was not keeping
+pace: 378 rows had been closed and then resurrected by the radar's flush bug
+(fixed 2026-11-19), and between 11-19 10:34 and 11-21 01:39 the public board
+moved 31.74002 -> 33.34845 and the public tree from 28.23441 to 33.07536.  Two
+days of releases (ThemBones' three new circuits on 11-20, then three cheaper
+files overnight) went unread.  **The lesson: the queue must be adjudicated every
+wake, and a kernel's OUTPUT (submission.zip) is where the tree lives —
+`kaggle kernels pull` never fetches it.**
+
+**v133 prediction vs actual:** predicted 28.23441; the board scored
+**28.23441** exactly (rank 838).  The verifier-dominated model is exact when the
+bytes are exact.
+
+**v135 (public best, adopted 2026-11-21):**
+| leg | bytes | our own verifier run | ratio |
+|---|---|---|---|
+| invsqrt | d2148a7cd7a4d0a0 | PASS 60,955.32670759028 (200,540,928 shots, 37 q, 1406.3123 Toffolis, eps 1.888e-13, worst/tol 0.9994718 @252) | 34.070431 |
+| dqi | 4b5721411adc239f | PASS 305,041,647,011.3978 (102,400 shots, **0 value / 0 phase**, 900 q, 316,131.22 T, rep 1.19126) | 80.118449 |
+| dfthcsos | npz 6b9903dda33a + loader_k_2 046679fe | PASS 253,143,456.48793402 (405 q, T 13,322, lambda_eff 46.918298421794454) | 13.255723 |
+Predicted **33.07535601** (local) = **33.07535601389506** (in-kernel), submitted
+as ref 58645864.  **+4.84095 GM over v133.**
+
+**Leverage at the v135 operating point:**
+| move | GM | note |
+|---|---|---|
+| invsqrt -1 qubit @37 q | **+0.30** | 1/37 of the cost; the single biggest lever |
+| invsqrt -1 Toffoli-eq | +0.0002 | 1/1647 of the cost |
+| dqi -1 qubit @900 q | +0.00074 | cost is proportional to Q^2 (2/900 / 3) |
+| dqi -1 Toffoli (of 316,131) | +0.0000011 | needs an algorithmic cut |
+| chem -1 qubit @405 q | +0.00082 | cost is proportional to Q |
+| chem -1 Toffoli (of 13,322) | +0.000025 | 1/13,322 / 3 |
+| chem T -1 % | +0.0033 | the heuristic 6,500 is 51 % of T |

@@ -1,7 +1,7 @@
 # RESEARCH STATE — live hypothesis queue (agent-maintained; rewrite freely)
 # Format: H# | claim | mechanism | est GM | cheapest discriminating test | status | evidence | updated
 # Rules: never re-run a KILLED test; re-rank by expected-GM/effort after each resolution.
-# Last full re-rank: 2026-11-19 (post v133 = 28.23441; H12 killed, H15/H16/H17 live)
+# Last full re-rank: 2026-11-21 (post v135 = 33.07536; H19 invsqrt-qubits, H20 chem-T, H21 salt)
 
 ## QUEUE (ranked)
 
@@ -263,6 +263,49 @@ H18 | **The J lever might still be live on the OTHER loader generator** | our sh
     4,022-Toffoli ANGLE loader family (ozertuu's "quantum-sim-linalg-cache") | **BLOCKED 2026-11-19** — that
     dataset contains ONLY 18 .kmb + 1 .npz, no source code.  Re-open if a source release appears.
 
+
+## FRONTIER SHIFT 2026-11-21 (the queue was 2 days stale — read this first)
+
+| | 2026-11-19 (v133) | 2026-11-21 (v135) |
+|---|---|---|
+| board #1 | 31.74002 | **33.34845** |
+| best public tree | 28.23441 | **33.07536** (goodpjw2008 output) |
+| our row | 28.23441 (rank 838) | 33.07536 (ref 58645864, pending) |
+| invsqrt | 44 q, 74,383.70 | **37 q, 60,955.33** (d2148a7c) |
+| dqi | 890 q, 365,894 T, 3.4526e11 | **900 q, 316,131 T, 3.05042e11** (4b572141) |
+| chem | 427 q, 14,706 T, 294.642M | **405 q, 13,322 T, 253.143M** (npz 6b9903dd + loader2 046679fe) |
+
+The jump was **not** a new mechanism per task so much as three better circuits:
+a 37-qubit invsqrt, a 900-qubit DQI with 316k Toffolis, and 405-qubit chemistry
+loaders.  All three are public and byte-pinned in v135.
+
+H19 | **invsqrt qubits are the dominant remaining lever: at 37 q, one qubit is worth
+    ~+0.30 GM** | score = Q x (toffoli-equivalent), so a 1-qubit cut is a 1/37 =
+    2.7 % cost cut = +0.9 % GM = **+0.30 GM**, versus +0.0002 GM for one Toffoli.
+    The 44 q -> 37 q step bought +4.8 GM.  The generator is now PUBLIC:
+    `tonylica/quantum-ai-32-85306-task-generators` ships `invsqrt/build.py`,
+    `carry.py`, `divider.py`, `lend29.py`, `v50/apply_best.py`, `angles.json` |
+    +0.30 GM per qubit | build the 37 q circuit from the public generator, confirm
+    the exact 60,955.3267 receipt, then try one more borrowed wire (36 q) and score
+    with the official verifier | **NEW / highest value**
+
+H20 | **chem T is 51 % heuristic: 6,500 of 13,322 Toffolis are state prep + Givens,
+    not the angle loaders** | resources from our own run: angles_toffoli 6,822
+    (3,411 per pass x 2) + heuristic 6,500 (outer 337 + inner state prep 4,213 +
+    Givens 1,950).  The heuristic depends on the factorization SHAPE, and the
+    chemistry generator is public with editable `W (9,127,46)`, `H2_I (9,46)`,
+    `Hsym_lower (2926,)`, `tree_edges (75,2)`, `angle_words (1219,75)` |
+    a shape/refit that cuts 300 heuristic Toffolis = +0.02 GM; 1,000 = +0.08 GM |
+    rebuild from `tonylica/.../chemistry/build.py`, reproduce 253,143,456.49, then
+    sweep refits (prvsiyan's `code/refit_grg.py` in
+    `prvsiyan/vqcc-verified-best-of-circuits-1106a`) | **NEW / medium**
+
+H21 | **The private-salt penalty for a DQI shot error is bounded at ~-0.15 % GM** |
+    alexchilton's 8-salt study: one failed shot in 102,400 raises the DQI cost by
+    +0.46 % (repetition factor), i.e. -0.15 % GM, NOT a zero.  But the new
+    4b572141 has only ever been run at the default salt | -0.05 GM worst case |
+    run the official DQI verifier at 3-4 salts in-kernel on the v135 snapshot |
+    **NEW / cheap (3 x 127 s)**
 ## KILLED (evidence recorded — DO NOT re-enter)
 - H12 chem J lever (re-partition the angle columns into fewer/wider circuits): **KILLED 2026-11-19 by
   measurement.**  The mechanism is real and was verified end-to-end (the verifier scores the words it
