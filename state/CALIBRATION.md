@@ -110,3 +110,53 @@ as ref 58645864.  **+4.84095 GM over v133.**
 | chem -1 qubit @405 q | +0.00082 | cost is proportional to Q |
 | chem -1 Toffoli (of 13,322) | +0.000025 | 1/13,322 / 3 |
 | chem T -1 % | +0.0033 | the heuristic 6,500 is 51 % of T |
+
+## 2026-11-21 — v135 scored exactly; v136 (multi-block chem splice) submitted
+
+**v135 prediction vs actual.**  Predicted GM 33.07535601389506 from our own three
+official-verifier runs; the board scored **33.07531** (33.075356... to the
+displayed precision).  Exact, as for v133 (28.23441).  Rank after scoring: 25.
+
+**v136 (boristown's multi-block DAG chemistry splice) — adopted and submitted.**
+Public tree = the OUTPUT of `boristown/qcc-gap-3-residue-repair-and-c43-native-compiler`
+(kernel outputs are where competitor trees live; `kernels pull` never fetches them).
+invsqrt and dqi are byte-identical to v135; 8 of the 15 chemistry loaders change
+(k = 2,3,4,8,9,10,12,13,14 from rupam2020 instead of rithvik, spliced only at
+matching batch boundaries).
+
+| leg | bytes | our own official run | ratio |
+|---|---|---|---|
+| invsqrt | d2148a7cd7a4d0a0 | PASS 60,955.32670759028 (200,540,928 shots, local + in-kernel) | 34.070431 |
+| dqi | 4b5721411adc239f | PASS 305,041,647,011.3978 (102,400 shots, 0 value / 0 phase, in-kernel) | 80.118449 |
+| dfthcsos | npz 6b9903dda33a + 15 loaders | PASS 252,573,399.16210923 (T 13,292, Q 405, lambda 46.918298421794454; local + in-kernel) | 13.285641 |
+
+Predicted **33.10022097**, published receipt 33.100220972901965.  Submitted as
+ref **58646682** (+0.02486 over v135).  Our local chem verifier reproduced the
+public receipt to the last digit.
+
+**The corrected leverage table (the old one was under-stated by the Q factor).**
+At the v136 operating point (GM 33.10022):
+
+| move | dGM | note |
+|---|---:|---|
+| invsqrt -1 qubit @37 q | **+0.2984** | cost = Q x T_eq |
+| invsqrt -1 rotation (29.07 T = 7.27 T_eq) | +0.0487 | 33 rotations cost 959 T = 240 T_eq |
+| invsqrt -1 Toffoli-equivalent | +0.00670 | |
+| dqi -1 qubit @900 q | **+0.0245** | cost = R x Q^2 x T |
+| dqi -1 Toffoli (of 316,131) | +0.0000349 | |
+| chem -1 qubit @405 q | **+0.0272** | cost = lambda x T x Q |
+| chem -1 Toffoli (of 13,292) | +0.00083 | |
+| chem -1 % of T | **+0.110** | |
+| chem -1 % of lambda_eff | +0.110 | lambda is at its floor (46.9183 vs 46.9160 best known) |
+
+Gap to #1 (33.34845) = **0.24823**, which is worth any one of:
+8.5 chem qubits OR 2.26 % chem T OR 300 chem Toffolis OR 10.1 DQI qubits OR
+2.5 % DQI T OR 5.1 invsqrt rotations OR 37 invsqrt Toffolis OR 1 invsqrt qubit.
+
+**H21 salt probe (CONFIRMED).**  The official DQI verifier at five salts on our
+exact bytes: clean at the default salt and at salt-v135-d, **one value error at
+salt-v135-a/b/c**.  Cost 305,041,647,011.4 -> 306,442,8xx,xxx (+0.459 %).
+The per-shot failure probability of this decoder is ~1e-5, so
+P(at least one failed shot at the unknown private salt) ~= 64 %, and the expected
+private-board penalty is ~ -0.05 GM (bounded, not a zero).
+See `work/recon/dqi_salt_probe_2026-11-21.md`.

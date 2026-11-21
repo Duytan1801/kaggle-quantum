@@ -500,3 +500,15 @@
 2026-11-21 02:11:20	kindasomethin/santa-2026-exact-portfolio-frontier-137782	rejected	no QCC tree or parts
 2026-11-21 02:11:20	cosmorin/qcc-28-24101-prelude3-portfolio	rejected	no QCC tree or parts
 2026-11-21 02:11:34	rishabhbafnaiiitd/visual-guide-to-quantum-circuit-compilation	rejected	no QCC tree or parts
+2026-11-21 02:13:11	wenbodai/qcc-milestone-circuit-reproduction	rejected	no QCC tree or parts
+2026-11-21 02:13:28	wenbodai/qcc-28-2344-verified-three-task-portfolio-28234	rejected	no QCC tree or parts
+2026-11-21 02:13:33	dziyanavalenta/q2026-v150-dqi-generator	rejected	no QCC tree or parts
+2026-11-21 02:13:55	liuzewen123/qcc-frontier-s	rejected	no QCC tree or parts
+2026-11-21 02:14:13	areebbb/qai-fewer-toffolis-same-qubits-lb-28-06015	rejected	no QCC tree or parts
+2026-11-21 02:14:17	topeseun100/quantum-circuit-compilation-work	rejected	no QCC tree or parts
+2026-11-21 02:14:34	loxigicck/breaking-frontier-lock-repro	rejected	no QCC tree or parts
+2026-11-21 02:14:53	bhaviklimani/widle-quantum-ai-submission-002-clean	rejected	no QCC tree or parts
+2026-11-21 02:16:06	mzishran/google-quantum-ai-verified-28-23-frontier-portfo	rejected	no QCC tree or parts
+2026-11-21 02:22:03	boristown/qcc-gap-3-residue-repair-and-c43-native-compiler	adopted	33.10022 GM public tree (chem T 13,292 via multi-block DAG splice, 8 rupam loaders at matching boundaries); invsqrt+dqi identical to v135; local chem verifier PASS 252,573,399.16210923; staged as v136
+2026-11-21 02:22:05	alexchilton/33-08-lb-which-circuits-survive-private-salt	pull-failed	To search for one, try 'kaggle search <query>'.
+2026-11-21 02:22:06	alexchilton/33-07-lb-which-circuits-survive-private-salt	pull-failed	To search for one, try 'kaggle search <query>'.

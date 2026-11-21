@@ -276,6 +276,8 @@ kernel|alexchilton/28-23-lb-which-circuits-survive-private-salt|2026-11-18T20:11
 kernel|alexchilton/28-23-lb-which-circuits-survive-private-salt|2026-11-19T07:40:44.567000
 kernel|alexchilton/31-68-lb-which-circuits-survive-private-salt|2026-11-20T19:22:16.977000
 kernel|alexchilton/33-07-lb-which-circuits-survive-private-salt|2026-11-21T01:47:16.440000
+kernel|alexchilton/33-08-lb-which-circuits-survive-private-salt|2026-11-21T02:02:23.823000
+kernel|alexchilton/33-10-lb-which-circuits-survive-private-salt|2026-11-21T02:19:35.177000
 kernel|almondlabs/almond-labs-qcc-31-69054-demonstrable-advantage|2026-11-20T19:50:34.373000
 kernel|almondlabs/almond-labs-qcc-31-69692-demonstrable-advantage|2026-11-20T23:19:16.277000
 kernel|almondlabs/almond-labs-qcc-31-70105-demonstrable-advantage|2026-11-20T23:57:45.767000
@@ -353,6 +355,7 @@ kernel|drpatrickchan/vqcc-syed-portfolio-plus|2026-11-05T17:44:45.637000
 kernel|dziyanavalenta/31-45-every-circuit-generated-submission|2026-11-20T23:33:14.523000
 kernel|evgendvorkin/google-quantum-ai-deep-eda-with-analogies|2026-11-18T20:25:26.103000
 kernel|evgendvorkin/google-quantum-ai-deep-eda-with-analogies|2026-11-20T20:50:51.307000
+kernel|evgendvorkin/google-quantum-ai-deep-eda-with-analogies|2026-11-21T02:27:28.207000
 kernel|evgendvorkin/spectra-to-structures-deep-eda-molecular-clues|2026-11-17T18:53:19.870000
 kernel|evgendvorkin/spectra-to-structures-deep-eda-molecular-clues|2026-11-19T12:22:57.713000
 kernel|ghazarosbarseghyan91/qcc-28-17-4-022-toffoli-chemistry-loaders|2026-11-17T14:20:45.067000
@@ -495,6 +498,7 @@ kernel|nursrijan/qcc-25-1508-optimal-verified-sota-portfolio|2026-11-09T06:54:01
 kernel|nursrijan/qcc-25-2268-verified-sota-portfolio|2026-11-10T12:35:18.357000
 kernel|orecord/quantum-circuit-compilation-pipeline|2026-11-21T01:12:56.553000
 kernel|orecord/quantum-circuit-compilation-pipeline|2026-11-21T01:39:02.410000
+kernel|orecord/quantum-circuit-compilation-pipeline|2026-11-21T02:14:16.397000
 kernel|ozertuu/28-23163-sota-verified-compilation-top-portfolio|2026-11-18T16:39:54.083000
 kernel|ozertuu/quantum-ai-fast-runner-starter-notebook|2026-11-18T17:37:18.403000
 kernel|ozertuu/santa-2026-138-867-1-sota-verified-portfolio|2026-11-19T08:45:52.510000
@@ -565,6 +569,7 @@ kernel|syehsyoh/vqcc-frontier-plus-solution-milestone-1|2026-11-20T23:44:16.3070
 kernel|taylorclark637/notebook2f60e4fa23|2026-11-18T19:52:16.357000
 kernel|thomasgamet/quantum-attempt-reset|2026-11-19T02:24:50.710000
 kernel|thomasgamet/quantum-attempt-reset|2026-11-21T01:02:59.347000
+kernel|thomasgamet/quantum-attempt-reset|2026-11-21T02:17:37.340000
 kernel|tonylica/quantum-ai-32-85306-ready|2026-11-21T00:32:25.477000
 kernel|topeseun100/quantum-circuit-compilation-original-work-sprint|2026-11-21T00:45:09.103000
 kernel|topeseun100/quantum-circuit-compilation-work|2026-11-09T01:47:41.767000

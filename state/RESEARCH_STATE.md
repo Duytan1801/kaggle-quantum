@@ -1,7 +1,7 @@
 # RESEARCH STATE — live hypothesis queue (agent-maintained; rewrite freely)
 # Format: H# | claim | mechanism | est GM | cheapest discriminating test | status | evidence | updated
 # Rules: never re-run a KILLED test; re-rank by expected-GM/effort after each resolution.
-# Last full re-rank: 2026-11-21 (post v135 = 33.07536; H19 invsqrt-qubits, H20 chem-T, H21 salt)
+# Last full re-rank: 2026-11-21 02:45 UTC (post v136 = 33.10022; H22 DQI-qubits is top, H19/H20 narrowed, H21 confirmed)
 
 ## QUEUE (ranked)
 
@@ -306,6 +306,69 @@ H21 | **The private-salt penalty for a DQI shot error is bounded at ~-0.15 % GM*
     4b572141 has only ever been run at the default salt | -0.05 GM worst case |
     run the official DQI verifier at 3-4 salts in-kernel on the v135 snapshot |
     **NEW / cheap (3 x 127 s)**
+
+## FRONTIER UPDATE 2026-11-21 02:45 UTC (post v136) — read this first
+
+| | v133 (2026-11-19) | v135 (02:10) | v136 (02:34) | board #1 |
+|---|---|---|---|---|
+| GM | 28.23441 | 33.07531 | **33.10022** | 33.34845 |
+| rank | 838 | 25 | ~4-6 | 1 |
+| invsqrt | 44 q | 37 q | 37 q | ? |
+| dqi | 890 q / 3.4526e11 | 900 q / 3.0504e11 | same | ? |
+| chem | 427 q / T 14,706 | 405 q / T 13,322 | **405 q / T 13,292** | ? |
+
+H19 | **invsqrt 37 -> 36 q (+0.298 GM)** — STATUS: OPEN, but the naive version
+    is KILLED.  Measured this wake: all 37 wires are live over ~80 % of the
+    60,790-gate stream (per-wire must-hold segments 35k-48k lines); no two
+    wires can be merged by relabelling, and the x-register is fixed at 22
+    qubits by the spec (width = 2*n_p + 2 = 22), so 36 is the floor.  The
+    remaining route is the borrow trick the public generator already uses
+    (`lend29.py` transplants an un-add block onto a freed wire): find a wire
+    that is provably free after its last use and re-home a block on it.
+    Kill criterion: if no borrowable window exists in the 37 q circuit, the
+    36 q target is dead for this lineage.
+
+H20 | **chemistry T (13,292) — SPLIT: the loader lane is KILLED, the refit
+    lane stays open** | measured: 2 x 3,396 (loaders) + 6,500 (state prep) =
+    13,292; the public per-block minimum over 8 loader families is 3,393/pass
+    (T 13,286, = Kotaro Terada's board row) but every loader that would reach it
+    breaks the chemistry (error_1 256-9262 mHa vs the 20 mHa limit).  The
+    loaders are dense 2,048-entry QROMs at ~5.3 Toffolis per output bit, i.e.
+    near the practical floor, and their output bits are dense random Boolean
+    functions of the 11 address bits (ANF ~670 monomials/bit) so no ANF rewrite
+    exists.  Evidence: `work/recon/loader_floor_2026-11-21.md`.
+    Remaining chem lane: a NEW angle-word discretisation (cheaper table AND
+    cheaper to load) or a lambda refit (lambda is at its floor, +0.000 GM).
+
+H21 | **DQI salt risk — CONFIRMED and quantified** | the official verifier at
+    five salts: clean at the default salt and salt-v135-d, one value error at
+    salt-v135-a/b/c; cost +0.459 % per failed shot.  Per-shot failure
+    probability ~1e-5 => P(>=1 failed shot at the private salt) ~ 64 % =>
+    expected private-board penalty ~ -0.05 GM (bounded, not zero).
+    Evidence: `work/recon/dqi_salt_probe_2026-11-21.md`.
+
+H22 | **NEW, TOP PRIORITY — DQI qubit count 900 -> 890 (+0.245 GM)** | the DQI
+    score is R x Q^2 x T, so one qubit is worth 2/900 of the leg.  The public
+    generator ships the DQI as editable KMX stages
+    (`tonylica/quantum-ai-32-85306-task-generators`: `dqi/decoder/*.kmx.xz`,
+    `dqi/d16/field_{1..4}_*`, `dqi/selector.py`, `dqi/stages.json`,
+    `dqi/arithmetic.py`); the four D16 arithmetic sites are executed
+    sequentially, so their temporary wires may be shareable.  Success
+    criterion: a rebuilt DQI with Q <= 890 that the official verifier scores
+    <= 3.0504e11 x (890/900)^2 = 2.9835e11 with 0 value / 0 phase errors at the
+    default salt.  Kill criterion: if the four sites' temporary wires are
+    simultaneously live (proved by a liveness analysis of the stage KMX), the
+    qubit lane is dead and DQI must be attacked through T instead.
+
+H23 | **NEW — DQI private-salt insurance (public-invisible, +0.05 GM expected)**
+    | the Clopper-Pearson bound is FIXED at k=0 (eps_plus = 1 - 2^(-128/102400)
+    = 8.66e-4), so a decoder with a lower per-shot failure rate costs NOTHING
+    publicly but raises the probability of a clean draw at the unknown private
+    salt from ~36 % to ~90 % (worth ~+0.05 GM in expectation).  Any public DQI
+    variant with the same clean cost and a lower failure rate is strictly
+    better.  Test: run the official DQI verifier at 8+ salts on each candidate
+    DQI and compare the number of failed shots, not the score.
+
 ## KILLED (evidence recorded — DO NOT re-enter)
 - H12 chem J lever (re-partition the angle columns into fewer/wider circuits): **KILLED 2026-11-19 by
   measurement.**  The mechanism is real and was verified end-to-end (the verifier scores the words it

@@ -116,3 +116,40 @@ one leg.
   26 versions of salt-verified members, README with measured costs.
 - `alexchilton/33-08-lb-which-circuits-survive-private-salt`: the 8-salt table and
   the per-circuit price history.
+
+## Leverage map refreshed 2026-11-21 (post v136 = 33.10022)
+
+| move | dGM | comment |
+|---|---:|---|
+| **invsqrt -1 qubit @ 37 q** | **+0.2984** | the single biggest lever; 44->37 q once bought +4.8 GM |
+| invsqrt -1 rotation (of 33) | +0.0487 | rotations cost 29.07 T each at eps 1.888e-13 |
+| invsqrt -1 Toffoli-equivalent | +0.00670 | T_eq = 1,647.44 |
+| **dqi -1 qubit @ 900 q** | **+0.0245** | cost = R x Q^2 x T, so qubits are squared |
+| dqi -1 Toffoli (of 316,131) | +0.0000349 | needs an algorithmic decoder cut |
+| dqi private-salt insurance (no public cost) | up to +0.0507 expected | lower per-shot failure rate at equal clean cost |
+| **chem -1 qubit @ 405 q** | **+0.0272** | |
+| chem -1 Toffoli (of 13,292) | +0.00083 | loaders are 2 x 3,396 of the 13,292 |
+| chem -1 % T | +0.110 | |
+
+**Frontier:** #1 Z3C1oherence 33.34845, #2 Kotaro Terada 33.10520,
+#3 No Bodies 33.10223, #4-6 at 33.10018 (boristown's tree = our v136),
+#7 Dan Pavlides 33.09354.  Our rows: v135 33.07531 (ref 58645864),
+v136 33.10022 (ref 58646682).  Gap to #1: **0.24823**.
+
+**What the public data says is exhausted (measured this wake):**
+- chemistry loaders: at their public floor (T 13,292; the unconstrained public
+  per-block minimum would be 13,286 but those bytes break the chemistry;
+  `work/recon/loader_floor_2026-11-21.md`).
+- chemistry lambda_eff: at its floor (46.918298 vs 46.916000 best known).
+- invsqrt: every one of the 37 wires is live over ~80 % of the 60,790-gate
+  stream; no pair can be merged without new synthesis.
+
+**What is NOT exhausted (the ranked goals):**
+1. **DQI qubit count 900 -> 890** (+0.245 GM) — the public DQI generator ships
+   editable KMX stages (`dqi/decoder/*.kmx.xz`, `dqi/d16/*`, `dqi/selector.py`,
+   `dqi/stages.json`); the four D16 arithmetic sites run sequentially and may
+   be able to share their temporary wires.
+2. **invsqrt 37 -> 36 q** (+0.298 GM) — needs new synthesis; the public
+   generator (`tonylica/.../invsqrt/`) has the carry-borrow machinery
+   (`lend29.py` transplants a free wire) that produced the last two steps.
+3. **DQI private-salt insurance** (+0.05 expected, invisible publicly).
