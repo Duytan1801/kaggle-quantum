@@ -1,0 +1,39 @@
+{
+ "task": "chemistry",
+ "release": "v154",
+ "candidate": "chemistry/766_chem_757_exact/release_757x",
+ "package": "experiments/chemistry/iterations/766_chem_757_exact/package",
+ "run": {
+  "cwd": ".",
+  "argv": [
+   "build.py",
+   "{name}"
+  ],
+  "env": {
+   "Q2026_ROOT": "{repo}"
+  },
+  "outputs": {
+   "dfthcsos/angle_k_0.kmb": "out/{name}/dfthcsos/angle_k_0.kmb",
+   "dfthcsos/angle_k_1.kmb": "out/{name}/dfthcsos/angle_k_1.kmb",
+   "dfthcsos/angle_k_2.kmb": "out/{name}/dfthcsos/angle_k_2.kmb",
+   "dfthcsos/angle_k_3.kmb": "out/{name}/dfthcsos/angle_k_3.kmb",
+   "dfthcsos/angle_k_4.kmb": "out/{name}/dfthcsos/angle_k_4.kmb",
+   "dfthcsos/angle_k_5.kmb": "out/{name}/dfthcsos/angle_k_5.kmb",
+   "dfthcsos/angle_k_6.kmb": "out/{name}/dfthcsos/angle_k_6.kmb",
+   "dfthcsos/angle_k_7.kmb": "out/{name}/dfthcsos/angle_k_7.kmb",
+   "dfthcsos/angle_k_8.kmb": "out/{name}/dfthcsos/angle_k_8.kmb",
+   "dfthcsos/angle_k_9.kmb": "out/{name}/dfthcsos/angle_k_9.kmb",
+   "dfthcsos/angle_k_10.kmb": "out/{name}/dfthcsos/angle_k_10.kmb",
+   "dfthcsos/angle_k_11.kmb": "out/{name}/dfthcsos/angle_k_11.kmb",
+   "dfthcsos/angle_k_12.kmb": "out/{name}/dfthcsos/angle_k_12.kmb",
+   "dfthcsos/angle_k_13.kmb": "out/{name}/dfthcsos/angle_k_13.kmb",
+   "dfthcsos/angle_k_14.kmb": "out/{name}/dfthcsos/angle_k_14.kmb",
+   "dfthcsos/submission.npz": "out/{name}/dfthcsos/submission.npz"
+  },
+  "generated": [
+   "out",
+   "__pycache__"
+  ]
+ },
+ "licenses": {}
+}

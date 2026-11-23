@@ -1,0 +1,25 @@
+{
+ "task": "dqi",
+ "release": "v150",
+ "candidate": "dqi/721_dqi_release_698r2/release_698r2",
+ "package": "experiments/dqi/iterations/721_dqi_release_698r2/package",
+ "run": {
+  "cwd": "build",
+  "argv": [
+   "build_only.py",
+   "{name}"
+  ],
+  "env": {
+   "Q2026_ROOT": "{repo}"
+  },
+  "outputs": {
+   "dqi.kmb": "build/out/{name}/dqi.kmb"
+  },
+  "generated": [
+   "build/out",
+   "build/work",
+   "build/__pycache__"
+  ]
+ },
+ "licenses": {}
+}

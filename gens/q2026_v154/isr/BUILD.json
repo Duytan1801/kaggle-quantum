@@ -1,0 +1,47 @@
+{
+ "task": "isr",
+ "release": "v154",
+ "candidate": "isr/772_isr_769_dial_w8/official_a",
+ "package": "experiments/isr/iterations/772_isr_769_dial_w8/package",
+ "run": {
+  "cwd": "build",
+  "argv": [
+   "build_only.py",
+   "{name}"
+  ],
+  "env": {
+   "Q2026_ROOT": "{repo}"
+  },
+  "outputs": {
+   "invsqrt.kmb": "build/out/{name}/invsqrt.kmb"
+  },
+  "generated": [
+   "build/out",
+   "build/work",
+   "build/__pycache__"
+  ],
+  "depends_on": [
+   "experiments/isr/iterations/769_isr_764_m9form/package/build/ (copied into work and run)"
+  ]
+ },
+ "licenses": {
+  "LICENSES/CREDITS.md": "submissions/licenses_v154/CREDITS.md",
+  "LICENSES/LICENSE": "submissions/licenses_v154/LICENSE",
+  "LICENSES/NOTICE": "submissions/licenses_v154/NOTICE",
+  "LICENSES/NOTICE_generators": "submissions/licenses_v154/NOTICE_generators",
+  "LICENSES/NOTICE_v12_dqi": "submissions/licenses_v154/NOTICE_v12_dqi",
+  "LICENSES/third_party__atakanaldemir_dqi_bundle__CREDITS_v3.md": "submissions/licenses_v154/third_party__atakanaldemir_dqi_bundle__CREDITS_v3.md",
+  "LICENSES/third_party__atakanaldemir_dqi_bundle__CREDITS_v3_parent1.md": "submissions/licenses_v154/third_party__atakanaldemir_dqi_bundle__CREDITS_v3_parent1.md",
+  "LICENSES/third_party__atakanaldemir_dqi_bundle__CREDITS_v3_parent2.md": "submissions/licenses_v154/third_party__atakanaldemir_dqi_bundle__CREDITS_v3_parent2.md",
+  "LICENSES/third_party__atakanaldemir_dqi_bundle__CREDITS_v3_parent3.md": "submissions/licenses_v154/third_party__atakanaldemir_dqi_bundle__CREDITS_v3_parent3.md",
+  "LICENSES/third_party__atakanaldemir_dqi_bundle__CREDITS_v3_parent4.md": "submissions/licenses_v154/third_party__atakanaldemir_dqi_bundle__CREDITS_v3_parent4.md",
+  "LICENSES/third_party__atakanaldemir_dqi_bundle__LICENSE": "submissions/licenses_v154/third_party__atakanaldemir_dqi_bundle__LICENSE",
+  "LICENSES/third_party__jday96314_QuantumAI-archive__LICENSE": "submissions/licenses_v154/third_party__jday96314_QuantumAI-archive__LICENSE",
+  "LICENSES/third_party__syed3000_dfthcsos__LICENSE": "submissions/licenses_v154/third_party__syed3000_dfthcsos__LICENSE",
+  "LICENSES/third_party__syed3000_dfthcsos__NOTICE": "submissions/licenses_v154/third_party__syed3000_dfthcsos__NOTICE",
+  "LICENSES/third_party__syed3000_dqi__LICENSE": "submissions/licenses_v154/third_party__syed3000_dqi__LICENSE",
+  "LICENSES/third_party__syed3000_dqi__NOTICE": "submissions/licenses_v154/third_party__syed3000_dqi__NOTICE",
+  "LICENSES/third_party__syed3000_invsqrt__LICENSE": "submissions/licenses_v154/third_party__syed3000_invsqrt__LICENSE",
+  "LICENSES/third_party__syed3000_invsqrt__NOTICE": "submissions/licenses_v154/third_party__syed3000_invsqrt__NOTICE"
+ }
+}

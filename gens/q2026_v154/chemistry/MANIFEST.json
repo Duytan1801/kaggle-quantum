@@ -1,0 +1,2431 @@
+{
+ "task": "chemistry",
+ "release": "v154",
+ "archive_task": "chemistry",
+ "candidate": "chemistry/766_chem_757_exact/release_757x",
+ "created": "2026-11-20T21:57:46+0100",
+ "source_commit": "0370d73b5909c71fd94d4666cc5d1d6fc4a92272",
+ "recipe_sha256": "2e4a99f00be1d92b6f760ec18277c2cf4a2b565caed739e4758823bbd5005b36",
+ "members": {
+  "dfthcsos/angle_k_0.kmb": "70a26b87ca3894dc8e7c5e6f513c9d74974ab16e1b657f8389db6ae13af1ef54",
+  "dfthcsos/angle_k_1.kmb": "c2f3892606ccbef89756bd7b279cc6f96533a9310b74814c5b9180ee8f1abf7c",
+  "dfthcsos/angle_k_2.kmb": "49ce5beb8e6d785ee0db1777d1dc52cdf4a3879a0e6592907b5d92b9eedac4cf",
+  "dfthcsos/angle_k_3.kmb": "dd3e326bf0bd851f85a507948e143bf83cd3ee8dc8fda6d5af6374b2eae8904c",
+  "dfthcsos/angle_k_4.kmb": "5a6ae9ccf90b9eb2dbf0466a6bee93d9047589df247e1fe886dbe078574d9e26",
+  "dfthcsos/angle_k_5.kmb": "0993b241533260904ccaf19dc8c77334c263a7500a358e61e123238d27476b07",
+  "dfthcsos/angle_k_6.kmb": "22593098c7c15656a48788bb2777c4b1a685caa0531a33d37ec0db419f568ef4",
+  "dfthcsos/angle_k_7.kmb": "0cd877a6ad3f653e44fe5ed38348fe9c14d14b801da9d89ebd1d6a11eabb368e",
+  "dfthcsos/angle_k_8.kmb": "53748891321850699b7b7dc024871aec5b7533fb87f0614ff2bd2fabca0f83a3",
+  "dfthcsos/angle_k_9.kmb": "81e206ebd9d70a46f680422b6a591fc282fddcdf65a7aa3c600aaf58d4667dbc",
+  "dfthcsos/angle_k_10.kmb": "b9418d8b6f497e21c150552d0127e3172f4496c4507cde1b4c7cc00067c110c5",
+  "dfthcsos/angle_k_11.kmb": "3a5103f4ffc8309a83c20168f34557f320fdcdb88c67a7ad955f90d4c1b33166",
+  "dfthcsos/angle_k_12.kmb": "bba22c58970dbc4b0a8dc2362692d91b9d3550d407aea8d738a6445a3605002e",
+  "dfthcsos/angle_k_13.kmb": "9a1e46e0f3451d671a67135d8409d748c6eb3e5d4ed76c90d9a0f793efe47530",
+  "dfthcsos/angle_k_14.kmb": "66c51db30eb0306d49ef8898096df7cd5541df36c1d06d31a5296951b5fcd939",
+  "dfthcsos/submission.npz": "b65e208ec40c877d027f96faa1c70619f6cb93b7832d14dafa0fdc9144a0d2fa"
+ },
+ "notes": [],
+ "files": [
+  {
+   "path": "BUILD.json",
+   "sha256": "f296ce17e8a2480c41faf3dbb0faed9d70ba431e56dd6e69a51f84e9c5e67f43",
+   "bytes": 1445,
+   "origin": "packaging",
+   "reason": "how build.py runs the package"
+  },
+  {
+   "path": "README.md",
+   "sha256": "15a65f8ebcb7053c0dea85e5023d77805ba88359e0ce78ad40f5a80f8798c522",
+   "bytes": 2826,
+   "origin": "packaging",
+   "reason": "provenance, licences, attribution"
+  },
+  {
+   "path": "SHA256SUMS",
+   "sha256": "e78eea5eba53342df0d9896945ed9d55e51a1734246157af1b27c6c556838456",
+   "bytes": 1430,
+   "origin": "packaging",
+   "reason": "expected members"
+  },
+  {
+   "path": "build.py",
+   "sha256": "0a53a9b5d2b7c202065fd9cf2982fdf6a873190b44bded3b26c5e3e4b12ac28c",
+   "bytes": 4304,
+   "origin": "packaging",
+   "reason": "generic entry point"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c3_bsearch.py",
+   "sha256": "34d5a46bb43361ed81cc4d4528e9d5f62ed68961719328c56a64002aebe4e264",
+   "bytes": 11368,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c3_c2a.py",
+   "sha256": "39cade9e20a35adacfe0b65c86e9a5f3ff6e8528056626b80ce3f6a3358d2630",
+   "bytes": 4379,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c3_c4chk.py",
+   "sha256": "3c2b8e3650d1c6998b437ba92059a6aa051b3cb5821ba942502390365f16219b",
+   "bytes": 25469,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c3_chainasm.py",
+   "sha256": "22ff3598d24c83da80b3b0521068d69fc7cde5855ec636e275dba3e67813af2e",
+   "bytes": 4323,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c3_emit5dead.py",
+   "sha256": "4c59a913a9f91abbbdfb09ef9cb2f1c9093429eb7ed497f5fb3d298c70423f98",
+   "bytes": 14481,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c3_emit68.py",
+   "sha256": "729e481ba721f596f919bbbb9b922c6b31ce618ed5d9cbd7fab7ea9d3fe8eaab",
+   "bytes": 12544,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c3_gencount.py",
+   "sha256": "9e59ec16261d7f1bd33a028fd5fa77da47f6868ae1c47389ab3a0e90c943fd11",
+   "bytes": 2402,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c3_k0fake.py",
+   "sha256": "1cdbcf2ec3d4071343889921b8716d3ab964f99925b8649bc0e471e534302f56",
+   "bytes": 3127,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c3_k0find.py",
+   "sha256": "9caa5429d8ebe32f08aafe685b8b70bfae99f69cd139d4cfd6ebe04d660b81dd",
+   "bytes": 1615,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c3_mask2dead.py",
+   "sha256": "cf54a7fe2e4a54f01bff69975b28774b21690618bd66029e41fac19cf0bfd2e4",
+   "bytes": 53119,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c3_mask3dead.py",
+   "sha256": "da5247a8c702156d7066d9845bf19f1e87a72324bf615b933c4db47fb67c536e",
+   "bytes": 69577,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c3_o29probe.py",
+   "sha256": "0e1a20ec320c94dd5d186582c81c879ab1da774560976bc2b21a6ba774934ac4",
+   "bytes": 6691,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c3_relfit.py",
+   "sha256": "0d7b4aad59f2a0bf5f711e53e7677caf744029b6829012b03d3f0095b765591a",
+   "bytes": 3149,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c3_transplant.py",
+   "sha256": "805a8549b3063dc25c544e4ea6695f3d10b905cd37e38778836c01bee8ef6dd3",
+   "bytes": 3462,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c3_vrun.py",
+   "sha256": "66bf10dfa60d078b7adc8a9850d8ee6927b6afa2c4016101bbebb8218ead82f6",
+   "bytes": 8911,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c3_wdcrel.py",
+   "sha256": "4e38e87d0a9a891c3a887d9826428b9df4020a32d93026c2c6277fa3d7a06aa7",
+   "bytes": 11400,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c4_build.py",
+   "sha256": "3808746c87f35ea8432ed09fb871b3c9fb43863288552ff20c0ddd8a0a6dc38c",
+   "bytes": 15481,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c4_cubic.py",
+   "sha256": "8079197c96d639f077eeac611a2b37c45dc73026f61668ce618e5e74be6d52ca",
+   "bytes": 27214,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c4_dead.py",
+   "sha256": "b1a756aaa61b38f06f6cafb89b57efe553668928cbaa35e9259b2220210184e0",
+   "bytes": 24709,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c4_drop.py",
+   "sha256": "9946b8f54b1b4dd77e78fecf3f6385b9372961ee8d9ec6bed0640683fe8cf35b",
+   "bytes": 13569,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c4_dump.py",
+   "sha256": "febbd87aadec80f6a20faeb0d541df59dec5f77097e4dd190a6dec4d6291492f",
+   "bytes": 3509,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c4_flips.py",
+   "sha256": "692ed67c1a8c3a08b6d157aed44f26a8d78db2671ea03644c7edf3cefd949f08",
+   "bytes": 5862,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c4_g0plans.py",
+   "sha256": "48d8502ffbff9cd263d2637bd9d3ad1847f2da2f18ccd8f01ddecd30c1511850",
+   "bytes": 2088,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c4_hyp.py",
+   "sha256": "cbff4464736437708a0dfb59c4b94d86b62cf625f2c8169906d69475505478f7",
+   "bytes": 4219,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c4_ns.py",
+   "sha256": "b62d17f2558d8526040c20f056ab15782f5161278a0116a0505a374ca4e5ea0a",
+   "bytes": 4926,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c4_ownscan.py",
+   "sha256": "a07f22604c42695537e94a16bb87a5a10b764216feb8fea4038023519afa57d8",
+   "bytes": 4440,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c4_pair.py",
+   "sha256": "c0338c340acdf28e794210fe54dfdb299c230d585704b2faeb3038440ec2e73c",
+   "bytes": 2637,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c4_pre.py",
+   "sha256": "47eacec5adc9efbf0cc4caf3bbfa87dc08b56f477ac2538eb5d3af14d3696dfd",
+   "bytes": 6161,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c4_subscan.py",
+   "sha256": "1f32ec84c9df7dc401f635261e347881a046dc8e971912d763b6c4807b5d7c1b",
+   "bytes": 3087,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c4_wb.py",
+   "sha256": "549ef41f44ec520f3cb0414129c76f7d7ab588606ce9274548d7e631b4ac3325",
+   "bytes": 3626,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_c5_mkport.py",
+   "sha256": "aefa7e3cd2c35526dff75fd2a8330f2ffe9139d5555008a711697eb7a7dd7681",
+   "bytes": 2162,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_cd7_codemodel.py",
+   "sha256": "418466af79e338dbd579ab967a8ee4ced95d2c4e6b939a423ed71c54eb70fa81",
+   "bytes": 6934,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_cd7_obcoset.py",
+   "sha256": "472bd953b0d67c2dd4e7cd7a7225fc92824e02ddf5f00be9d88279e0b4c0c728",
+   "bytes": 15357,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_cd7_oblay.py",
+   "sha256": "cf4751ee3708f5074ac05292f742c51ee4f65fc419d51efe1f16bd803e05817e",
+   "bytes": 6609,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_cd7_round.py",
+   "sha256": "4bf8c13565b3a1ed377e4692566d17f435091c68cca4159e736b275d7ad30acf",
+   "bytes": 100732,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_factor_als.py",
+   "sha256": "bf5afe160e70f4a092710c0f0e41aac7f9146830d7159d7b6a3f3fd372705f53",
+   "bytes": 6325,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_factor_fit.py",
+   "sha256": "c5c264b8c41c7c24f0b43f8d420f6027aa345d074d1c56fd28fb99e20f60a809",
+   "bytes": 17364,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_factor_lib.py",
+   "sha256": "aae87efe13a46641b1fea6669bd27e97e7d96b04f5312dfbf68fb7d8ee08b4b6",
+   "bytes": 8493,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_factor_refit_fixed.py",
+   "sha256": "51e1aa1a5d695642a08e84eb6d70b4a76e131fcd0c3db52ca3ad32165100c9f5",
+   "bytes": 10047,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_basis.py",
+   "sha256": "c85b86c5b45ad312253572667ee9a73b5ee64ccf0d6865769ae173fcdc4612ac",
+   "bytes": 11033,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_bsearch.py",
+   "sha256": "2a05a1efae2a18653b8154d82008a25d48da32137a74f9fede52428d684dd8fd",
+   "bytes": 11036,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_c4.py",
+   "sha256": "8f80e970d06cd98b454bc52ecda2f142e6f39bc5e312db5fa30e53a2b42b6975",
+   "bytes": 40966,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_c4pub.py",
+   "sha256": "5dac4108cae662b2dedb0ff227b64e73c8f5f7630c496af214f2d9f49fa075e7",
+   "bytes": 6083,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_c4test.py",
+   "sha256": "8044157bdd5fb42081759a1e31e830e0e7be3a2f8229040d84bc749d9ef43d13",
+   "bytes": 4632,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_cfind.py",
+   "sha256": "9cbcd58d18a245eebcb09287dbdce41177b41cbfedeeaaed10c838b10c5d867a",
+   "bytes": 19316,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_dissect.py",
+   "sha256": "685ddbe26e22aa5efc9c1def31ae199caf2dbb733255aa8600c73af7a6a6fcad",
+   "bytes": 8750,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_e11car7.py",
+   "sha256": "22427627829377a9f6e4b4ad32ccc9c4cb608b7799ef6617aeba4294a96045b2",
+   "bytes": 4980,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_e17cap.py",
+   "sha256": "8d42a6ccde16fe584e49aae424eb7c6d90dbb57ca535e443db5e73dbe7ff8d65",
+   "bytes": 3460,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_e17gc4.py",
+   "sha256": "76b4274eabcffdff0ca144362eaf4e5794109acb42b6253c1b1417ff24961754",
+   "bytes": 12986,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_e17kill.py",
+   "sha256": "6a7d6ca7ec4a72be6274293dbeb4967532e43fb740deaed949afedf14cb889eb",
+   "bytes": 7871,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_e19g42.py",
+   "sha256": "eccc71cfb33ca094a1b602dbf391adda4d44dfa27afeb17600867a5571bf60d6",
+   "bytes": 7473,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_e19grp.py",
+   "sha256": "371a03234952bc20e8be726d5c8dbc5c9fd9813ff7d963913792a85c00679bcb",
+   "bytes": 36948,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_e21dual.py",
+   "sha256": "7ec6f444049bdab2dc7ee2e128c959b37758a3abcf7d7053127f6adacdea7739",
+   "bytes": 12030,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_e22dci.py",
+   "sha256": "c8c1d222f15867a949a95a64da47ba296310da8ebaca1fc6941726f0cd8fd660",
+   "bytes": 6154,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_e22dcr.py",
+   "sha256": "c1ff317e6f5f656eabe90ccf5cb272f21f51bcef9a56fb5ad56d959f10a6f894",
+   "bytes": 20238,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_e22lucky.py",
+   "sha256": "ad622013bd49c90e566eb61cfc9880ea0f28f43e5eeb31d0dc8e80293ce1fb58",
+   "bytes": 8889,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_e22merge.py",
+   "sha256": "ad62fb9c997bef7808c3f3abd8dc49a038fdd57e913394edf14c0fd1eef1025f",
+   "bytes": 2502,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_e22mkdcr.py",
+   "sha256": "7b328888573d524bc560be0fd1478fd6a256e825070b13fc8baa092726513c0c",
+   "bytes": 1786,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_e22mktie.py",
+   "sha256": "c12154eff6fb861f147396e6927e82d5ccb79068955b2f281a074b72e8b33bbf",
+   "bytes": 1390,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_e22pick.py",
+   "sha256": "97a7c8cf4a4511704a854a03d6ac55a3654c85813781b6428f8f2cc9d13f746c",
+   "bytes": 1747,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_e22tie.py",
+   "sha256": "d95acdc396b57dedcc0f2df956b9ef9ed1a3b950e509113eb556d4f4ee7dbdfb",
+   "bytes": 18012,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_engine.py",
+   "sha256": "ee079b4d50b89fcd2df27bbdbebe1c7510de839be34f34210576ecbfee4ac24b",
+   "bytes": 12227,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_engx.py",
+   "sha256": "5bf1c63d857d3ace57d7d04ebb784400384d5d1a176d4c1b65cac6f46b9d78c0",
+   "bytes": 65792,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_hb.py",
+   "sha256": "2bdaddc530e5109bea9fe2ead20d98d634d5c37e2ebdf9f9e9714f3dee1a30b0",
+   "bytes": 770,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_prot.py",
+   "sha256": "6a6f1e75a3f07d92a2ed9c342b5fb425c992086b20a375676913d7721976518a",
+   "bytes": 21040,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_rel.py",
+   "sha256": "bb4a16b1c4509610580f9caf43ae7aef67bb1f1d4ea7c49b044cf8345300eddc",
+   "bytes": 4431,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_wwidth.py",
+   "sha256": "b28fc21dd1c25864a385cb6a87e925d8c5a090349bb0c73820765187e5f64bbd",
+   "bytes": 3814,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_ld2_yfan.py",
+   "sha256": "d9b12a93c40ef8af79c033901eb354c284b67843fcd6ef9f1b3c840bbe62fbb1",
+   "bytes": 2601,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_lens_codes.py",
+   "sha256": "eb493ff69c8ff12b67b1f66b8542ca8ddc16b32ee066f44822455fe36ed7693c",
+   "bytes": 22658,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_lens_gauge.py",
+   "sha256": "571b5c79ebe88495d126ebcbd81a67ccf719c06afd0c297b8b14ca6d83b31963",
+   "bytes": 21016,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_lens_orbit.py",
+   "sha256": "bcc87a4986c9e603ea216539f31ad2c730ea460ad4e2a69f8ca8081cda2b1c27",
+   "bytes": 14833,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_lens_project.py",
+   "sha256": "c18e41943ba5402088082f91e1b0b136bbb36cc6c40bd9860f7b2cb729842cc0",
+   "bytes": 24549,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_loaders_compile.py",
+   "sha256": "767384ad2fde4c5f32da700f58940f2b1c4b3c99b56437ac0afa67cdea834162",
+   "bytes": 12833,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_loaders_core.py",
+   "sha256": "b183352b347455bd121c2e3cd5587f72b82ebfb1c94b0ccce494c5c16465f04f",
+   "bytes": 49745,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_loaders_gauge.py",
+   "sha256": "f0d38c261aefb3e3bd92b939bdc7359fe54e3908e7ce9b392ece8a2cfc4a388c",
+   "bytes": 5694,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own2_absorb.py",
+   "sha256": "7d6ab9088c84e1d9e4ee7e49276ae364857741517fde10583aa2a9a80cc99030",
+   "bytes": 3955,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own2_carrier_restore.py",
+   "sha256": "2289c07195a86d3ff60c12be81aeb2cb16c38a0de2a8f8395ae75c83209f807f",
+   "bytes": 3960,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own2_ipolish.py",
+   "sha256": "6d9334ccb60631cd8316252cf4730ca85e5a010d523969fef56e4853c39bcf08",
+   "bytes": 13075,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own2_linmodel.py",
+   "sha256": "67d4bd9f6ea2cbd62e9a46585cf5669f0209fb01d35f22859cdf69628149ed6f",
+   "bytes": 12728,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own2_lmdebug.py",
+   "sha256": "6e761120e8ad573ac451769bd29abc8b0c099bba552ac1aa5311f57c0bd2fb7a",
+   "bytes": 2579,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own2_lmround.py",
+   "sha256": "d1f5fdb218a1b6034656724c26c6f10e4381f4b4bafeb568af181d3b7ab39a84",
+   "bytes": 105874,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own2_lmstage.py",
+   "sha256": "ce637170464ace82d8c1984dc6bd7275c5bf506c7858f2287ad802688a2717a9",
+   "bytes": 17061,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own2_lmstage7.py",
+   "sha256": "9ca419273958e8aebd99f75d30f074aedae23cdfbd13bf57d2303470f4f3f946",
+   "bytes": 4632,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own2_lmstage_old_cb40.py",
+   "sha256": "cb406c6ef295089350cff8065acda9ecefc7b2e798576645f4aed93ad7130049",
+   "bytes": 15270,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own2_lmstage_w.py",
+   "sha256": "ca5ddea80a89803d38e5b4ebfef04bbbb85c7920cbfdc0221c8f1c02b242306d",
+   "bytes": 15569,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own2_onebody.py",
+   "sha256": "7f444e30908c96ea10d046f0c017bf6247cb91668cbf4daac2b2287e1bf733a7",
+   "bytes": 17116,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own2_round.py",
+   "sha256": "c2e01ad6853e318e8dc5661c810e153b9e63f58a56a788be5ee4d1afdd3c35c6",
+   "bytes": 97126,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own2_sdiag.py",
+   "sha256": "2f586e1648c080f98eb21344ecbf454ba6d680ef03c45e9b3f6328ec277b0955",
+   "bytes": 5015,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own2_table.py",
+   "sha256": "40b876a811b89c2fe7ce8e145340254ecfd3799267cb0b2593e60c6e8777f2cf",
+   "bytes": 8994,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own_compile.py",
+   "sha256": "d59319a04b665fe66a9ed46a5eee01f0ec487f33690037726f71e88662e30197",
+   "bytes": 14728,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own_engine.py",
+   "sha256": "2d12dad3835e15416d6d9142b19c86b109e6d3e3b19e30709513c4a4fef86f33",
+   "bytes": 65652,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own_entry.py",
+   "sha256": "0bf75603767d24b11faad21102ddeeb8e8983905fdf2afb2be01394549085716",
+   "bytes": 10923,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own_fit.py",
+   "sha256": "ec12f1aa6b4678dc4fd5e1954e197f86759cc96f6f8279e4bd1d9b684cc59971",
+   "bytes": 21449,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own_onebody.py",
+   "sha256": "672554105a77b7c8633804e69bf72e9e0b52ad45b3438c411488907ead3903f4",
+   "bytes": 16242,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own_pairs.py",
+   "sha256": "54a2888aafb663698a0892a0eb61f16c86c1a6176e306bc2cbf5fa055987f738",
+   "bytes": 2935,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own_pick.py",
+   "sha256": "f9e9764cff2a81697e29b77838bac705fdbae5401513ed4231a3de0825c803d0",
+   "bytes": 2631,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own_refit.py",
+   "sha256": "fb14362de8d67e694bfe0643928e724df19173c03f57ede60f4e0217facad7a3",
+   "bytes": 17949,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own_round.py",
+   "sha256": "a0fcc20a29ded88be789080f8cd6060b4204d2e7084568f8b905019dd6bbd23f",
+   "bytes": 46894,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own_round7.py",
+   "sha256": "4e94e5774d5ebab5e43103aa4a71cc0d0f41d0141999857687ecf12587a7cc1a",
+   "bytes": 60101,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own_round7a.py",
+   "sha256": "92a1ef51838b5d723d4c3f974de6bbbfc457320802f6ed13c772c395b92d5fcf",
+   "bytes": 67095,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_own_table.py",
+   "sha256": "8929e13f45534b5380c1e85531f8840c0de3021f39f5f5402f5a2016e679e189",
+   "bytes": 7948,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_rk7_frel.py",
+   "sha256": "4c5ce7364bcabc35b43695039c1265b7f5afb7e03ae05e495de755c8acf29ccd",
+   "bytes": 115460,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_rk7_mkfrel.py",
+   "sha256": "c0d5beaedbd69c5b175fb660289a0299f463faad078566ffde8d634a95a28bc3",
+   "bytes": 4084,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_rk7_mkround.py",
+   "sha256": "c9189f20ba54c0398abeaa489bfd863e7b597491938c3c943933c50535059ea5",
+   "bytes": 9948,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_rk7_ob.py",
+   "sha256": "0a98f0893dbee30be9ddcdab0e5fc8913f1f9e3fb23a4864570867a3f40cb7a6",
+   "bytes": 19259,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_rk7_rel.py",
+   "sha256": "0bb72709adfa7cc5ab11ddef610a8a341b95008585922fb7ae5a1905e9941c28",
+   "bytes": 19105,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_rk7_relplace.py",
+   "sha256": "aec0591ca7ad159360f6e6b6ce78ff6d8a8185b1e2b3d8e1577a70de05027d90",
+   "bytes": 15815,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_rk7_round.py",
+   "sha256": "490e8f809c443fc10a43a5d37d081defeff51af4f202a63fd8b45b82f466efba",
+   "bytes": 108187,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_rk7_whold.py",
+   "sha256": "e4e5b764e707a54de67b3aa6332fdd3e17407baead2163cf9000d5662ed88a96",
+   "bytes": 3556,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_frel.py",
+   "sha256": "697078d6e5f5433ee2aaaccc115b88abce56c558fc1385e3b7179b6c51d0a1a5",
+   "bytes": 117679,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_frelgc.py",
+   "sha256": "c4de1ebe4a39c76aa3e47368681ed6c4a129a926692457ac9ebc82c7c6346ba8",
+   "bytes": 127490,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_frelgcj.py",
+   "sha256": "8c7f34b66c5f0b832e85369e69c1e0db30ec56221be604881dae9db70b3828ad",
+   "bytes": 128562,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_frelgcjl.py",
+   "sha256": "d9cc3c7d8a35cfe7afce73d418f949f84d1b07b963480225af6a6483b53c6ff8",
+   "bytes": 129646,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_froundgj.py",
+   "sha256": "f69236796af206b5c107b5f7b3db02416c8725e604f2e51c0e0d53ec37c3e826",
+   "bytes": 115633,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_froundgjc.py",
+   "sha256": "bf8550218bdbe4fe7b8a16c32519e11b3a63aad170de72629c700542f3e3a296",
+   "bytes": 119326,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_ipolg.py",
+   "sha256": "72565fe4c912b7119a56b1de1f907cf77a411b2fa20da2276bb1bd16b9e8db50",
+   "bytes": 13296,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_k0rows.py",
+   "sha256": "17589f430cdd5681aca5438b49b712b304a72c2812b38ff3d43db1fbb764871e",
+   "bytes": 2844,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_k1post.py",
+   "sha256": "4689f98ce3926d6b3dc5a706e492ba7474ab98ee5e6e5ef79fa1643627e672b9",
+   "bytes": 14970,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_mkfrel.py",
+   "sha256": "b269572a58327eb110fb72bbee76402801de1665ac8fe419a59d84c6d69b66ab",
+   "bytes": 8092,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_mkfrelgc.py",
+   "sha256": "b36866ae98c028639666867b60ccb2ba176290d1ff2f2b9ec6831963d22cd7fc",
+   "bytes": 7796,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_mkfrelgcj.py",
+   "sha256": "a68711a0dd9f832614fc76c3d1974313942d4dc99cf4d9ebb5a93ac6812ae140",
+   "bytes": 2801,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_mkfrelgcjl.py",
+   "sha256": "e37e10fd05c10830bb7e189692c5659bf3c6ff3f90eb66f891b408e340716ab8",
+   "bytes": 2973,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_mkgj.py",
+   "sha256": "32e908aef8e4bad7abcb4dcf2fa4626dcb71b02ba868c747e2b167ffde5cacb7",
+   "bytes": 2359,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_mkgjc.py",
+   "sha256": "b2090a261ed46d95d533d5a3e7c14dd63ca4aa0d7bf095412e907926d98fd049",
+   "bytes": 3388,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_mkipolg.py",
+   "sha256": "94c2afc18123964ad8eccb2cf07d7d23fd2a60ba3cf448293aa452a1ddcd029b",
+   "bytes": 1397,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_obcar.py",
+   "sha256": "7753350cd57dcd05112534ae343e262138b90b9ca6b7254432a049f373bfb6a6",
+   "bytes": 31193,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_pcheck.py",
+   "sha256": "3f2c50d79701438fd43a2677d29522b4d428cd9160596259f24a88a5aecafbdd",
+   "bytes": 2214,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_ppol.py",
+   "sha256": "e3ed640035107d6753e96dbd935f54e708b43527dc3411ee68f1074994a22cfe",
+   "bytes": 22403,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_prepair.py",
+   "sha256": "170b66a440e1a1dbc9598c5e0d13a6d8d7b1ca5a02d0656567d0da177843f051",
+   "bytes": 4886,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_price.py",
+   "sha256": "b4c6217fab91ce8beae5a3565f48ffd873e9f6823c1a48e1c6f92e88d0953584",
+   "bytes": 2144,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_relge.py",
+   "sha256": "a7434879f175a0b6fb03e98adc253d0a787678b1faadd36bebf0317bad99edad",
+   "bytes": 19703,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_relmerge.py",
+   "sha256": "f4fd1798f8fbc43e01006113e053a3db3060aabc08eb094798aa7824efd65609",
+   "bytes": 1226,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_tabcheck.py",
+   "sha256": "0210d6190c72924403b42969a8f3041964af6acd6d62454bf08a682d9a154aa5",
+   "bytes": 3259,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_wpol.py",
+   "sha256": "5b7800d35a1c662d938b67dc3697902d8577243c12a5c98a80fa526bfdac7935",
+   "bytes": 13181,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_t10_wrep.py",
+   "sha256": "4ace021f03b5b60e3a2bfda09027303596629a5e84c1bf29ffdde6aa7e2d4d0f",
+   "bytes": 13073,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_wr7_chainb.py",
+   "sha256": "ec14b9f895cce7ba1a59d4019592e4739f2b94d4567134ceae510186c534d099",
+   "bytes": 6549,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_wr7_froundl.py",
+   "sha256": "7667b52579fa93b1f189b02aac19dc97e623c731dee95439a1cb968056bdf21a",
+   "bytes": 112305,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_wr7_g2rel.py",
+   "sha256": "6926052d6dfaa717fa3049b255cb5e6e3400310e16ec057cc6801dc2b5f4cd22",
+   "bytes": 6736,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_wr7_mkfround.py",
+   "sha256": "28ad52a74904e71efe1ba89339c6afeda38458deebcf9b43aa1cd5b203fb1c4e",
+   "bytes": 1789,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_wr7_mkround.py",
+   "sha256": "2ca1904f4676c09fd9522c54e78d2f76179df78830fa0988792c85033219f888",
+   "bytes": 10691,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_wr7_obb.py",
+   "sha256": "89782242b3390e9f52dc58d0522149741c1159d96ce04192aa09780a818f8d0b",
+   "bytes": 8062,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_wr7_obpolish.py",
+   "sha256": "0e79c3979b477d2034450ace22a5020b0407268c3326a9d3e43be99c723c4cc8",
+   "bytes": 3506,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_wr7_obtry.py",
+   "sha256": "e33866c4cd7c0b56366516d1b2092ee5400eeb3a42cfd532a53484702ce9625c",
+   "bytes": 3340,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_wr7_round.py",
+   "sha256": "5db6b911f96f331d6e31cb4ab60820d64d93a35e50573c86955490f9a78b8c0e",
+   "bytes": 104662,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_wr7_roundg.py",
+   "sha256": "f1232631c4cf474ac22727f10ea4eca837c8857ff710a9e3cd633d67e93dfd38",
+   "bytes": 104197,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/chem_wr7_roundl.py",
+   "sha256": "7eec7e39fc8262a6aac6e405c8c2b52d13ddb8baa5b8e16cd4c15f25163bba0b",
+   "bytes": 107476,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/kmb.py",
+   "sha256": "6f2bd5a8f9cf2ca79b08685c06c839598c471b5d5952645af3f663d8fdd57b7b",
+   "bytes": 4822,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/panel3_chemr_labels.py",
+   "sha256": "23a9571fc8fd254150e8042cf18e58f0edc3174cd17e7e12801e769a1b539d79",
+   "bytes": 3421,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/qcc_verify.py",
+   "sha256": "f7325634c9ff1c4e725ad5431e0cb9bc08aaeaa1e9f28304f63efbbd6d921859",
+   "bytes": 3740,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r31_chem-table_loadj.py",
+   "sha256": "47b1ee382383535beb9da64bb8a44dcaaea06fc6a2a5f55dd9b0dcd1311264f6",
+   "bytes": 9321,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r38_chem_shape_rp_onebody.py",
+   "sha256": "31e0c7c79e141a00504355290180a3e232e76233c2bd4f9d7a6f356250ffdf5c",
+   "bytes": 10990,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r48_chem_q7c_absorb.py",
+   "sha256": "ce752909b7187c4e7c3a8bdc911e204a0328df67581d75e8a475127eb89f3c45",
+   "bytes": 3964,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r48_chem_q7c_fitlib.py",
+   "sha256": "aae87efe13a46641b1fea6669bd27e97e7d96b04f5312dfbf68fb7d8ee08b4b6",
+   "bytes": 8493,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r48_chem_q7c_linmodel.py",
+   "sha256": "8026c330b7f491f413bd18369349453215d8b3f830a30123632be379059614cf",
+   "bytes": 16525,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r48_chem_q7c_obsigned.py",
+   "sha256": "36474515accdd2f6eed9cf5c96d7a9f200ab82ce02990cb93c0d154f7daa5f76",
+   "bytes": 5108,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r48_chem_q7c_onebody.py",
+   "sha256": "884e27aa97db9a48dd14f680f872957e3253f22c7a87b69292731172a4fab2b1",
+   "bytes": 12112,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r48_chem_q7c_refit.py",
+   "sha256": "c8926d5cf5c3aedff3aa1626e4336873b0c98ea54674f1bd924ad10f433e81c0",
+   "bytes": 19677,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r48_chem_q7c_round.py",
+   "sha256": "22edb850bccdcdbab4a7eadd69634865b9a9b30554f77c6032584a72e77e578e",
+   "bytes": 99403,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r48_chem_q7c_sdiag.py",
+   "sha256": "021b07bff3ab47ae231c64cdcdf8d11ad39c7e258a0c6f6288e60d0bec50ee75",
+   "bytes": 5042,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r48_chem_q7c_table7.py",
+   "sha256": "6f2eb00dd7b23e9121cec3f2e276b5b24a3cbfab4541e5b6e268ccab636594e3",
+   "bytes": 8699,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r48_chem_q7c_vtab.py",
+   "sha256": "0187215b4553e6293dd9083b4be285bd70e67dc881ffcd8ff2034d97d0d9f283",
+   "bytes": 3691,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r49_chem_dmg_fitlib.py",
+   "sha256": "aae87efe13a46641b1fea6669bd27e97e7d96b04f5312dfbf68fb7d8ee08b4b6",
+   "bytes": 8493,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r49_chem_dmg_lmgpu.py",
+   "sha256": "0e3b993cb5c76ad9cca2c2181e03129329ca471ecf9cb68032d3350809df87b5",
+   "bytes": 11303,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r49_chem_dmg_lmhold.py",
+   "sha256": "77cdc5a0296b64530ae414695c7d6c74aa924c5ad216b3c47163eab07583269a",
+   "bytes": 15148,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r49_chem_free_codemodel.py",
+   "sha256": "68ae70ceb7aa8f6c3e2266143c9fdb9372e90cb181c97e3212e3f04e242ab0de",
+   "bytes": 11761,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r49_chem_free_costmap.py",
+   "sha256": "51699725b256216574b81624e226dcf3e9a177fec70482af5dea2e502bfc06e7",
+   "bytes": 1833,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r49_chem_free_obround.py",
+   "sha256": "91dd83da81d4e079b192ef78ed7fa36f3937551960b1d9c3eeaf1909472e537e",
+   "bytes": 19415,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r49_chem_free_rp_round.py",
+   "sha256": "465f3ddd9064744d510621222f720f4f38f36ec416cc86a59d1e6efb0a5414ee",
+   "bytes": 100479,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r49_chem_free_spec.py",
+   "sha256": "08b54327ea081c9dc1895c66f88bc733c2c08190ab221d6e3d5b69c4eadd8fc8",
+   "bytes": 5754,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r50_chem_lbl_chain.py",
+   "sha256": "706b881df0b9c2124099ae744fd472d9d4a7ec19b9b715e617dcc044dbbe2238",
+   "bytes": 7214,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r50_chem_lbl_dead.py",
+   "sha256": "19d9d8460026ffe10cd09004a7b24f8a9742a3863d8ead08cbabac018e121a07",
+   "bytes": 4243,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r50_chem_lbl_fround.py",
+   "sha256": "babf2d2995b494aa220cb4daedda44bdc8ed457bc8d91786f9a431dd248dce53",
+   "bytes": 108920,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r50_chem_lbl_hook.py",
+   "sha256": "469b666ebf7c77e5a64427ea2145905a00c4ccfa1715da1fcab4f553b0497014",
+   "bytes": 5861,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r50_chem_lbl_obchain.py",
+   "sha256": "49bc4597058496e2943635cd1be960e2f3d2e32d0488ed15145450494d4a0cc9",
+   "bytes": 2507,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r50_chem_lbl_obchk.py",
+   "sha256": "a88ddd5a1a5037ab1ec4c7fff874427617c67f416c98793e532e492eb2c11006",
+   "bytes": 3514,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r50_chem_lbl_obwires.py",
+   "sha256": "8ef0ab6f771d8b7e556d5b99da9460688d8e740501caf94e88042cc1be3a420b",
+   "bytes": 12276,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r50_chem_lbl_place.py",
+   "sha256": "d1bccec303f0948997bf3ee735a34cbb368ef53739d7419b7688dc0c2c8d093f",
+   "bytes": 21523,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r50_chem_lbl_round.py",
+   "sha256": "3041db14f32de767f05c07387601b05754784f93c88ddaea8a5dc52b9b8d9b79",
+   "bytes": 103450,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r50_chem_lbl_table7c.py",
+   "sha256": "6a4f0d15171cfde2e7eda78863ff8ee7216167fa0e451dec92904972dd44493e",
+   "bytes": 11031,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r50_chem_lbl_table7w.py",
+   "sha256": "e93d315165b0371f5eb328f39e09fbaac408c3428f4143937748f402bdd72d1f",
+   "bytes": 10898,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r50_chem_lbl_wcost.py",
+   "sha256": "8c123bc196c8e0aa3ccaf61c4bf8dcce292bedbdfa0747f23f1126f5da6d8bd8",
+   "bytes": 5888,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r50_chem_lbl_wround.py",
+   "sha256": "96a982c9b77a9406ac23e0b98693e532123bf6b0fc0a15580e2c7e3fb1078cb8",
+   "bytes": 7700,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r50_chem_lbl_wtab2.py",
+   "sha256": "abc37cd3d2e5121d3d0dce2f0d4d7edb41d5c2eb77c6c5b0261213fdbadeb49b",
+   "bytes": 12371,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r50_chem_lbl_wtable.py",
+   "sha256": "559aa5cd4f28803cad642068f48b99fc5642efb59e566e1a9965a3c8371a066c",
+   "bytes": 6733,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r51_chem_bit1_codemodel.py",
+   "sha256": "fb0ef1afe034e34c18959e9b00b864b3d52d07dc176c8c196cffdf983ede9dd3",
+   "bytes": 17788,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r51_chem_bit1_obround.py",
+   "sha256": "c5d2d4d1b25fee57f958da35aae6b27eb03bb7b7d2c7db9f75e6e8741e80cc05",
+   "bytes": 11297,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r51_chem_bit1_round.py",
+   "sha256": "6dfe10a307345851a4fe8a7bb7abc9e26be0eaf194b5420d8e3b18fc2f242dd1",
+   "bytes": 104704,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r51_chem_bit1_rp_obfix.py",
+   "sha256": "3522374a33a28181a42b7d0581ea71a9c2c1542efeddbc119bd9ab6ee093958f",
+   "bytes": 14447,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r51_chem_bit1_rp_obn.py",
+   "sha256": "2aa17dab704f1a92992ff33df444f643bed1536de71ce53900f0baf0fd35e536",
+   "bytes": 9844,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r53_chem_gauge_car.py",
+   "sha256": "dafba3f3b3c4a69e942430ccd3dd31437c112919abb9e75e162f01bca5e1a1ec",
+   "bytes": 15205,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r53_chem_gauge_group.py",
+   "sha256": "2f2395665edd80ee1b13749de6565361a1738520a6125142161a4f02758cc6e9",
+   "bytes": 9791,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r55_chem_engine2_lib.py",
+   "sha256": "9ca2911966a15ea5b4ecf21b02f7442960e3049809b09d4a58835b717743ef66",
+   "bytes": 6766,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r55_chem_engine2_rp_c4stair.py",
+   "sha256": "92889e1d873c9e9a0530fa6ccba92d83be5d0ffd81a9fd27d0faaffe68d069d7",
+   "bytes": 8961,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r55_chem_engine2_rp_entry.py",
+   "sha256": "5594661d23d6c8f2663a2d00ed67ccf5fdf2576bd59457d3703067f0c32144db",
+   "bytes": 2082,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r55_chem_engine2_stairb.py",
+   "sha256": "905e2433089c4379f28c588ec5df33c4361e8a7d1f97f790d04b10c0440c5700",
+   "bytes": 12190,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r56_chem_engine3_dual.py",
+   "sha256": "e0b61e5edb7f9b8de600f964140d8de1f1b6564a1c427b87dcd9d59e1107a01e",
+   "bytes": 11342,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r56_chem_engine3_lns.py",
+   "sha256": "67d4d1a662b935ef37900469b06d68ce6dd18e86a967083db4a2a96037fecedd",
+   "bytes": 9249,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r56_chem_engine3_mid.py",
+   "sha256": "15b34cdff294cd09e4035ef65b8776c9155f9f02ec2dd18a24ad6de908959f75",
+   "bytes": 14073,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r56_chem_engine3_rp_parity.py",
+   "sha256": "0cbd61919baa371780a1fad40e4146df40802cc5b54d35cbee57935744c32a80",
+   "bytes": 16808,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r58_chem_kept_c2a.py",
+   "sha256": "561fb2c40881afc7a592ec09c45ef65ecc9492bd828b438eec73dc2f4ea0937a",
+   "bytes": 3360,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r58_chem_kept_c4chk.py",
+   "sha256": "32d3ff5504c511c76177e17d2e7891126967643f075895f56c0f907039c5d212",
+   "bytes": 24844,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r58_chem_kept_emit.py",
+   "sha256": "d38e25e124492568e543ff25a82996b0611b723e84efa88537390ab65fccccd7",
+   "bytes": 11112,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r58_chem_kept_emit68.py",
+   "sha256": "a038e6ad9bbbf93f57b31a7b0816976b2cbfd08cebd2fe870653e55c4090a3be",
+   "bytes": 11264,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r58_chem_kept_entry.py",
+   "sha256": "5bbf5574d98be56e0fcf86a0884adb3ddd2174c5de51268aeb28c7728676a550",
+   "bytes": 2227,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r58_chem_kept_mask.py",
+   "sha256": "afd4ab1f4e7fbec669ae34af406fdaff65425529ea1efcf49c7b4dfd92ebe363",
+   "bytes": 19811,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r58_chem_kept_rp_emit68.py",
+   "sha256": "3e6c86af88fa61416a4f7d706f5dc43759e912e2c312a5e838d4b32e9b07ed7c",
+   "bytes": 12317,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r58_chem_kept_rp_mask.py",
+   "sha256": "e0124deb20dd67c4d7cf106407fdc816a2abbc832adc7ab72cdc832e8a836009",
+   "bytes": 28112,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r58_chem_kept_vpad.py",
+   "sha256": "d811fc2104d7e0d1c5b618148868d9bbcc17577109ac2a20b275ce6c126171f3",
+   "bytes": 2363,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r59_chem_groups_g42.py",
+   "sha256": "2ea75c62f09de1ae36b125cea4cc5c8b9c0adad4fed3b871d7715da3cfdc713a",
+   "bytes": 9314,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r59_chem_groups_grp.py",
+   "sha256": "f60f48347f9475a1c38d4017663452c143949b7934970e7d29970f13b538de06",
+   "bytes": 1430,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r59_chem_groups_lab.py",
+   "sha256": "9c509d6fc507cac2d8da35b5aaa2d66406e5f165c07e103901f5ae833eb8ba9e",
+   "bytes": 7633,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r59_chem_groups_tie.py",
+   "sha256": "2e763b96c64a34867c469cba9b0ec0002e97a2af1759e4483c5782de4c9d00d2",
+   "bytes": 17834,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r62_chem_bilin_emit2.py",
+   "sha256": "f07c8d8bd23e9048479bfbe4ac39406544ffe41688a91e0ee01befdf6bc3cff4",
+   "bytes": 13329,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r62_chem_bilin_mask.py",
+   "sha256": "43ca5f89983faa3bf26ab2574695fcebd93f495a04d1bcdd08c0cff2450e43a5",
+   "bytes": 32534,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r62_chem_bilin_mask2.py",
+   "sha256": "fa2ad4896ebc582addb3c5cec0157f28126aedbada017c3f27843d70337d7472",
+   "bytes": 46540,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r62_chem_cache_dead.py",
+   "sha256": "26954326598c645fde66c244c4370067ca45bc0c145919b8ea402c7fe0a2799c",
+   "bytes": 5284,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r62_chem_cache_rp_apply.py",
+   "sha256": "64541bc771b312d2d1a566e907a0a7c6dbecdd34926aa898f86753ccba9e1931",
+   "bytes": 5693,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r62_chem_cache_rp_mask.py",
+   "sha256": "1e6f2bf101bb236e41a0940ad521205303c42a7804cb66211ef349ac4a222c09",
+   "bytes": 33630,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r63_chem_wired_dc.py",
+   "sha256": "d09f975d27c1d1ee6424f2b3e9808c92762ac2c69da07a9ab43a4403b944d698",
+   "bytes": 20316,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r63_chem_wired_entry.py",
+   "sha256": "e91733a857ee0ac542579327c73a6af48202cdf76068edf1e3a0b9c6fc9fa43a",
+   "bytes": 3673,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r63_chem_wired_rp_dump.py",
+   "sha256": "37c710b23e7457566a6f64a1ee331fd51f90a5f576391c7b7a6e2b94687684ac",
+   "bytes": 6530,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r65_chem_all15_frelg.py",
+   "sha256": "bb29099de8c9d6adb392180a79afdb515eaeef18038eb9fd954311aa7ce33586",
+   "bytes": 120324,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r65_chem_all15_froundg.py",
+   "sha256": "3df596e059c5a1d6cacef770f3f86f6a154c5a3266baec9304cdf4d6c6bb11cc",
+   "bytes": 116523,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r65_chem_all15_hook.py",
+   "sha256": "20e3265e0fde3bfaa579936bc02e7548fd110e7d3c78d02e330645adfc3784a4",
+   "bytes": 8503,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r65_chem_all15_mkfrelg.py",
+   "sha256": "9f1fc608e8356ec373d13646296918f38925f6f6d0caf78423b8c9220d6a6242",
+   "bytes": 6714,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r65_chem_all15_relg.py",
+   "sha256": "d2b6435490c48951d21d58a75867d2a8a4f9425eb5816eefe7522bd2f63f621c",
+   "bytes": 19741,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r65_chem_wired221_build.py",
+   "sha256": "003d2383400df1544f9d2e5ed8ef46dd2924c9335c05c87e6c5c1360af362c79",
+   "bytes": 13631,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r65_chem_wired221_dc.py",
+   "sha256": "2eba3d51d16713a8bb6bfd54940336f4bea53212bff4054d54bf601a3c3dd550",
+   "bytes": 15790,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r65_chem_wired221_exact.py",
+   "sha256": "dadb1221594c1c9ea81b2088940b3f29b4ced05cb3df528280efd0a1427d9787",
+   "bytes": 14792,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r66_chem_plan244_emit3.py",
+   "sha256": "f471e084cb4595f84399b01614e971c97cf16a1ccd0e3d456ebbaccd82b24b0c",
+   "bytes": 14723,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r66_chem_plan244_emit4dead.py",
+   "sha256": "062ebad96e0e9fdace7b8580b8656b318f9ceb204e9a366cf067d3f0ba68d184",
+   "bytes": 15968,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r66_chem_plan244_job.sh",
+   "sha256": "7932eea7e09b4c864321e5b1404cfd56403e86ff6c7e7a944dc21bac5e49bb57",
+   "bytes": 1543,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r66_chem_plan244_mask3.py",
+   "sha256": "7a517bc19eb4d882c3833ed9599c04a8d558ff09e0eb420eb3f2bd78b1f8acac",
+   "bytes": 61270,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r66_chem_plan244_mask4.py",
+   "sha256": "7ccfef1d57cf77f05b916c459e9d9bc29f16369669f33c900b908d2bae25eab6",
+   "bytes": 66321,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r66_chem_plan244_mask4dead.py",
+   "sha256": "e3cef4be2f9c95ac15864e47e3f7911b302ecf16035bb299bd2b5f28615303ec",
+   "bytes": 74934,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r66_chem_plan244_stairA.py",
+   "sha256": "c4a9c1dc56b7ccd452246c7a1e508817a4a57d7ddfe8d83a2cec47460bfcf8a7",
+   "bytes": 15907,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r67_chem_path_cond.py",
+   "sha256": "9c5812899eb0d4e95dbc4487c9516781a52d9f872b7c81437b3aede1775849b1",
+   "bytes": 8713,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r67_chem_path_lmstage.py",
+   "sha256": "eec4f3da312e26f86d14638968d3424f5ea202ee63db4944a38e6119452ff4d0",
+   "bytes": 16493,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r67_chem_path_mkround.py",
+   "sha256": "de17219a2c3f7eafb00c26549d7fbc4ba8891641cb070ecf23df4f4cc7afcee9",
+   "bytes": 21795,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r67_chem_path_round.py",
+   "sha256": "1300b29056ba7f18779edca169ed703c7efcce46647d181f1e210bb396e09a95",
+   "bytes": 126063,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r74_chem_order_cond.py",
+   "sha256": "7d8642730fba5108d34ecadb5b96023da96a47f3cc532ab97aa4e18cf77c551e",
+   "bytes": 9870,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r74_chem_order_fround.py",
+   "sha256": "1a2c1fd8edf8749077fefa7d434e1359f8741e434d8a9c634e6041df8eeb2222",
+   "bytes": 133857,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r74_chem_order_mk.py",
+   "sha256": "3d05a7d7562d07b583d46bcc448997d3c5e4729ff213e175f4728dfaf28edb0a",
+   "bytes": 22737,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r74_chem_order_mkcond.py",
+   "sha256": "9373525cf725450fb5f65fd93bda4236ce2cbc133d08d055fe723665334ce2f2",
+   "bytes": 2840,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r78_chem_dead_lmin.py",
+   "sha256": "764437982ba9fc67f2584bea012555b70b848a18dc5c8d1e2cebdd4560a998a6",
+   "bytes": 16314,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r85_chem_budget_t1_gate.py",
+   "sha256": "892261bba32ac2903e561d1b90b1f1a1219424a0821ee749a0d8408ab31df279",
+   "bytes": 1282,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r85_chem_loaders_t1_mask4dead.py",
+   "sha256": "4ea5e74e50a32aeb28abc87d0b97c4be0c795dcfbe4fd515ec03c89abd694883",
+   "bytes": 76170,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r86_chem_g35_census.py",
+   "sha256": "cc8fa4b29d2e8ec51f7a5febcbd5a0f6b3db24557706af40a67ae372e14e40e6",
+   "bytes": 4693,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r86_chem_g35_dump.py",
+   "sha256": "0ca733bbb20c7d1a9d736a8f163725c1ba48051bebf08946e7627afc092ae345",
+   "bytes": 5508,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r86_chem_g35_hook.py",
+   "sha256": "aad4d92ee1edc628b0b4aa9f68948e361a83f5305cc544ea349e120ca4bf20fe",
+   "bytes": 2785,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r86_chem_g35_solve.py",
+   "sha256": "fd29a6707edcca62ec2a7175b6cd3094782cba36cfa5343481342674d5d975fc",
+   "bytes": 16801,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r89_chem_cascade_build.py",
+   "sha256": "e7f7e9ecae1dd8d8228c11c2f871dcea9d8ed74f519bb0cf7395589a3a94d502",
+   "bytes": 902,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r89_chem_cascade_cells.py",
+   "sha256": "4a2a2ffa1e6ffada99e4ac5f0df97c0cf56a3913f1647b9408cc5bb5efa5f07a",
+   "bytes": 1796,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r89_chem_cascade_dead.py",
+   "sha256": "9307b0a3529cd140a4369d11bcb4b4b0ae69607dbd43d072391a4601de409c3f",
+   "bytes": 7268,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r89_chem_cascade_pair.py",
+   "sha256": "1f803cac5f6e1f4d713c4737b6799476a0d1e3d23dc7bebbced82755a150cfe9",
+   "bytes": 3608,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r89_chem_cascade_strict.py",
+   "sha256": "8deefca0bd90c45f243578c9f0cf13ff96bd63b7b2e8812e2372d6b78ac3f492",
+   "bytes": 2335,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/r94_chem_market_formula.py",
+   "sha256": "89cb139323f85d19e8ea4342a3a7bd459872899d304d179dc2b4df01d473862f",
+   "bytes": 4321,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c3_bsrun.sh",
+   "sha256": "cec767f01ca88d86dc86aab331eb45a6e0ba961ad749b08e173573d6fc9a88d0",
+   "bytes": 4027,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c3_c4loader.sh",
+   "sha256": "0161c417eef2a2a6bbd79795e9fd3431711c92d0e97da654a4a5b82872e36736",
+   "bytes": 4326,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c3_c4own.sh",
+   "sha256": "bd8afd7fbf8456f92ec33ec9bf3af589d95485f1044ca069c6ae50e86f0d0b86",
+   "bytes": 5668,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c3_dentry.sh",
+   "sha256": "e33aead8753af3a2ee8dbc456a69332d35eccbde7febb90ceeadfba38a1ea6a5",
+   "bytes": 4170,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c3_lastg.sh",
+   "sha256": "f409e17fadb4b331105280fb5f8758580b0aba8baf76450256c78e3d130ebcc8",
+   "bytes": 3178,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c3_one.sh",
+   "sha256": "73f5fe66e5b5c62ca1f811454bf61894a1f48a2ec54041aac6a16b52b4f611ed",
+   "bytes": 1935,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c3_pt5.sh",
+   "sha256": "6d6d16c0bdb29854b3d7f08ba032691897bd2098af36d97ed643b0c21fea28f4",
+   "bytes": 2437,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c3_r65merge.sh",
+   "sha256": "20381821b0fdb16c78cedf8fa938317e1259e393af2dd47026fc8dffb3bc2848",
+   "bytes": 11454,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c3_r65own.sh",
+   "sha256": "ba6fc8d1199160ed9ee2273fae4cda000eff347fe6eac3358df6c47933d9815e",
+   "bytes": 13583,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c3_relrun.sh",
+   "sha256": "bc993103a2344ae984799405dddcb65f878d472335d48a1ad740ca977a65b1b0",
+   "bytes": 3016,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c3_s5one.sh",
+   "sha256": "aeeb49bff5906de79d5163df96a65de5d5e40a12aebf4422dce4d3bdc07b5e44",
+   "bytes": 1687,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c3_s5t.sh",
+   "sha256": "c2f653c5b2aa37fdceeab66e33c52d914b6203423708d3e8c4ec71569f357837",
+   "bytes": 2467,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c3_s5tp.sh",
+   "sha256": "3441aec853e479bd87f6bcb5003f9b4223e3dc7363c87064d5cb5e07aeac103c",
+   "bytes": 8159,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c3_s5tpb.sh",
+   "sha256": "08b27292d95581ef3d740e3a30c1de6c94707ccb5a82e4e418b67c164426293d",
+   "bytes": 9272,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c3_s5tpv.sh",
+   "sha256": "505b001902d56955b540d042b185639843bc3baaf0a162f0fe62bc73e0b4a45c",
+   "bytes": 7547,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c3_scan.sh",
+   "sha256": "8124f65004d38abb946bf678db44dc23fcb30231d417af963a75221dff89d70a",
+   "bytes": 1284,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c3_vscreen.sh",
+   "sha256": "4df1ba3afcebf84d201abdda8a081da4f647b708525c7229d139e77d20e4649d",
+   "bytes": 3392,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c4_chain.sh",
+   "sha256": "bfb734d8e4bbb32576bfc87c2f28a101b9ae838c89805747c55a228b95999010",
+   "bytes": 2288,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c4_loader.sh",
+   "sha256": "156e522e0ffc148fd7b5059d4aa17e1cf64c53268a552c3063874d33a0a6d694",
+   "bytes": 3898,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c4_loader2.sh",
+   "sha256": "8da04d967e713dad97d3fa82ddbfe26dba6365ad37fd148fceec93580c853673",
+   "bytes": 6938,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c4_port3.sh",
+   "sha256": "68a2a2ab8fd0889e24b8033b2a707712a4320a75b68f92051b11d345fc7208ac",
+   "bytes": 13502,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c4_port4.sh",
+   "sha256": "5c328f2ec8dcb9d8400b082e75e595ae58b9736b906c4359bb3d4cdda8fd2d10",
+   "bytes": 30922,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c4_port5.sh",
+   "sha256": "871233b65cfa0fca2844590d569af1359ab5264b0db5e883f4d14ae8fbf7b8ce",
+   "bytes": 45921,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c4_r86go.sh",
+   "sha256": "1b7e539a1cf9ebad2d7e9487fe2899c06146bfdf7e2590c55440bdf04f60a6db",
+   "bytes": 3142,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c4_r86go25.sh",
+   "sha256": "4d181e0e4978a6d5f9b49ce066840a1c75c0a5632959229f49c5060f388c8eef",
+   "bytes": 4079,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_c5_port.sh",
+   "sha256": "f50317e918d40ed762f867781794d1d305c57db7c59219cb665a5034d155d12f",
+   "bytes": 46852,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_ld2_e20kept.sh",
+   "sha256": "28a154d26310173686e6bbb5bdb571ec0f434a1fe6298636aaa19e6826b2b693",
+   "bytes": 5266,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_ld2_e21keptjob.sh",
+   "sha256": "108ea32caba5c523659d66d89203d295870e04f489e5c8ed104f7483b179d1f5",
+   "bytes": 3850,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_ld2_e22ann.sh",
+   "sha256": "92f4a028f4e48562cda48555dd38e51793f47dcf40a1a46734bf829f90660f8a",
+   "bytes": 3223,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_ld2_e22ann3.sh",
+   "sha256": "c05eeb040a52020f8143964a947a2d3307bbd6ac603ca8edd2004baf26ff1395",
+   "bytes": 4104,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_own_build.sh",
+   "sha256": "4a12ae5cc8a95c32ce6c0268232aae0f3411ec638e658fbeddfe1e7e57c497e8",
+   "bytes": 2535,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_own_publish.sh",
+   "sha256": "26e8eb0c08a333dc369d0391c6b176f3c9287be512e93c703f8339554e779502",
+   "bytes": 1449,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_t10_pfin.sh",
+   "sha256": "bbddcda3724570d92d1e4a75c69b9c8998b4574c9dde1730af4c3becbb2329e3",
+   "bytes": 3397,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_t10_ptick.sh",
+   "sha256": "3e17b06d15bf460b9a661f07b9c481a3917b8ee1c64757bbd6eb010fa2961cdd",
+   "bytes": 2072,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_t10_s4fin.sh",
+   "sha256": "84d1ce948ff3906badcc1e0b06ae534af35b8d5b36eadeb689ad946041000e16",
+   "bytes": 5489,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_t10_s4tick.sh",
+   "sha256": "26d568995130d070a3c97469510c133856c10f87e4bcaa74280c35bd4f82ac3e",
+   "bytes": 2523,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_t10_s4tickets.txt",
+   "sha256": "b29d0823e392a21172a630e44e0aa6c28ae76140b10ab5c570acc9faa8ee14ff",
+   "bytes": 2199,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_t10_s5fin.sh",
+   "sha256": "d1c108faa63bdd1e5686be04a662efcd674bb5947f571539e6064e3ee0cae656",
+   "bytes": 6788,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_t10_s5tick.sh",
+   "sha256": "177d40c814c9f15822b13fb0a3dc321892ac830354de07455b7dbc87ab658e7a",
+   "bytes": 2565,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_t10_s5tickets.txt",
+   "sha256": "4ba7a4470934d804e35a3067c417cbd934ab6e8dff33c2d020e8a80c84a0c91d",
+   "bytes": 5171,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/chem_t11_races.txt",
+   "sha256": "9a4dc08d0d674dad13ea970db469211952a9dbf3fdcab710ce859476b38d824e",
+   "bytes": 6433,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/r89_chem_cascade_an.sh",
+   "sha256": "73e8163ce120a1db0d30b1c7d227f8c94d26e06b625d71a9949fea7e6e281c7e",
+   "bytes": 1680,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/r89_chem_cascade_go.sh",
+   "sha256": "109277e09d1eae93d33e842945cf0a820676f88950f9fef24a32d889cefd4352",
+   "bytes": 1301,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/r89_chem_cascade_port.sh",
+   "sha256": "169ee19baeea0c9fe48b881ebee9340751f70b444e3f5e81f51c2049d20b1c66",
+   "bytes": 6303,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/r89_chem_cascade_r86go.sh",
+   "sha256": "78109ac8cfd17e75c7dcfd5727e151fcab9f9503db3b7d957bdf4e9af5a05504",
+   "bytes": 3518,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/public_thembones_31679_2026-11-20/gen/chem/tools/sh/r89_chem_cascade_r86s.sh",
+   "sha256": "cf97caaca8ee0f4d47456fe58e77023dece35755d8395df1179dcd74fe72f4ec",
+   "bytes": 3233,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/work_757/wheels/llvmlite-0.50.0-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+   "sha256": "425845f415a06dc50db08db033c6b568e0d85c4937e932c605a4d49e1514b2da",
+   "bytes": 59696589,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/.cache/work_757/wheels/numba-0.68.1-cp313-cp313-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl",
+   "sha256": "4d1b544f37fc237d16698a4266bb3d5b3c40ec8aa4c925a191ff09ec6d115310",
+   "bytes": 3850592,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/inputs/thembones_s108/set_dfthcsos/submission.npz",
+   "sha256": "e05fb18f808e410ff126d68b8415e6fd4b33712760f35f90412e96ba6a331f73",
+   "bytes": 1864916,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "pinned public input"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/inputs/thembones_s108/table/asm_words.npz",
+   "sha256": "3677889f764d107d05f9fc02488b6b6988e841ffd1e14b0289bea38d5a6874dd",
+   "bytes": 1864916,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "pinned public input"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/HANDOFF.json",
+   "sha256": "5436ad7777f55818cf7a825fb35ee17bdb372232832bd3585a241a0d159bd9e8",
+   "bytes": 4922,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/RECIPE.json",
+   "sha256": "2e4a99f00be1d92b6f760ec18277c2cf4a2b565caed739e4758823bbd5005b36",
+   "bytes": 118957,
+   "origin": "provenance:head",
+   "reason": "provenance"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/build.py",
+   "sha256": "456fee599bbbc4238f0f4fac65f5f24098264fcc5c5c81060acc6322819873eb",
+   "bytes": 7816,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/generator/PATCHES.md",
+   "sha256": "73585ab02d00161c1f15b1e1d9896051c2dbdde6d708059d7d6895dee387e1b7",
+   "bytes": 2463,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/generator/assemble_exact.py",
+   "sha256": "e280fe7ad8c1911b5cf481a3f4812d8f0afc734dc64e4569142c9e5ea9579257",
+   "bytes": 7301,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/generator/check_loader.py",
+   "sha256": "5c711974af5bf6691d0addb6acfb15f7875a1caa68b35ff63f94ad61ad0f2255",
+   "bytes": 6276,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/generator/generate_exact.sh",
+   "sha256": "72ef936509ab4f96fc1ff749fcb62d8dbc2325f8d83729eb6fba138fc7e35439",
+   "bytes": 11179,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/generator/setup_exact.sh",
+   "sha256": "99f28c448b4257894637ce99699a108bfe66f19de17e81ac48d40808f7ca18a2",
+   "bytes": 6944,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/licenses/CITATION.md",
+   "sha256": "18c82ebc8479d413607d6e55ba01009f903e19bdf76035331a80fc7bbd63ddfe",
+   "bytes": 2512,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/licenses/LICENSE",
+   "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "bytes": 11358,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/licenses/NOTICE",
+   "sha256": "f8db89166d2ecef5201fb2689fc6dcb14bb8dd5aa46fdbec2c73e277abcd1629",
+   "bytes": 2001,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/licenses/NOTICE_generators",
+   "sha256": "89c158858d9968cb48a17bd16c1d04e65870614af899ecbc5546fbf8e6180ffb",
+   "bytes": 4842,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/licenses/llvmlite__LICENSE",
+   "sha256": "5d0772f4dc4cb16e6bee2419bfa57c0a129808400e341b87fd9f87cbe6a5963d",
+   "bytes": 1285,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/licenses/llvmlite__LICENSE.thirdparty",
+   "sha256": "dc527293cfc2e4b4d59042e0b204667162845d8548651932f5a9d2f4adfc928b",
+   "bytes": 12561,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/licenses/numba__LICENSE",
+   "sha256": "3a70e0a21cad03147246f6363d07bf76fae216c72779707f4ae5db06bcacf067",
+   "bytes": 1286,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/licenses/numba__LICENSES.third-party",
+   "sha256": "fdc60ca21d827beb3835ffc6b7a99bda14a5cfcb379d0c82c05e3c1ff4a482f2",
+   "bytes": 26322,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/licenses/third_party__atakanaldemir_dqi_bundle__CREDITS_v3.md",
+   "sha256": "834b75256faf941255ca240962e366125c6da04f5efdbd522ce806d9fe683481",
+   "bytes": 1391,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/licenses/third_party__atakanaldemir_dqi_bundle__CREDITS_v3_parent1.md",
+   "sha256": "834b75256faf941255ca240962e366125c6da04f5efdbd522ce806d9fe683481",
+   "bytes": 1391,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/licenses/third_party__atakanaldemir_dqi_bundle__CREDITS_v3_parent2.md",
+   "sha256": "3533e8671670cf4a4feb7c5c552798bc62f8dffb207224a961631ded5996301c",
+   "bytes": 2307,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/licenses/third_party__atakanaldemir_dqi_bundle__CREDITS_v3_parent3.md",
+   "sha256": "f31580f7575472532c003901a884c3b3c9d71ba2acb6c74591ed166306ec61cd",
+   "bytes": 1636,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/licenses/third_party__atakanaldemir_dqi_bundle__CREDITS_v3_parent4.md",
+   "sha256": "aac50c403ef7f73e5082291cd88210b6f1a117e2191af736def9650152802503",
+   "bytes": 1684,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/licenses/third_party__atakanaldemir_dqi_bundle__LICENSE",
+   "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "bytes": 11358,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/licenses/third_party__jday96314_QuantumAI-archive__LICENSE",
+   "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+   "bytes": 11558,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/licenses/third_party__syed3000_dfthcsos__LICENSE",
+   "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "bytes": 11358,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/licenses/third_party__syed3000_dfthcsos__NOTICE",
+   "sha256": "3e0eea3a45192471eb7d3f9ceb8f47c070d45a9e46ee6553ccd60ed17f8bfa13",
+   "bytes": 230,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/licenses/third_party__syed3000_dqi__LICENSE",
+   "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "bytes": 11358,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/licenses/third_party__syed3000_dqi__NOTICE",
+   "sha256": "3e0eea3a45192471eb7d3f9ceb8f47c070d45a9e46ee6553ccd60ed17f8bfa13",
+   "bytes": 230,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/licenses/third_party__syed3000_invsqrt__LICENSE",
+   "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "bytes": 11358,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/licenses/third_party__syed3000_invsqrt__NOTICE",
+   "sha256": "3e0eea3a45192471eb7d3f9ceb8f47c070d45a9e46ee6553ccd60ed17f8bfa13",
+   "bytes": 230,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/package/tools.sha256",
+   "sha256": "cfe3cf45456a531b8c08e74aa7c5eb0be65e99f3321e5a8a425260707ae85885",
+   "bytes": 26453,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/chemistry/iterations/766_chem_757_exact/trials/001_release/result.json",
+   "sha256": "63da0a372396145cbcea27fb6d942f20560599da45fdfd903bf095d35477d243",
+   "bytes": 9169,
+   "origin": "provenance:head",
+   "reason": "provenance"
+  },
+  {
+   "path": "repo/host_provided/kickmix/kickmix.so",
+   "sha256": "c66b3216c4029e0cdfd09054306aa0feadf53ab2f50c1164e37f752874e5005e",
+   "bytes": 3220392,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "host file (competition terms)"
+  }
+ ]
+}

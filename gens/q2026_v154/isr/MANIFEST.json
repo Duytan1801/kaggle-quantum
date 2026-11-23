@@ -1,0 +1,2266 @@
+{
+ "task": "isr",
+ "release": "v154",
+ "archive_task": "isr",
+ "candidate": "isr/772_isr_769_dial_w8/official_a",
+ "created": "2026-11-20T21:57:46+0100",
+ "source_commit": "0370d73b5909c71fd94d4666cc5d1d6fc4a92272",
+ "recipe_sha256": "091a20d2ffe89e0cb3daced255dea7821d8a92cc05b7501358ddbef15c62abe0",
+ "members": {
+  "invsqrt.kmb": "b4ba2126a1ac435af2ab4e8e8394eb79bdf9dfae1ccb2aad06e5fad177e47608",
+  "LICENSES/CREDITS.md": "5804fdb972551019cf1481f9e347b91d8a9960b77e656c27b3a7bd7f49ba90e9",
+  "LICENSES/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "LICENSES/NOTICE": "f8db89166d2ecef5201fb2689fc6dcb14bb8dd5aa46fdbec2c73e277abcd1629",
+  "LICENSES/NOTICE_generators": "89c158858d9968cb48a17bd16c1d04e65870614af899ecbc5546fbf8e6180ffb",
+  "LICENSES/NOTICE_v12_dqi": "3e0eea3a45192471eb7d3f9ceb8f47c070d45a9e46ee6553ccd60ed17f8bfa13",
+  "LICENSES/third_party__atakanaldemir_dqi_bundle__CREDITS_v3.md": "834b75256faf941255ca240962e366125c6da04f5efdbd522ce806d9fe683481",
+  "LICENSES/third_party__atakanaldemir_dqi_bundle__CREDITS_v3_parent1.md": "834b75256faf941255ca240962e366125c6da04f5efdbd522ce806d9fe683481",
+  "LICENSES/third_party__atakanaldemir_dqi_bundle__CREDITS_v3_parent2.md": "3533e8671670cf4a4feb7c5c552798bc62f8dffb207224a961631ded5996301c",
+  "LICENSES/third_party__atakanaldemir_dqi_bundle__CREDITS_v3_parent3.md": "f31580f7575472532c003901a884c3b3c9d71ba2acb6c74591ed166306ec61cd",
+  "LICENSES/third_party__atakanaldemir_dqi_bundle__CREDITS_v3_parent4.md": "aac50c403ef7f73e5082291cd88210b6f1a117e2191af736def9650152802503",
+  "LICENSES/third_party__atakanaldemir_dqi_bundle__LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "LICENSES/third_party__jday96314_QuantumAI-archive__LICENSE": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+  "LICENSES/third_party__syed3000_dfthcsos__LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "LICENSES/third_party__syed3000_dfthcsos__NOTICE": "3e0eea3a45192471eb7d3f9ceb8f47c070d45a9e46ee6553ccd60ed17f8bfa13",
+  "LICENSES/third_party__syed3000_dqi__LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "LICENSES/third_party__syed3000_dqi__NOTICE": "3e0eea3a45192471eb7d3f9ceb8f47c070d45a9e46ee6553ccd60ed17f8bfa13",
+  "LICENSES/third_party__syed3000_invsqrt__LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+  "LICENSES/third_party__syed3000_invsqrt__NOTICE": "3e0eea3a45192471eb7d3f9ceb8f47c070d45a9e46ee6553ccd60ed17f8bfa13"
+ },
+ "notes": [],
+ "files": [
+  {
+   "path": "BUILD.json",
+   "sha256": "f15c2a44d43dbd67dfc2ee0136c5a513b40a4f90f84c265aa9e01bdb18b692d5",
+   "bytes": 2694,
+   "origin": "packaging",
+   "reason": "how build.py runs the package"
+  },
+  {
+   "path": "README.md",
+   "sha256": "9bd13b3322635918ecba5fcda80a36ea8d2613d834459f5b4f2cbc8e1b90bbde",
+   "bytes": 1259,
+   "origin": "packaging",
+   "reason": "provenance, licences, attribution"
+  },
+  {
+   "path": "SHA256SUMS",
+   "sha256": "5e8389e736c07efd7f60e9635a43d7516e31b90f049d23240eb82821ce0d1c8c",
+   "bytes": 2106,
+   "origin": "packaging",
+   "reason": "expected members"
+  },
+  {
+   "path": "build.py",
+   "sha256": "0a53a9b5d2b7c202065fd9cf2982fdf6a873190b44bded3b26c5e3e4b12ac28c",
+   "bytes": 4304,
+   "origin": "packaging",
+   "reason": "generic entry point"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/cfg/cfg_M.json",
+   "sha256": "3d9526b932f85657c3e62187c37248afbeb32ec94d391f553750eb8dbdaf2620",
+   "bytes": 14412,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/cfg/cfg_b312g.json",
+   "sha256": "40d4c3dd8112f1cd482d59d855ff1038bc97edecb61bb6d5b50bdce0de255182",
+   "bytes": 15043,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/cfg/cfg_dq18c.json",
+   "sha256": "0d3d62953be5f89ff43a5f8187d22d0ef605942a25267e511399e59626a15ff3",
+   "bytes": 15035,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/data/r59b0/SOURCE.txt",
+   "sha256": "c1672423dedfa3d339fecac8f583480ea23681a1d9dca63469f074ecb8f8e81c",
+   "bytes": 2578,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/data/r59b0/angles.json",
+   "sha256": "70612c9a77da7e6c893a661fb39bed037fb848307fbe8de10fdc6c50a9d865f5",
+   "bytes": 5901,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/data/r59b0/cfg.json",
+   "sha256": "fa687e3125d89d28e64433fa616bb170b0e23d9ac76086c966c1d1497a23a21b",
+   "bytes": 5340,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/data/r59b0/coset23b_full.json",
+   "sha256": "f9afb1cada5c7b5a9643e24ad04f906d6b552d047c91ef5150ed2d52a6de6039",
+   "bytes": 383,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/data/r59b0/router.json",
+   "sha256": "beeb738232001f38ed1ea1b18fcad3980082efbb3a18513b5d79145158fa572d",
+   "bytes": 899,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/prog/dq18c.staged.json",
+   "sha256": "bd993b27c27c5bc596b14e150baf25685504d3a2cfe7478b1c61261fc293d875",
+   "bytes": 1124,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/prog/q18_p7.json",
+   "sha256": "cd9962f2d80a7256176f605923feb842a9c7c08d720185a6af21ac925b0f897c",
+   "bytes": 438,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/SHA256SUMS",
+   "sha256": "fdf7352fb683d3bea0035b00014cd0db031836ba9f40595660cd650c84dbc0c2",
+   "bytes": 2861,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/SHA256SUMS.f3",
+   "sha256": "1684586c17aa512a0e27f68c4ed838d5a2fb2e26775317a127c735ed97dfa353",
+   "bytes": 2436,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/SHA256SUMS.m7",
+   "sha256": "ce719555de1e6ccbf73cfecbfba1aefaa4e930cb55363ee9fc50a6da4acd6db4",
+   "bytes": 2682,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/cfg_rebuild.json",
+   "sha256": "390d32875ebb9ffcae8f17785fca219110ed607028955807b5ec3db10b23e8c2",
+   "bytes": 600,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/cub_k7a_acc.json",
+   "sha256": "b770429f79629dbfbf993e49249089940019151954960ed8168c240b99128119",
+   "bytes": 443,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/cub_n31_acc.json",
+   "sha256": "66199baf66527b82972ca0e002e5aaa36604bfe27ec7d14c655740cf3a263341",
+   "bytes": 564,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/cub_n468_acc.json",
+   "sha256": "0746c8bc53ab51bad7940b55d6ef409c6b6240777c628ed6843899e5797c36f7",
+   "bytes": 518,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/cub_n6_acc.json",
+   "sha256": "913cc1cf78af307150603bfeba30f7b0565fd8f915e14a2fe83a85ac6cde9141",
+   "bytes": 486,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/cub_r48g70a_acc.json",
+   "sha256": "46037c94e22a1e85f465b8612d237263c7e93aea30660b3585d677fbd8572f6b",
+   "bytes": 314,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/cub_rot2e6e_acc.json",
+   "sha256": "77681be1b09f99bababe235a65958d523654911e1d6a1d2ffebe00003a86625b",
+   "bytes": 345,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/cub_s2_acc.json",
+   "sha256": "ca014635b25ab394e5837e05cd19a6cdd40fd0a25ece0c5af74b24f9b7005035",
+   "bytes": 510,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/cub_setF6_acc.json",
+   "sha256": "aefa41245f07f28ee52683f2e2628ffe9dab063f93f3f94988f7bd51fb7818ca",
+   "bytes": 385,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/fcsup/sc8_q18.prog.json",
+   "sha256": "65ed80c96b234e434d0cf51e714562e8744cb69bcaa57b41ff6c82020cf5259d",
+   "bytes": 1162,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/fcsup/sc8_q18.prog.json.ch1_10and",
+   "sha256": "96ea7094872a9a35dbf4be572a717672e1987e3d0a03a4c036c48fd4c02c3587",
+   "bytes": 1416,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/fcsup/sc8_q19.prog.json",
+   "sha256": "860bc024092eea686728129449beec616e6d891ec99164ffcb5bbc8fccdfef76",
+   "bytes": 492,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/fcsup/sc8_q20.prog.json",
+   "sha256": "13e6fac7f16b771c75bc0c890e4b8f187c220f5e0b13bc3b4a4ec42867fdf2f1",
+   "bytes": 288,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/fcsup/sc8_q21.prog.json",
+   "sha256": "c2c0f802704edb558add6297ddaedc24011ffd2229393c817c984ea72ea41257",
+   "bytes": 163,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc16_r24n.py",
+   "sha256": "98093352ca1378fa7201d780cd5fc903bfe7634cd13db447fce3bf12fe5ddb70",
+   "bytes": 16990,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc17_skipe.py",
+   "sha256": "e97eb5eb4f78aca88dd90236b61b9e3cde581ecbdd67b15e526f29018bc20f04",
+   "bytes": 27360,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc18_r25c.py",
+   "sha256": "fea1bd16e791a8feb4ef2760bf3300da39bcb5a1058b27913036d04dfdd32c0a",
+   "bytes": 4405,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc2_k4fuse.py",
+   "sha256": "8c859bf9bab43e454747e8b8e8478d11ebf6d988be9e48bedf819addc985d745",
+   "bytes": 30422,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc2_lanes.py",
+   "sha256": "b89a5dddf4f83c6fc3daf3db95c9a3fe832f965ff1d80f19292046472f772553",
+   "bytes": 2889,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc2_patch_h1b.py",
+   "sha256": "d506f383d1d0a79471cb8a4978fb8244253733a6bcc1a6131f80308423edfe5c",
+   "bytes": 33685,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc2_patch_h1c.py",
+   "sha256": "84562c4ce29110e5e8df05de2643bf087e0b036b74357bef1973f496360a6dae",
+   "bytes": 99360,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc2_patch_h1c.py.r62_p1",
+   "sha256": "d27fc0607f4994e52189331ea8a97b1ef6d1f413d114e5a4ab2da40e4cc701b2",
+   "bytes": 92640,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc2_patch_h1c.py.r62_p2",
+   "sha256": "a33160f59dfd1a412090bb5d7fce09979bcb3757d76160fe6fdd976d84eab79e",
+   "bytes": 99057,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc2_patch_norm.py",
+   "sha256": "567e27f02e162545d1d735c8f5212a437ab4086ac4c35c83afdffaa68c028e4b",
+   "bytes": 19463,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc2_patch_w26.py",
+   "sha256": "d8b436daefebd653e00b296c21fad41ba3251659e4493ec799c7aa48fa6d995a",
+   "bytes": 8511,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc_arith.py",
+   "sha256": "775a446f972c99721cbf466e2709c523eb80fc84ce32db9bc0fd460bdccaa152",
+   "bytes": 9104,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc_emit8.py",
+   "sha256": "06d7363a93f6536d6ac9a39e5a07146dfa717f2ec82cda1c26cb4c7676c2e259",
+   "bytes": 1683,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc_g8.py",
+   "sha256": "ee923b77e038040aa53ae0062e24c9eeca6f05c30b7d410eeb08985ac18816c8",
+   "bytes": 86040,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc_g8.py.orig_k9f",
+   "sha256": "5d49e94438a35a3af1df6721949ab156154670556325b3aed819d326bcae2f9b",
+   "bytes": 71765,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc_g8.py.orig_r56",
+   "sha256": "84dd0e5c02dec59f1ba0f79c9d96713be9e594e44d45791700cd1c82b73db976",
+   "bytes": 76655,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc_gen.py",
+   "sha256": "59a6e86dfd35e8179183f59bb822748610cb062169aae5dfee506f8f4e579939",
+   "bytes": 26149,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc_gnr.py",
+   "sha256": "96f8ea76db9ca2b787f57e5ef056d9ae376bd8db1a3447d97d2c51018d5a511b",
+   "bytes": 14005,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc_kit.py",
+   "sha256": "98bf7ae0f61c3d33d22e4c903eddf314642854b727e4e83cbb34fb9d5935fa67",
+   "bytes": 14883,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc_narrow.py",
+   "sha256": "cec8c0e064e03f64f19df9b8d69d868e2fa231d85e51846802bb375845382393",
+   "bytes": 30473,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc_narrow_r32.json",
+   "sha256": "1a414e44cce439730464ab4fae8818f026b18f0b59146de2ed1cebaf6178ad82",
+   "bytes": 1403,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc_run8.py",
+   "sha256": "ca32e6538e58c5228a8465d9827100dcf2cc6d1f5babff844e81624fe85d335f",
+   "bytes": 4423,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc_s8m3.py",
+   "sha256": "f6bc73e4251b72ec44cbc3a9dca75abcfd783d93f723f213fd04e5d903ec04d1",
+   "bytes": 20019,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fc_s8spanemit.py",
+   "sha256": "36375103c87761ad1c1c86abe2d0d73019bf2f4781499306e30164f5591842e7",
+   "bytes": 12935,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fk_epN.py",
+   "sha256": "00b4f191e5bbc7d36839192cb8275514ba1f2c1d321863ccbc36c2833664c2e0",
+   "bytes": 24367,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fk_epgen.py",
+   "sha256": "16e6ebf9c20e68cdcf9570cc53bce72555261c9f308f03d87bff1e46dfe3917b",
+   "bytes": 7081,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fk_epkit.py",
+   "sha256": "6cf572592f387495fed54f4766710d7ceaab6e3fd3b155f26d4ec807d4dccbd1",
+   "bytes": 15072,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fk_ringN.py",
+   "sha256": "bd1815a1e82c1fb4b9db653781ad156da10ab435dcdc3603556bc1024c3427c4",
+   "bytes": 6766,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fk_router.py",
+   "sha256": "30f139ff192b4ac82aa6a594a0e34cabaf6864fd40abcac26c6b55c28e3d2dd8",
+   "bytes": 5885,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fk_rteval.py",
+   "sha256": "91d215983d7075628d6b6a7d29b6621b9faff00b5d45ae8aee436e3b5c16001e",
+   "bytes": 5156,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fk_w24ret.py",
+   "sha256": "a3b3c3f6f712ca69a1b4c54be03b1536fc2bde9466d00e3ec67dc723d7d12e3f",
+   "bytes": 34924,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fk_w24ret.py.with_r64p4",
+   "sha256": "9d85e80d05c760abc4a7c818a269c84ad4bcf49f3ff847d93bec60a4feb85446",
+   "bytes": 34728,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fw_c1add.py",
+   "sha256": "08793d1a180d750cbac4db2687457bcbc6fafaa6926b62a715355f0423dc54cb",
+   "bytes": 22152,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fw_chiprog.py",
+   "sha256": "0cd2ddc03151a5e29ce160480aaff8a91fefba0aa80f508f53608c5b6acb5537",
+   "bytes": 34659,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fw_fcgen.py",
+   "sha256": "0f9e0e543eb0c4e295d54d93c5e6b0b8e364ba15c5a8331a0657f87c3fb06210",
+   "bytes": 16960,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fw_fcpol.py",
+   "sha256": "98c28c493fbc4f4b6955c2264e9727d94bcee39f2bcba97cfc6f7895a80c6a65",
+   "bytes": 22007,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fw_fcpolrun.py",
+   "sha256": "20ed5b0a77be601cc507e9b0a359f1d7a6c2eee84d6f6db4d3f1de1a138b6128",
+   "bytes": 6629,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fw_m7chi.py",
+   "sha256": "0689282c9cd3665e0e5651aab56d50ba3ceef43db500a46c578eb0789e154425",
+   "bytes": 2145,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fw_m7gv.py",
+   "sha256": "230e3c5cc2b8023c3ae74f1cff3da281e2059b2354c0c013dea9c46a6045a6c7",
+   "bytes": 10188,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fw_m7mux.py",
+   "sha256": "07b2f1d51fe4d31adffd356260d3fa09c7f451166e4f2f606e9f3da06828e03b",
+   "bytes": 13238,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fx_xc.py",
+   "sha256": "ffad5a77257566a8de218f8b34fe65f28d92a78416143a105c849e103aabe799",
+   "bytes": 12626,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_fx_xcrun.py",
+   "sha256": "2995f055864d6a43daa3dbd739655862bb0bc24841325367dcd8b30e8eda0333",
+   "bytes": 1311,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/invsqrt_sw_model.py",
+   "sha256": "e887b42cb7a5e85471735be8fc9509e7aab62abafadd6a55468d9e745eae873a",
+   "bytes": 33709,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/m7_prog_w23.json",
+   "sha256": "19c3da221158acc40b4aa98fc8839c2a84033849c15c50c132fb15b6db279520",
+   "bytes": 517,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/m7_prog_w23_bw.json",
+   "sha256": "954fda79dea1f18a0a8df6b139b739100e3d415e768f57e16810d99b91421fab",
+   "bytes": 313,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/m7_prog_w23_fc16.json",
+   "sha256": "82ccfb2ff9081fae95da0ac91e36a725a611f4d0d9fa6afc66ce0b235249985d",
+   "bytes": 784,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/m7_prog_w24.json",
+   "sha256": "4e0f938f9118c876c3bb275968f3cfd269cb444ec160c42caa758d73d2ad888b",
+   "bytes": 281,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/r32_inv-clean_pebble.py",
+   "sha256": "a46487f99949113d3a2a47770d565e31c1c8ea507552c60562c2412f3248e596",
+   "bytes": 14384,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/r32_inv_clean_rp_game.py",
+   "sha256": "a4e64bb5f9f4e328f0625ac659e02f0b01c12fd3940d23439bb72c32c5cc581d",
+   "bytes": 24246,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/r56_levj.py",
+   "sha256": "cc2335ce03d327b6006403cbd5f859204cd1d1a3b8004992ef36b1617ccaa75e",
+   "bytes": 12144,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/stages_34021.json",
+   "sha256": "0189248373a55d941cfebb41a87a9a9c1fdb88df7b3fa143e3ff4060b63ebfda",
+   "bytes": 755,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/w22_k6_m7.prog.json",
+   "sha256": "5bbe6a79c5946f40209beb6548db4e678d90d17f966636c7b47559f710842df5",
+   "bytes": 387,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/w22_k6_m7_bw.json",
+   "sha256": "72c7db40421d4e8c9e809eaf6669761010828c415d725a882abf5c78c0c8107e",
+   "bytes": 428,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/w22_k6_m7_fc16.json",
+   "sha256": "86b39a410809a2099c9ed6c78f08b831b1dc12a1276351ff835ad595067e1ad2",
+   "bytes": 912,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/src_s18_srcM/w24_k2.prog.json",
+   "sha256": "6d09ede3ff50c59e768640425c28b2390c7123742bb8d7a0bc2636f1afd2b1da",
+   "bytes": 336,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/audit_micro_invsqrt.py",
+   "sha256": "262359426382eec0eb86a83431c0aa88cd6ef98758f72d5de1d817fb690588e5",
+   "bytes": 3396,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/dqi_int_kmbw.py",
+   "sha256": "fa7dfca0c0bcb7661f3e7e7d14e2680533ad27a64bfa5bd4c83fe4de12c0d6a7",
+   "bytes": 6577,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/f9_i1_h6vloc.sh",
+   "sha256": "77c37736839f2546d587395043447740d910def9e23ec6c98ef32e905fc64b95",
+   "bytes": 1539,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/f9_i1_stack.sh",
+   "sha256": "68e2e7963cc15f24f394414d109f2b1bc9d9acbfe26c25a4f163d0bf3ffd8f2a",
+   "bytes": 11608,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/inv_i39_chicheck.py",
+   "sha256": "9ff66a47306d8d9777c3d1838ed6f08c1d7d45c5ad099384c2eb34a7d47d8b82",
+   "bytes": 3011,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/inv_i39_patch_slot.py",
+   "sha256": "58c68d3b36c57ff8b3b02764fd248a95065e5b55f13cfc76463285b7ba846136",
+   "bytes": 5249,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/inv_i39_patch_slot2.py",
+   "sha256": "668eb516f8f1f2a11874e79ab5807ad8b67c5f388a4bf56c526a9bfe8cb47a88",
+   "bytes": 2655,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/inv_i39_patch_slot3.py",
+   "sha256": "15cd61d8927bc7c13c096cf14ae2934a9ab0446977c4179d76ab0aae5a50a505",
+   "bytes": 3858,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/inv_i39_patch_slot4.py",
+   "sha256": "89d6da5f82294f8de9cad5d9de7e082caa0237c3278d1615406911b5fbe958b7",
+   "bytes": 3003,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/inv_i39_patch_slot5.py",
+   "sha256": "db78dea8f78283dea37ae2f6e4d7960348ad50e68c632aac0abe1d292e911043",
+   "bytes": 3650,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/inv_i39_relabel.py",
+   "sha256": "739b353878d296eebef8b0361d9c4192e8d991d67bb4fe8996446eb7c4d983bb",
+   "bytes": 5746,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/inv_i39_slotmodel.py",
+   "sha256": "3275711ec593fa12a239d6c2329cb733eadda7a9a2978783378c844db691a871",
+   "bytes": 3999,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/inv_i39_ssat.py",
+   "sha256": "db06c7d790c1e963e41ccc04a5c8b8a28d590e2a2c05d7d9b54ccbcda60a1536",
+   "bytes": 7249,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/inv_i39_udeg.py",
+   "sha256": "d779c7a5da476cebb3776dea6dfc17e1fc97be4e8dd0ef21e58faa88f133e3e8",
+   "bytes": 2748,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/inv_i39_uspec.py",
+   "sha256": "b884a6661121c2c1406c66dde3d3db1625ab759ca8078a45e3c45edd50b57be4",
+   "bytes": 1320,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/inv_i39_xpair.py",
+   "sha256": "0fae9cbdf7ced6a14c500e20b112dc12e7a15a36371ba317a33f1090c9ec9808",
+   "bytes": 2086,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc17_skipe.py",
+   "sha256": "13cda49c0ea9481664c3eacebde20afa4ca5f885d7aa39fdd8bcefdc397b18df",
+   "bytes": 31245,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc18_patch_m9.py",
+   "sha256": "909a328134c7880b71d4f496079aaf5a04ea382dfa13bd21e5254a078e3b1182",
+   "bytes": 3793,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc18_patch_r25c.py",
+   "sha256": "d2ea41ca9af05744c1e24065492c2af3da1335310fad8201f70cafd0940097ff",
+   "bytes": 3213,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc18_r25c.py",
+   "sha256": "fea1bd16e791a8feb4ef2760bf3300da39bcb5a1058b27913036d04dfdd32c0a",
+   "bytes": 4405,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc2_chi.py",
+   "sha256": "0a93a0c4d49f1e28c388419ce61c0b3ea37189452e9f6445aa2c665081bcdc03",
+   "bytes": 3171,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc2_count.py",
+   "sha256": "49628f2db696ed3c02bab6163842ddee880b09f660cd56365c92cbf5ad9daa69",
+   "bytes": 1708,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc2_d42m.py",
+   "sha256": "b8922b6cb7cab959ea81265aab0c8738e9747b98aaf7110e617cb200ef323d00",
+   "bytes": 4597,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc2_h1lp.py",
+   "sha256": "b631b811c8ad27ce911c687859ef1bac8d91c8ff487700d8afe8d7cfef95722e",
+   "bytes": 7396,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc2_h1m2.py",
+   "sha256": "ff1c1ac47fb2290e728300f3e62fea1a1af2c21b21c1763be6284869c59777e2",
+   "bytes": 5225,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc2_k4fuse.py",
+   "sha256": "e16dc370fc21a7bbce149064d32c63b5615a53cd70f2c1ac93016da915aefc81",
+   "bytes": 15119,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc2_k4prof.py",
+   "sha256": "b25e01e6be6cecb72a56343d72416f7d8a98f6f3eda2e1f3e64cc5057816aa5e",
+   "bytes": 8299,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc2_patch_frac.py",
+   "sha256": "2e09affd151313a5c031b81fd2a6e08453f5d65baaa9cbb834b2108452600aa7",
+   "bytes": 16309,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc2_patch_h1b.py",
+   "sha256": "c2af304a13a0fa9e9e7f59c7a4ed89f58fa707dbaa43d855e470a8825500f198",
+   "bytes": 34013,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc2_patch_h1c.py",
+   "sha256": "f8bd2c63c882e4b1896ec8e7abd17e1cd17aceb4c9cc2efc395a0970483b9fd8",
+   "bytes": 44643,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc2_patch_w26.py",
+   "sha256": "c6c6473b958a54e9bd928dc5b4c6f7646e6dcc765f762fb19aaae0c12216d03f",
+   "bytes": 7618,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc2_slot26.py",
+   "sha256": "51ac04ec8a2504299b29b649108cf71b83110bc756ef1dc02b02683f676276cd",
+   "bytes": 2880,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc_affprobe.py",
+   "sha256": "1d912cf70db704a1713863c05b6a02a630fe4213bdf3d2e87fa684b8bdda798e",
+   "bytes": 4778,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc_arith.py",
+   "sha256": "61c3e9808f6d6ea2a76f02411e47012e5df372d2bedc411376c19339e465b5db",
+   "bytes": 9051,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc_g8.py",
+   "sha256": "2ef02b3856ea58a31dd917314ea18219f5581770ab992d5e280db78f628282e3",
+   "bytes": 77690,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc_gen.py",
+   "sha256": "59a6e86dfd35e8179183f59bb822748610cb062169aae5dfee506f8f4e579939",
+   "bytes": 26149,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc_gnr.py",
+   "sha256": "96f8ea76db9ca2b787f57e5ef056d9ae376bd8db1a3447d97d2c51018d5a511b",
+   "bytes": 14005,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc_inj.py",
+   "sha256": "8bc755e72033c83dd49c4234e8a7c8e2409b482397317dbb7da33d50b3790c7e",
+   "bytes": 5072,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc_kit.py",
+   "sha256": "53734a08157326d7b3cb8c8cc2124316aa9bb23ecf6ab3ff1f78454bab59ad7b",
+   "bytes": 15254,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc_lateinj.py",
+   "sha256": "81ee878de9f1ec18f348ac98ea47617923b1f55240eb1d7ca699f74ec6fa3fbd",
+   "bytes": 3785,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc_narrow.py",
+   "sha256": "cec8c0e064e03f64f19df9b8d69d868e2fa231d85e51846802bb375845382393",
+   "bytes": 30473,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc_narrow_r32.json",
+   "sha256": "1a414e44cce439730464ab4fae8818f026b18f0b59146de2ed1cebaf6178ad82",
+   "bytes": 1403,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc_run8.py",
+   "sha256": "ca32e6538e58c5228a8465d9827100dcf2cc6d1f5babff844e81624fe85d335f",
+   "bytes": 4423,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc_s18cubrank.py",
+   "sha256": "27c58372846c4b547a278d6296c6549960436a09e0597118116fbde3c8d11a0e",
+   "bytes": 3442,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc_s18debt.py",
+   "sha256": "289990ecd90c66ea385b2baa34ae5c12243199a17df1c129998abe3f283e1b68",
+   "bytes": 5221,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc_s18m9frame.py",
+   "sha256": "dcaa947cabc2a705ecb2c6ce5c0647b86a13a90e5f33c9db0aa3e6573e89a9ed",
+   "bytes": 6503,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc_s18m9q.py",
+   "sha256": "b51b66fc687b55acb51affbc7057801816d8e81f10b5d5b3f6058512127cd48f",
+   "bytes": 3125,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc_s18r25.py",
+   "sha256": "ebde3cdc9099667ecb7ffdb62bdc36f78c94be8497a898f7a49ee8842322754e",
+   "bytes": 2448,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc_s19r91pass.py",
+   "sha256": "7d4b56e3dfc52a4c973bb106ad9ae872079531e190602798b8242499c1122ca8",
+   "bytes": 3908,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc_s19stage.py",
+   "sha256": "03e3f90bc0192b747b8bb08d79c419892b2e92635cc24d3b187850f127e87147",
+   "bytes": 3630,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc_s7hop.py",
+   "sha256": "86d2acd289f3f3fb7dc8cbb3839e64e1ef9614da19536d5b0e7a0eb7a254fbad",
+   "bytes": 13244,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fc_s7tmerge.py",
+   "sha256": "a1468b4328d591a71d0c9d8b21a3d34d9d15f279f0218f470b0597b3621954e8",
+   "bytes": 5346,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fk_angles.py",
+   "sha256": "f4941ed83e83903fbe9e95ae8a6657cb8a818f522d6680305e48f8daf60b4a9f",
+   "bytes": 9491,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fk_epN.py",
+   "sha256": "3ad2c74fb8ef3c620bf4ec188af8869414fffab9d0e6377d258ae195e8f2e739",
+   "bytes": 20294,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fk_epgen.py",
+   "sha256": "16e6ebf9c20e68cdcf9570cc53bce72555261c9f308f03d87bff1e46dfe3917b",
+   "bytes": 7081,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fk_epkit.py",
+   "sha256": "6cf572592f387495fed54f4766710d7ceaab6e3fd3b155f26d4ec807d4dccbd1",
+   "bytes": 15072,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fk_minand_sb.py",
+   "sha256": "aba405e5a13eb501f2d2d7bb14df609ee8d7d5e80b13b83898325e4fa6830b7f",
+   "bytes": 8488,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fk_minandm.py",
+   "sha256": "505fd9f7e25cd13506080be9c178505ebebe5a985beebdc18c89341fc094d224",
+   "bytes": 5115,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fk_nwret.py",
+   "sha256": "4319c2938fed7e5860331fd139542d16c0af68ec0f2ee7a84afae762689891ae",
+   "bytes": 14338,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fk_relabel.py",
+   "sha256": "0f429343d9ef32619aa32f48f8f780b611b4652d0263e9e90770c9eef5e60883",
+   "bytes": 5031,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fk_ringN.py",
+   "sha256": "bd1815a1e82c1fb4b9db653781ad156da10ab435dcdc3603556bc1024c3427c4",
+   "bytes": 6766,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fk_router.py",
+   "sha256": "30f139ff192b4ac82aa6a594a0e34cabaf6864fd40abcac26c6b55c28e3d2dd8",
+   "bytes": 5885,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fk_rtclass.py",
+   "sha256": "3be94c5640a3a7b20eb07b88740520bba4ab6a4c651f99d0c8141908b73a0eb4",
+   "bytes": 7704,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fk_rteval.py",
+   "sha256": "91d215983d7075628d6b6a7d29b6621b9faff00b5d45ae8aee436e3b5c16001e",
+   "bytes": 5156,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fk_rtsat.py",
+   "sha256": "69439410fd82a17f39e8ab7628ecba3c0a499f4278bfc8e8fc1cc41b25f9362d",
+   "bytes": 8634,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fk_rtsearch.py",
+   "sha256": "c611292732552a352af980227f05bb5202d93aa5428d630c8785d89407da6a8a",
+   "bytes": 6784,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fk_signsat.py",
+   "sha256": "2616d72ca52ebcac42ed6d40b7cb399f0030a7d4fbf551e5b986616b7a92ccfd",
+   "bytes": 4057,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fk_w24ret.py",
+   "sha256": "5b19d96894ecf1f69ebb8bf7d396aea7f034c2043d9106f08e07639612bd3bbf",
+   "bytes": 35875,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fl_minand.py",
+   "sha256": "c230d9d5124cac70451243c4d9fbf2792897465fdd01fb5bf0bdce8d90852e4e",
+   "bytes": 6798,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fw_c1add.py",
+   "sha256": "08793d1a180d750cbac4db2687457bcbc6fafaa6926b62a715355f0423dc54cb",
+   "bytes": 22152,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fw_chiprog.py",
+   "sha256": "ec101580cd63a683f39b627ae8b01ff0763b42958947d833c699654789dbe223",
+   "bytes": 33882,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fw_fcgen.py",
+   "sha256": "0f9e0e543eb0c4e295d54d93c5e6b0b8e364ba15c5a8331a0657f87c3fb06210",
+   "bytes": 16960,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fw_fcpol.py",
+   "sha256": "98c28c493fbc4f4b6955c2264e9727d94bcee39f2bcba97cfc6f7895a80c6a65",
+   "bytes": 22007,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fw_fcpolrun.py",
+   "sha256": "20ed5b0a77be601cc507e9b0a359f1d7a6c2eee84d6f6db4d3f1de1a138b6128",
+   "bytes": 6629,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fw_patch_prodmask.py",
+   "sha256": "a2e776c43c96eaf6167f8732c0c8d3a5821b827398ad35fcd4ac4518a544784e",
+   "bytes": 6818,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fw_rw.py",
+   "sha256": "e6f337e7935bf7a3cffdb8102b3cfa3b3e695f7bfb64840585767106135daa0c",
+   "bytes": 7770,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fw_sim.py",
+   "sha256": "94873cb0c5c31afed2c3460111e0bf2f4f66c29230164df594b3c99ef37b7dcc",
+   "bytes": 9988,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fx_xc.py",
+   "sha256": "ffad5a77257566a8de218f8b34fe65f28d92a78416143a105c849e103aabe799",
+   "bytes": 12626,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_fx_xcrun.py",
+   "sha256": "2995f055864d6a43daa3dbd739655862bb0bc24841325367dcd8b30e8eda0333",
+   "bytes": 1311,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_gen_build.py",
+   "sha256": "5bbf05eda2594fd4ed0f24fe125053edda19e9f3033ee85daaa95dafee6a0c13",
+   "bytes": 18570,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_gen_c2exp.py",
+   "sha256": "b8a49544f1a4501b571cff7bdcef6a57eccb102faa60077e10ee916adda22405",
+   "bytes": 2702,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_gen_circ.py",
+   "sha256": "b1d3a716fd1f646545334ed101f1bdd22ddb082e00cabcf23fe45cd39200db1c",
+   "bytes": 11562,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_gen_code.py",
+   "sha256": "2cbd2789879f03e41bea2025ab0a82b27065800a034cea66fd4976fcdb324f4c",
+   "bytes": 4723,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_gen_g3.py",
+   "sha256": "34c9124f0ff6afade927d9d029e0ec619632a8e7c01590600980620c4b0705c8",
+   "bytes": 10840,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_gen_g4.py",
+   "sha256": "9bfce4f61fc5d29631926805c41bda9bd074ee5cc9a406c55e1c013da954540a",
+   "bytes": 12613,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_gen_g5.py",
+   "sha256": "4bccee8c7cc2d723817e0136d295a01c746c53fe4ed7898b483c1c0f2163fe5e",
+   "bytes": 13064,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_gen_g6.py",
+   "sha256": "60878c3a52e576881b6bbcab54583dc1e65731ddf49169dc66dcfea2ba08522c",
+   "bytes": 72828,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_gen_hand.py",
+   "sha256": "fa165ed9f381a27b1e273add68238b0f8259d905263b2930cf6d88d6daed7be1",
+   "bytes": 14610,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_gen_lutcmp.py",
+   "sha256": "34a9c49dd9ea56701ff73a4512cf3719ef7cb859884dec32bd7f7d72e1618293",
+   "bytes": 5261,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_gen_model.py",
+   "sha256": "16db95832981d397cacca9f4f9f9944686d63d88c5c46773524b08c907277f54",
+   "bytes": 19970,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_gen_newbest.py",
+   "sha256": "438ff77629ed13f1ab30a0d245bb89cdb7a69e80fb26b586086df9ed2cd8f57a",
+   "bytes": 4188,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_gen_parts.py",
+   "sha256": "c9a742c2bc640f18fa1b90bffe3685741b701b6df69f66b98f6f7c05c41435db",
+   "bytes": 27535,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_gen_pool.py",
+   "sha256": "5fd603f694ea60697bbf2e44df2ac9eefe29a175df4bc65cd0b28a928cdedc5c",
+   "bytes": 31961,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_gen_rows2p1.py",
+   "sha256": "49528455643a9d06c12a75f7f3e11c9180fe3681302ea7127c3511207f34c451",
+   "bytes": 15154,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_gen_rowsb1.py",
+   "sha256": "188310f99239700bb382e69fc67fe81aa3f9f8a4aedbf1442435a73579b924fa",
+   "bytes": 16230,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_gen_rowsb2.py",
+   "sha256": "13e029fe419971b042d5701d57a9b99a5ffef06e3e628fb35d4f4318a0123c2e",
+   "bytes": 31984,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_gen_rowsb3.py",
+   "sha256": "4a063c2c58de5917a6dcf7fddd98d97949158ec1b07c75e46353cc0de0d0d6e9",
+   "bytes": 34360,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_gen_sep.py",
+   "sha256": "9db75225a63229947a2546a2e84634c0bf0b0b14914eecfa09baf9e47c3cbeec",
+   "bytes": 3065,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_gen_sweep.py",
+   "sha256": "7eabc228ba6854e4c0054ff1d563612c3865ddf1a78fa86bc4ac23c5755c8c88",
+   "bytes": 3865,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_gen_tabs.py",
+   "sha256": "b69c0fc4fb2f21ca3fe3092ee643f9c03076def5032391276d88dcbb4550444d",
+   "bytes": 4522,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_gen_trim.py",
+   "sha256": "491d10c5a595129447dbd86c93f51b991aee647ef85960aafafea783a37f2de0",
+   "bytes": 1686,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_int_ainv.py",
+   "sha256": "b24d1d7b9c667ca47339e3830cd6b3c85c4534d2388e5ee7028b14a4a575e47b",
+   "bytes": 14125,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_int_g2angles.py",
+   "sha256": "889572c5e8716d209f3c8a4700de9e05f7069d893e34207d2427b878247f7a72",
+   "bytes": 6685,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_int_phmod.py",
+   "sha256": "87c60bb6c6685912c734d2aca13488ecefc4f51ec559d61276214cc86b1385b6",
+   "bytes": 46855,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_lib.py",
+   "sha256": "989f725067b4e78989f855b2b9eecb0ab9b372964aa31390c6174488cdc0f60d",
+   "bytes": 8884,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_ph_bwdsets.py",
+   "sha256": "6ae444ae2aabf5e91c62a6be2573247ae79a2e70bdd1daa07a73506a2f3eb891",
+   "bytes": 6122,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_ph_mknet.py",
+   "sha256": "f1be65861bc4ea175a65e5a16f1cec13719756ce004c4a999b6a21f9386818dd",
+   "bytes": 6846,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_ph_mod.py",
+   "sha256": "13b6ebd7f14bc348b605001ab4af6d80239188e7464b898e2bb3daf1f5e51dbe",
+   "bytes": 34738,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_ph_net.py",
+   "sha256": "f6dd1b9c083e7cb7b9fc3da716568f03b78122c623d25bd9b3581a4b790ad618",
+   "bytes": 9250,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_ph_netsat.py",
+   "sha256": "72026c4b568b07bb25ce7a612487a0d4d3bdaf8e2c4c3a9a0e1253d9011d7501",
+   "bytes": 16759,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_ph_netsearch.py",
+   "sha256": "26e9a56f37f0141d69b59c876c61a1bfd6b52be82d9c462e3603cff1bdab750d",
+   "bytes": 10041,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_ph_stream.py",
+   "sha256": "1a378bff4f59d610aa8ee74c03e757c82f802163dc649bc35b7a47097bde0bf2",
+   "bytes": 12483,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_ph_sx.py",
+   "sha256": "77997c428e40598fe7da80e32a6581ef2bcfca4cc3600cd0f4709e4af2728ae3",
+   "bytes": 5965,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_pp_affine.py",
+   "sha256": "3148341e01518d30ddc8fd2e092fd9318652c633754f7c1b3977dc48a3ff3846",
+   "bytes": 4693,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_pp_affwrite.py",
+   "sha256": "580a6cfcf6f42498e5eb7110a5f58aa50534ecefae5f68c9b8ddd2146e3509a1",
+   "bytes": 5898,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_pp_alap.py",
+   "sha256": "6ddd6de3dbbc8f8978ffddae7be56307119d5d06e731931dc4fbac8182f99c9b",
+   "bytes": 4642,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_pp_asap.py",
+   "sha256": "b9b81dd7d804bf5ab2b735c5c4b31a944efa11d63b32bbb50f4ab79ad30303bc",
+   "bytes": 3044,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_pp_blocks.py",
+   "sha256": "94af334d27b2ce7fccb96876acdf50adb4c340713375e3063822353d06101bae",
+   "bytes": 8692,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_pp_exlinks.py",
+   "sha256": "5435f683e30a2e3b79c39725837b5e5a35be56cdcd516e704d121ce5e02b8187",
+   "bytes": 3658,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_pp_hold.py",
+   "sha256": "dbc610d8128704d874bf625d57ee1b07c37046e7fd8525a0175702c54025a84b",
+   "bytes": 11076,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_pp_hop.py",
+   "sha256": "2a68483b84955c6c275ca0fc25ea04fd561ef6aad01f63a2d9391b2daec537d9",
+   "bytes": 10086,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_pp_links.py",
+   "sha256": "49213a712edbbd2447b8145082ff5124437e5e2b2b0915d4c0d17dbb6e624204",
+   "bytes": 10071,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_pp_pubc3q.py",
+   "sha256": "b537e9f82d21dc85d1ed7017b8be76a01837ffd62ff4c59dab4a73d170232229",
+   "bytes": 5033,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_pp_pubpass.py",
+   "sha256": "0f4c98ea6fc171be5acf1fb33a2f98bfd04ea036277d26974e8bf8c3aae6e151",
+   "bytes": 6033,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_pp_pubrw.py",
+   "sha256": "c6542e5986b390a32d85aa66a8ef99f10f7a19ff86bd41441679ccdd856c086b",
+   "bytes": 13626,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_pp_sim.py",
+   "sha256": "66a0196488030b80e841ff47e52d63ebd28dca5d034b38052fc0108f3b140565",
+   "bytes": 6695,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_pp_smallfn.py",
+   "sha256": "2595e4a7c96b0707bb741293a7ab903cd556d605c6ca7111aa1224dbeb144308",
+   "bytes": 8055,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_pp_squeeze.py",
+   "sha256": "4979b43763f8deda3fe0dee1cebcf6341ab073f2826ce871f72475e941060649",
+   "bytes": 27466,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_pp_width.py",
+   "sha256": "3d600e3c450e606f10ec2514c8a2721632c68d0d7a6817e0563569e7baf4a182",
+   "bytes": 2488,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_rows2_b.py",
+   "sha256": "49528455643a9d06c12a75f7f3e11c9180fe3681302ea7127c3511207f34c451",
+   "bytes": 15154,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_rows_b.py",
+   "sha256": "4a063c2c58de5917a6dcf7fddd98d97949158ec1b07c75e46353cc0de0d0d6e9",
+   "bytes": 34360,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_s2_core.py",
+   "sha256": "6fc4c99e8d393a55838ce14b0b9361cb152106cc415dba54c13ee9811c2377d7",
+   "bytes": 6713,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_s2_root.py",
+   "sha256": "5ec61837c82dc268b0c04d615025947e9892273a31e83cdeef0958e81324d737",
+   "bytes": 7285,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_sw_model.py",
+   "sha256": "e887b42cb7a5e85471735be8fc9509e7aab62abafadd6a55468d9e745eae873a",
+   "bytes": 33709,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/invsqrt_zpol_phmod.py",
+   "sha256": "2f912832dc9852d764c5cfdbb94d0f56bf29fc722d3e474cd49e8f0fd73e914e",
+   "bytes": 43740,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/kmb.py",
+   "sha256": "6f2bd5a8f9cf2ca79b08685c06c839598c471b5d5952645af3f663d8fdd57b7b",
+   "bytes": 4822,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/lut_synth_core.py",
+   "sha256": "84a62e8d4c4a125c86e27efa55dde965e74774b7f3a5e309be6e876f56180ccf",
+   "bytes": 13409,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/lut_synth_fast.py",
+   "sha256": "54884791852b739ada8f2df13e2a48ad75ea8c2ae3af046bc72460d6ec29daf6",
+   "bytes": 13593,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/lut_synth_gen.py",
+   "sha256": "735a032036548262008c394c31ff406111289e8cefca9e26402a2088b17b3396",
+   "bytes": 19489,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/lut_synth_inv_a.py",
+   "sha256": "eec7de1400670bd5e232f21192adb80851ac14aceb0d5dbfa1aa338580a0c4b4",
+   "bytes": 39074,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/lut_synth_smooth.py",
+   "sha256": "c198cbb7bb7308eb59b5c590ad5c1b2995297eab3e438e26cf67cd223bcf2920",
+   "bytes": 2798,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/qcc_verify.py",
+   "sha256": "f7325634c9ff1c4e725ad5431e0cb9bc08aaeaa1e9f28304f63efbbd6d921859",
+   "bytes": 3740,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r31_inv-hyb_model.py",
+   "sha256": "cae01beac45f5baf7dacda5bb971e5dd07875d65083eee7c821e8f93a1850ed8",
+   "bytes": 32669,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r31_inv-wire_invadd.py",
+   "sha256": "f46053f85979a451eb3f5d86488fd76195e35019c5fce5be10bfcd6f095c26f3",
+   "bytes": 6509,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r31_inv-wire_rows.py",
+   "sha256": "c6c5282b92d3cf3b2da425aa0de8ea07cb45534ccb7d115e409399dc65eae1e1",
+   "bytes": 3801,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r31_inv-wire_tof.py",
+   "sha256": "7218700dae906885dfa3ec46d5a88738fc5390815791cf3de9bd446dc90d87e8",
+   "bytes": 1661,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r31_inv_hyb_rp_margin.py",
+   "sha256": "3a2f47a6e3666f58d53bcea45f46678e4ada334898a3abe3cb3683a2a77c93e5",
+   "bytes": 30612,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r32_inv-clean_pebble.py",
+   "sha256": "a46487f99949113d3a2a47770d565e31c1c8ea507552c60562c2412f3248e596",
+   "bytes": 14384,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r32_inv-clean_sign.py",
+   "sha256": "f0350bb240148a8c617dd471ea5b0748188708bf5a1f3620b0410cef8ca06592",
+   "bytes": 11860,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r32_inv_clean_rp_game.py",
+   "sha256": "a4e64bb5f9f4e328f0625ac659e02f0b01c12fd3940d23439bb72c32c5cc581d",
+   "bytes": 24246,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r33_inv-wire2_cm.py",
+   "sha256": "39529c1e341882567a51fa0e0bd649b61a183401e7a8595ef2e2e629516ab909",
+   "bytes": 20474,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r33_inv-wire2_report.py",
+   "sha256": "c75fa794a1d2c3870a153b7766f83216cf32a27333d9209fdf5e2b45b93c550e",
+   "bytes": 7061,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r33_inv-wire2_rowlaw.py",
+   "sha256": "821dee065dacd96981d21d30b043c3e2e363206f5ef54064d26d9f82bbbc92ef",
+   "bytes": 5836,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r33_inv_wire2_rp_tail.py",
+   "sha256": "13ddd24fc9ddf1f39e36f52d335b52493e63001d7bc78a72ba590075de0d4e61",
+   "bytes": 16406,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r36_inv_corr_patch.py",
+   "sha256": "48501b35f5cb965c64fc185bcb7f2312804cbaaed0cf144dc14d30227e8245ad",
+   "bytes": 10903,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r36_inv_corr_ref.py",
+   "sha256": "e8b654610cdb3a3cde371453398658989e7ef5630ead8c459c370412c6b1742c",
+   "bytes": 3442,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r37_inv_40_model.py",
+   "sha256": "e94d2388051710a7cbfc4a23494df924aad0cb0abe1ba4f37e4ca43ec65edbf4",
+   "bytes": 12764,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r37_inv_40_ref.py",
+   "sha256": "0d1bacb327df59cd885e48d75550bcf3a27f70ab148b16ef7c20dd0c110e5683",
+   "bytes": 6132,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r37_inv_40_ring.py",
+   "sha256": "074af0018e309d9d96b97a1c119c844e0f67f539331b71a55636672892fd8101",
+   "bytes": 4276,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r41_inv_main_xc.py",
+   "sha256": "d3db217aea3f3b64a5e258b787ef0d97a6f3af8b03111193515057aa5c51ad83",
+   "bytes": 12433,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r54_inv_tail_alt.py",
+   "sha256": "30c71fd96e963057799f3e77a4757af662bf33b2b7516d57c6796fb3a59f8b2f",
+   "bytes": 12806,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r54_inv_tail_dc.py",
+   "sha256": "84ee37af297814345f7da1a0a81d9794443de5afb6da81d0eff2ca3352b3d8f0",
+   "bytes": 22657,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r54_inv_tail_dump.py",
+   "sha256": "195a69be34d28b0bcb12ed93587512c6f2d9dc17c1e4dcae62eda1d873478578",
+   "bytes": 3305,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r54_inv_tail_sat.py",
+   "sha256": "2008521af20e147ad1e18b46dbf4fcf0b1094c0e6955f1579c794c88e1ca3d58",
+   "bytes": 20298,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r57_inv_arch2_model.py",
+   "sha256": "56c3c792cc77c907da15d8eee7a442c9e086cfd31f3632daf120410fe8ee2ccc",
+   "bytes": 13484,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r58_inv_38_redund.py",
+   "sha256": "db57c42b6be78db90b5f66b2121b6828c3567c37051dd9ea8de38ab7c78cba09",
+   "bytes": 9402,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r62_inv_word_p1.py",
+   "sha256": "ee13717e10766e04b0aeb0b9381118d116b55f760a324161de60d68cce6642c9",
+   "bytes": 2709,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r62_inv_word_p2.py",
+   "sha256": "49143b90f7c44155c3f1e77d8a800817e0fdcb197d76049f312a5605ce475289",
+   "bytes": 12958,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r63_inv_ghost_chk.py",
+   "sha256": "f514c3af95495cef56c1b987031a7d9e45c9b1f4441afabdc3cf2d7295667c84",
+   "bytes": 5398,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r63_inv_ghost_early.py",
+   "sha256": "88338378c684319635b38db4a468a3dce113b69040e0eeda03f99d8f51b0aeff",
+   "bytes": 2553,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r63_inv_ghost_state.py",
+   "sha256": "7bc8214ac7a60029b960b39c9f06230c6cc5946d0588e2be2eb769bdf90f99f9",
+   "bytes": 11718,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r64_inv_stack_xcrun.py",
+   "sha256": "91c5b6852086ebdf56766f5d2ebd3b9d53810104f9e79bc0f3c90e490c6af296",
+   "bytes": 1832,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r65_inv_chainall_carry.py",
+   "sha256": "af5187707e574e35a2576b65fbb453a4aa097aba3e239abc610738ed11180406",
+   "bytes": 8047,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r65_inv_file38_compact.py",
+   "sha256": "0c6f9615261342a9c0662277c35fb663ba68a77e4c98ed6bf01b2377dc96c85a",
+   "bytes": 13119,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r91_inv_step_build_exact.py",
+   "sha256": "794a229dee4ff503c9a0028053cec3ee89dfe3f5ef3621ec94958d729f7b5564",
+   "bytes": 9458,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r91_inv_step_build_patch.py",
+   "sha256": "69e493f0519e031e84d826f97bf76d1e4ed71f5e99eeea8653463867d0391d1d",
+   "bytes": 4786,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r91_inv_step_exec.py",
+   "sha256": "58c123136003e00a9cf3f0b848b4c6508c21ffc79cd91194376dd5718c29abd5",
+   "bytes": 12445,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/r91_inv_step_width.py",
+   "sha256": "b3950fcba98019e1121c0d2608f6cedceebf338205d4849e94969fe0e92ddf80",
+   "bytes": 9511,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/s5_inv_h1end_build.sh",
+   "sha256": "cce6b9b17a82d7a0a63e11a9ed64e78c65fcd12cfe3d96fe2c6c8784003b735e",
+   "bytes": 3381,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/s5_inv_h1end_finish.sh",
+   "sha256": "564d4237641dc88f5830cb31736f61fbf10d89f68e937a7c8a5b6f532a711be1",
+   "bytes": 1344,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/s5_inv_h1end_genpatch.py",
+   "sha256": "bba4e3ac79780294ac74b79dc1e9dc7cfa10c55e3bf8392f759a99e113c43542",
+   "bytes": 3491,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/s5_inv_h1end_ndiff.py",
+   "sha256": "08fa07cd200c335bf2b2d78f5b115b4d409d4ee67fec1e1521b8552035cd514a",
+   "bytes": 1406,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/s5_inv_h1end_patch_b196.py",
+   "sha256": "0c8cd9e72bca5080ef4f3fd33145662117a8659adb47c7e3d0232db22e9f6a2f",
+   "bytes": 6546,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/sh/inv_i39_emitchk.sh",
+   "sha256": "30ae389697acd60fd2cdd3ae4ae2848c4b9a63b3dc2fd3c34ee8b80ba11b2390",
+   "bytes": 1574,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/sh/inv_i39_q18find.sh",
+   "sha256": "6bcea4cfcee75a448a23285f7cc6383f88622e94fa1be4cfdcae641ba613e55f",
+   "bytes": 2569,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/sh/inv_i39_s17hold.sh",
+   "sha256": "17fa1cf6d6b5d5138ead4d27b0d017deeb325344ad410272f580f5e47d6defa9",
+   "bytes": 3223,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/sh/invsqrt_fc16_holdB.sh",
+   "sha256": "8d9aafd65a81299f6fc5c6db66d6767d7dbe08c420248176ebe7ce56e2f7e6b2",
+   "bytes": 2565,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/sh/invsqrt_fc_s17hold.sh",
+   "sha256": "24734c93efc004ed02a418b4d4cdee76ff11047c911a2589f9f959343b8b6743",
+   "bytes": 3129,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/sh/invsqrt_fc_s17pack.sh",
+   "sha256": "80c983e72e61d626d82fbff0d0d8160f567228d765f84918c835274798917f7b",
+   "bytes": 1664,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/sh/invsqrt_fc_s18emit.sh",
+   "sha256": "81350873135302251c2199d368104b29ec2b52f1eb5fcb1d9088c04491b93947",
+   "bytes": 1289,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/sh/invsqrt_fc_s18hold.sh",
+   "sha256": "0635c7e2b57947fb64777d1672755bad70f4789ca6b188ab98da41d2fd4c0881",
+   "bytes": 3175,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/sh/invsqrt_fc_s18pack.sh",
+   "sha256": "a81f9c75ae20fe27da69394a9dbcf62c7c7392087ef747599a5aa0ec0aa73adc",
+   "bytes": 1690,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/sh/invsqrt_fc_s18q18.sh",
+   "sha256": "008adf5a98544e466e046d4bf4b6dabe283352b4ba795da584e9c5d611f0a13c",
+   "bytes": 2530,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/sh/invsqrt_fc_s18q18m.sh",
+   "sha256": "0961ccb5383e7f2de91cd5e6c15b62ab04fd2f838ec6dbe4c99aaa32dba696b9",
+   "bytes": 2534,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/sh/invsqrt_fc_s19hold.sh",
+   "sha256": "59852a6be6e67efdf48cb0491bbf953d4f296d3854b28ef6009b30fb6337cef7",
+   "bytes": 3568,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/sh/invsqrt_fc_s7pubchain.sh",
+   "sha256": "a00737c96d6f63566c62ca9da724d8f7c71b22209d791f4dc950ac580f9b66b6",
+   "bytes": 1844,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/sh/invsqrt_fc_s7service.sh",
+   "sha256": "b6fb23a5934cfca2eeeba2ae22780a752d3416a9afa8dd26ba2ffc9be4ebde3e",
+   "bytes": 2546,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/sh/invsqrt_gen_ext.sh",
+   "sha256": "b0b6d23f8115cbc81dcd74d6417522628041cb2ee6aec0e2223c80722ea365bc",
+   "bytes": 1217,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/sh/invsqrt_gen_run.sh",
+   "sha256": "0b39474bbe837b651b42ed5cabf5bde78f42d9e4858b5f7aad5ad49aae89b23c",
+   "bytes": 454,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/sh/invsqrt_pp_affpass.sh",
+   "sha256": "1ac6ea055723ccea7a060cde2c0164ad522cc75620a4664087a99bb962535dde",
+   "bytes": 1476,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/sh/invsqrt_pp_pubchain.sh",
+   "sha256": "84c7dd1aaa0c3b1c40a2e293a545a2fd74e559bb8bf0627b25be06d70e9cf43d",
+   "bytes": 1294,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/sh/invsqrt_pp_pubfull.sh",
+   "sha256": "39f0aecff572e4b238a694a5ef4c42c74ffde8545b489c5fb484cb767f914c3e",
+   "bytes": 1691,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/758_isr_leader_public/public_generator/invsqrt/tools/sh/invsqrt_pp_service.sh",
+   "sha256": "89cb8b43f76480e7019ec6147a197dc748f8b796d77eac0103e23aac531bc446",
+   "bytes": 1964,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/769_isr_764_m9form/package/build/build_only.py",
+   "sha256": "003f06f61368d085fe3b7f30e65bffc051b822b47fc9145fd7b082251d772a9c",
+   "bytes": 4297,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/769_isr_764_m9form/package/build/carry_offsets.json",
+   "sha256": "faab1c5f752a363601d27ce21725dd2bae5a9df3720528ac840bddce5962dc07",
+   "bytes": 490,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/769_isr_764_m9form/package/build/gen_m9.py",
+   "sha256": "b75d9c47173214dbe9feb93f7699aeebfa7c1ab1ef8cb7ccc5a09da4195bcbca",
+   "bytes": 5101,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/769_isr_764_m9form/package/build/m9form.json",
+   "sha256": "70de5a1f2c570ad4c992b8c133ea74e3d987b38ac1a54a9c48363ee7e1650f63",
+   "bytes": 540,
+   "origin": "repo_input:head",
+   "reason": "build input"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/772_isr_769_dial_w8/package/HANDOFF.json",
+   "sha256": "a08dc04eecbb5e4cef5e7501b61ff7ca96e06a4755e92369ff062f76bed0a57f",
+   "bytes": 1031,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/772_isr_769_dial_w8/package/RECIPE.json",
+   "sha256": "091a20d2ffe89e0cb3daced255dea7821d8a92cc05b7501358ddbef15c62abe0",
+   "bytes": 83497,
+   "origin": "provenance:head",
+   "reason": "provenance"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/772_isr_769_dial_w8/package/build/build_only.py",
+   "sha256": "0b58a3b805b16d5df9daad7a08d5f7f97a1efb83542d16b4d0567e66224c90b1",
+   "bytes": 4363,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/772_isr_769_dial_w8/package/build/dial_recipe.json",
+   "sha256": "beb59d1dfb65b4f754214cf11cdce41d83054a145291b02a8b94427ea766807e",
+   "bytes": 2087,
+   "origin": "build_file:head",
+   "reason": "handoff package build file"
+  },
+  {
+   "path": "repo/experiments/isr/iterations/772_isr_769_dial_w8/trials/001_officials/result.json",
+   "sha256": "b9ada60f84bbc9740ab9c84b4f70877bb605261a3b11ef213cf264ef9d756373",
+   "bytes": 3232,
+   "origin": "provenance:head",
+   "reason": "provenance"
+  },
+  {
+   "path": "repo/host_provided/kickmix/kickmix.so",
+   "sha256": "c66b3216c4029e0cdfd09054306aa0feadf53ab2f50c1164e37f752874e5005e",
+   "bytes": 3220392,
+   "origin": "repo_input:pinned_untracked",
+   "reason": "host file (competition terms)"
+  },
+  {
+   "path": "repo/host_provided/verifiers/invsqrt/__init__.py",
+   "sha256": "e9a6ecf253c343528578be5fa92eb820ccade63333aebb784552fb4ae75dbc0b",
+   "bytes": 84,
+   "origin": "repo_input:head",
+   "reason": "host file (competition terms)"
+  },
+  {
+   "path": "repo/host_provided/verifiers/invsqrt/verify_submission_invsqrt.py",
+   "sha256": "ddef520dec6b68d1cf0a6f328ddd36d79eb84570b9192cf3f7acaf073f06733a",
+   "bytes": 17210,
+   "origin": "repo_input:head",
+   "reason": "host file (competition terms)"
+  },
+  {
+   "path": "repo/submissions/licenses_v154/CREDITS.md",
+   "sha256": "5804fdb972551019cf1481f9e347b91d8a9960b77e656c27b3a7bd7f49ba90e9",
+   "bytes": 2214,
+   "origin": "licence:head",
+   "reason": "LICENSES member source"
+  },
+  {
+   "path": "repo/submissions/licenses_v154/LICENSE",
+   "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "bytes": 11358,
+   "origin": "licence:head",
+   "reason": "LICENSES member source"
+  },
+  {
+   "path": "repo/submissions/licenses_v154/NOTICE",
+   "sha256": "f8db89166d2ecef5201fb2689fc6dcb14bb8dd5aa46fdbec2c73e277abcd1629",
+   "bytes": 2001,
+   "origin": "licence:head",
+   "reason": "LICENSES member source"
+  },
+  {
+   "path": "repo/submissions/licenses_v154/NOTICE_generators",
+   "sha256": "89c158858d9968cb48a17bd16c1d04e65870614af899ecbc5546fbf8e6180ffb",
+   "bytes": 4842,
+   "origin": "licence:head",
+   "reason": "LICENSES member source"
+  },
+  {
+   "path": "repo/submissions/licenses_v154/NOTICE_v12_dqi",
+   "sha256": "3e0eea3a45192471eb7d3f9ceb8f47c070d45a9e46ee6553ccd60ed17f8bfa13",
+   "bytes": 230,
+   "origin": "licence:head",
+   "reason": "LICENSES member source"
+  },
+  {
+   "path": "repo/submissions/licenses_v154/third_party__atakanaldemir_dqi_bundle__CREDITS_v3.md",
+   "sha256": "834b75256faf941255ca240962e366125c6da04f5efdbd522ce806d9fe683481",
+   "bytes": 1391,
+   "origin": "licence:head",
+   "reason": "LICENSES member source"
+  },
+  {
+   "path": "repo/submissions/licenses_v154/third_party__atakanaldemir_dqi_bundle__CREDITS_v3_parent1.md",
+   "sha256": "834b75256faf941255ca240962e366125c6da04f5efdbd522ce806d9fe683481",
+   "bytes": 1391,
+   "origin": "licence:head",
+   "reason": "LICENSES member source"
+  },
+  {
+   "path": "repo/submissions/licenses_v154/third_party__atakanaldemir_dqi_bundle__CREDITS_v3_parent2.md",
+   "sha256": "3533e8671670cf4a4feb7c5c552798bc62f8dffb207224a961631ded5996301c",
+   "bytes": 2307,
+   "origin": "licence:head",
+   "reason": "LICENSES member source"
+  },
+  {
+   "path": "repo/submissions/licenses_v154/third_party__atakanaldemir_dqi_bundle__CREDITS_v3_parent3.md",
+   "sha256": "f31580f7575472532c003901a884c3b3c9d71ba2acb6c74591ed166306ec61cd",
+   "bytes": 1636,
+   "origin": "licence:head",
+   "reason": "LICENSES member source"
+  },
+  {
+   "path": "repo/submissions/licenses_v154/third_party__atakanaldemir_dqi_bundle__CREDITS_v3_parent4.md",
+   "sha256": "aac50c403ef7f73e5082291cd88210b6f1a117e2191af736def9650152802503",
+   "bytes": 1684,
+   "origin": "licence:head",
+   "reason": "LICENSES member source"
+  },
+  {
+   "path": "repo/submissions/licenses_v154/third_party__atakanaldemir_dqi_bundle__LICENSE",
+   "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "bytes": 11358,
+   "origin": "licence:head",
+   "reason": "LICENSES member source"
+  },
+  {
+   "path": "repo/submissions/licenses_v154/third_party__jday96314_QuantumAI-archive__LICENSE",
+   "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+   "bytes": 11558,
+   "origin": "licence:head",
+   "reason": "LICENSES member source"
+  },
+  {
+   "path": "repo/submissions/licenses_v154/third_party__syed3000_dfthcsos__LICENSE",
+   "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "bytes": 11358,
+   "origin": "licence:head",
+   "reason": "LICENSES member source"
+  },
+  {
+   "path": "repo/submissions/licenses_v154/third_party__syed3000_dfthcsos__NOTICE",
+   "sha256": "3e0eea3a45192471eb7d3f9ceb8f47c070d45a9e46ee6553ccd60ed17f8bfa13",
+   "bytes": 230,
+   "origin": "licence:head",
+   "reason": "LICENSES member source"
+  },
+  {
+   "path": "repo/submissions/licenses_v154/third_party__syed3000_dqi__LICENSE",
+   "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "bytes": 11358,
+   "origin": "licence:head",
+   "reason": "LICENSES member source"
+  },
+  {
+   "path": "repo/submissions/licenses_v154/third_party__syed3000_dqi__NOTICE",
+   "sha256": "3e0eea3a45192471eb7d3f9ceb8f47c070d45a9e46ee6553ccd60ed17f8bfa13",
+   "bytes": 230,
+   "origin": "licence:head",
+   "reason": "LICENSES member source"
+  },
+  {
+   "path": "repo/submissions/licenses_v154/third_party__syed3000_invsqrt__LICENSE",
+   "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+   "bytes": 11358,
+   "origin": "licence:head",
+   "reason": "LICENSES member source"
+  },
+  {
+   "path": "repo/submissions/licenses_v154/third_party__syed3000_invsqrt__NOTICE",
+   "sha256": "3e0eea3a45192471eb7d3f9ceb8f47c070d45a9e46ee6553ccd60ed17f8bfa13",
+   "bytes": 230,
+   "origin": "licence:head",
+   "reason": "LICENSES member source"
+  }
+ ]
+}

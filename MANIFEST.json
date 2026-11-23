@@ -944,6 +944,82 @@
    "sha256": "a8f560ced582d4a89dd5645e68cb72dd9126d123db3d77b1f79f2ee7e473863d",
    "size": 40687
   },
+  "gens/q2026_v154/chemistry_source.tar.gz": {
+   "sha256": "cbfc4d50ce5a8a9750019b256ca349e8192bf2102e8046cbb5f1b80b88bf24d0",
+   "size": 68176249
+  },
+  "gens/q2026_v154/dqi_source.tar.gz": {
+   "sha256": "21735d33f3cb390453dcce2adcc01fbf377b32a7bb2ab618cba01c4a26dab808",
+   "size": 10654968
+  },
+  "gens/q2026_v154/q2026_v154_generator_sources_2026-11-23.md": {
+   "sha256": "f85db2aff2841efdb69ef50bafe067b971f5de852ad39193dcf8a50ad1eae273",
+   "size": 9048
+  },
+  "gens/q2026_v154/isr_source.tar.gz": {
+   "sha256": "16fa277737a0974d5e2c5c474fdf71cf772a49a6aa2879ccbc211c5f33397a02",
+   "size": 2130859
+  },
+  "gens/q2026_v154/isr/SHA256SUMS": {
+   "sha256": "5e8389e736c07efd7f60e9635a43d7516e31b90f049d23240eb82821ce0d1c8c",
+   "size": 2106
+  },
+  "gens/q2026_v154/isr/MANIFEST.json": {
+   "sha256": "a2956fbc8dd5d3c4d147b179cb5541f100a8cc5688e06adb80afc394caae684b",
+   "size": 93527
+  },
+  "gens/q2026_v154/isr/build.py": {
+   "sha256": "0a53a9b5d2b7c202065fd9cf2982fdf6a873190b44bded3b26c5e3e4b12ac28c",
+   "size": 4304
+  },
+  "gens/q2026_v154/isr/BUILD.json": {
+   "sha256": "f15c2a44d43dbd67dfc2ee0136c5a513b40a4f90f84c265aa9e01bdb18b692d5",
+   "size": 2694
+  },
+  "gens/q2026_v154/isr/README.md": {
+   "sha256": "9bd13b3322635918ecba5fcda80a36ea8d2613d834459f5b4f2cbc8e1b90bbde",
+   "size": 1259
+  },
+  "gens/q2026_v154/dqi/SHA256SUMS": {
+   "sha256": "18953b2c54bb0aec35cb0fa44ceec15cf636f408a70cbc08d31310a919b94dc3",
+   "size": 74
+  },
+  "gens/q2026_v154/dqi/MANIFEST.json": {
+   "sha256": "e1c37bcff064cfb56f5168a750b784bbddbb3246b50848d00b0f338adfcadbf6",
+   "size": 182092
+  },
+  "gens/q2026_v154/dqi/build.py": {
+   "sha256": "0a53a9b5d2b7c202065fd9cf2982fdf6a873190b44bded3b26c5e3e4b12ac28c",
+   "size": 4304
+  },
+  "gens/q2026_v154/dqi/BUILD.json": {
+   "sha256": "f1aef40d7a5183139cfdc08765c9a7e1e56c3953b52bf706644c6bb87cf02686",
+   "size": 446
+  },
+  "gens/q2026_v154/dqi/README.md": {
+   "sha256": "556f2334a4e0682004b4e98d4593c8246d16203147a43fd49f04e0aa1e64ed1f",
+   "size": 1273
+  },
+  "gens/q2026_v154/chemistry/SHA256SUMS": {
+   "sha256": "e78eea5eba53342df0d9896945ed9d55e51a1734246157af1b27c6c556838456",
+   "size": 1430
+  },
+  "gens/q2026_v154/chemistry/MANIFEST.json": {
+   "sha256": "4a9f05c24a10e06aa8a768c1c36f4edca8eeb5507502c2348b294968a40dcc0b",
+   "size": 96951
+  },
+  "gens/q2026_v154/chemistry/build.py": {
+   "sha256": "0a53a9b5d2b7c202065fd9cf2982fdf6a873190b44bded3b26c5e3e4b12ac28c",
+   "size": 4304
+  },
+  "gens/q2026_v154/chemistry/BUILD.json": {
+   "sha256": "f296ce17e8a2480c41faf3dbb0faed9d70ba431e56dd6e69a51f84e9c5e67f43",
+   "size": 1445
+  },
+  "gens/q2026_v154/chemistry/README.md": {
+   "sha256": "15a65f8ebcb7053c0dea85e5023d77805ba88359e0ce78ad40f5a80f8798c522",
+   "size": 2826
+  },
   "trees/v146/SHA_TABLE.json": {
    "sha256": "dcc7865d4c18a51ffdc4127712ee2623ac5f624cef0037bb744a824b64280e50",
    "size": 2424
