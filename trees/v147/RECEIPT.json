@@ -1,0 +1,72 @@
+{
+ "portfolio": "v147_zero_test_dqi_vox_chem",
+ "shas_ok": true,
+ "verifiers": [
+  "verify_submission_invsqrt.py",
+  "verify_submission_dqi.py",
+  "dfthcsos/verify.py"
+ ],
+ "verifies": {
+  "invsqrt": {
+   "status": "PASS",
+   "score": 60927.57739905387,
+   "num_qubits": 37,
+   "toffoli_count": 1406.3124317944714,
+   "toffoli_equivalent": 1646.69128105551,
+   "rotation_count": 33.0,
+   "rotation_eps": 1.8880574198146154e-13,
+   "verified_shots": 200540928,
+   "worst_error_over_tolerance": 0.9994717987127908,
+   "worst_x": 252,
+   "circuit_sha256": "bb676b95f94c923cc5482f6cd8d457ab5ff3e8180c8f7cfd2c9678335d0ba56b"
+  },
+  "dqi": {
+   "status": "PASS",
+   "score": 309694874626.0435,
+   "num_qubits": 900,
+   "toffoli_count": 316122.95665039064,
+   "value_errors": 4,
+   "phase_errors": 0,
+   "verified_shots": 102400,
+   "effective_error_rate": 0.001016763883917165,
+   "repetition_factor": 1.209464049815962,
+   "circuit_sha256": "6f78ecdd636051d4d2dd8f24aaece1d454eb220aaf0df2c1d64c3d96fe22081d"
+  },
+  "dfthcsos": {
+   "status": "PASS",
+   "score": 251089557.02151904,
+   "num_qubits": 405,
+   "toffoli_count": 13214.0,
+   "lambda_eff": 46.917982054483744,
+   "batch_size": 5
+  }
+ },
+ "leg_timings": {
+  "invsqrt": 492.8,
+  "dqi": 114.5,
+  "dfthcsos": 16.8
+ },
+ "public_dqi_evidence": [
+  {
+   "release": "goodpjw2008/qcc-dqi-zero-test-cuts-lb-33-17067",
+   "public_lb": 33.17067,
+   "dqi_sha256": "6f78ecdd636051d4d2dd8f24aaece1d454eb220aaf0df2c1d64c3d96fe22081d",
+   "note": "the release that shipped these exact DQI bytes; its notebook states \"The public leaderboard draw of this file had none\", and the whole tree was scored 33.17067 on the public board"
+  },
+  {
+   "release": "liuzewen123/qcc-dqi-zero-test-cuts-verbatim-33-17067",
+   "public_lb": 33.17067,
+   "dqi_sha256": "6f78ecdd636051d4d2dd8f24aaece1d454eb220aaf0df2c1d64c3d96fe22081d",
+   "note": "an independent verbatim copy of the same 18 bytes, scored 33.17067 on the public board"
+  }
+ ],
+ "dqi_default_salt_failed_shots": 4,
+ "ratios": {
+  "invsqrt": 34.08594797907608,
+  "dqi": 78.9146530538601,
+  "dfthcsos": 13.364154320555649
+ },
+ "gm": 33.003361018014395,
+ "dataset": "badboyhalo1801/qcc-release-v147",
+ "verdict": "V147-RECEIPT-PASS"
+}

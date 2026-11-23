@@ -33,7 +33,12 @@ import sys
 from pathlib import Path
 
 ROOT = pathlib.Path('/home/bandoc/Downloads/opencode')
+# Portable fallback: when this file is shipped inside a bundle (Kaggle dataset),
+# the generator source sits next to it under `isr/`.
+_LOCAL_SRC = pathlib.Path(__file__).resolve().parent / 'isr'
 DEFAULT_SOURCE = ROOT / 'work/gens/q2026_v154/isr'
+if not DEFAULT_SOURCE.exists() and _LOCAL_SRC.exists():
+    DEFAULT_SOURCE = _LOCAL_SRC
 
 
 def sha256(p: Path) -> str:
@@ -73,14 +78,23 @@ def main() -> int:
     ap.add_argument('--caps', default='', help='I39_CAPS value, e.g. "H1=37,DIV1=37"')
     ap.add_argument('--env', action='append', default=[],
                     help='extra env var for the pipeline, e.g. --env S5LEND=0')
+    ap.add_argument('--stack-env', action='append', default=[],
+                    help='env var injected AFTER the stack script hardcodes its exports '
+                         '(use for C1MIX/FXACCCAP/etc.); e.g. --stack-env FC_XFREE=1')
+    ap.add_argument('--cfg-overlay', default='',
+                    help='JSON file (or inline JSON) deep-merged into the generator cfg '
+                         'after mkcfg, i.e. before the emit stage that decides the H1 '
+                         'schedule and the peak live width')
     ap.add_argument('--out', default='/tmp/opencode/h30_run')
     ap.add_argument('--source-root', default=str(DEFAULT_SOURCE))
     ap.add_argument('--keep', action='store_true')
+    ap.add_argument('--keep-r56', action='store_true',
+                    help='preserve R56_LEV instead of the stack script unsetting it')
     ap.add_argument('--cores', default='0')
     a = ap.parse_args()
 
-    src_root = Path(a.source_root)
-    out_root = Path(a.out)
+    src_root = Path(a.source_root).resolve()
+    out_root = Path(a.out).resolve()
     if out_root.exists():
         shutil.rmtree(out_root)
     out_root.mkdir(parents=True)
@@ -95,11 +109,30 @@ def main() -> int:
                  (G / 'tools', home / 'Quantum/tools'), (G / 'prog', home / 'prog')):
         shutil.copytree(s, d, ignore=shutil.ignore_patterns('__pycache__'))
     (home / 'qcc/data').mkdir(parents=True, exist_ok=True)
-    (home / 'qcc/data/kickmix').symlink_to(R / 'host_provided/kickmix')
+    # ABSOLUTE symlink: the generator's scripts put $HOME/qcc/data/kickmix on
+    # PYTHONPATH, and a relative target would resolve against the symlink's
+    # own directory (home/qcc/data/) and break the kickmix import.
+    kickmix_link = home / 'qcc/data/kickmix'
+    if kickmix_link.is_symlink() or kickmix_link.exists():
+        kickmix_link.unlink()
+    kickmix_link.symlink_to((R / 'host_provided/kickmix').resolve())
     (home / 'qcc/.venv/bin').mkdir(parents=True)
     wrapper = home / 'qcc/.venv/bin/python'
     wrapper.write_text(f'#!/bin/sh\nexec "{sys.executable}" "$@"\n')
     wrapper.chmod(0o755)
+    # The generator's own steps import kickmix from $HOME/qcc/data/kickmix.
+    # Verify the extension really imports under THIS interpreter before the
+    # 13-minute build starts, so a broken environment fails in 1 second
+    # instead of 13 minutes.
+    _probe = subprocess.run(
+        [sys.executable, '-c',
+         'import sys; sys.path.insert(0, "%s"); import kickmix; '
+         'print("kickmix OK", kickmix.__file__, sys.version)' % (home / 'qcc/data/kickmix')],
+        capture_output=True, text=True)
+    if _probe.returncode != 0:
+        raise SystemExit('kickmix does not import under %s:\n%s\n%s'
+                         % (sys.executable, _probe.stdout[-800:], _probe.stderr[-1500:]))
+    print('   ', _probe.stdout.strip())
     for path in home.rglob('*'):
         if path.is_file() and not path.is_symlink():
             data = path.read_bytes()
@@ -113,11 +146,52 @@ def main() -> int:
 
     stack = home / 'Quantum/tools/f9_i1_stack.sh'
     text = stack.read_text()
+
+    # the cfg overlay: applied after mkcfg writes the cfg, so it reaches the
+    # emit stage (the stage that fixes the H1 schedule and the peak width).
+    overlay_path = ''
+    if a.cfg_overlay:
+        overlay_path = str(home / 'qcc_cfg_overlay.json')
+        ov = a.cfg_overlay
+        if os.path.exists(ov):
+            ov_text = pathlib.Path(ov).read_text()
+        else:
+            ov_text = ov
+        try:
+            json.loads(ov_text)
+        except json.JSONDecodeError as exc:
+            raise SystemExit(f'--cfg-overlay is neither a file nor valid JSON: {exc}')
+        (home / 'qcc_cfg_overlay.json').write_text(ov_text)
+        _patch = pathlib.Path(__file__).resolve().parent / 'qcc_cfg_patch.py'
+        if not _patch.exists():
+            _patch = pathlib.Path('/home/bandoc/Downloads/opencode/work/tools/qcc_cfg_patch.py')
+        if not _patch.exists():
+            raise SystemExit('--cfg-overlay: qcc_cfg_patch.py not found next to the driver')
+        shutil.copyfile(_patch, home / 'Quantum/tools/qcc_cfg_patch.py')
+        anchor = 'mkcfg 0 || exit 1'
+        if anchor not in text:
+            raise SystemExit('--cfg-overlay: anchor "mkcfg 0 || exit 1" not found')
+        text = text.replace(
+            anchor,
+            anchor + '\n[ -n "$QCC_CFG_PATCH" ] && { '
+                     '$P $Q/tools/qcc_cfg_patch.py "$CFG" "$QCC_CFG_PATCH" || exit 1; }',
+            1)
     old = '  grep -q "CHECK PASS" $C/emit_chk.log\n'
     text = text.replace(old, '  grep -q "CHECK PASS" $C/emit_chk.log || echo "(emit check base not shipped: skipped)"\n')
     i, j = text.index('echo "== EXACT PROOF against the base'), text.index('echo "== PROVED')
     text = text[:i] + 'echo "== exact proof against the published circuit skipped in the package (no public circuit is read)"\n' + text[j:]
     text = re.sub(r"BASE=\$\(readlink -f \$\{BASE:-[^}]*\}\)", "BASE=", text)
+    if a.keep_r56:
+        text = text.replace("unset R56_LEV", "# R56_LEV preserved by the H30 driver")
+    if a.stack_env:
+        # The stack script hardcodes its own exports (C1MIX=1, FXACCCAP=30, ...).
+        # Inject our overrides AFTER those lines and BEFORE the first build call,
+        # so a mutated knob actually reaches the generator.
+        inject = "\n".join(f"export {kv}" for kv in a.stack_env) + "\n"
+        anchor = "export NUMBA_CACHE_DIR="
+        if anchor not in text:
+            raise SystemExit("--stack-env: anchor export NUMBA_CACHE_DIR not found")
+        text = text.replace(anchor, inject + anchor, 1)
     stack.write_text(text)
 
     env = dict(os.environ, HOME=str(home), S5LEND='1')
@@ -126,6 +200,9 @@ def main() -> int:
         env[k] = v
     if a.caps:
         env['I39_CAPS'] = a.caps
+    if overlay_path:
+        env['QCC_CFG_PATCH'] = overlay_path
+        env['QCC_HOME'] = str(home)
     log = work / 'stack.log'
     print(f'== running f9_i1_stack.sh with I39_CAPS={a.caps!r} env={a.env}', flush=True)
     with log.open('w') as fh:

@@ -1,38 +1,38 @@
 # GOALS — breakthrough goals + leverage map (agent-maintained; rewrite freely)
-# Last refresh: 2026-11-23 01:20 UTC (post v146 score 33.17029 + q2026-v154 generator-source discovery)
+# Last refresh: 2026-11-23 05:3x UTC (post v146 score 33.17029 + DQI zero-test-cut discovery)
 #
-# 2026-11-23 refresh notes
-# -----------------------
-# * **Our scored best is now v146 = 33.17029** (ref 58749949, COMPLETE); v144 = 33.14394.
-# * Public frontier (2026-11-23 00:2x UTC): `Entangled Team` 33.83493, codebeforework
-#   33.54018, Two-Qubit Gate 33.51863, Schrodingers Cats Lived 33.51568.
-#   **Corrected inverse-square-root thresholds** (the previously quoted 58,237.0814940 was
-#   the OLD leader 33.67349's threshold, mislabelled):
-#     match 33.83493  -> invsqrt cost <= 57,407.3438787498
-#     beat  33.54018  -> invsqrt cost <= 58,934.1648
+# 2026-11-23 05:3x UTC refresh notes
+# -------------------------------
+# * **The public release lane is now EXHAUSTED at every leg**, all measured:
+#   - chemistry: `varianceofx`'s table `16b4f5b5` = **251,089,557.02151904**
+#     (beats our `e7f08627` = 251,089,557.46576697 by 0.44424793; the floor);
+#   - DQI: `goodpjw2008`'s zero-test-cut `6f78ecdd` = **-9.00 Toffolis/shot**
+#     (public LB 33.17067); their own scan rejects the other 62 of 72
+#     candidate gates with measured reasons, so the mechanism is closed;
+#   - invsqrt: `bb676b95` = 60,927.57739905387 (37 q) is still the public best.
+# * **The public board's draw is NOT the default salt.**  alexchilton proved the
+#   private board re-runs the verifiers with an unknown salt and that each DQI
+#   file's shot draw is hashed from its own bytes; the default-salt verifier
+#   number must therefore be calibrated against the board (our biases:
+#   -0.00004472 for v144, -0.00004035 for v146).
+# * **Frontier (2026-11-23 04:1x UTC board):** #1 `Entangled Team` **33.85279**,
+#   #2 `codebeforework` 33.56726, #3 `Two-Qubit Gate` 33.51863; we are **rank
+#   214 at 33.17029**.  With v147's DQI + chemistry fixed:
+#     match #1  -> invsqrt <= **57,318.1631**
+#     beat #2   -> invsqrt <= **58,793.3204**
 #   With the 39 q generator build's per-wire cost 1,581.954652990519:
-#     Q=37 -> 58,532.10 -> GM 33.6168  (2nd place)
-#     Q=36 -> 56,950.16 -> GM 33.9252  (1st place)
-#   **One Toffoli removed at 37 q = +0.0067 GM; 1 % off any leg = +0.1105 GM.**
-# * Public chemistry is at a hard public floor: the best of **12 distinct public
-#   chemistry tables** measured against the shared 3,357-T loaders is
-#   251,089,557.46576697 (`e7f08627208c`).  Every other public table is >= 0.04 and
-#   most are ~600,000 cost units worse.  Chemistry has no public headroom left.
-# * Public DQI: only the v144 member `4b5721411adc239f` is officially verified clean
-#   (0 value / 0 phase errors).  Two public "improvements" edit the DQI tape:
-#   `141f02ac…` (ozertuu) **FAILS** the official verifier (2 value errors / 102,400
-#   shots), and `1e6787a0…` (asteriospanoras family) is unverified and worth at most
-#   ~+0.000017 GM.  ⇒ DQI is not a lever for us without our own generator.
-# * **NEW: the q2026-v154 generator-source lane** (`work/gens/q2026_v154/`) gives us
-#   source for all three legs.  The ISR bundle contains `invsqrt_fc_narrow.py`
-#   (checkpoint-schedule carry narrowing = the H30 width mechanism), a lane search,
-#   a cubic-rank compressor, a SAT tail optimiser and LUT/angle synthesis; the
-#   chemistry bundle carries a leader-grade table plus the leader's loader tools.
-#   The v154 *tree* itself is dominated (measured), so this lane is a GENERATOR lane,
-#   not an adoption lane.
-# ⇒ **The inverse-square-root leg is again the only meaningful lever** (one wire =
-#   ten DQI wires), and it must come from the 39 q generator lineage (H24) or from
-#   the new q2026-v154 ISR generator (H30).
+#     Q=38 -> 60,114.28 (GM 33.319567)
+#     **Q=37 -> 58,532.32 (GM 33.617079, 2nd place)**
+#     **Q=36 -> 56,950.37 (GM 33.925509, 1st place)**
+# * **H31 (the evolutionary lane) is now LIVE on Kaggle**: the CodeEvolve
+#   framework (inter-co/science-codeevolve, Apache-2.0, vendored unchanged)
+#   evolves the *build plan* of the q2026-v154 ISR generator inside a private
+#   Kaggle kernel, scored by the unchanged official invsqrt verifier.
+#   3 islands run as PARALLEL processes and the build is single-threaded
+#   (644 s on 2 cores), so the search really does use Kaggle's 12 cores.
+# ⇒ **The inverse-square-root leg is the only meaningful lever** (one wire =
+#   ten DQI wires), and it must come from the 39 q generator lineage (H24) or
+#   from the q2026-v154 ISR generator (H30/H31).
 
 
 ## Leverage map (cost-formula anatomy, GM per unit)
@@ -303,3 +303,45 @@ Evidence: `work/recon/public_harvest_2026-11-22_v139.md`,
 `work/recon/invsqrt_basis_probe_2026-11-21.md`, and
 `work/recon/invsqrt_lend_scan_2026-11-21.md`.
 
+
+### 2026-11-23 06:2x UTC refresh (post-v147 submission + apache v173 full-manifest audit)
+
+**Lever map after the audit — the board is now provably at its public floor:**
+
+| leg | public floor (verifier-measured) | owner | our status |
+|---|---|---|---|
+| invsqrt | 60,927.57739905387 (37 q, `bb676b95f94c`) | varianceofx | **= ours**; runner-up 60,955.298422 ⇒ no public headroom |
+| DQI | clean 305,033,672,024 (`6f78ecdd`, implied T 316,122.9567) | goodpjw2008 | **= ours**; best rival `1e6787a0` 305,041,576,300.78 (−7.9M behind us) |
+| chemistry | 251,089,557.02151906 (table `81dbfe56d339` = `16b4f5b5`) | apache v173 manifest | **= ours** (their number vs our local differ by 2e-8) |
+
+⇒ **Every public-release lane is closed at the floor.**  The only remaining
+leverage in the whole competition is the **inverse-square-root physical width**
+(one wire ≈ 1,582 cost units ≈ 0.28 GM at 37 q; 36 q ≈ 1st place).
+
+**Ranked goals now:**
+
+1. **H31 (CodeEvolve evolutionary width search, RUNNING on Kaggle since
+   05:06 UTC, 8 h budget).**  The only automated route to a sub-39 q build.
+   Harvest `search_summary.json` / `best_program.py` / `best_invsqrt.kmb` when
+   the kernel completes; re-verify the best plan locally with the unchanged
+   official verifier before any use.
+2. **H32 (NEW — invsqrt `square_root` stage, "little-explored" in the public
+   closure ledger; "other constructions of the consuming square root are
+   untried").**  Cheap discriminating test: does the archived q2026-v154 ISR
+   bundle contain a *different* square-root construction (the 44/46-qubit
+   line's) that can be swapped in, and what does it cost in wires?  Kill
+   criterion: if the bundle has only one square-root construction and its
+   swap points are the same width, close it.
+3. **H33 (NEW — invsqrt `table` stage, "active" on the 44-qubit line).**
+   64-row table resyntheses are a public live lane; our H1 blocker is exactly
+   the table program's 7-input/6-temporary schedule.  Test: take the public
+   44-qubit table resynthesis *source* (if the bundle ships it) and rebuild the
+   H1 table with one more input wire.
+4. **Public-release radar (always on).**  8 rows adjudicated this wake, all by
+   measurement; the apache archive is now harvestable file-by-file, which
+   removes the last blind spot in the dataset channel.
+
+**Guardrail unchanged and still binding:** a candidate is eligible only with an
+exact 18-file SHA table + an unchanged-official-verifier in-kernel receipt, and
+it must beat the incumbent on the *measured* leg costs.  No DQI member without
+an official verifier receipt; no chemistry table without a local official PASS.

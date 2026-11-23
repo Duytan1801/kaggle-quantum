@@ -414,3 +414,44 @@ Evidence: `work/receipts/V139_RECEIPT.json`,
 `work/recon/public_harvest_2026-11-22_v139.md`,
 `work/receipts/V146_RECEIPT.json`, `work/receipts/V146_MOAT_RECEIPT.json`.
 
+
+## 2026-11-23 06:2x UTC — v146 board calibration + v147 prediction
+
+| # | submitted | predicted GM | board GM | displayed error | note |
+|---|---|---|---|---|---|
+| v144 | ref 58713892 | 33.1439847224675759169083408104802578161029519713326461544372 | 33.14394 | **-0.00004472** | public-salt band |
+| v146 | ref 58749949 | 33.1703303503537523913065411197878713240478112544176321620074 | 33.17029 | **-0.00004035** | public-salt band |
+| v147 | ref 58763051 | **33.17067** (clean DQI draw) / 33.00336 (default-salt 4-error draw) | pending | — | two-branch prediction, see below |
+
+**Two-branch calibration rule (measured from three public trees).**  The public
+board re-runs the official verifiers with an **unknown salt**; the failed-shot
+count is drawn from the file's own `sha256 + salt`, and the board's draw is
+**not** the default salt.  Evidence: DQI `4b572141` drew 0 default-salt errors
+and the board scored its tree 33.17029 (= the clean prediction); `141f02ac`
+drew 2 and the board scored 33.170350 (= its CLEAN prediction, not the
+33.07695 implied by 2 errors); `6f78ecdd` drew 4 and the board scored 33.17067
+(= its CLEAN prediction).  ⇒ predict the **clean-draw** GM, and treat the
+default-salt number as a lottery draw, not as the score.
+
+**v147 predicted GM, computed from the receipt's measured leg costs with the
+clean repetition factor 1.1912604648115832:**
+* DQI clean = 1.1912604648115832 × 900² × 316,122.95665039064 =
+  **305,033,672,024.33**
+* invsqrt = 60,927.57739905387 (37 q, unchanged from v146)
+* chemistry = 251,089,557.02151904 (v146 had 251,089,557.46576697; −0.44424793)
+⇒ composite **33.17067**, i.e. **+0.00038 GM** over the v146 board score
+33.17029, and equal to goodpjw2008's published 33.17067 for the same DQI bytes
+with a 0.0426-worse chemistry table.  The band to expect on the five-decimal
+board display: **33.17062 … 33.17067** (the same ±0.000045 public-salt band as
+v144/v146).  If the board's DQI draw happens to be the default salt's
+4-failed-shot draw, the score is 33.00336 instead — that branch has never
+been observed publicly for a tree that scored cleanly.
+
+**New measurement facts recorded this wake** (unchanged official verifiers):
+* chemistry floor 251,089,557.02151904 (`16b4f5b5`); rivals `b6f06794`
+  251,089,557.72428524, `508364c7` 251,090,780.9397702, `e337917c`
+  251,089,557.50839654, `14d5cc25` FAIL.
+* DQI clean: `6f78ecdd` 305,033,672,024.33 < `1e6787a0` 305,041,576,300.78 <
+  `4b572141` 305,041,647,011.3978.
+* invsqrt floor 60,927.57739905387 (`bb676b95`), runner-up 60,955.298422
+  (`52e8d4e6649b`).

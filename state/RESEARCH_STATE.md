@@ -637,3 +637,170 @@ Detailed release evidence is in `work/harvest/ADOPTED.tsv` and
 - invsqrt score = Q × (T_mean + T/4 + n_rot·rot_price(eps)/4).  In the editable 39 q generator lineage, the measured 38 q/60,114 build predicts GM 33.255613; the 37 q/58,532 build predicts **33.552564**.
 - Frontier: #1 `Schrödinger’s cat lived` / `pjmathematician` 33.51568; #2 `Syed Asad Ali` 33.46157; #3 `codebeforework` 33.36663; #4 `Z³C¹oherence` 33.34845.  Holding v139's public DQI/chemistry fixed, those imply invsqrt costs 58,725.4560 / 59,010.8080 / 59,515.9632 / 59,613.3522.
 - Public chemistry frontier is now Leo T7421 at 251,692,077.714951.  No inspected table/loader permutation beats it; H24's semantically exact 37 q physical allocation is the next material mechanism lane.
+
+## 2026-11-23 05:2x UTC — WAKE 2: THE DQI ZERO-TEST-CUT MECHANISM (new, public, EXHAUSTED)
+
+### DQI zero-test cuts — goodpjw2008's mechanism (adopted as v147's DQI)
+`goodpjw2008/qcc-dqi-zero-test-cuts-lb-33-17067` ships tonylica's `4b572141` with
+TEN gate rewrites and a **public LB of 33.17067** (vs our 33.17029):
+
+| who | rewrite | Toffolis/shot |
+|-----|---------|---------------:|
+| evgendvorkin | `CCZ q103 q54 q163` -> `CZ q103 q54` | -0.50 |
+| ozertuu | delete `CCZ q63 q507 q204 if b49140` | -0.50 |
+| goodpjw2008 | `CCX a b t` -> `CX a t` at positions 17-24 of a 24-bit zero test | **-8.00** |
+
+Measured by the OFFICIAL verifier on the same 102,400 shots for both files
+(seed 777): 316,133.13 -> 316,124.13 Toffolis/shot (-9.00).  One Toffoli removed
+from every shot = **+3.5e-5 GM**; one wrong shot = **-0.05 GM**, so a rewrite
+pays when its expected wrong shots per 102,400-shot run are below 7e-4.
+
+**THE MECHANISM IS EXHAUSTED (measured, do not re-enter).**  Their own scan found
+**72** redundant-looking gates; they took 10 and left **62**: 23 failed on the
+larger samples and **39 sit too early in their zero tests to pay off**.  Their
+value simulator (bit-parallel, `dqiscan`) shows the wrong-shot count halves from
+one chain position to the next, so the risk curve crosses the gain curve near
+position 16 and they take 17-24.  Two independent teams (`liuzewen123`,
+`thomasgamet`/`alexchilton`) shipped byte-identical or sibling trees the same
+cycle, so this is a *public* frontier, not a private one.
+
+### The chemistry floor moved (again) — `16b4f5b5e51b0777`
+`varianceofx/vqcc-verified-3357-loader-portfolio` ships a table that is
+**0.44424793 cost units cheaper** than our `e7f08627208c`:
+official local PASS **251,089,557.02151904** (T 13,214, Q 405,
+lambda_eff 46.917982054483744) on the same 3,357-T loaders.  Worth +2e-10 GM
+(it is the floor, not the prize) but it is now the reference chemistry.
+
+### The salt doctrine (alexchilton's, the most important new public fact)
+The **PRIVATE** board re-runs the official verifiers with a salt nobody knows,
+and **one failed task scores the whole submission 0**.  The verifier derives its
+shots from `sha256(circuit bytes) + salt`, so **every new DQI byte string draws
+its own number of inherited decoder failures** (~1 per 102,400-shot run, each
+worth ~-0.05 GM).  The **public board's draw is a different draw from the
+default salt**: on its own default salt `6f78ecdd` draws 4 failures and so does
+`4b572141` on the same shots, but the public leaderboard draw of both had none.
+⇒ **the default-salt verifier number is NOT the board number**; a predicted GM
+must be calibrated against the board's own draw (our v144/v146 biases are
+-0.00004472 / -0.00004035).
+⇒ because the failure count is drawn from the file's own hash, switching DQI
+files re-rolls that lottery but does NOT change its distribution; there is no
+systematic edge in probing salts (the P(fail) is a property of the algorithm).
+
+### Frontier re-baselined (2026-11-23 04:1x UTC board)
+#1 `Entangled Team` **33.85279**, #2 `codebeforework` 33.56726, #3
+`Two-Qubit Gate` 33.51863; we are **rank 214 at 33.17029**.
+With v147's DQI + chemistry fixed, the inverse-square-root thresholds are:
+
+| goal | required invsqrt cost |
+|------|----------------------:|
+| match #1 `Entangled Team` | **<= 57,318.1631** |
+| beat #2 `codebeforework` | **<= 58,793.3204** |
+| beat #3 `Two-Qubit Gate` | <= 59,049.5900 |
+
+and the 39 q generator build's per-wire cost 1,581.954652990519 gives
+Q=38 -> 60,114.28 (GM 33.319567), **Q=37 -> 58,532.32 (GM 33.617079, 2nd place)**,
+**Q=36 -> 56,950.37 (GM 33.925509, 1st place)**.
+
+⇒ **H24/H30 (the inverse-square-root width) is still the only lane worth a
+week.**  Everything public is now at its floor: chemistry 251,089,557.02151904,
+DQI `6f78ecdd` (-9.00 Toffolis/shot, exhausted), invsqrt `bb676b95`.
+
+### H31 (NEW, ACTIVE) — CodeEvolve evolutionary search, now RUNNING on Kaggle
+The search runs **in-kernel** (`badboyhalo1801/qcc-isr-codeevolve-evolutionary-width-search`,
+private).  The evolved entity is a *build plan* for the q2026-v154 ISR
+generator (`caps`, `env`, `stack_env`, `cfg` overlay); fitness = `-cost` with the
+exact official model; the evaluator runs the real generator and the UNCHANGED
+official invsqrt verifier (1/64 shot screen).  Full feature set: 3 islands
+(which CodeEvolve spawns as **parallel processes** - the generator build is
+single-threaded, 644 s on 2 cores vs 804 s on 6, so 3 islands really do run
+concurrently on Kaggle's 12 cores), meta-prompting, grid MAP-Elites over
+(Q x toffoli_like), PlateauScheduler exploration, ring migration, checkpoint
+every 2 epochs, 8 h wall-clock watchdog.
+Four kernel iterations were needed to get it alive; the three real bugs were
+recorded in `KERNEL_WATCH.md`.
+
+### 2026-11-23 06:2x UTC — **V147 GATE PASS → SUBMITTED (ref 58763051)** + apache v173 full-manifest audit
+
+**V147 SUBMITTED** (3 slots left).  Tree = invsqrt `bb676b95f94c923c` (37 q,
+unchanged) + DQI `6f78ecdd636051d4` (goodpjw2008's zero-test cuts) + chemistry
+`16b4f5b5e51b0777` (varianceofx's table) + the 15 byte-identical 3,357-T loaders.
+Gated zip SHA `dfdffd5042aa5687`, persisted at `work/trees/v147/submission.zip`.
+Static table `work/sha_tables/sha_table_v147.txt`; receipt
+`work/receipts/V147_RECEIPT.json` (verdict **V147-RECEIPT-PASS**, shas_ok true)
+from **moat-lab v62** on the exact snapshot bytes:
+
+| leg | status | measured | notes |
+|---|---|---|---|
+| invsqrt | PASS | 60,927.57739905387 | 37 q, 200,540,928 shots, worst_err/tol 0.99947 |
+| DQI | PASS | 309,694,874,626.0435 | 900 q, T 316,122.95665039064, **4 value / 0 phase** errors, eps_plus 0.0010168 < 1/16 |
+| chemistry | PASS | 251,089,557.02151904 | 405 q, T 13,214, λ_eff 46.9179821 |
+
+**The DQI gate criterion was corrected and is now principled (measured).**  The
+first v147 receipt (moat-lab v61, archived
+`work/receipts/V147_RECEIPT_FAIL_DQI4ERRORS.json`) said FAIL because *our extra*
+zero-error proxy rejected 4 failed shots — while the **unchanged official
+verifier returned PASS** (its contract is `eps_plus < 1/16`, and 0.00102 ≪
+1/16).  The public board's shot draw is **not** the default salt: three public
+trees prove it (DQI `4b572141` drew 0 default-salt errors → board 33.17029;
+`141f02ac` drew 2 → board 33.170350 = its CLEAN prediction; `6f78ecdd` drew 4 →
+board 33.17067 = its CLEAN prediction).  ⇒ the default-salt failed-shot count is
+a **lottery draw**, not a verdict.  New rule (`work/tools/build_moat_v147b.py`):
+a DQI leg with failed shots is admissible **only** if `PUBLIC_DQI_EVIDENCE`
+names the exact `circuit_sha256` we ship **and** a public leaderboard score for
+it; otherwise REJECT (still fail-closed).  v147 cites two independent public
+releases of those exact bytes at 33.17067.
+Prediction for the board: **33.17067** on a clean draw (33.00336 if the board
+re-draws the default salt's 4 errors).  Poller armed for ref 58763051.
+
+**Public-release queue: 8 rows adjudicated with MEASURED numbers** (no row is
+closed on a claim).  New tool `work/tools/chem_new_tables.py` measures any
+candidate chemistry table on the shared 3,357-T loaders with the UNCHANGED local
+official verifier (~20 s/cell):
+
+| release | new member | measured | verdict |
+|---|---|---|---|
+| `dennis6886/quantum-circuits-21-37712-…` | chem `b6f06794` | PASS 251,089,557.72428524 | dominated (+0.7028 vs our floor) |
+| `aakashhowlader/no-bodies-mix17-vqcc-33-17035` | chem `508364c7`, DQI `a931fcfe` | PASS 251,090,780.9397702 | dominated (+1,223.92); DQI is a metadata-only variant of tonylica `4b572141` (same gates ⇒ no cost gain); its 33.17035 is the salt lottery |
+| `liuzewen123/qcc-3357-loaders-stock-dqi` | chem `e337917c` | PASS 251,089,557.50839654 | dominated (+0.4869) |
+| `hassanabdulhafid/chronos-kickmix-…` | 13-file tree, chem `14d5cc25` | FAIL ("selection register must have exactly 12 qubits, got 11") | inadmissible: 5 loaders missing, invsqrt 260 q, DQI 1,893 q |
+| `manwithacat/the-real-150k-…` | — | 18 files hash **exactly** to our v147 | independent public confirmation of v147 |
+| `ishankarnick/santa-2026-frontier-programs`, `goodpjw2008/santa-2026-…-130-844` | — | — | rejected: Santa-2026 (other competition) / 404 |
+
+**NEW CAPABILITY — harvestable dataset archives.**  `manwithacat/vqcc-apache-public-circuits`
+404s on archive download (Kaggle builds the zip asynchronously) while its
+**8,542 individual files are already published**.  Two new tools fix that:
+`work/tools/ds_files.py` (full manifest through the CLI's page tokens) and
+`work/tools/ds_get_files.py` (per-file `datasets download -f`).  ⇒ the apache
+manifest is now fully harvestable.
+
+**APACHE v173 FULL-MANIFEST AUDIT (704 circuits, new evidence).**
+`structure/index.csv` + `parts/assembly_best.json` give verifier-measured costs
+for 129 invsqrt / 153 DQI / 422 chemistry families:
+
+* invsqrt best = **`bb676b95f94c` = ours** (60,927.577399, 37 q); runner-up
+  `52e8d4e6649b` 60,955.298422 ⇒ **no public invsqrt headroom**.
+* chemistry best = table `81dbfe56d339` (= our `16b4f5b5`), `verified_cost`
+  **251,089,557.02151906** (their number) vs our local 251,089,557.02151904 ⇒
+  **independent third-party confirmation of our chemistry floor**.
+* DQI best = `1e6787a0` at clean 305,041,576,300.78 (implied T 316,131.148) vs
+  **our `6f78ecdd` clean 305,033,672,024.33** (implied T 316,122.9567) ⇒ **we
+  are 7,904,276 cost units BETTER**.
+⇒ **v147 is the global public floor on all three legs**, confirmed by a third
+party.  All upside is therefore the invsqrt **width** lane.
+
+**H32 (NEW, from the apache negative-results ledger, `structure/stage_status.json`)**
+— a *curated reading* of the public closure ledger, i.e. a map of what is
+still open:
+* invsqrt **square_root: "little-explored"** — "about an eighth of the 44-qubit
+  pick and never changed in a public edit; one mechanism closed (further HMR on
+  the square-root inverse and seed clear).  **Other constructions of the
+  consuming square root are untried as far as we know.**"  ← the clearest
+  untried mechanism on the whole board.
+* invsqrt **table: "active"** — 64-row table resyntheses on the 44-qubit line;
+  and the **divider's construction itself is "less explored"**.
+* invsqrt arithmetic: active (steady small edits).
+* DQI: extract / middle / synthesis **active**; **scan is closed-at-floor**
+  (11 Toffolis per point is the floor for one degree-13 monomial root test).
+⇒ H32 is cheap to test: it is a *generator-side* mechanism question for the
+q2026-v154 ISR bundle (does the 44/46-qubit line's square-root construction
+exist as source we can adopt?), not a re-run of a closed route.

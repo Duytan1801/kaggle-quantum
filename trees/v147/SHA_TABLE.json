@@ -1,0 +1,77 @@
+{
+ "tree": "v147 hybrid = invsqrt bb676b95f94c923c (37 q, unchanged) + goodpjw2008's zero-test-cut DQI 6f78ecdd636051d4 (4b572141 + evgendvorkin CCZ->CZ + ozertuu CCZ delete + 8 CCX->CX at zero-test positions 17-24 = -9.00 Toffolis/shot) + varianceofx's chemistry table 16b4f5b5e51b0777 on the shared 3,357-T loaders (official local PASS 251089557.02151904 @405q) + the 15 byte-identical loaders; predicted GM 33.17069 (goodpjw2008's public LB for the same DQI was 33.17067 with a 0.0426-worse chemistry table)",
+ "files": {
+  "dfthcsos/angle_k_0.kmb": [
+   "f2004c1f1d12f4a0028252aa3febd713856d246ff21134ca91a92348c4bf2994",
+   501906
+  ],
+  "dfthcsos/angle_k_1.kmb": [
+   "55d06dd8ca615a9347d1f5e7f56995dbfc98271a9e7dcd41afcfa1471322e1ab",
+   495144
+  ],
+  "dfthcsos/angle_k_10.kmb": [
+   "6821f925554fec08153670bcc9ff83dc893d8cde72003727139c754b4ebbbbd9",
+   275433
+  ],
+  "dfthcsos/angle_k_11.kmb": [
+   "6d8ca06817049162d67d89aaf1ae0fd88acbb7ee984c4c28d222cd14e512ffda",
+   495152
+  ],
+  "dfthcsos/angle_k_12.kmb": [
+   "ddde7ec28d025883a9a789f4d313696d61797f26ab20016033362736cdf8bc72",
+   280926
+  ],
+  "dfthcsos/angle_k_13.kmb": [
+   "acaee97f692c612dddcac3bc1978f3f58348504fba3881bdd4a6b440aa2ed7e6",
+   267412
+  ],
+  "dfthcsos/angle_k_14.kmb": [
+   "5cef55cf6208b2cfd4f52a13b63241b4ce7b5196f9dddfe0349e484030db07cd",
+   275201
+  ],
+  "dfthcsos/angle_k_2.kmb": [
+   "ad15e5f7a198103af1fba6af7f36048948395853464b5876191844c8f2c4a539",
+   281142
+  ],
+  "dfthcsos/angle_k_3.kmb": [
+   "5ded23f357ebfa0ed1fe639f1cffd92d31957fb3845509d70abbb37c0bac5773",
+   278967
+  ],
+  "dfthcsos/angle_k_4.kmb": [
+   "c083539bde81b2b88f377fde85ac3b1ded11d1b2bcda246c59ec6a80597205fd",
+   284075
+  ],
+  "dfthcsos/angle_k_5.kmb": [
+   "6596b8f24e9fe2591ae5a9cfd63d3f4ed10d1b740cab1799b91eed55d1350da5",
+   494427
+  ],
+  "dfthcsos/angle_k_6.kmb": [
+   "5ea8a2182ae7c70bb6b7f095970b9abe7dde84d8ca4c6940713a75a70655a0cd",
+   280016
+  ],
+  "dfthcsos/angle_k_7.kmb": [
+   "f76cbba9b71e0f0601b2e906dd4c698438c1d8be7e65bb858c7f1626f3710c6e",
+   494173
+  ],
+  "dfthcsos/angle_k_8.kmb": [
+   "227472385bffce8eb08c31ee93d635755901b29107bb32177885e1b7e212f898",
+   265777
+  ],
+  "dfthcsos/angle_k_9.kmb": [
+   "62a3c1d1fb44df40a57df87b0907402fed4e581ec0dfe7f7647b92e75e0d4b3d",
+   279368
+  ],
+  "dfthcsos/submission.npz": [
+   "16b4f5b5e51b0777d78d51b6a004be3914280c89f71336ab107d55903632ab9a",
+   1864776
+  ],
+  "dqi.kmb": [
+   "6f78ecdd636051d4d2dd8f24aaece1d454eb220aaf0df2c1d64c3d96fe22081d",
+   617641568
+  ],
+  "invsqrt.kmb": [
+   "bb676b95f94c923cc5482f6cd8d457ab5ff3e8180c8f7cfd2c9678335d0ba56b",
+   523327
+  ]
+ }
+}
