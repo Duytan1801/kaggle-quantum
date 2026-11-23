@@ -17,12 +17,12 @@
    "size": 41717
   },
   "state/KERNEL_WATCH.md": {
-   "sha256": "c9be72f3032f5a323663514b4b6104d0402fa7fdab63c9df8108241900ac4937",
-   "size": 93999
+   "sha256": "ed37ecc82e717e4f883683d79e76a876b69df3e6ed66c1e6cb3b26bd61755d63",
+   "size": 94942
   },
   "state/RESEARCH_STATE.md": {
-   "sha256": "a86e2a2c8196f49c92f8d2eb8816f0992851957d9fdcdb45f253d30ef6741141",
-   "size": 47604
+   "sha256": "8cabc4015c7687b7b1b163f3fb01f990b0d4d273500d84fb257fed3e146d9207",
+   "size": 48459
   },
   "state/CALIBRATION.md": {
    "sha256": "cdf8d0fafb0b48a4a302f69bbed5fc8e8b46622a0f8b98acbd01e74a9f5996dd",
@@ -503,6 +503,10 @@
   "tools/build_moat_v136.py": {
    "sha256": "4f6f742c0825edec004f6f89f142937d202e5d5dbeb9439eec2ce12f07ce4004",
    "size": 11477
+  },
+  "tools/h24_peak_explain.py": {
+   "sha256": "8bae696c87c97b13f298400e0be25bee0b762c4590ab4e4e9222aa95dda58853",
+   "size": 2369
   },
   "tools/invsqrt_toffoli_scan.py": {
    "sha256": "2fb6787c9880b552b448d660bd73ba07525e0b8a2cba9bb676e3116306fbedcc",

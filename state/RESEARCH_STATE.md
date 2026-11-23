@@ -51,6 +51,17 @@
   says the canonical q38 OR block appears 32 times (16 forward + 16 reverse
   rows) but q38 has 895 other uses, so the rewrite alone does not free the
   wire.
+* **H24 width lane, measured 2026-11-23 (`work/recon/h24_width_state_2026-11-23.md`):**
+  the 39 q generator build was rebuilt byte-exactly (SHA `68eb8c13ebc75…`,
+  24,387 ops, 39 wires) and profiled: **0 mergeable wire pairs**, peak
+  **39 live wires** (all wires) over 11,791 ops.  The pipelined carry rewrite
+  is now **semantically exact** (state + phase equal on forced-zero,
+  forced-one and 3 labelled random HMR streams) but does not lower the peak.
+  The peak is the divider's **CSWAP sorting network**: 39 = 22 x-register + 15
+  permutation participants + 2 control/scratch (q34, q35).  ⇒ A 37 q/38 q build
+  of this generator needs an **algorithmic divider rewrite** (streaming divider
+  with one carry + one buffer), not wire re-allocation, affine recomputation or
+  a local gate patch.  This is now the only route to the 33.83493 leader.
 
 ## QUEUE (ranked)
 
