@@ -1,0 +1,208 @@
+#!/usr/bin/env python3
+"""Build the fail-closed two-receipt gate receipt for v146.
+
+Requirements enforced here:
+* the tree has exactly the 18 members in sha_table_v146.txt and every hash/size
+  matches;
+* moat-lab v60 ran the unchanged official invsqrt, DQI, and chemistry verifiers
+  in-kernel on badboyhalo1801/qcc-release-v146 and all three PASSed;
+* the in-kernel circuit hashes equal the pinned tree members;
+* the DQI draw has zero value and phase errors and reproduces the measured
+  305,041,647,011.3978;
+* the independent local official-verifier receipts reproduce the in-kernel
+  inverse-square-root and chemistry results;
+* the recomputed geometric mean agrees with the in-kernel GM.
+"""
+from __future__ import annotations
+
+import hashlib
+import json
+import pathlib
+from decimal import Decimal, getcontext
+
+ROOT = pathlib.Path('/home/bandoc/Downloads/opencode')
+TREE = ROOT / 'work/trees/v146_hybrid_dqi_chem'
+TABLE = ROOT / 'work/sha_tables/sha_table_v146.txt'
+OUT = ROOT / 'work/receipts/V146_RECEIPT.json'
+MOAT = ROOT / 'work/receipts/V146_MOAT_RECEIPT.json'
+INV_LOG = ROOT / 'work/receipts/V143_LOCAL_INVSQRT_VERIFY.log'
+CHEM_LOG = ROOT / 'work/receipts/V146_LOCAL_CHEM_VERIFY.log'
+REF = {
+    'invsqrt': Decimal('2076774.233715282'),
+    'dqi': Decimal('24439463583672.93'),
+    'dfthcsos': Decimal('3355599588.3155375'),
+}
+EXPECTED = {
+    'invsqrt': Decimal('60927.57739905387'),
+    'dqi': Decimal('305041647011.3978'),
+    'dfthcsos': Decimal('251089557.46576697'),
+}
+PREVIOUS = Decimal('33.1439847224675759169083408104802578161029519713326461544372')
+
+
+def json_block(path: pathlib.Path) -> dict:
+    text = path.read_text()
+    i, j = text.find('{'), text.rfind('}')
+    if i < 0 or j < 0:
+        raise RuntimeError(f'no JSON object in {path}')
+    obj = json.loads(text[i:j + 1])
+    if not isinstance(obj, dict):
+        raise RuntimeError(f'not a JSON object in {path}')
+    return obj
+
+
+def sha_size(path: pathlib.Path) -> tuple[str, int]:
+    b = path.read_bytes()
+    return hashlib.sha256(b).hexdigest(), len(b)
+
+
+def main() -> int:
+    table = json.loads(TABLE.read_text())
+    files = table['files']
+    actual = {p.relative_to(TREE).as_posix(): p for p in TREE.rglob('*') if p.is_file()}
+    if len(files) != 18:
+        raise RuntimeError(f'expected 18 files, got {len(files)}')
+    if set(actual) != set(files):
+        raise RuntimeError(f'tree/table mismatch: {set(actual) ^ set(files)}')
+
+    shas_ok = True
+    for name, (want_sha, want_size) in files.items():
+        got_sha, got_size = sha_size(actual[name])
+        if got_sha != want_sha or got_size != want_size:
+            shas_ok = False
+            print('SHA/SIZE MISMATCH', name)
+    if not shas_ok:
+        raise RuntimeError('static 18-file SHA table mismatch')
+
+    if sha_size(actual['invsqrt.kmb'])[0] != (
+            'bb676b95f94c923cc5482f6cd8d457ab5ff3e8180c8f7cfd2c9678335d0ba56b'):
+        raise RuntimeError('v146 inverse-square-root SHA mismatch')
+    if sha_size(actual['dqi.kmb'])[0] != (
+            '4b5721411adc239f61fc11c773a2358b75dfe7cb15586efae4f0459c77d77e52'):
+        raise RuntimeError('v146 DQI SHA mismatch')
+    if not sha_size(actual['dfthcsos/submission.npz'])[0].startswith('e7f08627208c'):
+        raise RuntimeError('v146 chemistry table SHA mismatch')
+
+    moat = json.loads(MOAT.read_text())
+    if moat.get('shas_ok') is not True:
+        raise RuntimeError('in-kernel receipt did not pass the SHA gate')
+    if moat.get('dataset') != 'badboyhalo1801/qcc-release-v146':
+        raise RuntimeError(f'unexpected in-kernel dataset: {moat.get("dataset")!r}')
+    if moat.get('verdict') != 'V146-RECEIPT-PASS':
+        raise RuntimeError(f'in-kernel verdict is not PASS: {moat.get("verdict")!r}')
+
+    verifies = moat.get('verifies') or {}
+    for leg in ('invsqrt', 'dqi', 'dfthcsos'):
+        entry = verifies.get(leg) or {}
+        if entry.get('status') != 'PASS':
+            raise RuntimeError(f'official in-kernel verifier did not PASS: {leg}')
+        got = Decimal(str(entry.get('score')))
+        want = EXPECTED[leg]
+        if abs(got - want) > abs(want) * Decimal('1e-9'):
+            raise RuntimeError(f'unexpected {leg} score: {got} != {want}')
+    if verifies['invsqrt'].get('circuit_sha256') != files['invsqrt.kmb'][0]:
+        raise RuntimeError('in-kernel invsqrt receipt is for different bytes')
+    if verifies['dqi'].get('circuit_sha256') != files['dqi.kmb'][0]:
+        raise RuntimeError('in-kernel DQI receipt is for different bytes')
+    if verifies['dqi'].get('value_errors') != 0 or verifies['dqi'].get('phase_errors') != 0:
+        raise RuntimeError('in-kernel DQI receipt contains shot errors')
+
+    local_inv = json_block(INV_LOG)
+    local_chem = json_block(CHEM_LOG)
+    for label, local, kernel in (
+        ('invsqrt', local_inv, verifies['invsqrt']),
+        ('dfthcsos', local_chem, verifies['dfthcsos']),
+    ):
+        if local.get('status') != 'PASS':
+            raise RuntimeError(f'local {label} status={local.get("status")!r}')
+        if abs(Decimal(str(local.get('score'))) - Decimal(str(kernel.get('score')))) > (
+                abs(Decimal(str(kernel.get('score')))) * Decimal('1e-12')):
+            raise RuntimeError(
+                f'local/in-kernel {label} score mismatch: '
+                f'{local.get("score")!r} != {kernel.get("score")!r}')
+        if local.get('circuit_sha256') and local.get('circuit_sha256') != kernel.get('circuit_sha256'):
+            raise RuntimeError(f'local/in-kernel {label} SHA mismatch')
+    for key in ('toffoli_count', 'num_qubits', 'batch_size'):
+        if local_chem.get(key) != verifies['dfthcsos'].get(key):
+            raise RuntimeError(
+                f'local/in-kernel chemistry mismatch for {key}: '
+                f'{local_chem.get(key)!r} != {verifies["dfthcsos"].get(key)!r}')
+    if abs(float(local_chem.get('lambda_eff'))
+           - float(verifies['dfthcsos'].get('lambda_eff'))) > 1e-12:
+        raise RuntimeError('local/in-kernel chemistry lambda_eff mismatch')
+
+    getcontext().prec = 60
+    legs = {
+        'invsqrt': {
+            **verifies['invsqrt'],
+            'note': 'official verifier PASS in moat-lab v60 on exact v146 snapshot bytes',
+        },
+        'dqi': {
+            **verifies['dqi'],
+            'note': 'official verifier PASS in moat-lab v60 on exact v146 snapshot bytes',
+        },
+        'dfthcsos': {
+            **local_chem,
+            'note': 'official verifier PASS in moat-lab v60 and independently reproduced locally',
+        },
+    }
+    ratios = {k: REF[k] / Decimal(str(legs[k]['score'])) for k in legs}
+    gm = (ratios['invsqrt'] * ratios['dqi'] * ratios['dfthcsos']) ** (Decimal(1) / Decimal(3))
+    if abs(gm - Decimal(str(moat['gm']))) > Decimal('1e-12'):
+        raise RuntimeError(f'GM mismatch: computed {gm}, in-kernel {moat["gm"]}')
+
+    ok = (shas_ok and all(legs[k].get('status') == 'PASS' for k in legs)
+          and verifies['dqi'].get('value_errors') == 0
+          and verifies['dqi'].get('phase_errors') == 0)
+    receipt = {
+        'portfolio': 'v146_hybrid_dqi_chem',
+        'shas_ok': shas_ok,
+        'verifiers': [
+            'verify_submission_invsqrt.py',
+            'verify_submission_dqi.py',
+            'verifiers/dfthcsos/verify.py',
+        ],
+        'verifies': legs,
+        'official_in_kernel': {
+            'kernel': 'badboyhalo1801/moat-lab',
+            'version': 60,
+            'dataset': 'badboyhalo1801/qcc-release-v146',
+            'receipt': str(MOAT),
+            'gm': float(moat['gm']),
+            'verified_shots': {
+                'invsqrt': verifies['invsqrt'].get('verified_shots'),
+                'dqi': verifies['dqi'].get('verified_shots'),
+                'dfthcsos': 1219,
+            },
+        },
+        'local_invsqrt_receipt': str(INV_LOG),
+        'local_chemistry_receipt': str(CHEM_LOG),
+        'ratios': {k: str(v) for k, v in ratios.items()},
+        'gm': str(gm),
+        'previous_gm': str(PREVIOUS),
+        'delta_gm': str(gm - PREVIOUS),
+        'source': (
+            'invsqrt bb676b95f94c unchanged; DQI 4b5721411adc239f (v144 member, '
+            'official 0 value / 0 phase errors); chemistry table e7f08627208c '
+            'with the public 3,357-Toffoli loaders (official local PASS '
+            '251089557.46576697)'
+        ),
+        'rejected_public_tree': (
+            'ozertuu/google-quantum-ai-vqcc-33-170350 (DQI 141f02ac69638c78) '
+            'FAILED the unchanged official DQI verifier in moat-lab v59 with '
+            '2 value errors / 102400 shots'
+        ),
+        'sha_table': 'work/sha_tables/sha_table_v146.txt',
+        'verdict': 'V146-RECEIPT-PASS' if ok else 'V146-RECEIPT-FAIL',
+    }
+    OUT.parent.mkdir(parents=True, exist_ok=True)
+    OUT.write_text(json.dumps(receipt, indent=1) + '\n')
+    print(f'verdict: {receipt["verdict"]}')
+    print(f'GM: {gm}  delta: {gm - PREVIOUS:+}')
+    for k, entry in legs.items():
+        print(f'  {k:9} {entry["status"]:4} score {entry["score"]!s:>22} ratio {ratios[k]}')
+    return 0 if ok else 1
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

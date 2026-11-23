@@ -563,3 +563,249 @@
 2026-11-21 04:58:29	bhaviklimani/widle-quantum-ai-research-optimization	rejected	no QCC tree or parts
 2026-11-21 04:58:45	bhaviklimani/widle-verified-quantum-circuit-compilatio	rejected	no QCC tree or parts
 2026-11-21 05:04:34	arthjshah/guman-mam-specs-2	rejected	no QCC tree or parts
+2026-11-21 06:08:54	manwithacat/vqcc-apache-public-circuits	pull-failed	To search for one, try 'kaggle search <query>'.
+2026-11-21 06:08:58	manwithacat/vqcc-private-frontier-disclosures	rejected	no QCC tree or parts
+2026-11-21 06:09:02	ankiteshtiwari/ntl-block-spec-v1	rejected	no QCC tree or parts
+2026-11-21 06:09:14	leotang09/vqcc-t7421-submission	rejected	no QCC tree or parts
+2026-11-21 06:09:18	rdaccel/qcc-32-86114-reproduction-cosmorin	rejected	no QCC tree or parts
+2026-11-21 06:09:56	manwithacat/the-real-150k-was-the-friends-we-made	rejected	no QCC tree or parts
+2026-11-21 06:16:09	syed3000/vqcc-own-circuit-portfolio	parts	dir=.:files=4111,missing=16
+2026-11-21 06:17:17	manwithacat/vqcc-hedge-wizardry	parts	circuits/invsqrt/1ba197b02771.kmb:q=46,sha=1ba197b02771; circuits/invsqrt/6c6a734dbcb6.kmb:q=62,sha=6c6a734dbcb6; circuits/dqi/35fa5ef9a2bf.kmb:q=890,sha=35fa5ef9a2bf; circuits/dqi/b0983d55f58d.kmb:q=890,sha=b0983d55f58d; circuits/dqi/957d67334541.kmb:q=890,sha=957d67334541; circuits/dqi/5e86f69a9611.kmb:q=892,sha=5e86f69a9611; circuits/dqi/1779b4e5967f.kmb:q=892,sha=1779b4e5967f; circuits/dqi/b99
+2026-11-21 06:35:05	bingchenzhao/qcc-milestone-tb1-circuits	pull-failed	  https://www.kaggle.com/competitions/<competition>/rules
+2026-11-21 06:35:09	rupam2020/qcc-no-bodies-milestone	parts	invsqrt/invsqrt.kmb:q=39,sha=be4ce1be07bd; dfthcsos/angle_k_13.kmb:q=128,sha=fdc1561ef834; dfthcsos/angle_k_8.kmb:q=128,sha=0d7574240d1d; dfthcsos/angle_k_14.kmb:q=128,sha=b21056081052; dfthcsos/angle_k_6.kmb:q=128,sha=dd666ec03310; dfthcsos/angle_k_4.kmb:q=128,sha=cf18699e46b4; dfthcsos/angle_k_11.kmb:q=128,sha=4927883dff5a; dfthcsos/angle_k_3.kmb:q=128,sha=9ee7708d0b30
+2026-11-21 06:35:17	rithvikredrouthu/qcc-milestone-set	rejected	no QCC tree or parts
+2026-11-21 06:39:26	rupam2020/qcc-no-bodies-milestone	rejected	No Bodies parts: invsqrt be4ce1be 39q (public score 63,055.040 > v136 60,955.327); chemistry official PASS 254,451,362.5007 @405q/T13,390 > v136 252,573,399.1621; no DQI; no component beats v136
+2026-11-21 06:39:26	rithvikredrouthu/qcc-milestone-set	rejected	Rithvik final pack: invsqrt d2148a7c byte-identical v136; DQI 175a61e3 890q public score 309,448,968,240.577 > v136 305,041,647,011.398; chemistry official PASS 253,286,626.9567 @405q/T13,328 > v136 252,573,399.1621
+2026-11-21 06:39:26	bingchenzhao/vqcc-milestone-tb1-circuits	rejected	Bingchen TB1 manual download succeeded (65.2MB) despite queue pull error: invsqrt be4ce1be 39q, DQI 8e0837e5 901q, chem refit official PASS 255,214,736.9888 @405q/T13,430; every component worse than v136
+2026-11-21 06:39:26	cosmorin/qcc-31-67947-frontier-set	rejected	Cosmorin 31.67947: invsqrt 7604ddb0 39q, DQI a2eac721 901q, chemistry official PASS 255,384,580.9947 @405q/T13,436; all components worse than v136
+2026-11-21 06:39:26	asteriospanoras/qcc-circuit-atlas	rejected	Atlas four trees scanned: best 31.69054 components invsqrt be4ce1be 63,055.040 @39q, DQI 8e0837e5 332,669,000,000 @901q, chemistry 255,384,620.97 @405q; all worse than v136
+2026-11-21 06:39:26	rdaccel/qcc-28-24094-reproduction-ozertuu	rejected	kernel output tree; published overall 28.24094 < v136 33.10018; components are 44q/890q historical frontier, no better leg
+2026-11-21 06:39:26	rdaccel/qcc-28-23162-reproduction-ozertuu	rejected	kernel output tree; published overall 28.23162 < v136 33.10018; no better leg
+2026-11-21 06:39:26	rdaccel/qcc-28-09090-reproduction-ozertuu	rejected	kernel output tree; published overall 28.09090 < v136 33.10018; no better leg
+2026-11-21 06:39:26	rdaccel/qcc-27-31216-reproduction-ahoirg	rejected	kernel output tree; published overall 27.31216 < v136 33.10018; no better leg
+2026-11-21 06:39:26	rdaccel/qcc-25-39570-reproduction-ozertuu	rejected	kernel output tree; published overall 25.39570 < v136 33.10018; no better leg
+2026-11-21 06:39:26	rdaccel/qcc-25-29657-reproduction-busyaprime	rejected	kernel output tree; published overall 25.29657 < v136 33.10018; no better leg
+2026-11-21 06:39:26	rdaccel/qcc-25-22676-reproduction-gengsr	rejected	kernel output tree; published overall 25.22676 < v136 33.10018; no better leg
+2026-11-21 06:39:27	rdaccel/qcc-25-13665-reproduction-ozertuu-kirilltym	rejected	kernel output tree; published overall 25.13665 < v136 33.10018; no better leg
+2026-11-21 06:39:27	rdaccel/qcc-v58-c40b-reproduction-lb-23-73311-heliosli	rejected	kernel output tree; published overall 23.73311 < v136 33.10018; no better leg
+2026-11-21 07:03:09	apogean/vqcc-verified-portfolio-reproducible-assembly	rejected	no QCC tree or parts
+2026-11-21 07:03:11	ishankarnick/santa-2026-frontier-programs-132-716	rejected	no QCC tree or parts
+2026-11-21 07:03:14	ishankarnick/santa-2026-frontier-programs	rejected	no QCC tree or parts
+2026-11-21 07:03:18	arsen123/squares-safe-sat-cell-reproducible-portfolio	rejected	no QCC tree or parts
+2026-11-21 07:12:25	mizeroluckygall/quantum-circuits-37q-split-block-refit	rejected	Kernel output tree is component-byte-identical to v136 on all 18 files (invsqrt d2148a7c 37q, DQI 4b572141 900q, chemistry npz 6b9903dd + 15 loaders); no byte-distinct component or score improvement
+2026-11-21 07:12:25	mendaparameet/vqcc-33-1002-frontier-multi-block-dag-splicing	rejected	Kernel output tree is component-byte-identical to v136 on all 18 files (invsqrt d2148a7c 37q, DQI 4b572141 900q, chemistry npz 6b9903dd + 15 loaders); only zip container bytes differ
+2026-11-21 07:12:25	thomasgamet/quantum-attempt-reset	rejected	Older component tree: invsqrt be4ce1be 39q (measured 63,055.040 > v136 60,955.327), DQI 8e0837e5 901q (332,669,000,000 > v136 305,041,647,011), chemistry 6abb5ef4 405q; every component worse than v136
+2026-11-21 07:12:25	manwithacat/vqcc-apache-public-circuits	rejected	Per-file API workaround succeeded; catalog has 7,930 files (~85.9GB) and 660 scored circuit rows. Zero measured components beat v136: best invsqrt is byte-identical d2148a7c 37q @60,955.3267, best DQI/chemistry costs are worse. No hidden width-reduced tree in catalog
+2026-11-21 07:12:25	tonylica/quantum-ai-32-85306-task-generators	rejected	Editable invsqrt generator source is byte-identical to local 39q source (build.py/carry.py/divider.py/lend29.py/angles.json/base_v90.kmx all matching SHA-256); no 38q/37q allocation or better circuit
+2026-11-21 07:12:25	tonylica/quantum-ai-32-85306-ready-input	rejected	Public submission contains invsqrt 68eb8c13 39q measured 61,696.2315 (worse than v136 60,955.3267); DQI is same 4b572141 as v136 but invsqrt is worse, so whole tree is dominated
+2026-11-21 07:12:32	alexchilton/33-10-lb-which-circuits-survive-private-salt	rejected	no QCC tree or parts
+2026-11-21 07:12:32	ishankarnick/santa-2026-frontier-programs	rejected	no QCC tree or parts
+2026-11-21 07:52:09	goodpjw2008/qcc-dead-word-loader-chain-dp-lb-33-10020	rejected	no QCC tree or parts
+2026-11-21 07:52:10	mzishran/google-quantum-ai-inside-the-iadd-circuit	pull-failed	To search for one, try 'kaggle search <query>'.
+2026-11-21 07:55:15	areebbb/qai-same-gates-better-chemistry-32-87767	rejected	18-file submission.zip is byte-identical to v136 on all components (invsqrt d2148a7c, dqi 4b572141, chem npz 6b9903dd + loaders); chemistry_trial_receipts.json confirms PASS 252573399.16210923 at T=13292/Q=405. No byte-distinct candidate; no submission.
+2026-11-21 07:55:15	pablodiegoo/google-quantum-compilation-starter-notebook	rejected	18-file submission.zip is byte-identical to v136 on all components; verification_receipt.json confirms portfolio GM 33.10022097290196 and chemistry score 252573399.16210923. No byte-distinct candidate; no submission.
+2026-11-21 08:40:58	specstream/us-startup-funding-rounds	rejected	no QCC tree or parts
+2026-11-21 08:41:46	malyshevdanil/squares-in-squares-living-atlas-of-tight-packings	rejected	no QCC tree or parts
+2026-11-21 08:41:48	manwithacat/vqcc-apache-public-circuits	pull-failed	To search for one, try 'kaggle search <query>'.
+2026-11-21 08:41:50	areebbb/qai-same-gates-better-chemistry-32-87767	pull-failed	To search for one, try 'kaggle search <query>'.
+2026-11-21 08:41:55	ishankarnick/santa-2026-frontier-programs-132-707	rejected	no QCC tree or parts
+2026-11-21 08:42:05	pablodiegoo/santa-2026-deterministic-atlas-solver	rejected	no QCC tree or parts
+2026-11-21 08:42:09	boristown/vqcc-33-10-lb-dag-splicing-visual-guide	pull-failed	To search for one, try 'kaggle search <query>'.
+2026-11-21 08:42:10	boristown/vqcc-33-10-lb-multi-block-dag-splicing-visual	pull-failed	To search for one, try 'kaggle search <query>'.
+2026-11-21 08:42:11	arsen123/squares-safe-sat-cell-reproducible-portfolio	rejected	no QCC tree or parts
+2026-11-21 08:42:29	areebbb/0-711-fingerprints-sibling-specialis	rejected	no QCC tree or parts
+2026-11-21 08:49:59	boristown/vqcc-33-102-lb-dag-splicing-visual-guide	adopted	v137 submitted ref 58658870; byte-distinct chemistry k6 64c95e3c + npz 77407294; local official chem PASS 252535127.6084 T13290 Q405; source kernel official default+alt PASS; GM 33.10189299
+2026-11-21 08:49:59	mizeroluckygall/quantum-circuits-33-10-private-salt-check	rejected	Only chemistry npz fc4b4c differs; kernel official chem cost 252572928.566965 is better than v136 by only 470.595 but worse than adopted v137 252535127.608373; dominated, no second submission
+2026-11-21 08:49:59	manwithacat/the-real-150k-was-the-friends-we-made	rejected	Only chemistry npz fc4b4c differs; same official chem cost 252572928.566965; dominated by v137; no submission
+2026-11-21 08:49:59	mzishran/google-quantum-ai-chemistry-cost-channel-search	rejected	All 18 component bytes exactly equal v136; notebook reproduced baseline and explicitly skipped resubmission
+2026-11-21 08:49:59	adilshamim8/google-quantum-ai-101	rejected	All 18 component bytes exactly equal v136; chemistry baseline reproduced and selected unchanged
+2026-11-21 08:49:59	areebbb/qai-same-gates-better-chemistry-33-10018	rejected	All 18 component bytes exactly equal v136; no byte-distinct component
+2026-11-21 08:49:59	mzingayeben/stock-portfolio-performance-data-set	rejected	Unrelated global stock dataset; no QCC tree or parts
+2026-11-21 08:54:38	ishankarnick/santa-2026-frontier-programs	rejected	Downloaded and scanned full dataset (4 files: CREDITS.md, README.md, sources.csv, submission.csv); zero QCC tree, circuit artifacts, or subzips
+2026-11-21 09:12:20	goodpjw2008/qcc-dead-word-loader-chain-dp-lb-33-10186	adopted	v138 submitted ref 58659698; exact 18 bytes; chemistry npz fc4b4c01 replaces v137 77407294; source Kaggle kernel official in-kernel PASS all legs (chem 252534924.8160521, T13290 Q405 lambda 46.91821100354896; invsqrt 60955.3267; DQI 305041647011.3978 0err); independent local official chem PASS exact; gate V138-RECEIPT-PASS; GM 33.10190185550799
+2026-11-21 09:12:30	arsen123/obscura-spectral-physics-validated-ensemble	rejected	no QCC tree or parts
+2026-11-21 09:12:31	geobrando/health-professional-shortage-areas	rejected	no QCC tree or parts
+2026-11-21 09:12:32	ishankarnick/santa-2026-frontier-programs-132-678	rejected	no QCC tree or parts
+2026-11-21 09:12:34	specstream/us-new-trucking-companies-sample	rejected	no QCC tree or parts
+2026-11-21 09:12:35	specstream/california-nonprofits-sample	rejected	no QCC tree or parts
+2026-11-21 09:12:37	specstream/us-h1b-perm-employers-sample	rejected	no QCC tree or parts
+2026-11-21 09:12:38	specstream/fda-medical-device-establishments-sample	rejected	no QCC tree or parts
+2026-11-21 09:12:40	specstream/us-private-foundations-sample	rejected	no QCC tree or parts
+2026-11-21 09:12:42	specstream/us-form-d-filings-sample	rejected	no QCC tree or parts
+2026-11-21 09:12:45	specstream/who-raised-5m-this-week-sec-form-d	rejected	no QCC tree or parts
+2026-11-21 09:12:45	specstream/colorado-bike-shops-who-stands-out	rejected	no QCC tree or parts
+2026-11-21 09:12:47	specstream/colorado-bike-shops	rejected	no QCC tree or parts
+2026-11-21 09:13:44	varianceofx/vqcc-verified-circuit-compiler	rejected	Pulled output; 16/18 bytes equal v138, only k6 e476a763 + npz 6b9903dd differ. Independent unchanged official chemistry verifier PASS 252573399.16210923 T13292 Q405 lambda 46.9182984218: exactly v136 chemistry, worse than v137 252535127.6084 and v138 252534924.8161; no submission
+2026-11-21 09:46:55	manwithacat/the-real-150k-was-the-friends-we-made	rejected	Kernel output scanned: 18-file tree differs from v138 only in dfthcsos/angle_k_6.kmb (e476a763 vs 64c95e3c); same npz fc4b4c01. Source official chemistry PASS 252572928.56696495 T13292 Q405 lambda 46.91821100354896, which is 38003.75091285 cost units WORSE than v138 chemistry 252534924.8160521; dominated, no submission
+2026-11-21 09:47:08	manwithacat/vqcc-apache-public-circuits	rejected	Updated 2026-11-21 08:56 catalog adjudicated via current 8090-file manifest and per-file downloads: 673 scored rows (126 invsqrt, 149 DQI, 398 chemistry), 13 new rows. Zero components cheaper than v138: best invsqrt 60955.32670759028, DQI 305041647011.3978, chemistry 252572928.56696495; best chemistry is 38003.75091285 worse than v138 252534924.8160521. Current parts/assembly_best.json selects e476 k6 and verifies 252572928.56696495, also dominated. No hidden full tree
+2026-11-21 09:48:50	areebbb/qai-same-gates-better-chemistry-33-10018	rejected	Kernel output scanned: all 18 component bytes exactly equal v137 (boristown k6 64c95e3c + npz 77407294); source official chemistry PASS 252535127.60837337 T13290 Q405 lambda 46.91824868013143. Byte-identical to already submitted v137 ref 58658870; never resample identical bytes; no submission
+2026-11-21 23:47:11	ishankarnick/santa-2026-frontier-programs	rejected	no QCC tree or parts
+2026-11-21 23:47:12	arsen123/qcc-hash-pinned-verification-harness	rejected	no QCC tree or parts
+2026-11-21 23:47:12	manwithacat/vqcc-chemistry-negative-results	rejected	no QCC tree or parts
+2026-11-21 23:48:30	manwithacat/vqcc-loader-workbench	rejected	no QCC tree or parts
+2026-11-21 23:50:49	radheshversharma/notebook77dad68819	rejected	no QCC tree or parts
+2026-11-21 23:52:13	taylorclark637/vqcc-submission-notebook-v1-v16-assemblies	rejected	no QCC tree or parts
+2026-11-21 23:54:09	sajid0559/invsqrt-rotation-angles-exact-optimality-proof	parts	kernel_output/invsqrt.kmb:q=37,sha=d2148a7cd7a4
+2026-11-21 23:56:27	prvsiyan/vqcc-verified-best-of-circuits-1106a	too-large	4.7 GB, not scanned
+2026-11-21 23:57:04	arsen123/qcc-public-frontier-full-independent-audit	rejected	no QCC tree or parts
+2026-11-21 23:59:16	ghazarosbarseghyan91/vqcc-33-135-cluster-specialists	pull-failed	  https://www.kaggle.com/competitions/<competition>/rules
+2026-11-21 23:59:18	orel1986/qcc-ozertuu-33138	pull-failed	  https://www.kaggle.com/competitions/<competition>/rules
+2026-11-22 00:03:45	manwithacat/vqcc-apache-public-circuits	too-large	63.3 GB, not scanned
+2026-11-22 00:44:14	asteriospanoras/qcc-33-1-ablation-floors-human-vs-ai-next	rejected	Byte-identical chemistry tree to Areeb (npz 53e5c6d0); official chem PASS 251693790.80323407; dominated by adopted v139 by 1713.08828307 cost units; no submission
+2026-11-22 00:44:14	leotang09/vqcc-t7421-submission	adopted	v139 submitted ref 58694635; exact 18 bytes; chemistry npz b3683e07 plus 15 T7421 loaders; unchanged official in-kernel moat-lab v53 PASS all legs (chem 251692077.714951 T13244 Q405 lambda 46.92403505616352; invsqrt 60955.3267; DQI 305041647011.3978 0err); independent local official chem PASS exact; gate V139-RECEIPT-PASS; GM 33.13881038958233
+2026-11-22 00:44:14	ozertuu/google-quantum-ai-vqcc-33-138	rejected	Title is misleading: actual older 39q/901q portfolio; official chem PASS 255195733.74 T13430 and source GM 31.69497; far worse than v139
+2026-11-22 00:44:14	mos3santos/circuit-optimization-test	rejected	npz 70ace3ef plus four Alex loaders; official chem PASS 251773628.0701481; dominated by v139; no submission
+2026-11-22 00:44:14	manwithacat/the-real-150k-was-the-friends-we-made	rejected	v138-family tree with only k6 e476a763 changed; source official chem PASS 252572928.56696495; dominated by v138 and v139; no submission
+2026-11-22 00:44:14	manwithacat/working-with-a-chemistry-loader-end-to-end	rejected	npz 508364c7 plus four Alex loaders; official chem PASS 251774848.45254695; dominated by v139; no submission
+2026-11-22 00:44:14	areebbb/qai-same-gates-better-chemistry-33-13869	rejected	npz 53e5c6d0; official chem PASS 251693790.80323407; runner-up but dominated by v139 by 1713.08828307 cost units; no submission
+2026-11-22 00:44:14	evgendvorkin/google-quantum-ai-deep-eda-with-analogies	rejected	npz 70ace3ef plus four Alex loaders; official chem PASS 251773628.0701481; dominated by v139; no submission
+2026-11-22 00:44:14	lucifer19/black-cat-quantum-heist-three-locks	rejected	npz d4d39b2e plus four Alex loaders; official chem PASS 251774061.4763462; source DQI salt probe had 1 value error in 3 of 6 salts; dominated by v139 and higher private-salt risk
+2026-11-22 00:44:14	alexchilton/33-13-lb-which-circuits-survive-private-salt	rejected	npz 70ace3ef plus four Alex loaders; official chem PASS 251773628.0701481; dominated by v139; no submission
+2026-11-22 00:44:14	mizeroluckygall/quantum-circuits-33-135-verifier-guided-refit	rejected	same Alex bytes; official chem PASS 251773628.0701481; DQI salt probe had 1 value error in 2 of 4 draws; dominated by v139
+2026-11-22 00:44:14	orecord/quantum-circuit-compilation-pipeline	rejected	39q invsqrt 68eb8c13; official chem PASS 251774061.4763462; source composite GM 33.0020; worse invsqrt and chemistry
+2026-11-22 00:44:14	mzishran/google-quantum-ai-testing-loader-and-table-swaps	rejected	npz d4d39b2e plus four Alex loaders; official chem PASS 251774061.4763462; dominated by v139; no submission
+2026-11-22 00:44:14	sachchidanandadaki/vqcc-spliced-loader	rejected	invsqrt reroll 52e8d4e6 PASS 60955.2984 but npz 508364c7 and chem PASS 251774848.45254695; small invsqrt gain outweighed by worse chemistry; no better composite than v139
+2026-11-22 00:44:14	prvsiyan/verifier-guided-quantum-circuit-optimization	rejected	npz 70ace3ef plus four Alex loaders; official chem PASS 251773628.0701481; DQI salt probe had 1 value error in 2 of 4 draws; dominated by v139
+2026-11-22 00:44:14	karel22/astra29-quantum-frozen-private	rejected	Public 18-file parent tree is obsolete: invsqrt ecf908fe at 44q, DQI e39b1396 at 890q, chemistry npz 6ef06081; not a frontier candidate
+2026-11-22 00:44:14	haomingyang0629/qcc-3375-tight-table-v8-repro	rejected	npz d4d39b2e plus four Alex loaders; official chem PASS 251774061.4763462; source GM 33.13521; dominated by v139
+2026-11-22 00:44:14	pablodiegoo/google-quantum-compilation-starter-notebook	rejected	npz 508364c7 plus four Alex loaders; official chem PASS 251774848.45254695 and alternate-salt PASS; dominated by v139
+2026-11-22 00:44:14	goodpjw2008/qcc-3-375-t-loaders-tight-table-lb-33-13521	rejected	npz d4d39b2e plus four Alex loaders; official chem PASS 251774061.4763462; source GM 33.13521; dominated by v139
+2026-11-22 00:44:14	kawh1111/qcomp-harvest-3168	rejected	All 18 members differ; 39q invsqrt 7604ddb0, DQI a2eac721; independent local official chem PASS 255384580.99470943; all measured legs worse
+2026-11-22 00:44:14	varianceofx/vqcc-milestone-circuit-builder	rejected	npz 508364c7 plus four Alex loaders; matches measured chem family 251774848.45254695; dominated by v139
+2026-11-22 00:44:14	maoxin123/qcc-33-135-3-375-toffoli-chemistry-loaders	rejected	Official chem PASS 251774848.45254695; all-leg source GM 33.13518; dominated by v139
+2026-11-22 00:44:14	dennis6886/qcc-dead-word-circuit-compilation-four-refinements	rejected	v138 loader family with npz c0b27e50; official chem PASS 252534924.50289264; tiny gain over v138 is irrelevant beside v139 251692077.714951
+2026-11-22 00:44:14	liuzewen123/vqcc-33-10189-v46-reverified-dag-splice-k6	rejected	Exact v137 chemistry family npz 77407294; official chem PASS 252535127.60837337; dominated by v138 and v139
+2026-11-22 00:44:14	ghazarosbarseghyan91/vqcc-33-10024-error-clusters	rejected	v137 loader family with k6 e476a763; same measured chem family 252572928.56696495; dominated by v138 and v139
+2026-11-22 00:53:58	arsen123/obscura-spectral-physics-validated-ensemble	rejected	no QCC tree or parts
+2026-11-22 00:54:07	goodpjw2008/santa-2026-source-aware-frontier-lb-132-233	rejected	no QCC tree or parts
+2026-11-22 00:54:11	manwithacat/vqcc-negative-results	rejected	no QCC tree or parts
+2026-11-22 00:54:18	ishankarnick/santa-2026-frontier-programs-132-239	rejected	no QCC tree or parts
+2026-11-22 00:54:22	arsen123/squares-safe-sat-cell-reproducible-portfolio	rejected	no QCC tree or parts
+2026-11-22 00:54:27	malyshevdanil/s6e11-nov21-step-r-public-frontier	rejected	no QCC tree or parts
+2026-11-22 00:54:45	malyshevdanil/squares-in-squares-living-atlas-of-tight-packings	rejected	no QCC tree or parts
+2026-11-22 00:54:47	pablodiegoo/santa-2026-puzzle-structure-atlas	rejected	no QCC tree or parts
+2026-11-22 00:54:55	pablodiegoo/santa-2026-deterministic-atlas-solver	rejected	no QCC tree or parts
+2026-11-22 00:56:02	areebbb/0-716-fingerprints-sibling-specialis	rejected	no QCC tree or parts
+2026-11-22 00:56:02	dennis6886/casmi26-anchored-spectral-network-four-refinements	rejected	no QCC tree or parts
+2026-11-22 00:56:06	taylorclark637/starter-notebook-listing-quantum-ai-archive	rejected	no QCC tree or parts
+2026-11-22 00:56:09	taylorclark637/starter-notebook-listing-invsqrt-v13-syed-files	rejected	no QCC tree or parts
+2026-11-22 00:56:12	dennis6886/casmi26-anchored-spectral-network-reproduction	rejected	no QCC tree or parts
+2026-11-22 00:56:15	nursrijan/santa-2026-frontier-milp-cost-alloc-v2	rejected	no QCC tree or parts
+2026-11-22 00:56:20	malyshevdanil/s6e11-nov21-expanded-public-frontier	rejected	no QCC tree or parts
+2026-11-22 01:47:54	ozertuu/google-quantum-ai-vqcc-33-138	rejected	round2 exact tree differs from v139 only chemistry npz 53e5c6d0; official chemistry PASS 251693790.80323407, dominated by v139 251692077.714951
+2026-11-22 01:47:54	manwithacat/the-real-150k-was-the-friends-we-made	rejected	round2 output byte-identical to all 18 v139 members; deterministic bytes already submitted, no resample
+2026-11-22 01:47:54	ghazarosbarseghyan91/vqcc-33-135-cluster-specialists	rejected	round2 source official chemistry PASS 251774848.452547 but DQI 306444698286.123108 with one value error and GM 33.084532682; no clean frontier tree
+2026-11-22 01:47:54	nursrijan/qcc-28-241-prelude3-dqi-6ef06081-chem-v7	rejected	round2 official PASS invsqrt 74361.94735262523@44q, DQI 345116150327.71313@890q, chemistry 294642169.5116752@427q; all legs worse than v139
+2026-11-22 01:47:54	mos3santos/quantum-circuits	rejected	round2 official PASS invsqrt 100568.51342962148, DQI 398268918669.5812, chemistry 333370708.5309501; all legs worse than v139
+2026-11-22 01:47:54	manwithacat/vqcc-apache-public-circuits	component-adopted	Apache v170 partial catalog, no submission-ready tree; exact invsqrt 52e8d4e6649b local official PASS 60955.29842169718 adopted as v140 one-member component candidate
+2026-11-22 02:22:42	ishankarnick/santa-2026-frontier-programs	rejected	no QCC tree or parts
+2026-11-22 02:25:54	manwithacat/how-team-thembones-plans-a-loader-group	rejected	no QCC tree or parts
+2026-11-22 02:29:04	goodpjw2008/qcc-3-372-t-loaders-refit-table-lb-33-13877	component-adopted	new chemistry npz baa8b2966e889ef6be581c85e440ef856c025687c2ff2f1a0fa13033f7e35c84 with exact 3372-T loaders; source official PASS 251692071.475490 and independent unchanged local official verifier PASS exact; 6.239461 cost units cheaper than v139 chemistry; v141 component candidate
+2026-11-22 02:29:04	dennis6886/quantum-circuits-21-37712-fused-dqi-reproduction	rejected	tree differs from v139 only chemistry npz 725dc2bb; selected lambda_eff 46.924354103184264 implies chemistry 251693789.025742, 1711.310791 worse than v139; no official verifier PASS
+2026-11-22 02:29:04	alexchilton/33-13-lb-which-circuits-survive-private-salt	rejected	exact output is byte-identical to all 18 v139 members; deterministic bytes already submitted, no resample
+2026-11-22 03:32:58	taylorclark637/vqcc-submission-notebook-v1-v16-assemblies	rejected	no QCC tree or parts
+2026-11-22 03:33:01	ramprasadatluri/llm-speculative-decoding-rollback-early-warning	rejected	no QCC tree or parts
+2026-11-22 03:33:07	ramprasadatluri/llm-speculative-decoding-acceptance-telemetry	rejected	no QCC tree or parts
+2026-11-22 03:33:16	goodpjw2008/santa-2026-source-aware-frontier-lb-132-226	rejected	no QCC tree or parts
+2026-11-22 03:33:21	ishankarnick/santa-2026-frontier-programs-132-230	rejected	no QCC tree or parts
+2026-11-22 03:33:26	ramprasadatluri/service-mesh-envoy-circuit-breaker-telemetry	rejected	no QCC tree or parts
+2026-11-22 03:34:25	capecora/checkpoint-step-7692	rejected	no QCC tree or parts
+2026-11-22 03:48:31	ishankarnick/santa-2026-frontier-programs	rejected	no QCC tree or parts
+2026-11-22 04:02:20	kozykappa/quantum-ai-dataset	rejected	complete 18-file selected tree, but all three legs are dominated: invsqrt d8f3de612555 official PASS 173002.7486137991@91q, DQI 05453a3aec72 official PASS 2307647381280.9233@1818q, chemistry official PASS 2348537554.5852766@681q; source local GM 5.663396402148851 vs ours 33.13881; no submission
+2026-11-22 04:02:24	manwithacat/the-real-150k-was-the-friends-we-made	component-adopted	round3 exact 18-file output: 15 loaders + DQI + chemistry npz baa8b2966e88 match gated v141; only invsqrt is v139 d2148a7c instead of v141 52e8d4e6. Source chemistry PASS 251692071.475490 and source GM 33.13881066342; unique chemistry component already adopted as v141, so no additional submission
+2026-11-22 04:02:28	manwithacat/vqcc-apache-public-circuits	component-adopted	Apache v171 remains a partial catalog (no submission-ready tree); added chemistry d45d7ddad7ff / npz baa8b2966e88, already adopted and gated as v141, and 1e300828f6bf with official chemistry PASS 251693789.02574182, worse than v139 251692077.714951; no new candidate
+2026-11-22 05:26:43	goodpjw2008/santa-2026-source-aware-frontier-lb-132-197	pull-failed	To search for one, try 'kaggle search <query>'.
+2026-11-22 05:26:46	taylorclark637/vqcc-submission-notebook-v1-v16-assemblies	rejected	no QCC tree or parts
+2026-11-22 05:26:48	aiokajima/quantum-goodpjw-3313877-reproduction-public	rejected	no QCC tree or parts
+2026-11-22 05:26:52	ishankarnick/santa-2026-frontier-programs-132-220	rejected	no QCC tree or parts
+2026-11-22 05:27:20	malyshevdanil/squares-in-squares-living-atlas-of-tight-packings	rejected	no QCC tree or parts
+2026-11-22 05:31:24	leotang09/vqcc-t7421-submission	component-adopted	latest round3 output pulled and independently audited: exact 18-file tree differs from v139 only in dfthcsos/submission.npz SHA 0d4459fbd3d517c4cce7851444763d863e4c455f98554bd28f31f7a9cd081444; unchanged local official chemistry verifier PASS 251690221.89594275 (lambda_eff 46.923689067855136, T=13244, Q=405), improving v139 chemistry by 1855.81900825; built as v142 with Apache invsqrt 52e8d4e6649b, static 18-file SHA table, private snapshot dataset, and official in-kernel moat-lab v56 gate running
+2026-11-22 05:31:35	malyshevdanil/s6e11-nov22-public-frontier	rejected	no QCC tree or parts
+2026-11-22 05:31:37	manwithacat/vqcc-apache-public-circuits	pull-failed	To search for one, try 'kaggle search <query>'.
+2026-11-22 07:11:48	alexchilton/33-13-lb-which-circuits-survive-private-salt	rejected	no QCC tree or parts
+2026-11-22 07:11:51	goodpjw2008/santa-2026-source-aware-frontier-lb-132-135	pull-failed	To search for one, try 'kaggle search <query>'.
+2026-11-22 07:12:04	arumpuri/mol2spec-v2	rejected	no QCC tree or parts
+2026-11-22 07:12:09	mizeroluckygall/quantum-circuits-33-139-loader-chain-refit-table	rejected	no QCC tree or parts
+2026-11-22 07:13:06	ishankarnick/santa-2026-frontier-programs-132-158	rejected	no QCC tree or parts
+2026-11-22 07:13:10	ishankarnick/santa-2026-frontier-programs	rejected	no QCC tree or parts
+2026-11-22 07:13:11	goodpjw2008/santa-2026-source-aware-frontier-lb-132-158	pull-failed	To search for one, try 'kaggle search <query>'.
+2026-11-22 07:13:16	kindasomethin/santa-2026-exact-portfolio-checkpoints	rejected	no QCC tree or parts
+2026-11-22 07:14:03	olaflundstrom/notebook15e18f5413	parts	dir=.:files=13,missing=5
+2026-11-22 08:03:04	mizeroluckygall/quantum-circuits-33-139-best-public-circuits	dominated	exact 18-file output audited: DQI 4b572141 and all 15 Leo T7421 loaders plus chemistry npz 0d4459fbd3d51 are byte-exact v142; only invsqrt d2148a7cd7a4 replaces v142 52e8d4e6649b, with source official score 60955.32670759028 versus v142 60955.29842169718, so the release is strictly dominated and no submission was made
+2026-11-22 08:03:04	manwithacat/the-real-150k-was-the-friends-we-made	dominated	latest round4 exact 18-file output audited: DQI 4b572141 and all 15 Leo T7421 loaders plus chemistry npz 0d4459fbd3d51 are byte-exact v142; only invsqrt d2148a7cd7a4 replaces v142 52e8d4e6649b and scores 60955.32670759028 versus v142 60955.29842169718, so it is strictly dominated by v142; no submission
+2026-11-22 08:04:43	olaflundstrom/notebook15e18f5413	parts-dominated	final audit of pulled 13-member output: inverse sqrt 60b72e79470a is 239q with source-verified cost 1839899, about 30x worse than current 37q cost 60927.57739905387; DQI 959471d05a26 is unique but has no complete tree or measured score beating ours; chemistry has only 10 of 15 loaders and no hash match to an adopted/static tree, so it cannot be officially verified or adopted; no submission
+2026-11-22 08:04:43	manwithacat/vqcc-apache-public-circuits	component-adopted	superseding Apache public-circuits v172 manifest audit: best invsqrt remains 52e8d4e6649b 60955.29842169718, best DQI remains 4b572141 305041647011.3978, and best chemistry is Leo Tang 4ce4c58c5d0a 251690221.89594275 already adopted as v142; new chemistry 004d3c3d0ae4 scores 331076721.7501548 and is dominated; no additional component or submission
+2026-11-22 08:18:08	ishankarnick/santa-2026-frontier-programs-132-103	rejected	no QCC tree or parts
+2026-11-22 08:18:09	goodpjw2008/santa-2026-source-aware-frontier-lb-132-092	rejected	no QCC tree or parts
+2026-11-22 08:18:11	ankiteshtiwari/ntl-block-spec-v1	rejected	no QCC tree or parts
+2026-11-22 08:18:13	ishankarnick/santa-2026-frontier-programs	rejected	no QCC tree or parts
+2026-11-22 08:18:43	malyshevdanil/squares-in-squares-living-atlas-of-tight-packings	rejected	no QCC tree or parts
+2026-11-22 08:56:51	abdelrazeksheta/faultsense-ai-multidomain-fault-inspection	rejected	no QCC tree or parts
+2026-11-22 08:59:12	varianceofx/vqcc-three-t-phase-compiler	adopted	exact three-T phase compiler bb676b95f94c adopted as inverse-square-root member in v143; unchanged official verifier PASS 60927.57739905387 at 37q and official in-kernel PASS; v143 submitted as ref 58711337 and scored 33.14388, new best; no separate release submission because the adopted component was already gated in the complete v143 tree
+2026-11-22 23:41:09	manwithacat/vqcc-apache-public-circuits	pull-failed	To search for one, try 'kaggle search <query>'.
+2026-11-22 23:41:29	taylorclark637/vqcc-submission-notebook-v1-v16-assemblies	rejected	no QCC tree or parts
+2026-11-22 23:41:34	manwithacat/vqcc-negative-results	rejected	no QCC tree or parts
+2026-11-22 23:41:39	manwithacat/vqcc-chemistry-negative-results	rejected	no QCC tree or parts
+2026-11-22 23:42:21	pablodiegoo/santa-2026-deterministic-atlas-solver	rejected	no QCC tree or parts
+2026-11-22 23:42:21	mzishran/google-quantum-ai-verified-circuit-portfolio	rejected	no QCC tree or parts
+2026-11-22 23:42:34	rdaccel/qcc-33-13877-bundle-leotang09	parts	dir=.:files=19,missing=16
+2026-11-22 23:43:22	manwithacat/vqcc-private-dqi-candidates	parts	invsqrt/50f0140e0b6f.kmb:q=39,sha=50f0140e0b6f; dqi/3c03fa53dd86.kmb:q=889,sha=3c03fa53dd86
+2026-11-22 23:43:39	manwithacat/quantum-voodoo-2-electric-boogaloo	parts	dir=.:files=18,missing=15
+2026-11-22 23:43:42	manwithacat/vqcc-loader-workbench	rejected	no QCC tree or parts
+2026-11-22 23:44:48	malyshevdanil/squares-in-squares-living-atlas-of-tight-packings	rejected	no QCC tree or parts
+2026-11-22 23:44:59	kindasomethin/santa-2026-exact-portfolio-frontier-132018	rejected	no QCC tree or parts
+2026-11-22 23:45:05	kindasomethin/santa-2026-exact-portfolio-checkpoints	rejected	no QCC tree or parts
+2026-11-22 23:45:09	manwithacat/how-the-newest-circuit-families-work	rejected	no QCC tree or parts
+2026-11-22 23:45:42	goodpjw2008/qcc-3-t-phase-fold-table-refit-lb-33-14394	pull-failed	To search for one, try 'kaggle search <query>'.
+2026-11-22 23:45:43	goodpjw2008/santa-2026-source-aware-frontier-lb-132-074	pull-failed	To search for one, try 'kaggle search <query>'.
+2026-11-23 07:23:10	ozertuu/google-quantum-ai-vqcc-33-170350	rejected-dqi-errors	exact 18-file tree (invsqrt bb676b95, DQI 141f02ac, chemistry npz 05387b5d + 15 3,357-T loaders); chemistry locally PASS 251089557.50839654 BUT its DQI member FAILS the unchanged official verifier in moat-lab v59: 2 value errors / 102400 shots, score 307632423468.0979 -> verdict V145-RECEIPT-FAIL; not submitted
+2026-11-23 07:23:10	ozertuu/25-218-starter-notebook	rejected-dqi-errors	same 18 bytes as ozertuu/google-quantum-ai-vqcc-33-170350 (DQI 141f02ac) -> same official-verifier failure
+2026-11-23 07:23:10	asteriospanoras/qcc-33-1702-ablation-floors-human-vs-ai-next	candidate-dqi-unverified	18-file tree: invsqrt bb676b95 + 3,357-T loaders + chemistry npz e7f08627 (locally PASS 251089557.46576697) + DQI 1e6787a0 (v144 DQI with CCZ q103 q54 q163 replaced by CZ q103 q54); DQI not yet officially verified; kept out of the submission until the official verifier accepts it
+2026-11-23 07:23:10	hassanabdulhafid/chronos-kickmix-verifiable-quantum-circuit-comp	candidate-dqi-unverified	byte-identical 18-file tree to asteriospanoras (DQI 1e6787a0, npz e7f08627); DQI unverified
+2026-11-23 07:23:10	goodpjw2008/qcc-3-357-t-loaders-table-swap-lb-33-17029	dominated	same tree as lucifer19 (npz e337917c9b72, locally PASS 251089557.50839654, DQI 4b572141) -> 0.04262963 cost units worse than our v146 chemistry table
+2026-11-23 07:23:10	ghazarosbarseghyan91/vqcc-33-17033-table-swap	dominated	same tree as lucifer19 (npz e337917c9b72, DQI 4b572141) -> dominated by v146
+2026-11-23 07:23:10	alexchilton/33-17-lb-which-circuits-survive-private-salt	dominated	same tree as lucifer19 (npz e337917c9b72, DQI 4b572141) -> dominated by v146
+2026-11-23 07:23:10	areebbb/qai-same-gates-better-chemistry-33-17029	dominated	same tree as lucifer19 (npz e337917c9b72, DQI 4b572141) -> dominated by v146
+2026-11-23 07:23:10	orel1986/qcc-alex33-17-fork	dominated	same tree as lucifer19 (npz e337917c9b72, DQI 4b572141) -> dominated by v146
+2026-11-23 07:23:10	rishabhbafnaiiitd/qcc-33-1702-3-task-sota-portfolio-visual-guide	dominated	npz 508364c75b73 on the 3,357-T loaders (locally PASS 251090780.9397702) + DQI 4b572141 -> 1223.43 cost units worse than our v146 table
+2026-11-23 07:23:10	maoxin123/qcc-33-17-3-357-toffoli-chemistry-loaders	dominated	same tree as rishabhbafnaiiitd (npz 508364c75b73) -> dominated by v146
+2026-11-23 07:23:10	mizeroluckygall/quantum-circuits-33-170-3-357-toffoli-loaders	dominated	same tree as rishabhbafnaiiitd (npz 508364c75b73, chemistry PASS 251090780.9397702) -> dominated by v146
+2026-11-23 07:23:10	orel1986/qcc-alex33-fork	duplicate-of-v144	18 files byte-identical to v144
+2026-11-23 07:23:10	varianceofx/vqcc-phase-and-chemistry-compiler	dominated	npz 4d8b273c57d8 with the Leo Tang loaders (raw cost 251688793.18660563) + DQI 4b572141 -> 599235.7 cost units worse than our v146 table
+2026-11-23 07:23:10	ghazarosbarseghyan91/vqcc-33-14398-public-set-reproduction	dominated	same tree as pablodiegoo (old invsqrt d2148a7c, npz eb4b5d79603e) -> dominated
+2026-11-23 07:23:10	kawh1111/qcomp-harvest-3314	dominated	older tree (npz b3683e07 with the Leo Tang loaders 251692077.714951, invsqrt d2148a7c) -> dominated
+2026-11-23 07:23:10	rdaccel/qcc-33-13877-reproduction-leotang09	dominated	Leo Tang round-1 tree (npz b3683e07, invsqrt d2148a7c) -> dominated
+2026-11-23 07:23:10	mos3santos/vqcc-fast-runner	dominated	46 q inverse-square-root and 889 q DQI with 384003 ops -> far wider and larger than our 37 q / 900 q tree
+2026-11-23 07:23:10	whyithastobesix/which-data-may-a-prize-generator-read	rejected-no-tree	output has no QCC tree or parts
+2026-11-23 07:23:10	arsen123/qcc-one-decoder-gate-409600-paired-shots	rejected-no-tree	kernel output empty (no 18-file tree)
+2026-11-23 07:23:20	ozertuu/google-quantum-ai-vqcc-33-170350	rejected-dqi-errors	refined: exact 18-file tree (invsqrt bb676b95, DQI 141f02ac, chemistry npz 05387b5d + 15 3,357-T loaders); chemistry locally PASS 251089557.50839654 BUT its DQI member FAILS the unchanged official verifier in moat-lab v59: 2 value errors / 102400 shots, score 307632423468.0979 -> verdict V145-RECEIPT-FAIL; not submitted
+2026-11-23 07:23:20	ozertuu/25-218-starter-notebook	rejected-dqi-errors	refined: same 18 bytes as ozertuu/google-quantum-ai-vqcc-33-170350 (DQI 141f02ac) -> same official-verifier failure
+2026-11-23 07:23:20	ozertuu/quantum-sim-linalg-cache	rejected-dqi-errors	refined: dataset ships the same 18 bytes (DQI 141f02ac, chemistry npz 05387b5d) -> same official-verifier failure
+2026-11-23 07:23:20	manwithacat/the-real-150k-was-the-friends-we-made	adopted-as-v146	refined: 18-file tree byte-identical to our v146 candidate: invsqrt bb676b95 + verifier-clean DQI 4b572141 (0 value/0 phase errors) + chemistry npz e7f08627 on the 3,357-T loaders; chemistry locally PASS 251089557.46576697; predicted GM 33.17033035
+2026-11-23 07:23:20	asteriospanoras/qcc-33-1702-ablation-floors-human-vs-ai-next	candidate-dqi-unverified	refined: 18-file tree: invsqrt bb676b95 + 3,357-T loaders + chemistry npz e7f08627 (locally PASS 251089557.46576697) + DQI 1e6787a0 (v144 DQI with CCZ q103 q54 q163 replaced by CZ q103 q54); DQI not yet officially verified; kept out of the submission until the official verifier accepts it
+2026-11-23 07:23:20	evgendvorkin/google-quantum-ai-deep-eda-with-analogies	candidate-dqi-unverified	refined: byte-identical 18-file tree to asteriospanoras/qcc-33-1702-ablation-floors-human-vs-ai-next (DQI 1e6787a0, npz e7f08627); DQI unverified
+2026-11-23 07:23:20	hassanabdulhafid/chronos-kickmix-verifiable-quantum-circuit-comp	candidate-dqi-unverified	refined: byte-identical 18-file tree to asteriospanoras (DQI 1e6787a0, npz e7f08627); DQI unverified
+2026-11-23 07:23:20	lucifer19/black-cat-quantum-heist-three-locks	dominated	refined: 18-file tree: invsqrt bb676b95 + DQI 4b572141 + chemistry npz 05387b5d on the 3,357-T loaders (locally PASS 251089557.50839654) = our v145 chemistry with the clean DQI; 0.04262963 cost units worse than npz e7f08627 -> dominated by v146
+2026-11-23 07:23:20	goodpjw2008/qcc-3-357-t-loaders-table-swap-lb-33-17029	dominated	refined: same tree as lucifer19 (npz e337917c9b72, locally PASS 251089557.50839654, DQI 4b572141) -> 0.04262963 cost units worse than our v146 chemistry table
+2026-11-23 07:23:20	ghazarosbarseghyan91/vqcc-33-17033-table-swap	dominated	refined: same tree as lucifer19 (npz e337917c9b72, DQI 4b572141) -> dominated by v146
+2026-11-23 07:23:20	alexchilton/33-17-lb-which-circuits-survive-private-salt	dominated	refined: same tree as lucifer19 (npz e337917c9b72, DQI 4b572141) -> dominated by v146
+2026-11-23 07:23:20	areebbb/qai-same-gates-better-chemistry-33-17029	dominated	refined: same tree as lucifer19 (npz e337917c9b72, DQI 4b572141) -> dominated by v146
+2026-11-23 07:23:20	orel1986/qcc-alex33-17-fork	dominated	refined: same tree as lucifer19 (npz e337917c9b72, DQI 4b572141) -> dominated by v146
+2026-11-23 07:23:20	rishabhbafnaiiitd/qcc-33-1702-3-task-sota-portfolio-visual-guide	dominated	refined: npz 508364c75b73 on the 3,357-T loaders (locally PASS 251090780.9397702) + DQI 4b572141 -> 1223.43 cost units worse than our v146 table
+2026-11-23 07:23:20	maoxin123/qcc-33-17-3-357-toffoli-chemistry-loaders	dominated	refined: same tree as rishabhbafnaiiitd (npz 508364c75b73) -> dominated by v146
+2026-11-23 07:23:20	mizeroluckygall/quantum-circuits-33-170-3-357-toffoli-loaders	dominated	refined: same tree as rishabhbafnaiiitd (npz 508364c75b73, chemistry PASS 251090780.9397702) -> dominated by v146
+2026-11-23 07:23:20	leotang09/vqcc-t7421-submission	duplicate-of-v144	refined: 18 files byte-identical to v144 (npz fd02c7f7, DQI 4b572141, invsqrt bb676b95)
+2026-11-23 07:23:20	orel1986/qcc-alex33-fork	duplicate-of-v144	refined: 18 files byte-identical to v144
+2026-11-23 07:23:20	varianceofx/vqcc-phase-and-chemistry-compiler	dominated	refined: npz 4d8b273c57d8 with the Leo Tang loaders (raw cost 251688793.18660563) + DQI 4b572141 -> 599235.7 cost units worse than our v146 table
+2026-11-23 07:23:20	dennis6886/quantum-circuits-21-37712-fused-dqi-reproduction	dominated	refined: npz 0d4459fbd3d5 with the Leo Tang loaders (v143 chemistry 251690221.895943) + DQI 4b572141 -> dominated by v146
+2026-11-23 07:23:20	pablodiegoo/google-quantum-compilation-starter-notebook	dominated	refined: old invsqrt d2148a7c + npz eb4b5d79603e with the Leo Tang loaders (FAILs with the 3,357-T loaders) -> worse than v144 and v146
+2026-11-23 07:23:20	ghazarosbarseghyan91/vqcc-33-14398-public-set-reproduction	dominated	refined: same tree as pablodiegoo (old invsqrt d2148a7c, npz eb4b5d79603e) -> dominated
+2026-11-23 07:23:20	kawh1111/qcomp-harvest-3314	dominated	refined: older tree (npz b3683e07 with the Leo Tang loaders 251692077.714951, invsqrt d2148a7c) -> dominated
+2026-11-23 07:23:20	rdaccel/qcc-33-13877-reproduction-leotang09	dominated	refined: Leo Tang round-1 tree (npz b3683e07, invsqrt d2148a7c) -> dominated
+2026-11-23 07:23:20	ratnachand/vqcc-verified-floor-and-circuit-anatomy	dominated	refined: npz 70ace3efe6ee on the 3,357-T loaders (locally PASS 251089563.87312728) but old invsqrt d2148a7c -> dominated
+2026-11-23 07:23:20	ratnachand/vqcc-verified-public-floor	dominated	refined: dataset ships the same tree as ratnachand/vqcc-verified-floor-and-circuit-anatomy -> dominated
+2026-11-23 07:23:20	mos3santos/vqcc-fast-runner	dominated	refined: 46 q inverse-square-root and 889 q DQI with 384003 ops -> far wider and larger than our 37 q / 900 q tree
+2026-11-23 07:23:20	whyithastobesix/which-data-may-a-prize-generator-read	rejected-no-tree	refined: output has no QCC tree or parts
+2026-11-23 07:23:20	arsen123/qcc-public-frontier-full-independent-audit	rejected-no-tree	refined: output has no QCC tree or parts
+2026-11-23 07:23:20	arsen123/qcc-hash-pinned-verification-harness	rejected-no-tree	refined: dataset (28 files) contains decoder batches and certificates but no complete 18-file QCC tree
+2026-11-23 07:23:20	arsen123/qcc-one-decoder-gate-409600-paired-shots	rejected-no-tree	refined: kernel output empty (no 18-file tree)

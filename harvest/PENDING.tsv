@@ -1,3 +1,1 @@
-dataset	syed3000/vqcc-own-circuit-portfolio	2026-11-21 01:31:44	VQCC Own-Circuit Portfolio	syed3000	2026-11-20T22:31:21.850000	search:vqcc
-dataset	asteriospanoras/qcc-circuit-atlas	2026-11-21 01:31:42	QCC Circuit Atlas + Verified Refit Toolkit	asteriospanoras	2026-11-20T21:24:45.673000	search:qcc
-dataset	manwithacat/vqcc-hedge-wizardry	2026-11-21 01:31:49	VQCC Hedge Wizardry	manwithacat	2026-11-19T20:23:33.417000	search:dqi
+kernel	hassanabdulhafid/chronos-kickmix-verifiable-quantum-circuit-comp	2026-11-23 00:31:29	Chronos-Kickmix: Verifiable Quantum Circuit Comp.	Hassan Alghamoudi	2026-11-23T00:27:18.777000	comp-kernels

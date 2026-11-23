@@ -74,6 +74,10 @@ def read_state() -> dict[tuple[str, str], str]:
                 ref, version, verdict = parts[0], parts[1], parts[2]
             else:
                 ref, version, verdict = parts[0], '', parts[1]
+            # A transient error is NOT an adjudication: keep the row eligible
+            # for retry instead of letting it block the queue forever.
+            if verdict == 'error':
+                continue
             st[(ref, version)] = verdict
     return st
 
@@ -162,29 +166,45 @@ def scan(dest: pathlib.Path) -> dict:
 
 
 def classify(scan_res: dict) -> tuple[str, str]:
-    """-> (verdict, note).  'candidate' means a full tree that needs the gate."""
+    """-> (verdict, note).  'candidate' means a full tree that needs the gate.
+
+    ds_scan reports three collections: ``trees`` (directories containing an
+    invsqrt+dqi pair), ``artifacts`` (loose circuit files) and ``subzips``.
+    The old classifier looked for non-existent ``candidates``/``parts`` keys,
+    so every successful scan was mislabeled 'rejected'.
+    """
     if not scan_res:
         return 'error', 'scan produced nothing (retry)'
     if scan_res.get('error'):
         # ds_scan failed (usually the invsqrt verifier timed out under load).
         # This is NOT a verdict about the release: keep it queued for a retry.
         return 'error', f"scan error (retry): {scan_res['error']}"[:300]
-    cands = scan_res.get('candidates') or []
-    parts = scan_res.get('parts') or []
+
+    trees = scan_res.get('trees') or []
+    cands = [t for t in trees if t.get('is_full_18')]
+    parts = [t for t in trees if not t.get('is_full_18')]
+    parts += scan_res.get('artifacts') or []
+    parts += scan_res.get('subzips') or []
+
     if cands:
         notes = []
         for c in cands[:6]:
-            if isinstance(c, dict):
-                notes.append(f"{c.get('path', '?')}:q={c.get('num_qubits')},"
-                             f"score={c.get('score')},sha={str(c.get('sha256'))[:12]}")
-            else:
-                notes.append(str(c)[:120])
+            inv = ((c.get('files') or {}).get('invsqrt.kmb') or {})
+            dqi = ((c.get('files') or {}).get('dqi.kmb') or {})
+            notes.append(f"dir={c.get('dir', '?')}:files={c.get('n_files')},"
+                         f"invq={inv.get('qubits')},dqiq={dqi.get('qubits')},"
+                         f"invsha={str(inv.get('sha256'))[:12]}")
         return 'candidate', '; '.join(notes)[:400]
     if parts:
         notes = []
         for p in parts[:8]:
             if isinstance(p, dict):
-                notes.append(f"{p.get('path', '?')}:sha={str(p.get('sha256'))[:12]}")
+                if p.get('path'):
+                    notes.append(f"{p.get('path')}:q={p.get('qubits')},"
+                                 f"sha={str(p.get('sha256'))[:12]}")
+                else:
+                    notes.append(f"dir={p.get('dir', '?')}:files={p.get('n_files')},"
+                                 f"missing={len(p.get('missing') or [])}")
             else:
                 notes.append(str(p)[:100])
         return 'parts', '; '.join(notes)[:400]

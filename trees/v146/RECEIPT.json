@@ -1,0 +1,116 @@
+{
+ "portfolio": "v146_hybrid_dqi_chem",
+ "shas_ok": true,
+ "verifiers": [
+  "verify_submission_invsqrt.py",
+  "verify_submission_dqi.py",
+  "verifiers/dfthcsos/verify.py"
+ ],
+ "verifies": {
+  "invsqrt": {
+   "status": "PASS",
+   "score": 60927.57739905387,
+   "num_qubits": 37,
+   "toffoli_count": 1406.3124317944714,
+   "toffoli_equivalent": 1646.69128105551,
+   "rotation_count": 33.0,
+   "rotation_eps": 1.8880574198146154e-13,
+   "verified_shots": 200540928,
+   "worst_error_over_tolerance": 0.9994717987127908,
+   "worst_x": 252,
+   "circuit_sha256": "bb676b95f94c923cc5482f6cd8d457ab5ff3e8180c8f7cfd2c9678335d0ba56b",
+   "note": "official verifier PASS in moat-lab v60 on exact v146 snapshot bytes"
+  },
+  "dqi": {
+   "status": "PASS",
+   "score": 305041647011.3978,
+   "num_qubits": 900,
+   "toffoli_count": 316131.2215625,
+   "value_errors": 0,
+   "phase_errors": 0,
+   "verified_shots": 102400,
+   "effective_error_rate": 0.0008660587301657926,
+   "repetition_factor": 1.1912604648115832,
+   "circuit_sha256": "4b5721411adc239f61fc11c773a2358b75dfe7cb15586efae4f0459c77d77e52",
+   "note": "official verifier PASS in moat-lab v60 on exact v146 snapshot bytes"
+  },
+  "dfthcsos": {
+   "status": "PASS",
+   "score": 251089557.46576697,
+   "lambda_eff": 46.91798213749483,
+   "toffoli_count": 13214.0,
+   "num_qubits": 405,
+   "brot": 7,
+   "batch_size": 5,
+   "num_circuits": 15,
+   "reaction_depth": 741,
+   "num_ops": 561982,
+   "verified_shots": 1219,
+   "submission_sha256": "27268dc3ecaf0fb48b1785232c16f27ccf1e18410660cf3576bbff300c24012d",
+   "resources": {
+    "brot": 7,
+    "keep_bits": 10,
+    "angles_toffoli_per_pass": 3357.0,
+    "angles_toffoli": 6714.0,
+    "angles_qubits": 128,
+    "angles_selection_qubits": 11,
+    "angles_persistent_qubits": 35,
+    "angles_temporary_qubits": 82,
+    "outer_state_prep_toffoli": 337,
+    "inner_state_prep_toffoli": 4213,
+    "givens_rotations_toffoli": 1950,
+    "outer_state_prep_persistent_qubits": 40,
+    "outer_state_prep_temporary_qubits": 90,
+    "outer_state_prep_qubits": 130,
+    "inner_state_prep_persistent_qubits": 43,
+    "inner_state_prep_temporary_qubits": 287,
+    "inner_state_prep_qubits": 330,
+    "heuristic_persistent_qubits": 83,
+    "heuristic_temporary_qubits": 287,
+    "heuristic_toffoli": 6500,
+    "heuristic_qubits": 370,
+    "persistent_qubits": 118,
+    "temporary_qubits": 287,
+    "toffoli": 13214.0,
+    "qubits": 405,
+    "angles_within_cap": true
+   },
+   "metrics": {
+    "error_1": 0.01999999990028074,
+    "error_2": 0.0199999999009691,
+    "Lambda": 283.10105067678467,
+    "E_SOS": -22144.188248000035,
+    "E_gap": 3.914898000035464,
+    "lambda_eff": 46.91798213749483,
+    "gap_in_domain": true
+   },
+   "note": "official verifier PASS in moat-lab v60 and independently reproduced locally"
+  }
+ },
+ "official_in_kernel": {
+  "kernel": "badboyhalo1801/moat-lab",
+  "version": 60,
+  "dataset": "badboyhalo1801/qcc-release-v146",
+  "receipt": "/home/bandoc/Downloads/opencode/work/receipts/V146_MOAT_RECEIPT.json",
+  "gm": 33.170330350353744,
+  "verified_shots": {
+   "invsqrt": 200540928,
+   "dqi": 102400,
+   "dfthcsos": 1219
+  }
+ },
+ "local_invsqrt_receipt": "/home/bandoc/Downloads/opencode/work/receipts/V143_LOCAL_INVSQRT_VERIFY.log",
+ "local_chemistry_receipt": "/home/bandoc/Downloads/opencode/work/receipts/V146_LOCAL_CHEM_VERIFY.log",
+ "ratios": {
+  "invsqrt": "34.0859479790760848134664756279077827996133716378520935465214",
+  "dqi": "80.1184488187600034301333851403707694472521715829645687650371",
+  "dfthcsos": "13.3641542969107068300551413183898838740304062480025642563811"
+ },
+ "gm": "33.1703303503537523913065411197878713240478112544176321620074",
+ "previous_gm": "33.1439847224675759169083408104802578161029519713326461544372",
+ "delta_gm": "0.0263456278861764743982003093076135079448592830849860075702",
+ "source": "invsqrt bb676b95f94c unchanged; DQI 4b5721411adc239f (v144 member, official 0 value / 0 phase errors); chemistry table e7f08627208c with the public 3,357-Toffoli loaders (official local PASS 251089557.46576697)",
+ "rejected_public_tree": "ozertuu/google-quantum-ai-vqcc-33-170350 (DQI 141f02ac69638c78) FAILED the unchanged official DQI verifier in moat-lab v59 with 2 value errors / 102400 shots",
+ "sha_table": "work/sha_tables/sha_table_v146.txt",
+ "verdict": "V146-RECEIPT-PASS"
+}

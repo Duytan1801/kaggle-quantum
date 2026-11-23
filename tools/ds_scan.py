@@ -133,7 +133,10 @@ def main() -> int:
     text = json.dumps(report, indent=1)
     if a.out:
         pathlib.Path(a.out).write_text(text + '\n')
-    print(text[:6000])
+    # Print the COMPLETE JSON document.  The old 6,000-character truncation
+    # made stdout impossible to parse and silently turned every dataset scan
+    # into a queue error.
+    print(text)
     return 0
 
 

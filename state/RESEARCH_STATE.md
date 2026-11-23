@@ -1,7 +1,56 @@
 # RESEARCH STATE — live hypothesis queue (agent-maintained; rewrite freely)
 # Format: H# | claim | mechanism | est GM | cheapest discriminating test | status | evidence | updated
 # Rules: never re-run a KILLED test; re-rank by expected-GM/effort after each resolution.
-# Last full re-rank: 2026-11-21 12:20 UTC (post H26 kill + H22 kill; H24 generator-lend is top, H25 is the last angle-level probe)
+# Last full re-rank: 2026-11-23 00:30 UTC (post v145 rejection + v146 build; see LATEST STATUS below)
+
+## LATEST STATUS (2026-11-23 00:30 UTC)
+
+* **Scored best is still v144 (ref `58713892`, board 33.14394)**; prediction
+  33.1439847224675759169083408104802578161029519713326461544372, displayed
+  error -0.00004472.
+* **v145 = the exact 18 bytes of `ozertuu/google-quantum-ai-vqcc-33-170350` was
+  REJECTED by the gate.**  moat-lab v59 ran the unchanged official DQI
+  verifier on the exact snapshot bytes: 2 value errors / 102,400 shots, cost
+  307,632,423,468.0979 instead of the claimed 305,041,160,753.34.  The removed
+  `CCZ q63 q507 q204 if b49140` is NOT redundant (the public log only
+  verified chemistry).  Implied composite 33.0769512773 — **-0.067033 GM versus
+  v144**, so submitting it would have hurt.  Evidence:
+  `work/receipts/V145_MOAT_RECEIPT.json` (verdict V145-RECEIPT-FAIL),
+  `work/recon/public_harvest_2026-11-23_v145_reject.md`.
+* **v146 = the hybrid that survives the gate**: inverse-square-root
+  `bb676b95f94c` (unchanged) + DQI `4b5721411adc239f` (v144's member, official
+  0 value / 0 phase errors) + chemistry table `e7f08627208c` on the shared
+  3,357-Toffoli loaders (official local chemistry PASS 251,089,557.46576697,
+  599,237.39496946 cost units below v144's chemistry).  Predicted GM
+  **33.1703303503537523913065411197878713240478112544176321620074**
+  (+0.0263456279 GM).  moat-lab v60 returned **V146-RECEIPT-PASS** (shas_ok
+  true, DQI 0 value / 0 phase errors on 102,400 shots, chemistry PASS
+  251,089,557.46576697, invsqrt PASS 60,927.57739905387) and the tree was
+  **SUBMITTED 2026-11-23 00:33 UTC — ref `58749949`**, gated zip
+  `work/trees/v146/submission.zip` (zipsha c20d298e882280b6), 4 slots left.
+* **Public queue fully adjudicated (31 rows, PENDING now empty).**  Measured
+  verdicts in `work/harvest/VERDICTS_2026-11-23.tsv` (applied to
+  `work/harvest/ADOPTED.tsv`).  New tooling: `work/tools/adjudicate_pending.py`
+  (pull + unzip + member-level comparison), `work/tools/compare_candidates.py`
+  (DQI header op counts + per-member diff), `work/tools/chem_table_sweep.py`
+  (every distinct public chemistry table measured against the shared loaders).
+  **New rule from this sweep: no DQI member may enter a tree without an
+  official verifier receipt — a public scorecard that quotes a DQI cost is not
+  evidence.**
+* Two further public DQI variants were found and are NOT adopted:
+  `1e6787a0…` (v144's DQI with `CCZ q103 q54 q163` replaced by `CZ q103 q54`,
+  published by asteriospanoras / evgendvorkin / hassanabdulhafid) and
+  `141f02ac…` (ozertuu).  The first would be worth ~+0.000017 GM *if* the
+  official verifier accepts it; it has never been verified, and the ozertuu
+  sibling shows how such edits fail.
+* **Frontier moved to 33.83493** (`Entangled Team`).  With v146's DQI and
+  chemistry fixed, matching it needs an inverse-square-root cost <=
+  58,237.0814940; H24's nominal 37 q / 58,532 build is ~295 cost units short.
+* H24 sub-lane **H29** (ancilla-free divider OR rewrite) is pre-registered in
+  `work/recon/h24_divider_or_rewrite_prereg_2026-11-23.md`; measured anatomy
+  says the canonical q38 OR block appears 32 times (16 forward + 16 reverse
+  rows) but q38 has 895 other uses, so the rewrite alone does not free the
+  wire.
 
 ## QUEUE (ranked)
 
@@ -395,16 +444,40 @@ H26 | **KILLED 2026-11-21 — the invsqrt rotation angles are ALREADY minimax-op
     (+274 to +5,989 score) than the margin they buy.  Evidence:
     `work/recon/invsqrt_refit_2026-11-21.md`.
 
-H24 | **TOP PRIORITY — invsqrt generator 39 q -> 38/37 q (+0.15 / +0.45 GM).
-    LEND MACHINERY CONFIRMED 2026-11-21 12:5x.**  New tool
+H24 | **TOP PRIORITY / ACTIVE — invsqrt generator 39 q -> 38/37 q (+0.15 / +0.45 GM).
+    THE AFFINE SCAN IS COMPLETE; PLAIN LENDING IS NOT YET A WIDTH WIN.**  New tool
     `work/tools/invsqrt_affine.py` computes the GF(2) null space of the 39
-    wire-value bit-vectors (exact over all 3,133,452 inputs) and finds the
-    lend relation **q29 = q5^q7^q9^q10^q13^q14^1** at op indices 17.7k-18.3k —
-    exactly the loan in `carry.py`, disappearing the moment the loan is
-    executed and restored afterwards.  So the mechanism works on this
-    circuit; what is still open is whether a SECOND wire has a usable affine
-    window.  Full scan (975 points) running -> /tmp/opencode/affine39_full.json.
-    Evidence: `work/recon/invsqrt_lend_scan_2026-11-21.md`.
+    wire-value bit-vectors (exact over all 3,133,452 inputs).  The stride-25
+    scan (975 points, `/tmp/opencode/affine39_full.json`) finds 205 op indices
+    and 95 distinct dependency sets.  In the carry window the only
+    non-trivial relation is **q29 = q5^q7^q9^q10^q13^q14^1**, exactly the loan
+    in `carry.py`; it disappears when the loan is executed and returns when
+    the loan is restored.  The tempting q30 relation belongs to an earlier
+    forward product block (ops 6,100-6,725), not the q29 carry block.
+    Crucially, the carry block simultaneously stores q29,q30,q31,q32,q33,q36,
+    q37, so recoverability of q29's *pre-loan* value does not free a physical
+    wire while the chain is live.  The remaining admissible mechanisms are
+    therefore (a) a Boolean carry-chain rewrite that reconstructs/relocates
+    one carry, or (b) an op-level physical allocation that shares a wire
+    whose data is safely recoverable throughout the borrow window.
+    Success criterion remains: a rebuilt generator circuit with **38 q** whose
+    official verifier score <= 60,114 and whose phase is identical to the
+    39 q build on all 3,133,452 inputs and all salt outcome streams.
+    **Frontier calibration 2026-11-22 00:38 UTC (post v139):** the fresh board
+    leader is `Schrödinger’s cat lived` / `pjmathematician` at **33.51568**;
+    #2 `Syed Asad Ali` is 33.46157, #3 `codebeforework` 33.36663, and #4
+    `Z³C¹oherence` is 33.34845.  Holding v139's public DQI and chemistry legs
+    fixed, those rows imply inverse-sqrt costs **58,725.4560 / 59,010.8080 /
+    59,515.9632 / 59,613.3522**, respectively.  H24's 38 q build (predicted
+    cost 60,114, GM 33.255613) is therefore **no longer sufficient** for the
+    frontier.  The 37 q build (predicted cost 58,532, GM **33.552564**) beats
+    the leader by **+0.03688** and is the first generator width target that
+    clears the current board.  Success criterion is correspondingly a
+    semantically exact **37 q** rebuild (38 q remains useful only as an
+    intermediate physical-allocation milestone).  Evidence:
+    `work/recon/invsqrt_lend_scan_2026-11-21.md`,
+    `work/recon/public_harvest_2026-11-22_v139.md`, and
+    `work/recon/public_harvest_2026-11-21_v138.md`.
     Original entry:
     The public invsqrt generator (`/tmp/opencode/gens/x/invsqrt/`, sha
     `68eb8c13ebc75c5e443ed5a8c6357c2c77e6676c499ed1324108bf025faf1489`)
@@ -414,27 +487,21 @@ H24 | **TOP PRIORITY — invsqrt generator 39 q -> 38/37 q (+0.15 / +0.45 GM).
     +0.45 over the board**).  The generator already ships the lend machinery
     (`lend29.py` locate/transplant, `carry.py` `carry_window()`): a wire that
     holds an AFFINE function of other live wires is XOR-ed out, reused as
-    scratch, and restored afterwards, so it does not need its own physical
-    wire.  The public patch `invsqrt_lend29.patch` does this for block 29 but
-    keeps 39 q (it only saves 0.5 Toffoli).  Success criterion: a rebuilt
-    generator circuit with **38 q** whose official verifier score <= 60,114 and
-    whose phase is identical to the 39 q build on all 3,133,452 inputs.
-    Kill criterion: if no second lendable affine wire exists (measured by a
-    per-wire affine-dependency scan of the 39 q build), the lane is dead and
-    invsqrt is closed at 37 q / 60,955.
+    scratch, and restored afterwards.  The public patch only saves 0.5
+    Toffoli and keeps 39 q.
 
-H25 | **NEW — the only surviving angle-level lever: an extra salt-invariant
-    basis function.**  H26 killed the *angle* refit, but the circuit's phase is
-    a sum of indicator functions and a NEW indicator (an extra Z_POW on a
-    scratch wire whose value is a function of x) enlarges the span.  The
-    x-register bit basis was tried and does not pay (margin x1.33 at best for
-    +22 rotations).  A scratch wire holding a half-cell-like function could do
-    far better.  Test: instrument the simulator to record every wire's value
-    at each of the 33 priced-rotation positions (keep only salt-invariant
-    ones), then run the LP with the best candidate added.  Break-even: one
-    extra rotation pays only if the margin improves by **> x2.96** (each
-    rotation costs ~268 score).  Kill criterion: if the best candidate gives
-    < x2.96, drop the lane for good (the +0.13 GM ceiling applies here too).
+H25 | **KILLED 2026-11-21 BY MEASUREMENT — the extra salt-invariant basis
+    function cannot pay for itself.**  The complete legal scratch-wire
+    catalogue was extracted at all 33 priced-rotation positions and checked
+    against six independent HMR outcome streams (four random, all-zero,
+    all-one): 495 wire/position occurrences, zero stream mismatches, 104
+    distinct bit-vector functions.  Exact all-input Chebyshev LP for every
+    candidate found a best margin of 39,585,698.8 versus 36,584,657.8, only
+    **x1.0820**, below the pre-registered **x2.96** break-even.  The best
+    one-rotation circuit scores 61,210.8541, **255.5274 worse** than the
+    33-rotation 60,955.3267 baseline.  Do not re-enter this lane.  Evidence:
+    `work/recon/invsqrt_basis_probe_2026-11-21.md`, tools
+    `work/tools/invsqrt_basis_probe.py` and `work/tools/invsqrt_basis_lp.py`.
 
 H22 | **KILLED 2026-11-21 by measurement.**  The DQI generator reproduces
     `4b572141` byte-for-byte locally; the assembled 69.8 M-line KMX shows
@@ -457,6 +524,40 @@ H26b | **KILLED — rotation merge.**  `work/tools/rot_merge_scan.py` with the
     wire, SWAP/CSWAP/H/HMR/R) finds **0 mergeable rotation pairs** on both
     our 37 q circuit and the 39 q generator build.  A permissive first pass
     wrongly showed 38 pairs; the refined rule kills them.
+
+### CURRENT PUBLIC-RELEASE SWEEP (2026-11-22 00:44 UTC) — COMPLETE; v139 ADOPTED
+
+`work/harvest/PENDING.tsv` is empty after the full semantic adjudication of
+all 25 remaining rows.  Every row was removed only after its verdict was
+appended to `work/harvest/ADOPTED.tsv`; the exact-byte triage is in
+`work/recon/queue_byte_triage_2026-11-22.json`.
+
+* **v139 ADOPTED:** exact output of `leotang09/vqcc-t7421-submission`.
+  Relative to v138, only the chemistry leg changes: table `b3683e07` plus the
+  15 T7421 loaders.  The unchanged official chemistry verifier PASSes at
+  **251,692,077.714951** (T=13,244, Q=405,
+  lambda_eff=46.92403505616352), both locally and in moat-lab v53 on the
+  exact `badboyhalo1801/qcc-release-v139` snapshot bytes.  The same in-kernel
+  receipt PASSes invsqrt at 60,955.32670759028 and DQI at
+  305,041,647,011.3978 with 0 value/0 phase errors.  The fail-closed
+  receipt is `V139-RECEIPT-PASS`; submitted as ref **58694635**, predicted
+  GM **33.13881038958233**.
+* Areeb Ali's distinct tree is the runner-up at chemistry cost
+  251,693,790.80323407.  Leo's tree is cheaper by **1,713.08828307** cost
+  units under identical invsqrt/DQI bytes.
+* Alex/Mizero/Prvsiyan trees measure 251,773,628.0701481; GoodpJW/Haoming
+  trees 251,774,061.4763462; Maoxin/working-loader trees
+  251,774,848.45254695.  All are dominated by v139.
+* Özer's advertised “33.138” kernel is actually an older 39 q/901 q portfolio
+  with chemistry PASS 255,195,733.74 and GM 31.69497.  The one loader-only
+  splice with a slightly cheaper inverse-sqrt reroll still has much worse
+  chemistry and no better composite score.
+* The remaining old 44 q/890 q dataset, the cluster-specialist output with
+  a DQI value error, and all rows without a clean 18-file tree were rejected
+  with measured reasons.
+
+Detailed release evidence is in `work/harvest/ADOPTED.tsv` and
+`work/recon/public_harvest_2026-11-22_v139.md`.
 
 
 ## KILLED (evidence recorded — DO NOT re-enter)
@@ -494,8 +595,9 @@ H26b | **KILLED — rotation merge.**  `work/tools/rot_merge_scan.py` with the
 - ozertuu "Residual Sibling Gating Apex" = Name-That-LLM competition, not QCC. 2026-11-18.
 - heliosli drift: dataset unchanged since 11-15 13:32, owner dormant. 2026-11-18.
 
-## FACTS PINNED
-- Best row v131 = 28.18084 (ref 58487983, clean draw). Best public tree, adopted verbatim.
-- DQI score = rep × Q² × toffoli_mean. 1 DQI qubit ≈ +0.021 GM at Q=890. 1 DQI toffoli ≈ +2.6e-5 GM.
-- invsqrt score = Q × (T_mean + T/4 + n_rot·rot_price(eps)/4); 1 invsqrt qubit ≈ +0.077 GM.
-- Frontier: #1 31.50404, #2 31.42723 ⇒ ×2.867 ratio product over us.
+## FACTS PINNED (refreshed 2026-11-22 00:44 UTC)
+- Latest submitted tree: **v139**, ref `58694635`, predicted GM **33.13881038958233** (pending at this snapshot).  v138 ref `58659698` scored 33.10186; v137 ref `58658870` scored 33.10185.
+- DQI score = rep × Q² × toffoli_mean. 1 DQI qubit ≈ +0.0245 GM at Q=900. 1 DQI toffoli ≈ +2.8e-5 GM.
+- invsqrt score = Q × (T_mean + T/4 + n_rot·rot_price(eps)/4).  In the editable 39 q generator lineage, the measured 38 q/60,114 build predicts GM 33.255613; the 37 q/58,532 build predicts **33.552564**.
+- Frontier: #1 `Schrödinger’s cat lived` / `pjmathematician` 33.51568; #2 `Syed Asad Ali` 33.46157; #3 `codebeforework` 33.36663; #4 `Z³C¹oherence` 33.34845.  Holding v139's public DQI/chemistry fixed, those imply invsqrt costs 58,725.4560 / 59,010.8080 / 59,515.9632 / 59,613.3522.
+- Public chemistry frontier is now Leo T7421 at 251,692,077.714951.  No inspected table/loader permutation beats it; H24's semantically exact 37 q physical allocation is the next material mechanism lane.

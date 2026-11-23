@@ -1,5 +1,26 @@
 # GOALS — breakthrough goals + leverage map (agent-maintained; rewrite freely)
-# Last refresh: 2026-11-19 (post v132 = 28.23163; the public-release radar was repaired)
+# Last refresh: 2026-11-23 00:30 UTC (post v145 rejection + v146 build; frontier moved to 33.83493)
+#
+# 2026-11-23 refresh notes
+# -----------------------
+# * Public frontier (2026-11-23 00:2x UTC): `Entangled Team` 33.83493, codebeforework
+#   33.54018, Two-Qubit Gate 33.51863, Schrodingers Cats Lived 33.51568.
+#   Our scored best is still v144 = 33.14394.
+# * With v146's DQI (305,041,647,011.3978) and chemistry (251,089,557.46576697) fixed,
+#   an inverse-square-root cost <= **58,237.0814940** matches 33.83493.
+#   H24's nominal 37 q / 58,532 build is ~295 cost units short; 36 q would clear it.
+# * Public chemistry is now at a hard public floor: the best of **12 distinct public
+#   chemistry tables** measured against the shared 3,357-T loaders is
+#   251,089,557.46576697 (`e7f08627208c`).  Every other public table is >= 0.04 and
+#   most are ~600,000 cost units worse.  Chemistry has no public headroom left.
+# * Public DQI: only the v144 member `4b5721411adc239f` is officially verified clean
+#   (0 value / 0 phase errors).  Two public "improvements" edit the DQI tape:
+#   `141f02ac…` (ozertuu) **FAILS** the official verifier (2 value errors / 102,400
+#   shots), and `1e6787a0…` (asteriospanoras family) is unverified and worth at most
+#   ~+0.000017 GM.  ⇒ DQI is not a lever for us without our own generator.
+# ⇒ **The inverse-square-root leg is again the only meaningful lever** (one wire =
+#   ten DQI wires), and it must come from the 39 q generator lineage (H24).
+
 
 ## Leverage map (cost-formula anatomy, GM per unit)
 Reference values (maoxin123's public notebook, `REFERENCE` dict):
@@ -185,33 +206,87 @@ Toffolis | 5.1 invsqrt rotations | 2.26 % chem T | 300 chem Toffolis |
 - salt risk on the DQI: quantified at -0.05 GM expected, not zero —
   work/recon/dqi_salt_probe_2026-11-21.md
 
-## Leverage map refreshed 2026-11-21 12:25 UTC (post H26 kill, post v136 = 33.10018)
+## Leverage map refreshed 2026-11-22 00:44 UTC (post v139, predicted 33.13881039)
 
-| move | GM delta | note |
+| move | GM delta / target | note |
 |---|---:|---|
-| **invsqrt generator 39 q -> 38 q** | **+0.153** | generator build 39 q / 24,387 instr / 1,452 Toffoli-like = 61,696; at 38 q it would be 60,114 (GM 33.253) |
-| **invsqrt generator 39 q -> 37 q** | **+0.452** | 58,532 -> GM 33.5518, BEATS the board #1 by 0.20 |
-| invsqrt -1 qubit @37 q (our lineage) | +0.2984 | DEAD: 36 is the spec floor for this lineage (all 37 wires live ~80 % of the stream) |
-| invsqrt -1 rotation | +0.0487 | **DEAD**: the 33 angles are minimax-optimal (H26), the basis is full rank |
-| invsqrt +1 salt-invariant basis function | +0.02..+0.05 | only if the margin improves > x2.96; ceiling for the whole leg is +0.13 GM |
-| chem -1 % of T (13,292) | +0.110 | DEAD: loaders are at the public floor (T 13,292), Q is verifier-pinned |
-| chem -1 qubit @405 q | +0.0272 | DEAD: Q = persistent + max(heuristic_temp, loader_temp); heuristic 287 > loader 82 |
-| dqi -1 qubit @900 q | +0.0245 | **DEAD (H22)**: 900 wires simultaneously live to the last stage, 0 disjoint pairs |
+| **public-release adoption v138 -> v139** | **+0.03690853 realized locally** | Leo T7421 chemistry cost 251,692,077.714951; submitted ref 58694635 |
+| **invsqrt generator 39 q -> 38 q** | **+0.11680 → GM 33.255613** | predicted cost 60,114; **insufficient for the new frontier** |
+| **invsqrt generator 39 q -> 37 q** | **+0.41375 → GM 33.552564** | predicted cost 58,532; beats current leader 33.51568 by **+0.03688** |
+| invsqrt -1 qubit @37 q (our current lineage) | +0.2984 | DEAD: 36 is the spec floor for this lineage (all 37 wires live ~80 % of the stream) |
+| invsqrt -1 rotation | +0.0487 | DEAD: the 33 angles are minimax-optimal (H26), the basis is full rank |
+| invsqrt +1 salt-invariant basis function | +0.02..+0.05 | DEAD: measured margin gain is x1.0820, below the x2.96 break-even |
+| chem -1 % of T (13,244) | +0.110 | public table/loader family is now at Leo T7421's measured frontier |
+| chem -1 qubit @405 q | +0.0273 | DEAD: Q = persistent + max(heuristic_temp, loader_temp); heuristic 287 > loader 82 |
+| dqi -1 qubit @900 q | +0.0246 | DEAD (H22): 900 wires live to the last stage, 0 disjoint pairs |
 | dqi -1 % of T (316,131) | +0.110 | the only editable quantum part holds 850 of 318,972 Toffolis (0.27 %) |
-| dqi salt insurance (cleaner draw) | +0.05 expected | OPEN (H23): a public DQI with fewer failed shots is strictly better at equal clean cost |
+| dqi salt insurance (cleaner draw) | +0.05 expected | OPEN (H23): require equal clean cost and a demonstrably lower multi-salt failure rate |
 
-**Frontier:** #1 Z3C1oherence 33.34845, #2 codebeforework 33.12761, #3 No Bodies
-33.11359, #4 Almond Labs 33.10687, #5 Frost Cerberus 33.10523, #6 VKAS 33.10522;
-~40 teams sit at 33.10020-33.10032 (the boristown tree family).  Our row: v136
-**33.10018** (predicted 33.100221 — the board rounds to 5 decimals), rank ~42.
+**Frontier:** #1 `Schrödinger’s cat lived` / `pjmathematician` 33.51568, #2
+`Syed Asad Ali` 33.46157, #3 `codebeforework` 33.36663, #4 `Z³C¹oherence`
+33.34845.  Our latest submitted tree is v139, predicted **33.13881039** (ref
+58694635, pending at this snapshot); v138 scored 33.10186.  The predicted gap
+to #1 is **0.37686961 GM**.
 
-**Equivalent targets for the 0.24827 gap:** 1 invsqrt qubit in the GENERATOR
-lineage (38 q) | 2 generator qubits (37 q) | 2.26 % chem T | 10.1 DQI qubits |
-2.5 % DQI T | 5.1 invsqrt rotations.
+**Equivalent inverse-sqrt targets with v139's public DQI/chemistry held
+fixed:** <=58,725.4560 matches #1, <=59,010.8080 matches #2, <=59,515.9632
+matches #3, and <=59,613.3522 matches #4.  H24's 38 q/60,114 build misses
+all four; its 37 q/58,532 build clears #1.
 
 **Lanes closed this wake (evidence on disk):**
 - invsqrt angle refit (H26): the fit is minimax-optimal and the margin ceiling
-  is +0.13 GM — work/recon/invsqrt_refit_2026-11-21.md
+  is +0.13 GM — `work/recon/invsqrt_refit_2026-11-21.md`
+- extra salt-invariant basis function (H25): x1.0820 measured margin gain
+  versus x2.96 break-even — `work/recon/invsqrt_basis_probe_2026-11-21.md`
 - DQI qubit cut (H22): 900 wires live to the last stage, 0 disjoint pairs
 - rotation merge: 0 mergeable pairs under the correct commutation rule
-- chemistry: Q verifier-pinned, T at the public loader floor
+- public chemistry permutations: Leo T7421's 251,692,077.714951 is the best
+  distinct verified chemistry cost found; every other inspected family is
+  1,713.08828307 or more cost units worse
+
+## Current operating point — 2026-11-22 00:44 UTC
+
+**Latest submitted tree:** v139, submission `58694635`, predicted GM
+**33.13881038958233** (pending).  v138/ref `58659698` scored 33.10186 and
+v137/ref `58658870` scored 33.10185.  The leader is 33.51568, so the
+predicted remaining gap is **0.37686961 GM**.  One submission has been used
+today; **four slots remain**.
+
+### Ranked live goals
+
+1. **H24 — reduce the editable 39 q invsqrt generator to a semantically exact
+   37 q physical allocation (+0.41375 GM).**  This is the only active
+   mechanism lane with enough upside to clear the current frontier.  A 38 q
+   intermediate remains useful for validation, but the 38 q score 33.255613
+   is already below #4.  The affine scan is complete: q29's lend relation is
+   real, but the carry block simultaneously holds
+   q29/q30/q31/q32/q33/q36/q37, so affine recoverability alone does **not**
+   remove a physical wire.  Success requires a Boolean carry-chain rewrite or
+   op-level allocation with a provably safe shared physical wire.
+2. **H23 — DQI private-salt insurance (expected +0.05 GM, invisible on the
+   public board).**  Reopen only when a public DQI has the same clean cost and
+   a demonstrably lower multi-salt failure rate.
+3. **H5 — public-release adoption.**  Passive radar remains mandatory at every
+   wake.  v139 was adopted only after an exact 18-file SHA table, unchanged
+   official verifiers PASS in moat-lab v53, an independent local chemistry
+   PASS, and a full 25-row semantic queue adjudication.
+
+### Guardrail for the next submission
+
+A candidate is eligible only after all of the following hold:
+
+1. exact all-input simulation agrees with the 39 q generator on phase,
+   restored x-register, and clean scratch, including forced/random HMR
+   outcome streams;
+2. the rebuilt circuit compiles to at most 37 physical qubits (38 q is a
+   research milestone, not a frontier submission);
+3. the unchanged official invsqrt verifier returns PASS with cost <=58,532
+   (and <=58,725.4560 to match board #1 with the public other legs);
+4. the complete 18-file tree passes `harness/submit_gate.sh` with a static
+   SHA receipt and an official in-kernel verifier receipt;
+5. the tree bytes are distinct from v139 and every prior submission.
+
+Evidence: `work/recon/public_harvest_2026-11-22_v139.md`,
+`work/recon/invsqrt_basis_probe_2026-11-21.md`, and
+`work/recon/invsqrt_lend_scan_2026-11-21.md`.
+

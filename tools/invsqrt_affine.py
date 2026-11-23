@@ -81,6 +81,8 @@ def main() -> None:
     out_path = None
     start = 0
     stop = None
+    outcomes = 'rand'
+    seed = 1
     args = sys.argv[2:]
     if '--stride' in args:
         stride = int(args[args.index('--stride') + 1])
@@ -88,6 +90,10 @@ def main() -> None:
         start = int(args[args.index('--start') + 1])
     if '--end' in args:
         stop = int(args[args.index('--end') + 1])
+    if '--mode' in args:
+        outcomes = args[args.index('--mode') + 1]
+    if '--seed' in args:
+        seed = int(args[args.index('--seed') + 1])
     if '--out' in args:
         out_path = pathlib.Path(args[args.index('--out') + 1])
 
@@ -101,7 +107,7 @@ def main() -> None:
     if pad:
         ones[-1] &= np.uint64((1 << pad) - 1)
 
-    sim = K.Sim(nq, 'rand', 1)
+    sim = K.Sim(nq, outcomes, seed)
     sim.load_x(xreg)
     findings = []
     last_wires = None

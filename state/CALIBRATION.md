@@ -231,3 +231,159 @@ Measured: the margin factor ceiling is **x16.98** (`min_margin <= min_x tol(x)
 mechanism (the fit was already minimax-optimal) and wrong by 4x on the
 ceiling (+0.13 GM, not +0.25).  Lesson: before promising a margin-driven GM
 gain, compute the tolerance ceiling `min_x tol(x)` — it bounds the whole lane.
+
+### H25 (extra salt-invariant basis function) — predicted vs measured
+
+**Prediction:** one additional priced `Z_POW` on a scratch wire could enlarge
+the phase span. The pre-registered break-even was a margin improvement
+greater than **x2.96**, because the added rotation costs about 268 score
+units.
+
+**Measured:** the complete legal catalogue contained 495 wire/position
+occurrences, 104 distinct functions, and zero mismatches across six
+independent HMR outcome streams (four random, all-zero, all-one). The exact
+all-input Chebyshev LP for every candidate produced a best margin of
+39,585,698.8 versus 36,584,657.8: only **x1.0820**, a factor 2.74 short of
+break-even. The best one-rotation circuit scores **61,210.8541**, versus
+**60,955.3267** for the baseline, so it is **255.5274 cost units worse**.
+
+**Verdict:** H25 is killed. The prediction overestimated the incremental
+phase-span value of a legal scratch-wire basis function by more than 2.7x in
+the decisive ratio. The complete catalogue had to be enumerated before this
+could be rejected; a sampled search would not have been sufficient evidence.
+
+### Public-release sweep — predicted vs actual
+
+**Prediction:** the two new 37 q kernel releases might contain a better DQI
+or chemistry splice, and the Apache catalog's 7,930 files might expose a
+width-reduced component hidden outside the release radar.
+
+**Measured:** both 37 q kernel outputs are component-byte-identical to v136
+on all 18 files; the older ThomasG tree is worse on every leg; and all 660
+scored Apache rows have zero invsqrt, DQI, or chemistry component cheaper
+than v136. Actual release-lane gain: **0 GM**. No slot was spent. This is a
+successful negative calibration: advertised width labels were not treated as
+evidence without component-byte and measured-cost checks.
+
+## 2026-11-22 — v137 through v144 predictions vs actual
+
+| release | predicted GM | board row | displayed error |
+|---|---:|---:|---:|
+| v137, ref `58658870` | 33.10189299494091 | **33.10185** | -0.000043 (board rounds to 5 decimals) |
+| v138, ref `58659698` | 33.10190185550799 | **33.10186** | -0.000042 (board rounds to 5 decimals) |
+| v139, ref `58694635` | 33.13881038958233 | **33.13877** | -0.00004039 |
+| v140, ref `58697756` | 33.1388155155283337620293485875 | **33.13876** | -0.00005552 |
+| v142, ref `58704506` | 33.138896964186566120113950746488050643547143089038 | **33.13885** | -0.00004696 |
+| v143, ref `58711337` | 33.1439220823404781609380739820350565305934107352740789700917 | **33.14388** | -0.00004208 |
+| v144, ref pending | 33.1439847224675759169083408104802578161029519713326461544372 | PENDING | — |
+
+The v137/v138 predictions came from exact local official-verifier receipts
+and again matched the board's five-decimal row.  v139 was the first prediction
+in this cycle with a chemistry-only mechanism move: Leo Tang's T7421 tree
+changes the chemistry table to `b3683e07` and replaces the loader family,
+while invsqrt `d2148a7c` and DQI `4b572141` remain byte-identical.
+
+v139's predicted legs are:
+
+| leg | exact official-verifier result | ratio |
+|---|---:|---:|
+| invsqrt | 60,955.32670759028 | 34.070430688983215 |
+| DQI | 305,041,647,011.3978, 0 value / 0 phase errors | 80.11844881876 |
+| dfthcsos | 251,692,077.714951, T=13,244, Q=405 | 13.332162135495805 |
+
+The local unchanged chemistry verifier and moat-lab v53's unchanged in-kernel
+verifier agree exactly.  The runner-up Areeb tree predicts 33.138735205848945
+at chemistry cost 251,693,790.80323407; Leo is better by 1,713.08828307 cost
+units and therefore **+0.0000751837 GM** in predicted composite score.
+This is a useful calibration: a very small chemistry-cost margin can decide
+between two public releases, but it is too small to survive the board's
+five-decimal display or any private-salt perturbation by itself.
+
+v142 then established the new scored best at **33.13885**.  v143 replaced
+only the inverse-square-root member with varianceofx's certified three-T
+phase compiler (60,927.57739905387 at 37 q), predicting
+**33.1439220823404781609380739820350565305934107352740789700917** and
+scoring **33.14388**, a new best.  The displayed error of -0.00004208 is
+consistent with the -0.00004039 to -0.00005552 errors on the preceding
+same-cycle rows; predictions from exact local receipts therefore remain
+systematically useful at the five-decimal board precision but should not be
+presented as exact public-score matches.
+
+v144 changes only Leo Tang's chemistry factorization NPZ to
+`fd02c7f730b024a1`; the unchanged local official chemistry verifier PASSes
+at **251,688,794.86073643**, 1,427.03520632 cost units below v143's
+251,690,221.89594275.  With the same inverse-square-root and DQI bytes, the
+predicted gain is **+0.0000626401270977559702668284452012855095412360585671843455
+GM**.  This is a real but deliberately small release gain; it must not be
+inflated by presenting the board's five-decimal display as an exact score.
+
+v144 scored **33.14394** on the public board (ref `58713892`), against the
+exact-receipt prediction **33.1439847224675759169083408104802578161029519713326461544372**
+— a displayed error of **-0.00004472**, inside the established
+-0.00004039 to -0.00005552 public-salt band.  It remains the current scored
+best.
+
+v145 adopted the exact 18-member output of `ozertuu/google-quantum-ai-vqcc-33-170350`.
+The inverse-square-root member is byte-identical to v144; the DQI member
+`141f02ac69638c78` is v144's DQI with exactly one conditional `CCZ` removed;
+chemistry is the 3,357-Toffoli loader tree, independently PASSed locally at
+**251,089,557.50839654** (405 q, lambda_eff 46.917982145460485).  Using
+ozertuu's published DQI cost 305,041,160,753.34 the exact prediction was
+**33.1703479737831408066848265849219924110754769688805472789162**
+(+0.0263632513 GM over v144).
+
+**That prediction was wrong, and the gate caught it.**  moat-lab v59 ran the
+UNCHANGED official DQI verifier on the exact v145 snapshot bytes: the DQI leg
+came back `PASS` mechanically but with **2 value errors out of 102,400 shots**
+and a cost of **307,632,423,468.0979** (not 305,041,160,753.34).  The
+removed `CCZ q63 q507 q204 if b49140` is NOT redundant: the public release's
+own log only verified the chemistry leg, so its 33.17035 claim was never
+backed by a DQI verification.  The implied composite would have been
+**33.07695127730162880252628437417097183896**, i.e. **-0.067033 GM versus
+v144** — a public-tree adoption that would have made our row WORSE.
+
+Calibration lesson: a public scorecard that quotes a DQI cost without running
+the official DQI verifier must be treated as an unverified claim.  The
+Toffoli-model check (the removed conditional CCZ implied a mean Toffoli
+reduction of 0.5039 per shot, which matched ozertuu's number exactly) was
+*consistent* with a legal edit and still wrong, because the edit changed the
+syndrome values, not the gate count.  Only the official verifier's shot-error
+counter distinguishes the two, so **every DQI member must be officially
+verified before it enters a tree**, regardless of how small the edit is.
+
+v146 therefore keeps v144's verifier-clean DQI (`4b5721411adc239f`, 0 value /
+0 phase errors) and swaps only the chemistry table for the best measured
+public one, `e7f08627208c`, on the shared 3,357-Toffoli loaders: official
+local chemistry PASS **251,089,557.46576697** (T 13,214, Q 405, lambda_eff
+46.91798213749483), i.e. 599,237.39496946 cost units below v144's chemistry.
+With the unchanged inverse-square-root and DQI bytes the predicted score is
+**33.1703303503537523913065411197878713240478112544176321620074**
+(**+0.0263456279 GM** over v144's
+33.1439847224675759169083408104802578161029519713326461544372).
+
+Frontier refresh (2026-11-23 00:2x UTC): the public leaderboard moved to
+**33.83493** (`Entangled Team`), with codebeforework 33.54018, Two-Qubit Gate
+33.51863, Schrodingers Cats Lived 33.51568.  Holding v146's DQI and chemistry
+fixed, an inverse-square-root cost of **58,237.0814940** or lower would match
+33.83493; the H24 37 q / 58,532 build remains ~295 cost units short of that.
+
+Evidence: `work/receipts/V145_MOAT_RECEIPT.json` (verdict V145-RECEIPT-FAIL),
+`work/receipts/OZERTUU_33170350_LOCAL_CHEM_VERIFY.log`,
+`work/receipts/V146_LOCAL_CHEM_VERIFY.log`,
+`work/harvest/VERDICTS_2026-11-23.tsv`.
+
+**Frontier calibration after v143:** the current leader remains 33.67349.
+Holding the latest public DQI/chemistry legs fixed, matching that leader
+requires an inverse-square-root cost no greater than 58,097.5763957674.
+H24's nominal 37 q/58,532 build remains above that threshold by 434.4236
+cost units, so width plus an additional mechanism is still required.
+
+Evidence: `work/receipts/V139_RECEIPT.json`,
+`work/receipts/V139_MOAT_RECEIPT.json`,
+`work/receipts/V139_LOCAL_CHEM_VERIFY.log`,
+`work/receipts/V143_RECEIPT.json`, `work/receipts/V143_MOAT_RECEIPT.json`,
+`work/receipts/V143_LOCAL_INVSQRT_VERIFY.log`,
+`work/receipts/LEOTANG_ROUND4_LOCAL_CHEM_VERIFY.log`, and
+`work/recon/public_harvest_2026-11-22_v139.md`,
+`work/receipts/V146_RECEIPT.json`, `work/receipts/V146_MOAT_RECEIPT.json`.
+
