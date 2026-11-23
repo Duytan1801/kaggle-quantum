@@ -1,15 +1,20 @@
 # GOALS — breakthrough goals + leverage map (agent-maintained; rewrite freely)
-# Last refresh: 2026-11-23 00:30 UTC (post v145 rejection + v146 build; frontier moved to 33.83493)
+# Last refresh: 2026-11-23 01:20 UTC (post v146 score 33.17029 + q2026-v154 generator-source discovery)
 #
 # 2026-11-23 refresh notes
 # -----------------------
+# * **Our scored best is now v146 = 33.17029** (ref 58749949, COMPLETE); v144 = 33.14394.
 # * Public frontier (2026-11-23 00:2x UTC): `Entangled Team` 33.83493, codebeforework
 #   33.54018, Two-Qubit Gate 33.51863, Schrodingers Cats Lived 33.51568.
-#   Our scored best is still v144 = 33.14394.
-# * With v146's DQI (305,041,647,011.3978) and chemistry (251,089,557.46576697) fixed,
-#   an inverse-square-root cost <= **58,237.0814940** matches 33.83493.
-#   H24's nominal 37 q / 58,532 build is ~295 cost units short; 36 q would clear it.
-# * Public chemistry is now at a hard public floor: the best of **12 distinct public
+#   **Corrected inverse-square-root thresholds** (the previously quoted 58,237.0814940 was
+#   the OLD leader 33.67349's threshold, mislabelled):
+#     match 33.83493  -> invsqrt cost <= 57,407.3438787498
+#     beat  33.54018  -> invsqrt cost <= 58,934.1648
+#   With the 39 q generator build's per-wire cost 1,581.954652990519:
+#     Q=37 -> 58,532.10 -> GM 33.6168  (2nd place)
+#     Q=36 -> 56,950.16 -> GM 33.9252  (1st place)
+#   **One Toffoli removed at 37 q = +0.0067 GM; 1 % off any leg = +0.1105 GM.**
+# * Public chemistry is at a hard public floor: the best of **12 distinct public
 #   chemistry tables** measured against the shared 3,357-T loaders is
 #   251,089,557.46576697 (`e7f08627208c`).  Every other public table is >= 0.04 and
 #   most are ~600,000 cost units worse.  Chemistry has no public headroom left.
@@ -18,8 +23,16 @@
 #   `141f02ac…` (ozertuu) **FAILS** the official verifier (2 value errors / 102,400
 #   shots), and `1e6787a0…` (asteriospanoras family) is unverified and worth at most
 #   ~+0.000017 GM.  ⇒ DQI is not a lever for us without our own generator.
+# * **NEW: the q2026-v154 generator-source lane** (`work/gens/q2026_v154/`) gives us
+#   source for all three legs.  The ISR bundle contains `invsqrt_fc_narrow.py`
+#   (checkpoint-schedule carry narrowing = the H30 width mechanism), a lane search,
+#   a cubic-rank compressor, a SAT tail optimiser and LUT/angle synthesis; the
+#   chemistry bundle carries a leader-grade table plus the leader's loader tools.
+#   The v154 *tree* itself is dominated (measured), so this lane is a GENERATOR lane,
+#   not an adoption lane.
 # ⇒ **The inverse-square-root leg is again the only meaningful lever** (one wire =
-#   ten DQI wires), and it must come from the 39 q generator lineage (H24).
+#   ten DQI wires), and it must come from the 39 q generator lineage (H24) or from
+#   the new q2026-v154 ISR generator (H30).
 
 
 ## Leverage map (cost-formula anatomy, GM per unit)

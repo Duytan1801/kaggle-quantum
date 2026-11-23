@@ -361,15 +361,42 @@ With the unchanged inverse-square-root and DQI bytes the predicted score is
 (**+0.0263456279 GM** over v144's
 33.1439847224675759169083408104802578161029519713326461544372).
 
+**v146 scored 33.17029** (ref `58749949`, board COMPLETE 2026-11-23 00:34:54
+UTC, read at 01:07 UTC).  The prediction was
+**33.1703303503537523913065411197878713240478112544176321620074**, so the
+displayed error is **-0.00004035** — inside the established public-salt band
+(v144: -0.00004472) and **v146 is the new scored best** (33.17029 vs v144's
+33.14394), i.e. the prediction model is still exact to the fifth decimal after
+the chemistry swap.
+
 Frontier refresh (2026-11-23 00:2x UTC): the public leaderboard moved to
 **33.83493** (`Entangled Team`), with codebeforework 33.54018, Two-Qubit Gate
-33.51863, Schrodingers Cats Lived 33.51568.  Holding v146's DQI and chemistry
-fixed, an inverse-square-root cost of **58,237.0814940** or lower would match
-33.83493; the H24 37 q / 58,532 build remains ~295 cost units short of that.
+33.51863, Schrodingers Cats Lived 33.51568.
+
+**Correction to an earlier note.**  The "inverse-square-root cost <=
+58,237.0814940" figure quoted for the new 33.83493 leader is **wrong**; that
+number is the threshold for the *old* leader 33.67349.  Recomputed exactly
+from the v146 receipt (ratios 34.08594797907608 / 80.11844881876 /
+13.364154296910707, product 36,499.14):
+
+| target GM | inverse-square-root cost needed |
+|-----------|----------------------------------|
+| 33.83493 (`Entangled Team`) | **<= 57,407.3438787498** |
+| 33.54018 (codebeforework) | <= 58,934.1648 |
+| 33.51863 (Two-Qubit Gate) | <= 59,047.9088 |
+| 33.51568 (Schrodingers Cats Lived) | <= 59,063.5021 |
+
+With the 39 q generator build's per-wire cost 61,696.23146663024/39 =
+**1,581.954652990519**, this means: a **37 q** build of that generator scores
+58,532.10 → GM **33.6168** (enough for **2nd place**, above codebeforework),
+and a **36 q** build scores 56,950.16 → GM **33.9252** (enough for **1st
+place**).  Every Toffoli removed from a 37 q circuit is worth ≈ **+0.0067 GM**
+and a 1 % cut in any single leg is worth **+0.1105 GM** at GM 33.17.
 
 Evidence: `work/receipts/V145_MOAT_RECEIPT.json` (verdict V145-RECEIPT-FAIL),
 `work/receipts/OZERTUU_33170350_LOCAL_CHEM_VERIFY.log`,
 `work/receipts/V146_LOCAL_CHEM_VERIFY.log`,
+`work/receipts/V146_BOARD_SCORE.tsv` (board 33.17029),
 `work/harvest/VERDICTS_2026-11-23.tsv`.
 
 **Frontier calibration after v143:** the current leader remains 33.67349.

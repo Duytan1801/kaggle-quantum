@@ -17,36 +17,36 @@
    "size": 41717
   },
   "state/KERNEL_WATCH.md": {
-   "sha256": "ed37ecc82e717e4f883683d79e76a876b69df3e6ed66c1e6cb3b26bd61755d63",
-   "size": 94942
+   "sha256": "31511949e2882018906f611648c4c4490c256c4dee45d55324f90ac3204b619e",
+   "size": 97884
   },
   "state/RESEARCH_STATE.md": {
-   "sha256": "8cabc4015c7687b7b1b163f3fb01f990b0d4d273500d84fb257fed3e146d9207",
-   "size": 48459
+   "sha256": "9dc8582a75726916451fee0c805bb76961f4e2eaf9fca442622d0849e58238c6",
+   "size": 50373
   },
   "state/CALIBRATION.md": {
-   "sha256": "cdf8d0fafb0b48a4a302f69bbed5fc8e8b46622a0f8b98acbd01e74a9f5996dd",
-   "size": 22713
+   "sha256": "cfabbe6695dae77c918eb2564c1452e1ac09a64907b4c3286b39440ab2c92ce2",
+   "size": 24119
   },
   "state/GOALS.md": {
-   "sha256": "2f0934e9fb7b2a9cb078b7da6139fee6fcada38840fdab0fd271a8646eb1b5b7",
-   "size": 18075
+   "sha256": "e69421fc14e7b0aed13f50ffe88c32d07309ccca2c36d19c154e3388c977b926",
+   "size": 18957
   },
   "harvest/ADOPTED.tsv": {
-   "sha256": "5a38f36290d050c6693aaa0476dca2428832837142b63ea21c34e3b93aa0ba02",
-   "size": 97899
+   "sha256": "6cde399595bcb0c46e6eb310e6882214af1f90be8b0ffe4c2f296779c91c6380",
+   "size": 100185
   },
   "harvest/watch.log": {
-   "sha256": "9e01cfba83646fc625f8cc93d92a6374174442e30fec5649546960e1a397bbe0",
-   "size": 305086
+   "sha256": "a6a19d8b6ba6f3aab520f5d0049c8a0284db0e1f541816fcccca795472f5646c",
+   "size": 305331
   },
   "harvest/PENDING.tsv": {
-   "sha256": "8fdfb4ac66df88614ed7307351b3d9209f423381a8869e43118dd7a90e18caf7",
-   "size": 200
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "size": 0
   },
   "harvest/SEEN.tsv": {
-   "sha256": "aa800c4fce4b980d54c285ab1ac7d31946f4634b4971484c8f070b5d57b1d39b",
-   "size": 67185
+   "sha256": "59ea91a590704d1132c68b08929d5868707753a846a843d0af289c249d6efeaa",
+   "size": 68051
   },
   "harvest/AUTHORS.txt": {
    "sha256": "d2b52d92b60c9de330c3c2faaf6a7548edda01a2e744389a514cced918347cd2",
@@ -92,6 +92,10 @@
    "sha256": "113a129385e60c6a07ab0ab28a339a61e835adcf40eabb1c3dc8bde84051791c",
    "size": 11467
   },
+  "tools/h30_isr_caps.py": {
+   "sha256": "06d496daddaa42ae156475b7aa94169285772c6b40292092a0e98a3f8f176d33",
+   "size": 6647
+  },
   "tools/build_moat_v145.py": {
    "sha256": "46297ea41fa5173b89096cf21610de4ce1149ec92415c332808ab8f8575b8b71",
    "size": 1280
@@ -127,6 +131,10 @@
   "tools/dqi_reference_circuit.py": {
    "sha256": "2b8e1b80a806157c333a7e308eaf2499ee09de499efbc05875202c327959959e",
    "size": 30450
+  },
+  "tools/chem_cross_sweep.py": {
+   "sha256": "cc8e5b25245b067ad2ba42824c643dcb2420dc0de1e4d400cda8ca878db80ab3",
+   "size": 2272
   },
   "tools/kmb_align.py": {
    "sha256": "18b4159bc99d93257d4692c8dcd66721f5baf033a899c37106da370dad5e468d",
@@ -359,6 +367,10 @@
   "tools/build_moat_v145.generated.py": {
    "sha256": "8011eeda04f6fb34d53b7ac30b37cf2626f5f60dee03a1de241460aa132859cc",
    "size": 11798
+  },
+  "tools/h24_cswap_runs.py": {
+   "sha256": "c94f031c7a5f1f40fd01e1f0a316c56469e67a336f3651e73b723b7bd1d0c874",
+   "size": 2245
   },
   "tools/apply_verdicts.py": {
    "sha256": "00475eb875377072aec05a6e107ef784cacfeb4619a6b03b4e5ec15849ec63d0",

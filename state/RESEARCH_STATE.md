@@ -1,13 +1,18 @@
 # RESEARCH STATE — live hypothesis queue (agent-maintained; rewrite freely)
 # Format: H# | claim | mechanism | est GM | cheapest discriminating test | status | evidence | updated
 # Rules: never re-run a KILLED test; re-rank by expected-GM/effort after each resolution.
-# Last full re-rank: 2026-11-23 00:30 UTC (post v145 rejection + v146 build; see LATEST STATUS below)
+# Last full re-rank: 2026-11-23 01:20 UTC (post v146 score + q2026-v154 generator-source discovery; see LATEST STATUS below)
 
-## LATEST STATUS (2026-11-23 00:30 UTC)
+## LATEST STATUS (2026-11-23 01:20 UTC)
 
-* **Scored best is still v144 (ref `58713892`, board 33.14394)**; prediction
-  33.1439847224675759169083408104802578161029519713326461544372, displayed
-  error -0.00004472.
+* **v146 is the new SCORED BEST: board 33.17029** (ref `58749949`, COMPLETE
+  2026-11-23 00:34:54 UTC).  Prediction
+  33.1703303503537523913065411197878713240478112544176321620074 → displayed
+  error **-0.00004035**, inside the public-salt band (v144: -0.00004472).
+  v146 = invsqrt `bb676b95f94c` + DQI `4b5721411adc239f` + chemistry
+  `e7f08627208c` on the shared 3,357-T loaders.  Evidence:
+  `work/receipts/V146_BOARD_SCORE.tsv`, `work/receipts/V146_RECEIPT.json`.
+* **Scored-best predecessor:** v144 (ref `58713892`, board 33.14394).
 * **v145 = the exact 18 bytes of `ozertuu/google-quantum-ai-vqcc-33-170350` was
   REJECTED by the gate.**  moat-lab v59 ran the unchanged official DQI
   verifier on the exact snapshot bytes: 2 value errors / 102,400 shots, cost
@@ -17,40 +22,60 @@
   v144**, so submitting it would have hurt.  Evidence:
   `work/receipts/V145_MOAT_RECEIPT.json` (verdict V145-RECEIPT-FAIL),
   `work/recon/public_harvest_2026-11-23_v145_reject.md`.
-* **v146 = the hybrid that survives the gate**: inverse-square-root
-  `bb676b95f94c` (unchanged) + DQI `4b5721411adc239f` (v144's member, official
-  0 value / 0 phase errors) + chemistry table `e7f08627208c` on the shared
-  3,357-Toffoli loaders (official local chemistry PASS 251,089,557.46576697,
-  599,237.39496946 cost units below v144's chemistry).  Predicted GM
-  **33.1703303503537523913065411197878713240478112544176321620074**
-  (+0.0263456279 GM).  moat-lab v60 returned **V146-RECEIPT-PASS** (shas_ok
-  true, DQI 0 value / 0 phase errors on 102,400 shots, chemistry PASS
-  251,089,557.46576697, invsqrt PASS 60,927.57739905387) and the tree was
-  **SUBMITTED 2026-11-23 00:33 UTC — ref `58749949`**, gated zip
-  `work/trees/v146/submission.zip` (zipsha c20d298e882280b6), 4 slots left.
-* **Public queue fully adjudicated (31 rows, PENDING now empty).**  Measured
-  verdicts in `work/harvest/VERDICTS_2026-11-23.tsv` (applied to
-  `work/harvest/ADOPTED.tsv`).  New tooling: `work/tools/adjudicate_pending.py`
-  (pull + unzip + member-level comparison), `work/tools/compare_candidates.py`
-  (DQI header op counts + per-member diff), `work/tools/chem_table_sweep.py`
-  (every distinct public chemistry table measured against the shared loaders).
-  **New rule from this sweep: no DQI member may enter a tree without an
-  official verifier receipt — a public scorecard that quotes a DQI cost is not
-  evidence.**
+* **NEW TOP HYPOTHESIS H30 — the q2026-v154 GENERATOR-SOURCE lane.**  The
+  never-radar-seen kernel `dziyanavalenta/q2026-v154-submission-nb` ships
+  **generator sources** for all three legs (isr / DQI / chemistry), each a
+  fail-closed traced package (`build.py` + `BUILD.json` + `MANIFEST.json` +
+  `SHA256SUMS` + `RECIPE.json`), preserved at `work/gens/q2026_v154/`.
+  Its v154 *tree* is dominated (measured: invsqrt PASS 62,993.5511616945 @
+  39 q vs our 60,927.57739905387 @ 37 q; chemistry PASS 256,334,995.4141029
+  vs our 251,089,557.46576697), but its ISR bundle contains
+  `invsqrt_fc_narrow.py` — the *checkpoint-schedule carry narrowing* mechanism
+  that the H24 lane proved was the only route to fewer wires — plus a lane
+  search, a cubic-rank compressor, a SAT tail optimiser and LUT/angle
+  synthesis.  Evidence: `work/recon/q2026_v154_generator_sources_2026-11-23.md`.
+* **H30 progress (2026-11-23 01:2x UTC).**
+  * The ISR generator **builds byte-exactly locally** (exit 0, every
+    `SHA256SUMS` entry MATCH) — the capability works.
+  * **T1a (`I39_CAPS=H1=38,DIV1=38,DIV2=38,END=38`) is INCONCLUSIVE, not a
+    kill**: the emit fails with *"no schedule within 1 temporaries"* inside
+    the **H1** section (`invsqrt_fc2_patch_h1c.py:889 c.tag("H1")` →
+    `chiprog.emit`).  Baseline anatomy: `cap 39 live 37 C 2` — **37 live
+    wires + 2 clean wires = 39**.  The binding constraint is the *live* count
+    at H1 (a 38 q plan needs live <= 36 there), not the DIV/END caps.
+  * The leader's own `inv_i39_relabel.py` (an exact busy-segment relabeller,
+    HMR outcomes 0/1 and two random seeds) **confirms** both circuits are at
+    their peak: our 39 q generator build → "peak busy 39"; the public 37 q
+    build → "peak busy 37".  `inv_i39_xpair.py` removes 69 redundant X-X
+    pairs from the public 37 q build but does not lower its peak busy width.
+  * ⇒ the width prize needs a **live-count reduction at H1** (one fewer live
+    wire) or a different accumulator schedule, not a relabel.
+* **Chemistry cross-matrix measured (9 cells, `work/tools/chem_cross_sweep.py`):
+  the public floor is confirmed and NOT beatable by mixing tables with foreign
+  loader sets.**  Best cell remains ours 3,357-T loaders + `e7f08627` =
+  **251,089,557.46576697**; the v154 table on our loaders gives 251,164,958
+  (+75,401) and our table on the v154 loaders gives 256,258,042 (better than
+  v154's own 256,334,995 by -76,953).  3 of 9 cells FAIL.  ⇒ chemistry lane:
+  no public headroom.
+* **Queue: 9 new radar rows + 4 competition kernels the radar never saw were
+  pulled and adjudicated; PENDING is empty again.**  New standing check added:
+  **diff the competition kernel list against ADOPTED every wake** (the radar
+  alone missed 4, including the v154 generator release).
+* **Frontier: 33.83493** (`Entangled Team`); codebeforework 33.54018, Two-Qubit
+  Gate 33.51863, Schrodingers Cats Lived 33.51568.  Corrected thresholds (the
+  previously quoted 58,237.0814940 was the *old* leader 33.67349's threshold):
+  matching 33.83493 needs an inverse-square-root cost <= **57,407.3438787498**;
+  beating codebeforework needs <= **58,934.1648**.  With the 39 q generator
+  build's per-wire cost 1,581.954652990519, a **37 q** build scores 58,532.10
+  → GM **33.6168** (2nd place) and a **36 q** build scores 56,950.16 → GM
+  **33.9252** (1st place).  One Toffoli removed at 37 q ≈ **+0.0067 GM**; a
+  1 % cut in any single leg ≈ **+0.1105 GM**.
 * Two further public DQI variants were found and are NOT adopted:
   `1e6787a0…` (v144's DQI with `CCZ q103 q54 q163` replaced by `CZ q103 q54`,
   published by asteriospanoras / evgendvorkin / hassanabdulhafid) and
   `141f02ac…` (ozertuu).  The first would be worth ~+0.000017 GM *if* the
   official verifier accepts it; it has never been verified, and the ozertuu
   sibling shows how such edits fail.
-* **Frontier moved to 33.83493** (`Entangled Team`).  With v146's DQI and
-  chemistry fixed, matching it needs an inverse-square-root cost <=
-  58,237.0814940; H24's nominal 37 q / 58,532 build is ~295 cost units short.
-* H24 sub-lane **H29** (ancilla-free divider OR rewrite) is pre-registered in
-  `work/recon/h24_divider_or_rewrite_prereg_2026-11-23.md`; measured anatomy
-  says the canonical q38 OR block appears 32 times (16 forward + 16 reverse
-  rows) but q38 has 895 other uses, so the rewrite alone does not free the
-  wire.
 * **H24 width lane, measured 2026-11-23 (`work/recon/h24_width_state_2026-11-23.md`):**
   the 39 q generator build was rebuilt byte-exactly (SHA `68eb8c13ebc75…`,
   24,387 ops, 39 wires) and profiled: **0 mergeable wire pairs**, peak

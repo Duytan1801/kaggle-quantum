@@ -366,14 +366,18 @@ kernel|areebbb/qai-same-gates-better-chemistry-33-10018|2026-11-21T07:43:16.3300
 kernel|areebbb/qai-same-gates-better-chemistry-33-10018|2026-11-21T09:35:19.673000
 kernel|areebbb/qai-same-gates-better-chemistry-33-13869|2026-11-21T20:54:46.197000
 kernel|areebbb/qai-same-gates-better-chemistry-33-17029|2026-11-22T14:55:39.227000
+kernel|areebbb/santa-2026-frontier-audit-register-free-cone|2026-11-22T23:46:57.280000
 kernel|arizalfirdaus123/vqcc-df-thc-schur-nullspace-refit|2026-11-18T09:32:09.247000
+kernel|arsen123/casmi26-spectral-evidence-and-provenance-audit|2026-11-22T23:39:03.943000
 kernel|arsen123/obscura-spectral-physics-validated-ensemble|2026-11-20T23:29:52.963000
 kernel|arsen123/obscura-spectral-physics-validated-ensemble|2026-11-21T08:01:11.440000
 kernel|arsen123/obscura-spectral-physics-validated-ensemble|2026-11-22T00:29:00.217000
+kernel|arsen123/obscura-spectral-physics-validated-ensemble|2026-11-22T22:58:35.037000
 kernel|arsen123/qcc-one-decoder-gate-409600-paired-shots|2026-11-23T00:00:12.957000
 kernel|arsen123/qcc-public-frontier-full-independent-audit|2026-11-21T00:54:40.310000
 kernel|arsen123/qcc-public-frontier-full-independent-audit|2026-11-21T15:38:40.700000
 kernel|arsen123/qcc-public-frontier-full-independent-audit|2026-11-22T21:24:47.887000
+kernel|arsen123/qcc-public-frontier-full-independent-audit|2026-11-23T00:00:12.957000
 kernel|arsen123/qcc-public-frontier-full-independent-audit|2026-11-23T00:13:08.963000
 kernel|arsen123/squares-safe-sat-cell-reproducible-portfolio|2026-11-21T06:35:44.867000
 kernel|arsen123/squares-safe-sat-cell-reproducible-portfolio|2026-11-21T06:42:24.573000
@@ -436,6 +440,7 @@ kernel|cosmorin/qcc-31-67947-rank-48-frontier-portfolio|2026-11-21T01:45:38.2170
 kernel|cosmorin/qcc-32-86114-milestone-reproduction|2026-11-21T01:10:04.347000
 kernel|cosmorin/qcc-32-91616-milestone-d-reproduction|2026-11-21T02:58:11.217000
 kernel|cosmorin/qcc-33-10020-tie-portfolio-reproduction|2026-11-21T04:29:04.957000
+kernel|cosmorin/quantum-goodpjw2008-reproduction-lb-33-13877|2026-11-22T14:13:41.297000
 kernel|cosmorin/quantum-heliosli-v58-reproduction-lb-23-36258|2026-10-31T14:49:21.857000
 kernel|cosmorin/quantum-somejoint-22-75-guard-verified|2026-10-29T14:48:56.387000
 kernel|danishlynxthembones/gift-from-thembones-vqcc-31-67924|2026-11-20T16:03:03.113000
@@ -464,6 +469,7 @@ kernel|evgendvorkin/google-quantum-ai-deep-eda-with-analogies|2026-11-21T20:53:4
 kernel|evgendvorkin/google-quantum-ai-deep-eda-with-analogies|2026-11-22T21:40:12.757000
 kernel|evgendvorkin/spectra-to-structures-deep-eda-molecular-clues|2026-11-17T18:53:19.870000
 kernel|evgendvorkin/spectra-to-structures-deep-eda-molecular-clues|2026-11-19T12:22:57.713000
+kernel|evgendvorkin/spectra-to-structures-deep-eda-molecular-clues|2026-11-22T15:54:21.470000
 kernel|ghazarosbarseghyan91/qcc-28-17-4-022-toffoli-chemistry-loaders|2026-11-17T14:20:45.067000
 kernel|ghazarosbarseghyan91/qcc-28-235-three-salt-dqi|2026-11-19T11:02:48.720000
 kernel|ghazarosbarseghyan91/vqcc-28-09486-verified-portfolio|2026-11-18T06:14:07.387000
@@ -495,6 +501,7 @@ kernel|goodpjw2008/qcc-3-t-phase-fold-table-refit-lb-33-14394|2026-11-22T09:02:0
 kernel|goodpjw2008/qcc-dead-word-loader-chain-dp-lb-33-10020|2026-11-21T07:35:56.377000
 kernel|goodpjw2008/qcc-dead-word-loader-chain-dp-lb-33-10186|2026-11-21T08:40:32.283000
 kernel|goodpjw2008/qcc-public-best-loader-table-swap-lb-33-0753|2026-11-21T01:30:44.910000
+kernel|goodpjw2008/santa-2026-source-aware-frontier-lb-130-899|2026-11-23T00:30:21.337000
 kernel|goodpjw2008/santa-2026-source-aware-frontier-lb-132-074|2026-11-22T09:01:16.403000
 kernel|goodpjw2008/santa-2026-source-aware-frontier-lb-132-092|2026-11-22T08:01:14.630000
 kernel|goodpjw2008/santa-2026-source-aware-frontier-lb-132-135|2026-11-22T06:33:41.233000
@@ -506,6 +513,7 @@ kernel|grantprater/vqcc-dqi-merged-patches-closings-at-all-49|2026-11-17T02:33:3
 kernel|haomingyang0629/qcc-3375-tight-table-v8-repro|2026-11-21T16:02:24.940000
 kernel|hassanabdulhafid/chronos-kickmix-verifiable-quantum-circuit-comp|2026-11-22T22:18:31.470000
 kernel|hassanabdulhafid/chronos-kickmix-verifiable-quantum-circuit-comp|2026-11-23T00:27:18.777000
+kernel|hassanabdulhafid/chronos-kickmix-verifiable-quantum-circuit-comp|2026-11-23T00:58:15.790000
 kernel|hayatohikawa/qcc-c8-milestone-public-repro-lb-28-066|2026-11-16T01:33:58.207000
 kernel|heliosli/quantum-ai-v1|2026-11-03T13:34:14.287000
 kernel|henritonnang/qcc-v5-fused14-submit-python313|2026-11-20T11:15:25.050000
@@ -514,6 +522,7 @@ kernel|infnitycoder2009/invsqrt-edit-search|2026-11-12T10:11:47.717000
 kernel|infnitycoder2009/qcc-24-65388-public-portfolio-fork-v3|2026-11-04T23:31:41.257000
 kernel|infnitycoder2009/qcc-24-65388-verified-public-portfolio-fork|2026-11-05T02:02:17.260000
 kernel|infnitycoder2009/vqcc-portfolio-v2|2026-11-18T21:39:43.013000
+kernel|ishankarnick/santa-2026-frontier-programs-130-901|2026-11-23T00:18:20.977000
 kernel|ishankarnick/santa-2026-frontier-programs-132-103|2026-11-22T07:44:39.717000
 kernel|ishankarnick/santa-2026-frontier-programs-132-158|2026-11-22T05:40:27.767000
 kernel|ishankarnick/santa-2026-frontier-programs-132-220|2026-11-22T03:36:10.440000
@@ -690,6 +699,7 @@ kernel|orecord/quantum-circuit-compilation-pipeline|2026-11-21T03:12:32.373000
 kernel|orecord/quantum-circuit-compilation-pipeline|2026-11-21T18:15:11.197000
 kernel|orel1986/qcc-alex33-17-fork|2026-11-22T20:41:17.390000
 kernel|orel1986/qcc-alex33-fork|2026-11-22T10:53:20.567000
+kernel|orel1986/qcc-ozertuu-33138|2026-11-21T22:43:39.693000
 kernel|ozertuu/25-218-starter-notebook|2026-11-22T22:59:38.887000
 kernel|ozertuu/28-23163-sota-verified-compilation-top-portfolio|2026-11-18T16:39:54.083000
 kernel|ozertuu/google-quantum-ai-vqcc-33-138|2026-11-21T22:47:48.753000
