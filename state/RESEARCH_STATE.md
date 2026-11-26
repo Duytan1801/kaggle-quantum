@@ -1,7 +1,12 @@
 # RESEARCH STATE — live hypothesis queue (agent-maintained; rewrite freely)
 # Format: H# | claim | mechanism | est GM | cheapest discriminating test | status | evidence | updated
 # Rules: never re-run a KILLED test; re-rank by expected-GM/effort after each resolution.
-# Last full re-rank: 2026-11-23 01:20 UTC (post v146 score + q2026-v154 generator-source discovery; see LATEST STATUS below)
+# Last full re-rank: 2026-11-25 01:20 UTC (v148 submitted; chemistry frontier jump; H38 killed — see the LAST section)
+
+> **NEWEST (2026-11-25 01:2x UTC): v148 SUBMITTED (ref 58859204), predicted GM
+> 33.21008.**  v147 + goodpjw2008's 3,334-T chemistry loaders (T 13,168,
+> lambda_eff 46.91432641685298, chemistry PASS 250,195,979.3541336).  H38
+> measure-first rewrite KILLED (0 candidates).  Details in the last section.
 
 ## LATEST STATUS (2026-11-23 01:20 UTC)
 
@@ -804,3 +809,718 @@ still open:
 ⇒ H32 is cheap to test: it is a *generator-side* mechanism question for the
 q2026-v154 ISR bundle (does the 44/46-qubit line's square-root construction
 exist as source we can adopt?), not a re-run of a closed route.
+
+---
+
+## 2026-11-25 01:2x UTC — WAKE: v148 SUBMITTED (chemistry frontier jump), H38 KILLED
+
+### V148 = v147 + goodpjw2008's shorter chemistry loaders — GATE PASS → SUBMITTED (ref 58859204)
+
+The public frontier moved from 33.17067 to **33.2101** between wakes, and the
+mechanism is the lane H35 was wrongly closed on: **chemistry loaders**, not DQI
+or invsqrt.  Four public trees (`goodpjw2008/qcc-shorter-chemistry-loaders-lb-33-21011`,
+`ozertuu/...-33-2101-sota-apex`, `areebbb/qai-the-26-toffoli-cut-lb-33-21010`,
+`mizeroluckygall/quantum-circuits-33-210-shorter-chem-loaders`) ship our exact
+invsqrt (`bb676b95`) and DQI (`6f78ecdd`) and change only `dfthcsos/`.
+
+Measured with the UNCHANGED local official chemistry verifier
+(`work/toolchain/verifiers/dfthcsos/verify.py <dir> --shots-per-address 1`):
+
+| tree | npz | T | lambda_eff | chemistry score | Δ vs v147 |
+|---|---|---|---|---|---|
+| **v148 = goodpjw2008 / ozertuu** | `573d10bed90b4ad7` | **13,168** | **46.91432641685298** | **250,195,979.3541336** | **−893,577.67** |
+| areebbb / mizeroluckygall | `14e3e699aef7ab15` | 13,168 | 46.9143769105685 | 250,196,248.63913822 | −893,308.38 |
+| evgendvorkin `proba-2` refit | (1.11 MB npz) | 13,168 | 46.91437686361922 | 250,196,248.38875583 | −893,308.63 |
+| alexchilton 33.18 tree | `c7c288e13a602b8a` | 13,192 | 46.917982145460485 | 250,671,518.28748047 | −418,038.73 |
+| lionalmedong 33.19287 | `093cf2ad5cd763c5` | 13,188 | 46.914532073979125 | 250,577,083.84161285 | −512,473.18 |
+| v147 (previous) | `16b4f5b5e51b0777` | 13,214 | 46.917982054483744 | 251,089,557.02151904 | — |
+
+The gain is **both** a shorter loader (T 13,214 → 13,168 = 10 loaders at
+**3,334 T/pass**, 5 unchanged at 3,357) **and** a better weight refit
+(46.917982 → 46.914326).  T dominates (0.35 % of T vs 0.008 % of lambda), but
+the refit is free and real.
+
+**Important correction to the cost model:** `angles_toffoli_per_pass = 3334`
+with 5 loaders still at 3,357 proves the verifier's per-pass cost is the max
+over the loaders the shipped **table actually invokes**, not over all 15 files.
+⇒ the 5 unchanged loaders are dead weight in this table; H35's "public floor"
+claim was based on all-15-invoked trees.  This is a new lever: a table that
+invokes fewer/cheaper banks lowers T without touching the loaders.
+
+Build: `work/trees/v148/` (18 files, `work/sha_tables/sha_table_v148.txt`);
+the 7 unchanged members are byte-identical to v147 (verified).
+Snapshot dataset `badboyhalo1801/qcc-release-v148`; moat-lab **v63 COMPLETE →
+`V148-RECEIPT-PASS`** on the exact snapshot bytes: invsqrt PASS 60,927.57739905387
+(37 q), DQI PASS 309,694,874,626.0435 (900 q, T 316,122.9567, 4 default-salt
+failed shots → same bytes as v147, covered by `PUBLIC_DQI_EVIDENCE`), chemistry
+PASS 250,195,979.3541336 (405 q, T 13,168).  Gate `GATE-OK 8516167498ef6812`;
+receipt `work/receipts/V148_RECEIPT.json`.  **Predicted board GM 33.21008**
+(clean DQI draw), matching the public 33.2101.
+
+### H38 (measure-first Toffoli rewrite) — KILLED by structural measurement (0 candidates)
+
+Re-ran the site census with the *correct* measure-first predicate (a Toffoli
+CCX whose target ancilla is HMR-measured, unconditionally, before that wire's
+next quantum read).  Result over all 312,246 CCX + 6,716 CCZ:
+
+* `target_is_syndrome` 226,198 — the target carries the circuit's ANSWER, so its
+  value cannot be traded for a phase;
+* `read_before_measurement` 85,737 — every ancilla-targeting CCX is read again
+  before its next measurement;
+* `not_ccx` 6,716 (CCZ has no target), `no_later_measurement` 311;
+* **candidates = 0 at every depth**, so arsen123's public "measure-first" 4-site
+  rewrite cannot generalise to our DQI.  Their own `conditional_measure_validation.csv`
+  shows parent and child executed Toffoli counts **identical** — a verified
+  negative result.  Archived at `work/gens/arsen123_measurefirst_2026-11-23/`.
+  Do not re-enter.
+
+Supporting census (`work/tools/dqi_tof_sites.py`, `/tmp/opencode/tof_sites.json`):
+900 q = 840 syndrome + 60 ancilla; depth histogram {0: 269,838; 1: 47,748;
+2: 374; 3: 850; 4: 152}; 43,803 unconditional Toffolis target an ancilla;
+80,632 HMRs, all 60 ancillas measured.
+
+### DQI conditional-region census (new hard floor)
+
+`work/tools/dqi_cond_blocks.py`: PUSH=POP=710,906, max nesting 12, 645,740
+conditional regions (median 3 ops), 11.355 % of ops inside a conditional
+region.  **49,124 Toffolis are conditional** (4,918 regions have ≥1; 10 regions
+have ≥100; largest 819) and **267,934 are outside every region (hard floor)**.
+Static 318,962 vs observed mean 316,122.9567 ⇒ implied skip rate 0.057793.
+Consequence: the DQI upside is now (a) raising the 5.78 % skip rate, or (b)
+turning depth-0 Toffolis into conditional work — each 1,000 mean Toffolis ≈
++0.035 GM; 900 → 882 q would be +0.45 GM.
+
+### Public-release queue — adjudicated by measurement this wake
+
+* `goodpjw2008/...33-21011`, `ozertuu/...33-2101`, `areebbb/...33-21010`,
+  `mizeroluckygall/...33-210-shorter-chem-loaders` → **ADOPTED as v148**
+  (goodpjw2008/ozertuu variant, the cheapest).
+* `evgendvorkin/proba-2` → dominated (250,196,248.3888).
+* `prvsiyan/vqcc-verified-best-of-circuits-1106a` (6.1 GB, 9 complete trees)
+  → all dominated: alt_almond 255,211,486.70 (T 13,430); alt_maoxin_v55_2024 /
+  alt_qc1_v57b / alt_v58b 251,089,554.74–251,089,563.87 (T 13,214);
+  alt_tony_0023 254,640,803.04; alt_v30 255,345,329.79.
+* `aslan007x/qcc-v4-chem` 251,089,554.7402866 (dominated); its portfolio /
+  `atakanaldemir/...controlled-refits` / `kawh1111/qcomp-harvest-1124pc` all
+  ship the same `17a7658245230231` npz on the old 3,357 loaders (dominated).
+* `mzishran/...chemistry-refit` and `orel1986/qcc-331707-reclaim` → exact v147
+  tree (chem `e337917c`) = dominated.
+* `alexchilton/33-18-lb-...` → 250,671,518.29 (dominated; also a different
+  invsqrt `6b592145`).
+* `lionalmedong/...33-19287` → 250,577,083.84 (dominated).
+* `arsen123/qcc-public-frontier-full-independent-audit` → its DQI
+  `6faebf1cc1f0920c` measures 305,030,293,104.77 (T 316,119.45, 3.5 Toffolis
+  better than ours) and invsqrt 60,927.610458 (0.033 worse) ⇒ net ≈ 0, not
+  worth new DQI bytes with an unknown public draw.  Its chemistry = areebb's.
+* `kirderf/...2711-reproduced`, `kozykappa/...`, `ranjeet258/qcc-nov12...`,
+  `ranjeet258/qcc-1124-ten-published-decoder-rewrites`, `manwithacat/
+  quantum-voodoo-2` → entirely different (older) portfolios, no leg beats ours.
+* `manwithacat/vqcc-chemistry-negative-results` → **harvested as a research
+  ledger** (479 rows).  The two chemically relevant open/partial rows:
+  NR-0207 (weight refit at fixed words has ~0.09 % left ⇒ ~+0.003 GM, convex
+  bound lambda_eff ≥ 46.8497) and NR-0303 (reopen: fit at the 20 mHa cap with
+  sign-mixing M driven to zero).
+
+### New ranked queue after this wake
+
+1. **H39 (NEW) — chemistry: exploit the per-pass-max discovery.**  A table that
+   invokes only the 3,334-T banks already ships 5 dead loaders.  Cheapest test:
+   measure whether the 3,334-T bank set can be re-solved at 3,3xx with a
+   different `brot`/word split (the `maoxin123`/`goodpjw2008` generator is
+   public), and whether a table can be refit to invoke fewer banks per pass.
+   Each −10 T/pass ≈ −0.007 GM.
+2. **H40 (NEW) — chemistry: weight refit at fixed words on the shipped npz**
+   (NR-0207's method).  Predicted ceiling ≈ +0.003 GM.  Cheap (CPU, hours).
+3. **DQI lane (still the only large upside):** raise the 5.78 % conditional
+   skip rate or convert depth-0 Toffolis to conditional work; 900→882 q is
+   +0.45 GM but the width lane was closed (H22) and needs a new stage design.
+4. **H32/H33 (invsqrt square-root construction / 44-q table resynthesis)** —
+   unchanged, still the clearest untried public mechanism.
+
+## 2026-11-25 12:0x UTC — wake after v149 scored 33.21179: chemistry plan model EXACT, three new probes
+
+### What changed in our capability (this is the durable gain)
+
+The chemistry "plan" scheme (goodpjw2008's `qcc-shorter-chemistry-loaders-lb-33-21179`,
+version 17) is now **fully reverse-engineered and machine-checked**.  Before this
+wake we could only re-emit goodpjw's ten published plans byte for byte; we could
+not tell whether a *new* plan would be correct.  Now we can.
+
+* `work/tools/chem_plan.py` — the validated emitter, now instrumented
+  (`RECORD['fn'][qubit]` = the exact boolean function the emitter believes each
+  feature qubit carries; `RECORD['names']` = the feature order).  `run_loader`
+  also learned the `Z` gate (the old maoxin loaders use it).
+* `work/tools/chem_rec.py` — compares the emitter's RECORD against an
+  independent reconstruction of the same feature list.
+  **Result: 0 feature disagreements on all ten public plans.**
+* `work/tools/chem_struct.py` — reconstructs each public plan's 30 output
+  deltas from the plan fields alone.  **Result: `OK` for all ten**
+  (the plan model now reproduces the shipped circuits' semantics exactly).
+
+Two model bugs were found and fixed (both were silent before):
+
+1. the emitter's `pair()` indexes a **growing** `gens` list (bank-bit
+   generators, then every cached AND appends its own `u & v`), so a cached
+   feature may be a product of *previous cached features* — the cached bank
+   features are NOT limited to degree 2 in the bank bits;
+2. a mixed feature's bank mask is indexed by the **bank index** directly, not
+   by `BANK[BANK[b]]`.
+
+Confirmed semantics (all now verified against the emitter, not guessed):
+
+* the QUADS feature is the **integer** AND `fun((LOW >> x) & 1 & (LOW >> y))`,
+  i.e. `low_x AND (low >= 2^y)` — *not* `low_x AND low_y`;
+* the incoming words satisfy `word[7j+6] XOR word[7j+5] == QUADS(j)` for
+  **k = 1..14** (diff 0 for every batch), but **not for k = 0** (incoming state
+  is zero, diff 1520) ⇒ a k=0 plan cannot use the QUADS features as the
+  emitter does;
+* the old maoxin loaders for k = 0,1,5,7,11 use **four** classical bits
+  (b0..b3) plus conditioned `CZ`/`Z`, while the ten re-solved ones use one
+  bit and no `Z` — the two families are structurally different, so the old
+  five cannot be read as plans.
+
+### Hypotheses resolved this wake
+
+* **H45 (NEW) — reuse a solved plan's products for another batch: KILLED.**
+  Products are functions of (bank, low) only, so in principle they are
+  batch-independent.  Measured over all 90 (solved plan, batch) pairs:
+  **0 hits** — no solved plan's product span contains another batch's target
+  matrices (`work/tools/chem_reuse.py`).
+* **H43 (NEW) — narrow the word register (`brot` 7 → 6): KILLED.**
+  `brot` enters `T_total` directly (`2*(N-1)*(2*brot-1)` = 1950 of our
+  13,166) and `Q_total` through `J*brot` (35 of 405).  brot = 6 would save
+  300 Toffolis and 5 qubits (−3.5 % of the score) — but the official metric
+  on 6-bit words **fails the gates**: error_1 4.150, error_2 0.858 Ha against
+  the 0.020 Ha limit (`work/tools/chem_brot.py`).  Our shipped words sit
+  *exactly* on the gates (error_1 = error_2 = 20.000 mHa, E_gap = 3.914898 =
+  the strict floor), so `lambda_eff` is pinned by the accuracy constraints and
+  precision cannot be traded for T.  **Never re-run.**
+* **H44 (NEW) — cheaper factorization shape (R,B,C): MEASURED, BLOCKED.**
+  The state-prep heuristic is strongly C-sensitive (R=9, B=127):
+  C=46 → T_state 4550 / Q_state 370 (ours); C=16 → 2101 / 367; C=1 → 744 / 233.
+  C=16 would cut T_total by 18.6 % (≈ +2 GM if `lambda_eff` held) — but C is
+  pinned by the 20 mHa error_2 gate, and any change of the weights changes the
+  words, hence **all fifteen loaders** must be rebuilt.  Blocked behind the
+  plan search (H42).  Tool: `work/tools/chem_shape.py`.
+* **H42 (chemistry plan search) — CAPABILITY CONFIRMED, SEARCH STILL OPEN.**
+  * Reachability: `work/tools/chem_reach.py` builds the maximal quadratic
+    space `Q = span{f} + span{f_i f_j}` and asks whether each output delta
+    lies in it.  Control: all ten public plans test 30/30 (dim Q = 1217).
+    The five unsolved batches are **not** structurally excluded —
+    `dim span{D_i} = 30` and `rank(M_i) = 16` for every one of the fifteen
+    batches, solved and unsolved alike (`work/tools/chem_dim.py`).
+  * The search problem, precisely: choose n *pure products*
+    `A_p = u_p AND v_p` with `u_p, v_p` linear forms over the plan's
+    99-feature space such that `span{A_p}` contains `span{D_i}` modulo the
+    feature span; the masks are then determined (the mask matrix must have
+    rank 30 ⇒ n ≥ 30) and the linear rest is whatever is left.  Each output
+    needs ≥ 8 products (rank 16, ≤ 2 independent bank directions per product).
+  * goodpjw's own plans use 123–132 products with **≈50 products per output**
+    (`work/tools/chem_prod.py`: product matrix rank 5–7, mask size 7–19
+    outputs, both factors mix bank/low/mixed features) — far above the rank
+    bound, so the scheme is **not exhausted**; a better search could in
+    principle beat 205 Toffolis/loader.
+  * goodpjw's own method is public in prose only ("plant low-rank elements in
+    Z", "GPU FWHT", "matroid parity", maoxin123's note).  A random product
+    search cannot work: the product variety has dimension ≈198 inside a
+    1232-dimensional function space, so the probability that a random product
+    lands in the 30-dimensional target subspace is ~2^-905.  A *structured*
+    search is required, exactly as goodpjw describes.
+  * Kill criterion for the next attempt (pre-registered): a bounded search
+    that cannot produce a plan with **nP ≤ 132** for any of k = 0,1,5,7,11
+    within one build day is killed as a mechanism; a plan with nP ≤ 157 already
+    beats the old 240–245-Toffoli loaders and is worth ~+0.05 GM.
+
+### Queue-hygiene fix (worth knowing)
+
+`work/tools/auto_adjudicate.py` treated every queue row as a *dataset* and ran
+`kaggle datasets download` on kernel slugs; 19 kernel rows were closed with a
+bogus "don't have access to this resource" note.  The tool now carries the
+queue's type column (kernel vs dataset), `harvest_queue.py add` takes the kind
+explicitly, and the tree writer handles zip trees with a top-level directory
+and directory members.  All 19 rows were re-queued through
+`harvest_queue.py add … kernel` and are being re-adjudicated.
+
+### Re-ranked queue after this wake
+
+1. **H42 (chemistry plan search)** — +0.21 GM prize, capability now exact.
+   Blocked on a structured product search (see the precise formulation above).
+2. **H41 (invsqrt 37 → 36 q)** — +0.307 GM, unchanged; needs a different
+   square-root construction (H32), not relabelling.
+3. **DQI** — +0.45 GM for 900 → 882 q; H22 width lane closed, H32-m6 blocked.
+4. **H44 (factorization C)** — +2 GM *if* a smaller-C table meets the 20 mHa
+   gate AND the loaders can be rebuilt; both sub-problems are open.
+5. **H40 (weight refit at fixed words)** — ceiling +0.003 GM, CPU-only.
+
+## 2026-11-25 14:0x UTC — wake: the chemistry plan scheme is now an EXACT quotient-space problem (H46 killed)
+
+### New capability (durable)
+
+* `work/tools/chem_check_plan.py` — **the plan acceptance test**.  It emits a
+  candidate plan with the validated emitter, simulates the circuit EXACTLY on
+  all 1,219 addresses (every qubit is a boolean function of the address), and
+  checks (a) the word registers move by exactly the batch delta, (b) the
+  oracle is self-inverse (the loader is `|a>|z> -> |a>|z XOR f_k(a)>`, so
+  applying it again must undo it — running the op list *backwards* is wrong,
+  the list ends with the uncompute section), (c) every workspace qubit
+  returns to |0>.  Known-answer control: batch 14 PASS (205 Toffolis),
+  batch 2 PASS (215 Toffolis).
+  The phase never has to be checked: the emitter's `CZ qa qb if b0` is
+  conditioned on the `HMR` outcome and `q = a AND b`, so the measurement's
+  phase flip is cancelled by the CZ on every trajectory.
+* `work/tools/chem_prune.py` — **the quotient-space model of the plan
+  scheme**, with a self-contained GF(2) basis (reduced row-echelon, with
+  coefficient tracking) that produces CANONICAL coset representatives.
+
+### The exact statement of the plan problem (this is the key result)
+
+A plan expresses each output's batch delta as
+
+    D_i  =  XOR_{p : i in M_p} g_p   XOR   R_i ,
+
+where `g_p = u_p AND v_p` is one Toffoli and `R_i` is a *linear rest* — an
+XOR of the cached features, applied with free CNOTs.  Let `F = span(features)`
+(99 or 100 dimensions, all independent) and `pi: V -> V/F` the quotient map.
+Then the plan is correct **iff**
+
+    span{ pi(g_p) }   CONTAINS   Q := span{ pi(D_i) } .
+
+Over GF(2) every element of a span is a subset sum, so this single global
+condition is necessary *and* sufficient: the masks and the linear rests then
+follow from linear algebra alone.  `V/F` is 1,120-dimensional (1,219 − 99),
+`Q` is only **23** (non-swap) or **24** (swap) dimensions, and the measured
+`dim F` is 99/100 for all ten public plans.
+
+### H46 (NEW) — prune the public plans' redundant products: **KILLED**
+
+* The 123…132 products of every public plan have **linearly independent
+  classes** (`rank(pi(g_p)) = nP`), so the span is `nP`-dimensional while
+  `Q` is 23–24 dimensional.  A greedy search for a sub-family of the *same*
+  products whose span still contains `Q` needs **all** of them (measured for
+  all ten public batches).
+* Why: because the classes are independent, **each output's representation is
+  UNIQUE** — the mask of every product is forced.  There is no freedom to
+  re-mask.
+* Directly measured: **0 of the 123…132 product classes lie in `Q`**
+  (`work/tools/chem_qhit.py`); the outside-`Q` part of a typical class has
+  ~534 set bits.  The products are generic with respect to `Q`.
+* **Conclusion: the public plans are MINIMAL with respect to their own
+  product set.**  The only way to a cheaper loader is a *different* product
+  set whose classes span `Q`.  Never re-run the pruning idea.
+
+### What a cheaper plan would be worth (pre-registered)
+
+`nP` products cost `82 + nP` Toffolis per loader.  The public loaders cost
+205…215; the five unsolved batches (k = 0,1,5,7,11) cost 240…245.
+The lower bound is `nP >= dim Q` = 23.
+
+| nP per loader | loader Toffolis | chemistry T (both passes) | GM |
+|---:|---:|---:|---:|
+| 123…132 (public) | 205…215 | 13,166 | 33.21179 |
+| 80 | 162 | 11,206 | ~34.8 |
+| 50 | 132 | 9,586 | ~36.0 |
+| 23 (the bound) | 105 | 8,060 | ~37.9 |
+
+So a search that reaches `nP <= 80` on the *five unsolved* batches alone is
+worth ≈ **+1.2 GM**, and `nP <= 50` ≈ **+2.0 GM**.  This is the largest
+single lever in the chemistry leg and it is now precisely posed.
+
+### The search obstacle, measured
+
+* The quotient `V/F` is 1,120-dimensional; `Q` is 23.  A *random* product's
+  class lands in `Q` with probability ≈ 2^(23−1120) ≈ 2^−1097, and a random
+  family of `m` products contains `Q` with probability ≈ C(m,23)/C(1120,23) —
+  hopeless (this confirms the earlier "random sampling is dead" note with the
+  correct exponents).
+* The structure that makes a *structured* search possible: the bank-side
+  features (68 cached ANDs + 7 address bank bits) span **76 of the 77**
+  bank-function dimensions, so the per-column bank quotient is **1
+  dimension**; the mixed features (bank function AND low==7/14) make the
+  quotient vanish on the two special columns; the low-side features (4 low
+  bits + 5 QUADS + 6 low ANDs) span 16 dimensions.  A product's class is
+  therefore `pi(alpha_u alpha_v)` (one uniform quotient vector) plus
+  `q_v(low)·[alpha_u] + q_u(low)·[alpha_v]` (a low-profile-weighted pair of
+  quotient vectors) — i.e. every product's class is a *rank-≤3 object* in the
+  quotient, exactly the "two dimensions per product" that
+  goodpjw2008's published method prose describes ("plant low-rank elements
+  in Z", "GPU FWHT", "matroid parity").
+* goodpjw2008's own method is public only as prose in
+  `work/gens/goodpjw2008_chem_2026-11-25/...ipynb` (md cell 1): block 1
+  (8 outputs, 89 dimensions, 45 products), block 2 (force `u ⊗ x1 + v ⊗ x2`
+  into `Z`, one per output pair), block 3 (8 outputs, 83 dimensions); their
+  counts (260 dimensions for 24 outputs) match `nP = 130`.
+* **Next experiment (H48, pre-registered):** implement the *planting* step
+  alone — search for a small family of products whose classes span `Q` — and
+  measure the achievable `nP` for one batch.  Kill criterion: if a bounded
+  search cannot reach `nP <= 80` for batch 14 within one build day, the
+  mechanism is killed; `nP <= 157` still beats the old 240…245 loaders
+  (+0.05 GM) and is worth keeping.
+
+### Queue
+
+`work/tools/auto_adjudicate.py` re-adjudicated the 19 wrongly-closed kernel
+rows (the tool had run `kaggle datasets download` on kernel slugs).  14 of
+them are now closed by measurement; two of them
+(`alexchilton/33-17-lb-…`, `prvsiyan/verifier-guided-…`) ship an invsqrt
+that measures **60,927.5479** against our **60,927.5774** — a 4.8e−7
+relative gain, i.e. **+0.000005 GM**, not worth a submission slot.  The
+public chemistry frontier is still closed (every complete tree measured
+250.16e6…321.3e6 against our 250.158e6).
+
+### H48 (NEW) — the rigorous lower bound on the product count, and the exact
+### factorisation a better plan must have
+
+`work/tools/chem_dim2.py` measures the *direction* budget of a loader.
+
+Write a product as `u.v` with `u = alpha_u + q_u(low)`, `v = alpha_v + q_v(low)`
+(`alpha` a cached bank function, `q` a low function).  Then
+
+    u.v = alpha_u alpha_v   (uniform over the 16 columns)
+        + alpha_u q_v + alpha_v q_u   (bank direction x low profile)
+        + q_u q_v                     (low only)
+
+The first term is the same bank vector in every column, so it cancels in the
+**column-difference pattern** `d_j XOR d_0` that a product has to reproduce.
+What survives per column is a combination of **TWO bank directions**,
+`alpha_u` and `alpha_v`.  Therefore:
+
+* every product supplies at most two independent bank directions to all the
+  outputs in its mask;
+* the target's difference rows `{d_j XOR d_0}` over all 30 outputs span the
+  **full 77-dimensional bank space** for every batch;
+* hence **`nP >= ceil(77/2) = 39`** for every one of the fifteen batches
+  (solved and unsolved alike).
+
+Measured (v149 words):
+
+| k | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| bank-direction dim | 77 | 77 | 77 | 77 | 77 | 77 | 77 | 77 | 77 | 77 | 77 | 77 | 77 | 77 |
+| **nP bound** | **39** | **39** | **39** | **39** | **39** | **39** | **39** | **39** | **39** | **39** | **39** | **39** | **39** | **39** |
+| public nP | – | – | 132 | 132 | 132 | – | 132 | – | 127 | 132 | 132 | – | 132 | 127 | 123 |
+
+so the public plans sit at **3.2x** the bound.  Two further measured facts:
+
+* `S` (the sum over outputs of the rank of the 15 difference rows) is **450**
+  for the five *unsolved* batches (k = 0,1,5,7,11) and **383…385** for the ten
+  solved ones — the unsolved batches are genuinely a little harder, which is
+  consistent with their loaders costing 240…245 instead of 205…215;
+* the joint rank of the 30 outputs' difference matrices is only **28…30**:
+  the outputs' difference patterns are nearly the same subspace, so the
+  *variation* between outputs is small even though the direction space is
+  all of F_2^77.
+
+**The exact factorisation a better plan must have.**  Let the 39+ products'
+directions `(alpha_u^p, alpha_v^p)` be a basis of the direction space and let
+`x_p(j), y_p(j)` be their low profiles.  For output `i` and column `j` the
+target row must be
+
+    d_j XOR d_0  =  SUM_p c_i[p] ( x_p(j) alpha_u^p + y_p(j) alpha_v^p )
+
+so the two coefficient columns that belong to one product must be
+**proportional with a ratio that is the same for all thirty outputs** (the
+profiles are global, only `c_i[p]` is per output).  That is the search
+constraint, and it is checkable in linear algebra.
+
+*Pre-registered kill criterion for H48:* a bounded search that cannot reach
+`nP <= 80` for one batch within one build day kills the mechanism; `nP <= 157`
+still beats the old 240…245 loaders and is worth ~+0.05 GM.
+
+## 2026-11-25 15:5x UTC — wake: the chemistry plan problem is now EXACTLY
+## characterised, and every cheap search variant is MEASURED dead
+
+### The new facts (all measured, tools in work/tools/)
+
+1. **The product classes fill the quotient space** (`chem_qdim.py`).
+   `dim W2 = 1118` of `dim(V/F) = 1120` for batch 14 (1117/1119 for batch 2):
+   the span of the 99x99 feature-product classes is **99.8 % of the whole
+   quotient**.  `Q subset W2` ✓ (as it must be).  So the classes a product
+   can have are *generic* in a 1120-dimensional space, and the counting is
+   decisive:
+
+   * the number of (u,v) factor pairs is 2^198, so the chance that a
+     *specified* class is a single product class is ~2^-922;
+   * the chance that a family of m independent product classes spans a
+     fixed 23-dimensional Q is ~C(m,23)/C(1118,23): **2^-120 at m = 39**
+     and still **2^-89 at m = 123** — goodpjw2008's own count.
+
+   **Therefore a cheaper plan CANNOT be found by any random, greedy or
+   factor-cover search.  It requires the structured "planting" search
+   goodpjw2008 describes in prose.**  This kills (with the right exponent)
+   the whole family of cheap ideas; it is the first time the exponent has
+   been computed on the *actual* quotient space.
+
+2. **The column blocking** (`chem_colrank.py`).  At every low column j the
+   30 outputs' difference rows span `r_j` dimensions:
+
+   | | solved batches (2,3,4,6,9,10,12) | 8, 13, 14 | unsolved (0,1,5,7,11) |
+   |---|---|---|---|
+   | r_j per column | 25…26 | 24…25 | **30** |
+   | sum_j r_j | 386…388 | 373 | **450** |
+   | rank of the union | 77 | 77 | 77 |
+
+   So the unsolved batches really are harder (every column is full rank 30),
+   and the public plans sit at 123…132 products against a direction bound of
+   `ceil(77/2) = 39`.
+
+3. **The public plans use everything** (`chem_featuse.py`): all 82 cached
+   features (68 bank ANDs + 6 low ANDs + 8 mixed) are referenced by the
+   products or the linear rests of every public batch.  There is **no free
+   Toffoli** in the feature overhead — the 82 is irreducible as published.
+
+4. **The public plan's products are dense and generic** (`chem_prof.py`,
+   batch 14): every product's two factors are XORs of ~30…48 bank features,
+   ~6…10 low features and ~2…6 mixed features; the 246 directions
+   (123 alpha_u + 123 alpha_v) are **all distinct** and span rank 75 — the
+   whole bank-feature space; the 240 low profiles are 120/123 distinct dense
+   16-bit patterns (14…20 active difference columns per product).
+
+5. **The fixed-factor idea, measured** (`chem_fixed.py`, `chem_fast.py`,
+   `chem_cover.py`).  Fixing one factor u makes `v |-> pi(u AND v)` LINEAR,
+   so the reachable classes form the subspace `L_u = span{pi(u AND f_j)}`
+   (dim up to 97).  Scanned 545…645 candidate factors (every feature, every
+   factor of the public plan's own products, random XORs):
+
+   * the best single factor covers **5 of the 30** targets — and those five
+     are the outputs whose class is ZERO (they are free: outputs 0, 6, 12,
+     18, 24 need no product at all; this also explains the 10 "pair sums"
+     found by `chem_pair.py`, all of them differences of zero-class
+     outputs);
+   * the sum of **12** such image subspaces (dim 1041 of 1120) still covers
+     only those 5 targets: the 25 other target classes are generic with
+     respect to them;
+   * no non-zero pair sum `q_i XOR q_j` is a single product class — as the
+     2^-922 count predicts.
+
+6. **The exact shape of a better plan** (new reformulation).  Write a
+   product as `g_p = u_p AND v_p` with `u_p = alpha_u + x(low)`,
+   `v_p = alpha_v + y(low)`.  Its column-difference contribution is
+   `d_y(j).alpha_u + d_x(j).alpha_v`, so a plan is a set of "slots"
+   (a row-selector in F_2^15 and a direction in the 77-dimensional
+   difference-row space), paired two per product, with the condition that
+   for every slot the thirty outputs' slot coefficients are all multiples of
+   ONE vector.  With `m = 39` products the 78 slot directions are almost a
+   basis of the 77-dimensional row space, so that condition becomes a
+   "Hadamard factorisation" of the targets' coordinate matrix — extremely
+   restrictive.  **This is why goodpjw2008 needs 5.3x dim(Q) products and
+   why the slack cannot be removed by choosing better products alone.**
+
+### What is now known to be DEAD (never re-run)
+
+* pruning / dropping public products (H46),
+* random product search, greedy factor cover, fixed-factor cover,
+  pair-sum trees (all measured above, with exponents),
+* dropping unused cached features (measured: none are unused).
+
+### The next move for H48 (now precisely specified)
+
+Reimplement goodpjw2008's **planting** step, which is public only as prose
+in `work/gens/goodpjw2008_chem_2026-11-25/...ipynb` (md cell 8):
+
+> "**Block 1** has 8 outputs and 89 dimensions.  He collects hundreds of
+> thousands of small spaces of low functions and looks for four that share
+> an 8-dimensional output space.  **Block 2** reuses block 1's 45 products
+> for free, and forces paired elements into Z.  **Block 3** removes one whole
+> low column from every remaining output."
+
+That is a search over *spaces of low functions* (subspaces of F_2^16) whose
+products share an output space — not over individual products.  It is the
+only formulation left that is not excluded by the counting above, and it is
+the one thing that could reach nP < 80 (worth +0.5…+3.4 GM).  Kill
+criterion (pre-registered): if the planting search cannot produce a plan
+with **nP <= 100** for batch 14 within one build day, the chemistry-plan
+lane is killed as a mechanism and the chemistry leg is declared closed at
+goodpjw2008's 123…132 products.
+
+## 2026-11-25 15:2x UTC — wake: the exact peephole optimizer is MEASURED
+## worthless on our tree (H49), and the release queue is repaired
+
+### H49 (NEW, KILLED) — the "exact optimization compiler" of
+### bandlapallisudharani/qcc-target34-all-three-circuit-optimization
+
+The release promises "target 34" but its own receipt shows the **measured**
+score is **31.679** (chem 255,384,620.97, invsqrt 63,055.0444, DQI
+3.3267e11) — all three legs are WORSE than our v149
+(chem 250,157,973.26, invsqrt 60,927.5774, DQI 3.0503e11), so it is
+**dominated**.  Verdict recorded in ADOPTED.tsv.
+
+What it ships is nevertheless a real mechanism, so it was harvested to
+`work/gens/bandlapalli_target34_2026-11-25/` and ported to
+`work/tools/kmb_opt.py`:
+
+* `pair_pass`   — commuting Toffoli/CCZ identities (identical pairs cancel;
+  two Toffolis with the same target and ONE shared control become
+  CX·CCX·CX, i.e. **2 magic ops -> 1**; the same for the same controls with
+  different targets; and the CCZ version);
+* `measure_pass` — the "measure-first" rewrite (a target-only X/CX/CCX
+  before a measurement on that wire is moved after it and becomes a
+  conditional phase correction);
+* `anf_pass`    — exact affine-frame ANF reconstruction: a short block is
+  synthesised symbolically and replaced by a shorter equivalent, with an
+  independent symbolic equality check before acceptance.
+
+**Measured on OUR v149 tree (`work/tools/kmb_opt.py`):**
+
+| leg | magic ops before | after | rules fired |
+|---|---|---|---|
+| `dfthcsos/angle_k_14.kmb` | 205 | 205 | **0** |
+| `invsqrt.kmb` | 1553 | 1553 | **0** |
+
+and the release's own receipt shows what the optimizer can do at its best:
+on their 351,536-CCX DQI it saved **7** CCX (`raw_ccx_saved: 7`,
+`pair_rewrites: 1`, `measure_ccx_saved: 6`) for a total tree improvement of
+**+0.00022 GM**.  At our v149 operating point
+(`dGM = GM/3 * dT/T`) 7 DQI Toffolis are worth **+0.00024 GM** — i.e.
+*nothing*.  **H49 is KILLED: the exact peephole optimizer cannot move our
+score.**  Do not re-run it on our trees.
+
+Why it cannot fire here (measured, `work/tools/kmb_mix.py`):
+
+* the chemistry loader's 205 magic ops are 82 cached-feature CCXs + 123
+  product CCXs; the products' two control wires are *feature* wires whose
+  value is recomputed by each product's own `pre` CNOT network and restored
+  afterwards, so no two Toffolis share a control **value**, and the
+  "same target + one shared control" rule needs one;
+* the loader's 57-Toffoli target has 57 *different* control pairs, so the
+  rule does not fire (3 window opportunities in 48 gates, 0 surviving the
+  commutation test);
+* `invsqrt.kmb` has 1470 Toffolis on 37 targets but again no shared
+  control pair (59 window opportunities, 0 surviving).
+
+The *algebraic* version of the rule (two products sharing the same first
+factor `u` merge into one Toffoli because
+`(u AND v1) XOR (u AND v2) = u AND (v1 XOR v2)`) is **also dead**: the 123
+products of a public plan have **123 distinct `alpha_u`** and **123 distinct
+`alpha_v`** (`work/tools/chem_prof.py`), so no two products share a factor.
+That is a further reason the plan search (H48) must find products that are
+*simultaneously* correct and factor-sharing — which is exactly the
+structured "planting" search goodpjw2008 describes.
+
+### Queue hygiene (two bugs found and fixed this wake)
+
+1. `radar_queue.py` called `harvest_queue.py add <ref> 'kernel' <title>
+   ...` but the tool's signature is `add <ref> <note> <kind>`; the title
+   landed in the note column, the kind became the title (rejected -> the
+   literal string `manual`), and the **title was lost**.  Since
+   `auto_adjudicate.py` reads column 0 as the kind and defaults anything
+   unknown to `dataset`, all **243 re-queued kernels would have been handed
+   to `kaggle datasets download` and closed wrongly** — exactly the bug
+   that had closed 19 rows earlier.  Fixed in `radar_queue.py`; the 243
+   damaged rows were repaired by the new `work/tools/radar_repair.py`
+   (which re-lists the competition kernels to recover the titles).
+2. `auto_adjudicate.py` extracted every candidate tree in full — including
+   the **700 MB `dqi.kmb`** — and never deleted it, so the 235-row queue
+   filled the disk (109 GB, 100 %, `OSError: [Errno 28] No space left on
+   device`) and the adjudicator crashed.  Fixed: member hashes are now
+   **streamed** from the zip, only the members we actually verify
+   (`invsqrt.kmb` + `dfthcsos/`) are extracted, and each candidate is
+   deleted after its verdict.  Disk now stays at 45 %.
+3. The adjudicator now orders the queue by the **score advertised in the
+   title** (highest first) instead of file order.
+
+## 2026-11-26 wake — v150 ADOPTED: goodpjw2008's v21 chemistry (LB 33.25564), +0.044 GM
+
+**Status: SUBMITTED (ref 58918753), 4 slots left.**  The public-release queue
+paid off within minutes of the wake starting: `goodpjw2008/qcc-shorter-chemistry-loaders-lb-33-25564`
+(version 21, published 2026-11-25 21:5x UTC) advertises **33.25564** and its
+kernel output ships the complete 18-file `submission.zip`.  This is the same
+line we adopted as v149 (their v2 chemistry), now three versions further.
+
+### What changed (measured with the unchanged official verifier)
+
+| leg | v149 | v150 (adopted) |
+|---|---|---|
+| chemistry score | 250,157,973.2614051 | **249,169,842.41339546** |
+| chemistry T | 13,166 | **13,114** |
+| lambda_eff | 46.91432538757801 | **46.91430370584927** |
+| angles Toffoli/pass | 3,333 | **3,307** |
+| error_1 / error_2 | 0.0199999998799 / 0.0199999998794 | 0.0199999998801 / 0.0199999998805 |
+| E_gap | 3.9148980000209 | 3.9148980000173 |
+| invsqrt | 60,927.57739905387 (37 q) | same bytes (`bb676b95`) |
+| DQI | 6f78ecdd (900 q) | same bytes (`6f78ecdd`) |
+
+Local official verification: `work/receipts/V150_CHEM_VERIFY.log` (PASS, all
+gates).  `invsqrt.kmb` and `dqi.kmb` are byte-identical to v149, whose in-kernel
+moat-lab receipt (V149-RECEIPT-PASS) covers them; the DQI bytes are also the
+public 33.17067 release's bytes.  Gate: `GATE-OK 0269bb6a1aa0e404`, receipt
+`work/receipts/V150_RECEIPT.json`, tree `work/trees/v150`.  Predicted GM
+**33.25562954624495**; the advertised public LB of the same bytes is 33.25564.
+
+### What the release does (generator source harvested)
+
+`work/gens/goodpjw2008_chem_v21_2026-11-26/` (notebook + kernel log + their
+receipt).  It pins maoxin123's v4 table `ec85d969` and the 15 public loaders by
+sha256, keeps **loader 0 unchanged**, re-solves **ten** loaders and rebuilds
+**four** for the re-valued dead words, and refits W/H2_I.  Their own numbers:
+version 20 = 33.25226; v21 shaves loader 12 (210→209) and loader 10 (213→212)
+and re-solves 13/14 at the same length.
+
+**The plan format is fully machine-readable in their notebook (cell 5):**
+`KS = [[k, nP, early, c1, c2], ...]` for the ten wired loaders
+(k = 2,3,4,6,8,9,10,12,13,14 with nP = 132,130,131,131,123,130,130,127,124,124),
+and `BS = [[k, nbytes], ...]` = zlib-compressed sliding programs for
+k = 1,5,7,11.  A base85 PACK blob (sha256 e25fe703…) holds all 14 plans, and
+`build_loader` / `build_window` are the emitters.  We can now decode, edit and
+re-emit their loaders locally.
+
+### H48 status: CONFIRMED as a lane, and now precisely localised
+
+Per-loader Toffolis in v150 (official reader):
+
+```
+k :  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14
+T : 245 240 214 212 213 240 213 240 205 212 212 240 209 206 206   (sum 3,307)
+```
+
+The **five group-start loaders k = 0,1,5,7,11 are still 240–245**; goodpjw has
+not solved them in 21 versions either.  Everything else is 205–214.  Prize if
+they reached ~215 each: 5 × ~28 × 2 passes × 0.000845 GM/T = **+0.24 GM**.
+
+New structural measurement this wake (function tracking on the v150 circuits,
+`chem_extract.py`; classification = truth table constant within each bank):
+
+* **wired (solved) loaders**: 82 features = **68 bank-only + 14 low/mixed**
+  (6 low ANDs + 8 mixed), 123–132 products;
+* **group-start (unwired) loaders**: 144 features = **5 bank-only + 139
+  low/mixed**, 96 products.
+
+So the two families are genuinely different decompositions: the wired scheme
+captures all low dependence in 14 cached features and pays 123–132 products;
+the sliding scheme uses word-dependent (hence low-dependent) features and pays
+143 features + 96 products.  The old extraction claim "143 bank features" is
+really "143 low-dependent features"; the blocker is finding products whose
+factors live in the 82-feature (68 bank AND + 6 low AND + 8 mixed) space.
+
+Dead-word freedom per batch (the planting budget; amplitude < 1e-9):
+
+```
+k :  0   1   2   3   4   5   6   7   8   9  10  11  12  13  14
+dead: 5  67  56 214 191  60 110 131 190 222 187 240 195 247 285
+```
+
+**Consequence for the H48 kill criterion:** k0 (5 dead) is hopeless and
+k1/k5 (60–67) are very tight, but **k7 (131) and k11 (240) have as much
+planting freedom as solved batches** (solved: 110–285).  The next build should
+attack **k11 first** (most freedom) with the 82-feature scheme, then k7.
+Pre-registered: a planting search that cannot reach **nP ≤ 157** (→ 239 T,
+a 1-Toffoli win) for k11 within one build day kills the 82-feature approach for
+group starts; reaching nP ≤ 132 (→ 214) is the full +0.24 GM.
+
+### Queue
+
+`goodpjw2008/qcc-shorter-chemistry-loaders-lb-33-25564` → **adopted** in
+`ADOPTED.tsv` (via `harvest_queue.py done`).  The other 33.25xxx titles
+(`areebbb/...33-25060`, `ghazarosbarseghyan91/vqcc-33-25057...`) are v20-line
+derivatives and are now dominated by v150.  Four adjudicators are running on
+disjoint slices (detached with `setsid`, unbuffered logs in
+`work/harvest/logs/`); PENDING 248 at the time of writing.
+
+### Re-ranked queue after this wake
+
+1. **H48 (group-start loaders)** — +0.24 GM; now localised to k11/k7 with a
+   decoded plan format and a measured dead-word budget.  Build lane.
+2. **H41 (invsqrt 37 → 36 q)** — +0.31 GM; needs a new square-root construction.
+3. **H44 (factorisation shape C)** — large but blocked on the 20 mHa gate and
+   a full 15-loader rebuild.
+4. **DQI width** — +0.45 GM, blocked (H22 closed, H32-m6 blocked).
+5. **H40 (weight refit)** — ≤ +0.003 GM.

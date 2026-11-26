@@ -455,3 +455,67 @@ been observed publicly for a tree that scored cleanly.
   `4b572141` 305,041,647,011.3978.
 * invsqrt floor 60,927.57739905387 (`bb676b95`), runner-up 60,955.298422
   (`52e8d4e6649b`).
+
+## 2026-11-25 01:2x UTC — v148 prediction
+
+* **Predicted public GM 33.21008** (clean DQI draw), from
+  invsqrt 60,927.57739905387 / DQI clean 305,033,672,024.33 /
+  chemistry 250,195,979.3541336, using the same REF constants as v147.
+* The public board for the same three legs (goodpjw2008 / ozertuu) reads
+  **33.2101** ⇒ calibration error expected ≤ 5e-5, inside the public-salt band
+  (v144 −0.0000447, v146 −0.0000404).
+* If the board draws the default-salt DQI (4 failed shots) the score is
+  ≈33.0429; that branch has never been observed for a tree that scored cleanly.
+* Chemistry measurement is exact (deterministic, no salt): the three public
+  variants and our assembled tree reproduce to 1e-7 relative.
+
+## 2026-11-25 01:53 UTC — v148 ACTUAL
+
+* **v148 public score 33.21011** (ref 58859204), predicted **33.21008**.
+  Residual **+0.00003** — the clean-DQI-draw branch was right, and the
+  prediction model (invsqrt / DQI / chemistry local PASS values with the
+  v147 REF constants) is unbiased to ~3e-5.
+* Public-salt band history: v144 −0.0000447, v146 −0.0000404, v148 +0.00003.
+  The band is asymmetric-but-tiny: ±5e-5 covers every observed draw.
+* Consequence for v149: predicted 33.21174403 ⇒ expected public ≈
+  **33.2117–33.2118** (goodpjw2008's identical bytes read 33.21179 on the
+  public board, i.e. +4.6e-5 vs our prediction — same order).
+* No-silent-day: v148 submitted 01:16 UTC, v147 on 2026-11-23 06:11 UTC
+  (>43 h). v149 will be the second submission of the 2026-11-25 UTC day;
+  budget after v149 = 3/5.
+
+## 2026-11-25 12:0x UTC — v149 ACTUAL
+
+* **v149 public score 33.21179** (ref 58861394, submitted 2026-11-25
+  02:13:04 UTC), predicted **33.21174403**.  Residual **+0.0000459**.
+  The bytes are identical to goodpjw2008's public release, which also reads
+  33.21179 — a third independent confirmation that the clean-DQI-draw
+  prediction model is unbiased.
+* Public-salt band history: v144 −0.0000447, v146 −0.0000404, v148 +0.00003,
+  v149 +0.0000459.  ±5e-5 covers every observed draw.
+* Predictions vs actuals this wake:
+  * `brot` 7 → 6 (chem_brot.py): **predicted** −3.5 % score ⇒ +0.40 GM;
+    **actual** the official metric FAILS (error_1 4.150, error_2 0.858 Ha vs
+    the 0.020 Ha gate).  The prediction was wrong because it ignored the
+    20 mHa accuracy gate, which our shipped words sit exactly on.  Lesson:
+    any chemistry word change must be scored with `evaluate_words` BEFORE
+    costing the loaders.
+  * factorisation shape C = 46 → 16 (chem_shape.py): **predicted** T_state
+    4550 → 2101 (−18.6 % of T_total, ≈ +2 GM if `lambda_eff` held);
+    **actual** untested — the 20 mHa error_2 gate pins C, and changing the
+    weights changes the words (⇒ 15 loader rebuilds).  Do not report a score
+    for this cell until the metric passes.
+
+## 2026-11-26 01:0x UTC — v150 (goodpjw2008 v21 chemistry) adopted + submitted
+
+* **Prediction:** chemistry score 249,169,842.41339546, T 13,114, lambda_eff
+  46.91430370584927 ⇒ GM = 33.21179 × (13166/13114)^(1/3) = **33.25562955**.
+  The release's own title claims 33.25564.
+* **Actual (local official verifier):** PASS, score 249,169,842.41339546,
+  T 13,114, lambda_eff 46.91430370584927, error_1 0.019999999880108168,
+  error_2 0.019999999880538476, E_gap 3.914898000017274.
+* **Board:** submission ref 58918753 (2026-11-26 01:03 UTC); score pending at
+  write time.  Expect 33.25564 ± 5e-5 (public-salt band).
+* **Lesson:** the chemistry leg is now a pure adoption race on the goodpjw2008
+  line; their version cadence is ~1/day and each version is worth +0.003 to
+  +0.044 GM.  Check the queue for their slug every wake.

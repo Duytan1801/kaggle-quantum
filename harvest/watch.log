@@ -3423,3 +3423,1457 @@ You have been rate limited. Wait a little while before retrying.
 2026-11-23 05:59:41 pass done: pending=8 (new 3) authors=172
 2026-11-23 06:10:01 pass done: pending=10 (new 2) authors=172
 2026-11-23 06:20:22 pass done: pending=4 (new 3) authors=174
+2026-11-23 06:30:44 pass done: pending=7 (new 3) authors=174
+2026-11-23 06:41:05 pass done: pending=10 (new 4) authors=174
+2026-11-23 07:01:51 pass done: pending=14 (new 6) authors=174
+2026-11-23 07:12:16 pass done: pending=13 (new 1) authors=174
+2026-11-23 07:22:38 pass done: pending=15 (new 2) authors=175
+2026-11-23 07:32:58 pass done: pending=18 (new 4) authors=176
+2026-11-23 07:43:16 pass done: pending=17 (new 0) authors=176
+2026-11-23 07:53:36 pass done: pending=19 (new 2) authors=176
+2026-11-23 08:14:27 pass done: pending=10 (new 3) authors=176
+2026-11-23 08:24:46 pass done: pending=13 (new 4) authors=176
+2026-11-23 08:35:07 pass done: pending=5 (new 1) authors=177
+2026-11-23 08:45:26 pass done: pending=7 (new 2) authors=178
+2026-11-23 08:55:44 pass done: pending=7 (new 0) authors=178
+2026-11-23 09:06:07 pass done: pending=9 (new 2) authors=178
+2026-11-23 09:26:53 pass done: pending=13 (new 5) authors=178
+2026-11-23 09:37:17 pass done: pending=7 (new 4) authors=179
+2026-11-23 09:47:40 pass done: pending=8 (new 1) authors=179
+2026-11-23 09:58:01 pass done: pending=12 (new 4) authors=180
+2026-11-23 10:08:21 pass done: pending=9 (new 6) authors=180
+2026-11-23 10:18:41 pass done: pending=9 (new 0) authors=180
+2026-11-23 10:39:20 pass done: pending=26 (new 17) authors=180
+2026-11-23 10:49:40 pass done: pending=26 (new 1) authors=180
+2026-11-23 11:00:02 pass done: pending=25 (new 0) authors=180
+2026-11-23 11:10:22 pass done: pending=27 (new 2) authors=180
+2026-11-23 11:20:42 pass done: pending=27 (new 1) authors=180
+2026-11-23 11:30:58 pass done: pending=28 (new 2) authors=180
+2026-11-25 00:36:20 pass done: pending=73 (new 45) authors=185
+2026-11-25 00:40:06 pass done: pending=134 (new 67) authors=185
+2026-11-25 00:50:27 pass done: pending=88 (new 0) authors=185
+2026-11-25 01:00:51 pass done: pending=89 (new 1) authors=185
+2026-11-25 01:11:11 pass done: pending=89 (new 1) authors=185
+2026-11-25 01:21:30 pass done: pending=89 (new 0) authors=185
+2026-11-25 01:31:53 pass done: pending=65 (new 1) authors=185
+2026-11-25 01:54:34 pass done: pending=70 (new 6) authors=186
+2026-11-25 02:04:59 pass done: pending=71 (new 3) authors=186
+2026-11-25 02:15:23 pass done: pending=69 (new 1) authors=186
+2026-11-25 02:25:48 pass done: pending=70 (new 2) authors=186
+2026-11-25 02:36:11 pass done: pending=69 (new 0) authors=186
+2026-11-25 02:46:32 pass done: pending=71 (new 2) authors=187
+2026-11-25 03:09:55 pass done: pending=11 (new 3) authors=187
+2026-11-25 03:20:18 pass done: pending=12 (new 1) authors=188
+2026-11-25 03:30:40 pass done: pending=15 (new 3) authors=188
+2026-11-25 03:41:01 pass done: pending=14 (new 0) authors=188
+2026-11-25 03:51:23 pass done: pending=15 (new 1) authors=188
+2026-11-25 04:01:46 pass done: pending=32 (new 0) authors=188
+2026-11-25 04:23:26 pass done: pending=41 (new 9) authors=188
+2026-11-25 04:33:48 pass done: pending=29 (new 1) authors=188
+2026-11-25 04:44:12 pass done: pending=27 (new 0) authors=188
+2026-11-25 04:54:34 pass done: pending=25 (new 1) authors=188
+2026-11-25 05:04:59 pass done: pending=21 (new 0) authors=188
+2026-11-25 05:15:23 pass done: pending=21 (new 1) authors=188
+2026-11-25 05:37:44 pass done: pending=26 (new 6) authors=188
+2026-11-25 05:48:11 pass done: pending=28 (new 4) authors=188
+2026-11-25 05:58:36 pass done: pending=29 (new 4) authors=188
+2026-11-25 06:08:57 pass done: pending=23 (new 0) authors=188
+2026-11-25 06:19:22 pass done: pending=18 (new 1) authors=188
+2026-11-25 06:29:48 pass done: pending=14 (new 1) authors=189
+2026-11-25 06:58:41 pass done: pending=13 (new 8) authors=189
+2026-11-25 07:09:11 pass done: pending=12 (new 1) authors=190
+2026-11-25 07:19:34 pass done: pending=11 (new 1) authors=191
+2026-11-25 07:29:55 pass done: pending=9 (new 0) authors=191
+2026-11-25 07:40:15 pass done: pending=10 (new 2) authors=191
+2026-11-25 07:50:37 pass done: pending=245 (new 0) authors=191
+2026-11-25 08:12:16 pass done: pending=240 (new 5) authors=191
+2026-11-25 08:22:36 pass done: pending=237 (new 2) authors=191
+2026-11-25 08:32:56 pass done: pending=237 (new 2) authors=191
+2026-11-25 08:43:22 pass done: pending=236 (new 2) authors=192
+2026-11-25 08:53:50 pass done: pending=235 (new 1) authors=192
+2026-11-25 09:04:19 pass done: pending=235 (new 1) authors=193
+2026-11-25 09:34:12 pass done: pending=237 (new 3) authors=193
+2026-11-25 09:44:36 pass done: pending=237 (new 4) authors=193
+2026-11-25 09:54:58 pass done: pending=235 (new 1) authors=193
+2026-11-25 10:05:26 pass done: pending=232 (new 3) authors=193
+2026-11-25 10:16:06 pass done: pending=232 (new 1) authors=193
+2026-11-25 10:26:44 pass done: pending=232 (new 0) authors=193
+2026-11-25 10:50:48 pass done: pending=225 (new 2) authors=193
+2026-11-25 11:01:19 pass done: pending=223 (new 1) authors=193
+2026-11-25 11:11:43 pass done: pending=222 (new 0) authors=193
+2026-11-25 23:40:33 POLL-FAILED (rc=1): kaggle kernels list --competition google-verifiable-quantum-circuit-compilation --sort-by dateRun --page-size 40 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:34 POLL-FAILED (rc=1): kaggle datasets list --sort-by updated --page-size 40 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:34 POLL-FAILED (rc=1): kaggle datasets list --sort-by published --page-size 40 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:34 POLL-FAILED (rc=1): kaggle datasets list -s qcc --sort-by updated --page-size 40 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:35 POLL-FAILED (rc=1): kaggle datasets list -s vqcc --sort-by updated --page-size 40 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:35 POLL-FAILED (rc=1): kaggle datasets list -s quantum circuit --sort-by updated --page-size 40 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:35 POLL-FAILED (rc=1): kaggle datasets list -s invsqrt --sort-by updated --page-size 40 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:35 POLL-FAILED (rc=1): kaggle datasets list -s dqi --sort-by updated --page-size 40 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:36 POLL-FAILED (rc=1): kaggle datasets list -s verifiable quantum --sort-by updated --page-size 40 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:36 POLL-FAILED (rc=1): kaggle datasets list -s circuit compilation --sort-by updated --page-size 40 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:36 POLL-FAILED (rc=1): kaggle datasets list -s dfthc --sort-by updated --page-size 40 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:37 POLL-FAILED (rc=1): kaggle datasets list --user aakashhowlader --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:37 POLL-FAILED (rc=1): kaggle kernels list --user aakashhowlader --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:37 POLL-FAILED (rc=1): kaggle datasets list --user abcode80 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:38 POLL-FAILED (rc=1): kaggle kernels list --user abcode80 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:38 POLL-FAILED (rc=1): kaggle datasets list --user abdelghanicharouiti --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:38 POLL-FAILED (rc=1): kaggle kernels list --user abdelghanicharouiti --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:39 POLL-FAILED (rc=1): kaggle datasets list --user abdelrazeksheta --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:39 POLL-FAILED (rc=1): kaggle kernels list --user abdelrazeksheta --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:39 POLL-FAILED (rc=1): kaggle datasets list --user adilshamim8 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:40 POLL-FAILED (rc=1): kaggle kernels list --user adilshamim8 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:40 POLL-FAILED (rc=1): kaggle datasets list --user ahmedberatozer --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:40 POLL-FAILED (rc=1): kaggle kernels list --user ahmedberatozer --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:41 POLL-FAILED (rc=1): kaggle datasets list --user ahoirg --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:41 POLL-FAILED (rc=1): kaggle kernels list --user ahoirg --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:41 POLL-FAILED (rc=1): kaggle datasets list --user aimanalshalfi --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:42 POLL-FAILED (rc=1): kaggle kernels list --user aimanalshalfi --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:42 POLL-FAILED (rc=1): kaggle datasets list --user aiokajima --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:42 POLL-FAILED (rc=1): kaggle kernels list --user aiokajima --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:43 POLL-FAILED (rc=1): kaggle datasets list --user alexahern --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:43 POLL-FAILED (rc=1): kaggle kernels list --user alexahern --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:43 POLL-FAILED (rc=1): kaggle datasets list --user alexchilton --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:43 POLL-FAILED (rc=1): kaggle kernels list --user alexchilton --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:44 POLL-FAILED (rc=1): kaggle datasets list --user almondlabs --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:44 POLL-FAILED (rc=1): kaggle kernels list --user almondlabs --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:44 POLL-FAILED (rc=1): kaggle datasets list --user amarkum --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:45 POLL-FAILED (rc=1): kaggle kernels list --user amarkum --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:45 POLL-FAILED (rc=1): kaggle datasets list --user andrea0106 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:45 POLL-FAILED (rc=1): kaggle kernels list --user andrea0106 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:46 POLL-FAILED (rc=1): kaggle datasets list --user ankiteshtiwari --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:46 POLL-FAILED (rc=1): kaggle kernels list --user ankiteshtiwari --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:46 POLL-FAILED (rc=1): kaggle datasets list --user apogean --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:47 POLL-FAILED (rc=1): kaggle kernels list --user apogean --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:47 POLL-FAILED (rc=1): kaggle datasets list --user areebbb --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:47 POLL-FAILED (rc=1): kaggle kernels list --user areebbb --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:48 POLL-FAILED (rc=1): kaggle datasets list --user ariear --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:48 POLL-FAILED (rc=1): kaggle kernels list --user ariear --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:48 POLL-FAILED (rc=1): kaggle datasets list --user arizalfirdaus123 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:49 POLL-FAILED (rc=1): kaggle kernels list --user arizalfirdaus123 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:49 POLL-FAILED (rc=1): kaggle datasets list --user arsen123 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:49 POLL-FAILED (rc=1): kaggle kernels list --user arsen123 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:50 POLL-FAILED (rc=1): kaggle datasets list --user arthjshah --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:50 POLL-FAILED (rc=1): kaggle kernels list --user arthjshah --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:50 POLL-FAILED (rc=1): kaggle datasets list --user arumpuri --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:51 POLL-FAILED (rc=1): kaggle kernels list --user arumpuri --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:51 POLL-FAILED (rc=1): kaggle datasets list --user ashmitachakraborty21 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:51 POLL-FAILED (rc=1): kaggle kernels list --user ashmitachakraborty21 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:51 POLL-FAILED (rc=1): kaggle datasets list --user ashtonpeng --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:52 POLL-FAILED (rc=1): kaggle kernels list --user ashtonpeng --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:52 POLL-FAILED (rc=1): kaggle datasets list --user aslan007x --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:52 POLL-FAILED (rc=1): kaggle kernels list --user aslan007x --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:53 POLL-FAILED (rc=1): kaggle datasets list --user aslanahmedov --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:53 POLL-FAILED (rc=1): kaggle kernels list --user aslanahmedov --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:53 POLL-FAILED (rc=1): kaggle datasets list --user asteriospanoras --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:54 POLL-FAILED (rc=1): kaggle kernels list --user asteriospanoras --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:54 POLL-FAILED (rc=1): kaggle datasets list --user atakanaldemir --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:54 POLL-FAILED (rc=1): kaggle kernels list --user atakanaldemir --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:55 POLL-FAILED (rc=1): kaggle datasets list --user auriclee --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:55 POLL-FAILED (rc=1): kaggle kernels list --user auriclee --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:55 POLL-FAILED (rc=1): kaggle datasets list --user aviral342 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:56 POLL-FAILED (rc=1): kaggle kernels list --user aviral342 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:56 POLL-FAILED (rc=1): kaggle datasets list --user ayman0al0araishi --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:56 POLL-FAILED (rc=1): kaggle kernels list --user ayman0al0araishi --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:57 POLL-FAILED (rc=1): kaggle datasets list --user balramsrinivasan --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:57 POLL-FAILED (rc=1): kaggle kernels list --user balramsrinivasan --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:57 POLL-FAILED (rc=1): kaggle datasets list --user banwait13 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:58 POLL-FAILED (rc=1): kaggle kernels list --user banwait13 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:58 POLL-FAILED (rc=1): kaggle datasets list --user bhaviklimani --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:58 POLL-FAILED (rc=1): kaggle kernels list --user bhaviklimani --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:59 POLL-FAILED (rc=1): kaggle datasets list --user bhavinmoriya --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:59 POLL-FAILED (rc=1): kaggle kernels list --user bhavinmoriya --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:40:59 POLL-FAILED (rc=1): kaggle datasets list --user billedenfield --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:00 POLL-FAILED (rc=1): kaggle kernels list --user billedenfield --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:00 POLL-FAILED (rc=1): kaggle datasets list --user bingchenzhao --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:00 POLL-FAILED (rc=1): kaggle kernels list --user bingchenzhao --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:00 POLL-FAILED (rc=1): kaggle datasets list --user bobber --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:01 POLL-FAILED (rc=1): kaggle kernels list --user bobber --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:01 POLL-FAILED (rc=1): kaggle datasets list --user boristown --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:01 POLL-FAILED (rc=1): kaggle kernels list --user boristown --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:02 POLL-FAILED (rc=1): kaggle datasets list --user busyaprime --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:02 POLL-FAILED (rc=1): kaggle kernels list --user busyaprime --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:02 POLL-FAILED (rc=1): kaggle datasets list --user c6519219f598 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:03 POLL-FAILED (rc=1): kaggle kernels list --user c6519219f598 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:03 POLL-FAILED (rc=1): kaggle datasets list --user caffeinemiller --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:03 POLL-FAILED (rc=1): kaggle kernels list --user caffeinemiller --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:04 POLL-FAILED (rc=1): kaggle datasets list --user capecora --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:04 POLL-FAILED (rc=1): kaggle kernels list --user capecora --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:04 POLL-FAILED (rc=1): kaggle datasets list --user carsonrodrigues --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:05 POLL-FAILED (rc=1): kaggle kernels list --user carsonrodrigues --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:05 POLL-FAILED (rc=1): kaggle datasets list --user chinnachundu --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:05 POLL-FAILED (rc=1): kaggle kernels list --user chinnachundu --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:06 POLL-FAILED (rc=1): kaggle datasets list --user chunhsn --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:06 POLL-FAILED (rc=1): kaggle kernels list --user chunhsn --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:06 POLL-FAILED (rc=1): kaggle datasets list --user codeatlantis --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:07 POLL-FAILED (rc=1): kaggle kernels list --user codeatlantis --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:07 POLL-FAILED (rc=1): kaggle datasets list --user colabprober --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:07 POLL-FAILED (rc=1): kaggle kernels list --user colabprober --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:08 POLL-FAILED (rc=1): kaggle datasets list --user cosmorin --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:08 POLL-FAILED (rc=1): kaggle kernels list --user cosmorin --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:08 POLL-FAILED (rc=1): kaggle datasets list --user cpscub --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:09 POLL-FAILED (rc=1): kaggle kernels list --user cpscub --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:09 POLL-FAILED (rc=1): kaggle datasets list --user danielaijdkx --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:09 POLL-FAILED (rc=1): kaggle kernels list --user danielaijdkx --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:09 POLL-FAILED (rc=1): kaggle datasets list --user danishlynxthembones --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:10 POLL-FAILED (rc=1): kaggle kernels list --user danishlynxthembones --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:10 POLL-FAILED (rc=1): kaggle datasets list --user dataset066 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:10 POLL-FAILED (rc=1): kaggle kernels list --user dataset066 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:11 POLL-FAILED (rc=1): kaggle datasets list --user deba10106 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:11 POLL-FAILED (rc=1): kaggle kernels list --user deba10106 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:11 POLL-FAILED (rc=1): kaggle datasets list --user dehaiwang --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:12 POLL-FAILED (rc=1): kaggle kernels list --user dehaiwang --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:12 POLL-FAILED (rc=1): kaggle datasets list --user dennis6886 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:12 POLL-FAILED (rc=1): kaggle kernels list --user dennis6886 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:13 POLL-FAILED (rc=1): kaggle datasets list --user dfenglei --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:13 POLL-FAILED (rc=1): kaggle kernels list --user dfenglei --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:13 POLL-FAILED (rc=1): kaggle datasets list --user dmitriigluzdov --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:14 POLL-FAILED (rc=1): kaggle kernels list --user dmitriigluzdov --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:14 POLL-FAILED (rc=1): kaggle datasets list --user drpatrickchan --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:14 POLL-FAILED (rc=1): kaggle kernels list --user drpatrickchan --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:15 POLL-FAILED (rc=1): kaggle datasets list --user dziyanavalenta --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:15 POLL-FAILED (rc=1): kaggle kernels list --user dziyanavalenta --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:15 POLL-FAILED (rc=1): kaggle datasets list --user evgendvorkin --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:16 POLL-FAILED (rc=1): kaggle kernels list --user evgendvorkin --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:16 POLL-FAILED (rc=1): kaggle datasets list --user geobrando --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:16 POLL-FAILED (rc=1): kaggle kernels list --user geobrando --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:16 POLL-FAILED (rc=1): kaggle datasets list --user geocables --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:17 POLL-FAILED (rc=1): kaggle kernels list --user geocables --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:17 POLL-FAILED (rc=1): kaggle datasets list --user georgymamarin --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:17 POLL-FAILED (rc=1): kaggle kernels list --user georgymamarin --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:18 POLL-FAILED (rc=1): kaggle datasets list --user getfreecarcheck --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:18 POLL-FAILED (rc=1): kaggle kernels list --user getfreecarcheck --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:18 POLL-FAILED (rc=1): kaggle datasets list --user ghazarosbarseghyan91 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:19 POLL-FAILED (rc=1): kaggle kernels list --user ghazarosbarseghyan91 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:19 POLL-FAILED (rc=1): kaggle datasets list --user goodpjw2008 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:19 POLL-FAILED (rc=1): kaggle kernels list --user goodpjw2008 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:20 POLL-FAILED (rc=1): kaggle datasets list --user grantprater --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:20 POLL-FAILED (rc=1): kaggle kernels list --user grantprater --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:20 POLL-FAILED (rc=1): kaggle datasets list --user haomingyang0629 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:21 POLL-FAILED (rc=1): kaggle kernels list --user haomingyang0629 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:21 POLL-FAILED (rc=1): kaggle datasets list --user hassanabdulhafid --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:21 POLL-FAILED (rc=1): kaggle kernels list --user hassanabdulhafid --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:22 POLL-FAILED (rc=1): kaggle datasets list --user hayatohikawa --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:22 POLL-FAILED (rc=1): kaggle kernels list --user hayatohikawa --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:22 POLL-FAILED (rc=1): kaggle datasets list --user heliosli --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:23 POLL-FAILED (rc=1): kaggle kernels list --user heliosli --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:23 POLL-FAILED (rc=1): kaggle datasets list --user henritonnang --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:23 POLL-FAILED (rc=1): kaggle kernels list --user henritonnang --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:24 POLL-FAILED (rc=1): kaggle datasets list --user hosen42 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:24 POLL-FAILED (rc=1): kaggle kernels list --user hosen42 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:24 POLL-FAILED (rc=1): kaggle datasets list --user hubertsidorowicz --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:24 POLL-FAILED (rc=1): kaggle kernels list --user hubertsidorowicz --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:25 POLL-FAILED (rc=1): kaggle datasets list --user huynhtanphucb2303893 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:25 POLL-FAILED (rc=1): kaggle kernels list --user huynhtanphucb2303893 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:25 POLL-FAILED (rc=1): kaggle datasets list --user infnitycoder2009 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:26 POLL-FAILED (rc=1): kaggle kernels list --user infnitycoder2009 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:26 POLL-FAILED (rc=1): kaggle datasets list --user ishankarnick --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:26 POLL-FAILED (rc=1): kaggle kernels list --user ishankarnick --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:27 POLL-FAILED (rc=1): kaggle datasets list --user issacizrealdavis --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:27 POLL-FAILED (rc=1): kaggle kernels list --user issacizrealdavis --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:27 POLL-FAILED (rc=1): kaggle datasets list --user iwanttorungemma9b --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:28 POLL-FAILED (rc=1): kaggle kernels list --user iwanttorungemma9b --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:28 POLL-FAILED (rc=1): kaggle datasets list --user jeffemerson --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:28 POLL-FAILED (rc=1): kaggle kernels list --user jeffemerson --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:29 POLL-FAILED (rc=1): kaggle datasets list --user jeffryjames --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:29 POLL-FAILED (rc=1): kaggle kernels list --user jeffryjames --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:29 POLL-FAILED (rc=1): kaggle datasets list --user jezzlin --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:30 POLL-FAILED (rc=1): kaggle kernels list --user jezzlin --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:30 POLL-FAILED (rc=1): kaggle datasets list --user jiaobinliu --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:30 POLL-FAILED (rc=1): kaggle kernels list --user jiaobinliu --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:31 POLL-FAILED (rc=1): kaggle datasets list --user jingjiehuang88 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:31 POLL-FAILED (rc=1): kaggle kernels list --user jingjiehuang88 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:31 POLL-FAILED (rc=1): kaggle datasets list --user junmiaotiao --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:31 POLL-FAILED (rc=1): kaggle kernels list --user junmiaotiao --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:32 POLL-FAILED (rc=1): kaggle datasets list --user kamali2727 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:32 POLL-FAILED (rc=1): kaggle kernels list --user kamali2727 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:32 POLL-FAILED (rc=1): kaggle datasets list --user karel22 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:33 POLL-FAILED (rc=1): kaggle kernels list --user karel22 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:33 POLL-FAILED (rc=1): kaggle datasets list --user kawh1111 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:33 POLL-FAILED (rc=1): kaggle kernels list --user kawh1111 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:34 POLL-FAILED (rc=1): kaggle datasets list --user kindasomethin --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:34 POLL-FAILED (rc=1): kaggle kernels list --user kindasomethin --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:34 POLL-FAILED (rc=1): kaggle datasets list --user kirderf --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:35 POLL-FAILED (rc=1): kaggle kernels list --user kirderf --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:35 POLL-FAILED (rc=1): kaggle datasets list --user kirilltym --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:35 POLL-FAILED (rc=1): kaggle kernels list --user kirilltym --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:36 POLL-FAILED (rc=1): kaggle datasets list --user koushikrudra --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:36 POLL-FAILED (rc=1): kaggle kernels list --user koushikrudra --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:36 POLL-FAILED (rc=1): kaggle datasets list --user kozykappa --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:37 POLL-FAILED (rc=1): kaggle kernels list --user kozykappa --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:37 POLL-FAILED (rc=1): kaggle datasets list --user leadchangegroup --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:37 POLL-FAILED (rc=1): kaggle kernels list --user leadchangegroup --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:38 POLL-FAILED (rc=1): kaggle datasets list --user leotang09 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:38 POLL-FAILED (rc=1): kaggle kernels list --user leotang09 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:38 POLL-FAILED (rc=1): kaggle datasets list --user lionalmedong --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:39 POLL-FAILED (rc=1): kaggle kernels list --user lionalmedong --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:39 POLL-FAILED (rc=1): kaggle datasets list --user liuzewen123 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:39 POLL-FAILED (rc=1): kaggle kernels list --user liuzewen123 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:39 POLL-FAILED (rc=1): kaggle datasets list --user loiskleinner --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:40 POLL-FAILED (rc=1): kaggle kernels list --user loiskleinner --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:40 POLL-FAILED (rc=1): kaggle datasets list --user loxigicck --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:40 POLL-FAILED (rc=1): kaggle kernels list --user loxigicck --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:41 POLL-FAILED (rc=1): kaggle datasets list --user lucifer19 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:41 POLL-FAILED (rc=1): kaggle kernels list --user lucifer19 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:41 POLL-FAILED (rc=1): kaggle datasets list --user malachiwmoody --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:42 POLL-FAILED (rc=1): kaggle kernels list --user malachiwmoody --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:42 POLL-FAILED (rc=1): kaggle datasets list --user malyshevdanil --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:42 POLL-FAILED (rc=1): kaggle kernels list --user malyshevdanil --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:43 POLL-FAILED (rc=1): kaggle datasets list --user manvenderraparia --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:43 POLL-FAILED (rc=1): kaggle kernels list --user manvenderraparia --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:43 POLL-FAILED (rc=1): kaggle datasets list --user manwithacat --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:44 POLL-FAILED (rc=1): kaggle kernels list --user manwithacat --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:44 POLL-FAILED (rc=1): kaggle datasets list --user maoxin123 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:44 POLL-FAILED (rc=1): kaggle kernels list --user maoxin123 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:45 POLL-FAILED (rc=1): kaggle datasets list --user marculera --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:45 POLL-FAILED (rc=1): kaggle kernels list --user marculera --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:45 POLL-FAILED (rc=1): kaggle datasets list --user marupibneyalid --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:46 POLL-FAILED (rc=1): kaggle kernels list --user marupibneyalid --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:46 POLL-FAILED (rc=1): kaggle datasets list --user masumhuq --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:46 POLL-FAILED (rc=1): kaggle kernels list --user masumhuq --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:47 POLL-FAILED (rc=1): kaggle datasets list --user matousakura --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:47 POLL-FAILED (rc=1): kaggle kernels list --user matousakura --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:47 POLL-FAILED (rc=1): kaggle datasets list --user mdyousuf38125 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:47 POLL-FAILED (rc=1): kaggle kernels list --user mdyousuf38125 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:48 POLL-FAILED (rc=1): kaggle datasets list --user mendaparameet --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:48 POLL-FAILED (rc=1): kaggle kernels list --user mendaparameet --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:48 POLL-FAILED (rc=1): kaggle datasets list --user mh0386 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:49 POLL-FAILED (rc=1): kaggle kernels list --user mh0386 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:49 POLL-FAILED (rc=1): kaggle datasets list --user michaelrustad --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:49 POLL-FAILED (rc=1): kaggle kernels list --user michaelrustad --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:50 POLL-FAILED (rc=1): kaggle datasets list --user mizeroluckygall --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:50 POLL-FAILED (rc=1): kaggle kernels list --user mizeroluckygall --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:50 POLL-FAILED (rc=1): kaggle datasets list --user mliston --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:51 POLL-FAILED (rc=1): kaggle kernels list --user mliston --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:51 POLL-FAILED (rc=1): kaggle datasets list --user mohamedthoufhiq --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:51 POLL-FAILED (rc=1): kaggle kernels list --user mohamedthoufhiq --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:52 POLL-FAILED (rc=1): kaggle datasets list --user mos3santos --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:52 POLL-FAILED (rc=1): kaggle kernels list --user mos3santos --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:52 POLL-FAILED (rc=1): kaggle datasets list --user mrmeows --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:53 POLL-FAILED (rc=1): kaggle kernels list --user mrmeows --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:53 POLL-FAILED (rc=1): kaggle datasets list --user mzingayeben --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:53 POLL-FAILED (rc=1): kaggle kernels list --user mzingayeben --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:54 POLL-FAILED (rc=1): kaggle datasets list --user mzishran --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:54 POLL-FAILED (rc=1): kaggle kernels list --user mzishran --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:54 POLL-FAILED (rc=1): kaggle datasets list --user nathanchandrasekar --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:55 POLL-FAILED (rc=1): kaggle kernels list --user nathanchandrasekar --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:55 POLL-FAILED (rc=1): kaggle datasets list --user nguynlmtnlc --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:55 POLL-FAILED (rc=1): kaggle kernels list --user nguynlmtnlc --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:55 POLL-FAILED (rc=1): kaggle datasets list --user nightelfdavid --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:56 POLL-FAILED (rc=1): kaggle kernels list --user nightelfdavid --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:56 POLL-FAILED (rc=1): kaggle datasets list --user nswitzer --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:56 POLL-FAILED (rc=1): kaggle kernels list --user nswitzer --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:57 POLL-FAILED (rc=1): kaggle datasets list --user nursrijan --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:57 POLL-FAILED (rc=1): kaggle kernels list --user nursrijan --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:57 POLL-FAILED (rc=1): kaggle datasets list --user nyaksrio --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:58 POLL-FAILED (rc=1): kaggle kernels list --user nyaksrio --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:58 POLL-FAILED (rc=1): kaggle datasets list --user okosdoqwjqn --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:58 POLL-FAILED (rc=1): kaggle kernels list --user okosdoqwjqn --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:59 POLL-FAILED (rc=1): kaggle datasets list --user olaflundstrom --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:59 POLL-FAILED (rc=1): kaggle kernels list --user olaflundstrom --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:41:59 POLL-FAILED (rc=1): kaggle datasets list --user omvare --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:00 POLL-FAILED (rc=1): kaggle kernels list --user omvare --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:00 POLL-FAILED (rc=1): kaggle datasets list --user orecord --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:00 POLL-FAILED (rc=1): kaggle kernels list --user orecord --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:01 POLL-FAILED (rc=1): kaggle datasets list --user orel1986 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:01 POLL-FAILED (rc=1): kaggle kernels list --user orel1986 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:01 POLL-FAILED (rc=1): kaggle datasets list --user ozertuu --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:02 POLL-FAILED (rc=1): kaggle kernels list --user ozertuu --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:02 POLL-FAILED (rc=1): kaggle datasets list --user pablodiegoo --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:02 POLL-FAILED (rc=1): kaggle kernels list --user pablodiegoo --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:02 POLL-FAILED (rc=1): kaggle datasets list --user paritoshtripathi5 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:03 POLL-FAILED (rc=1): kaggle kernels list --user paritoshtripathi5 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:03 POLL-FAILED (rc=1): kaggle datasets list --user planindex --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:03 POLL-FAILED (rc=1): kaggle kernels list --user planindex --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:04 POLL-FAILED (rc=1): kaggle datasets list --user prami --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:04 POLL-FAILED (rc=1): kaggle kernels list --user prami --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:04 POLL-FAILED (rc=1): kaggle datasets list --user pramitdas --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:05 POLL-FAILED (rc=1): kaggle kernels list --user pramitdas --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:05 POLL-FAILED (rc=1): kaggle datasets list --user pranavmudgal --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:05 POLL-FAILED (rc=1): kaggle kernels list --user pranavmudgal --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:06 POLL-FAILED (rc=1): kaggle datasets list --user prvsiyan --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:06 POLL-FAILED (rc=1): kaggle kernels list --user prvsiyan --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:06 POLL-FAILED (rc=1): kaggle datasets list --user qiuqiuslowchillchill --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:07 POLL-FAILED (rc=1): kaggle kernels list --user qiuqiuslowchillchill --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:07 POLL-FAILED (rc=1): kaggle datasets list --user radheshversharma --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:07 POLL-FAILED (rc=1): kaggle kernels list --user radheshversharma --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:08 POLL-FAILED (rc=1): kaggle datasets list --user ralarellanolopez --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:08 POLL-FAILED (rc=1): kaggle kernels list --user ralarellanolopez --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:08 POLL-FAILED (rc=1): kaggle datasets list --user ramprasadatluri --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:09 POLL-FAILED (rc=1): kaggle kernels list --user ramprasadatluri --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:09 POLL-FAILED (rc=1): kaggle datasets list --user ranjeet258 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:09 POLL-FAILED (rc=1): kaggle kernels list --user ranjeet258 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:09 POLL-FAILED (rc=1): kaggle datasets list --user ratnachand --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:10 POLL-FAILED (rc=1): kaggle kernels list --user ratnachand --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:10 POLL-FAILED (rc=1): kaggle datasets list --user rdaccel --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:10 POLL-FAILED (rc=1): kaggle kernels list --user rdaccel --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:11 POLL-FAILED (rc=1): kaggle datasets list --user realscience87 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:11 POLL-FAILED (rc=1): kaggle kernels list --user realscience87 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:11 POLL-FAILED (rc=1): kaggle datasets list --user ricardoestudiomdix --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:12 POLL-FAILED (rc=1): kaggle kernels list --user ricardoestudiomdix --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:12 POLL-FAILED (rc=1): kaggle datasets list --user rikdas --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:12 POLL-FAILED (rc=1): kaggle kernels list --user rikdas --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:13 POLL-FAILED (rc=1): kaggle datasets list --user rishabhbafnaiiitd --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:13 POLL-FAILED (rc=1): kaggle kernels list --user rishabhbafnaiiitd --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:13 POLL-FAILED (rc=1): kaggle datasets list --user rithvikredrouthu --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:14 POLL-FAILED (rc=1): kaggle kernels list --user rithvikredrouthu --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:14 POLL-FAILED (rc=1): kaggle datasets list --user royalacecat --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:14 POLL-FAILED (rc=1): kaggle kernels list --user royalacecat --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:15 POLL-FAILED (rc=1): kaggle datasets list --user ruijiezhao666 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:15 POLL-FAILED (rc=1): kaggle kernels list --user ruijiezhao666 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:15 POLL-FAILED (rc=1): kaggle datasets list --user rupam2020 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:16 POLL-FAILED (rc=1): kaggle kernels list --user rupam2020 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:16 POLL-FAILED (rc=1): kaggle datasets list --user sachchidanandadaki --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:16 POLL-FAILED (rc=1): kaggle kernels list --user sachchidanandadaki --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:17 POLL-FAILED (rc=1): kaggle datasets list --user sajid0559 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:17 POLL-FAILED (rc=1): kaggle kernels list --user sajid0559 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:17 POLL-FAILED (rc=1): kaggle datasets list --user salmanfarsi786 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:17 POLL-FAILED (rc=1): kaggle kernels list --user salmanfarsi786 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:18 POLL-FAILED (rc=1): kaggle datasets list --user samf6969 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:18 POLL-FAILED (rc=1): kaggle kernels list --user samf6969 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:18 POLL-FAILED (rc=1): kaggle datasets list --user santiagocorrea802 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:19 POLL-FAILED (rc=1): kaggle kernels list --user santiagocorrea802 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:19 POLL-FAILED (rc=1): kaggle datasets list --user sethdowden --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:19 POLL-FAILED (rc=1): kaggle kernels list --user sethdowden --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:20 POLL-FAILED (rc=1): kaggle datasets list --user shade012 --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:20 POLL-FAILED (rc=1): kaggle kernels list --user shade012 --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:20 POLL-FAILED (rc=1): kaggle datasets list --user sittlohgilliand --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:21 POLL-FAILED (rc=1): kaggle kernels list --user sittlohgilliand --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:21 POLL-FAILED (rc=1): kaggle datasets list --user sjhageman --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:21 POLL-FAILED (rc=1): kaggle kernels list --user sjhageman --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:22 POLL-FAILED (rc=1): kaggle datasets list --user skagumire --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:22 POLL-FAILED (rc=1): kaggle kernels list --user skagumire --sort-by dateRun --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:42:22 POLL-FAILED (rc=1): kaggle datasets list --user soniciumquantumlab --sort-by updated --page-size 10 --format json :: Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 203, in _new_conn
+    sock = connection.create_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-25 23:44:14 pass done: pending=224 (new 3) authors=193
+2026-11-25 23:54:39 pass done: pending=250 (new 28) authors=195
+2026-11-26 00:05:04 pass done: pending=243 (new 0) authors=195
+2026-11-26 00:15:27 pass done: pending=242 (new 2) authors=195
+2026-11-26 00:25:55 pass done: pending=239 (new 1) authors=195
+2026-11-26 00:36:21 pass done: pending=238 (new 0) authors=195
+2026-11-26 00:53:21 pass done: pending=232 (new 1) authors=195
+2026-11-26 01:01:48 pass done: pending=249 (new 19) authors=195

@@ -1,0 +1,89 @@
+{
+ "portfolio": "v150_gpw_v21_chemistry",
+ "shas_ok": true,
+ "verifiers": [
+  "verify_submission_invsqrt.py",
+  "verify_submission_dqi.py",
+  "dfthcsos/verify.py"
+ ],
+ "verifies": {
+  "invsqrt": {
+   "status": "PASS",
+   "score": 60927.57739905387,
+   "num_qubits": 37,
+   "toffoli_count": 1406.3124317944714,
+   "toffoli_equivalent": 1646.69128105551,
+   "rotation_count": 33.0,
+   "rotation_eps": 1.8880574198146154e-13,
+   "verified_shots": 200540928,
+   "worst_error_over_tolerance": 0.9994717987127908,
+   "worst_x": 252,
+   "circuit_sha256": "bb676b95f94c923cc5482f6cd8d457ab5ff3e8180c8f7cfd2c9678335d0ba56b",
+   "evidence": "BYTE-IDENTICAL to the invsqrt.kmb of v149 (sha256 bb676b95...). This exact file was verified PASS in-kernel by moat-lab v63 (V148-RECEIPT-PASS) and again for v149 (V149-RECEIPT-PASS); unchanged bytes, unchanged verifier."
+  },
+  "dqi": {
+   "status": "PASS",
+   "score": 309694874626.0435,
+   "num_qubits": 900,
+   "toffoli_count": 316122.95665039064,
+   "value_errors": 4,
+   "phase_errors": 0,
+   "verified_shots": 102400,
+   "effective_error_rate": 0.001016763883917165,
+   "repetition_factor": 1.209464049815962,
+   "circuit_sha256": "6f78ecdd636051d4d2dd8f24aaece1d454eb220aaf0df2c1d64c3d96fe22081d",
+   "evidence": "BYTE-IDENTICAL to the dqi.kmb of v147/v148/v149 (sha256 6f78ecdd...). This exact file was verified PASS in-kernel by moat-lab v63 (V148-RECEIPT-PASS) and for v149 (V149-RECEIPT-PASS); the public-release draw for these bytes scored 33.17067 on the leaderboard (goodpjw2008/qcc-dqi-zero-test-cuts, liuzewen123 verbatim copy)."
+  },
+  "dfthcsos": {
+   "status": "PASS",
+   "score": 249169842.41339546,
+   "num_qubits": 405,
+   "toffoli_count": 13114.0,
+   "lambda_eff": 46.91430370584927,
+   "batch_size": 5,
+   "brot": 7,
+   "error_1": 0.019999999880108168,
+   "error_2": 0.019999999880538476,
+   "Lambda": 283.0569683482715,
+   "E_gap": 3.914898000017274,
+   "submission_sha256": "a69483e146a3d3ff814774153853a330523e4f135cf0faeb4de870bcc5f8e9af",
+   "verified_shots": 1219,
+   "evidence": "NEW chemistry leg, verified this wake with the UNCHANGED official verifier work/toolchain/verifiers/dfthcsos/verify.py (shots-per-address 1) under harness/run_capped.sh 3G; log work/receipts/V150_CHEM_VERIFY.log. PASS on every gate (error_1/error_2 < 0.02, E_gap >= 3.914898, angles_within_cap true)."
+  }
+ },
+ "leg_timings": {
+  "invsqrt": "not re-run (byte-identical to v149)",
+  "dqi": "not re-run (byte-identical to v149)",
+  "dfthcsos": 27.4
+ },
+ "public_dqi_evidence": [
+  {
+   "release": "goodpjw2008/qcc-dqi-zero-test-cuts-lb-33-17067",
+   "public_lb": 33.17067,
+   "dqi_sha256": "6f78ecdd636051d4d2dd8f24aaece1d454eb220aaf0df2c1d64c3d96fe22081d",
+   "note": "the release that shipped these exact DQI bytes; its notebook states \"The public leaderboard draw of this file had none\", and the whole tree was scored 33.17067 on the public board"
+  },
+  {
+   "release": "liuzewen123/qcc-dqi-zero-test-cuts-verbatim-33-17067",
+   "public_lb": 33.17067,
+   "dqi_sha256": "6f78ecdd636051d4d2dd8f24aaece1d454eb220aaf0df2c1d64c3d96fe22081d",
+   "note": "an independent verbatim copy of the same 18 bytes, scored 33.17067 on the public board"
+  }
+ ],
+ "dqi_default_salt_failed_shots": 4,
+ "source": {
+  "release": "goodpjw2008/qcc-shorter-chemistry-loaders-lb-33-25564",
+  "public_lb": 33.25564,
+  "kernel_output_zip_sha256": "f1f47061167d4a1f03f89387b823ed53c19871f39b40c7a375d4348f3d141c13",
+  "generator_source": "work/gens/goodpjw2008_chem_v21_2026-11-26/qcc-shorter-chemistry-loaders-lb-33-25564.ipynb",
+  "note": "chemistry leg adopted from this public release; its own pinned inputs are maoxin123's v4 table ec85d969 and the 15 public loaders, and it re-solves 14 of the 15. We replace only the dfthcsos/ directory; invsqrt.kmb and dqi.kmb are kept at the v149 bytes."
+ },
+ "ratios": {
+  "invsqrt": 34.08594797907608,
+  "dqi": 78.9146530538601,
+  "dfthcsos": 13.466835523212364
+ },
+ "gm": 33.25562954624495,
+ "dataset": "badboyhalo1801/qcc-release-v150",
+ "verdict": "V150-RECEIPT-PASS"
+}

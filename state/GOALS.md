@@ -345,3 +345,106 @@ leverage in the whole competition is the **inverse-square-root physical width**
 exact 18-file SHA table + an unchanged-official-verifier in-kernel receipt, and
 it must beat the incumbent on the *measured* leg costs.  No DQI member without
 an official verifier receipt; no chemistry table without a local official PASS.
+
+---
+
+## 2026-11-25 01:2x UTC — leverage map refresh (post v148)
+
+**Scored best:** v148 SUBMITTED (ref 58859204), predicted **33.21008**; previous
+scored v147 = 33.17067.  The jump came entirely from the chemistry leg
+(−893,577.67 cost units, +0.0395 GM) and is the first move in three wakes.
+
+| leg | shipped | measured score | remaining public/known headroom | GM per unit |
+|---|---|---|---|---|
+| invsqrt | `bb676b95` 37 q | 60,927.577399 | Q=36 ⇒ GM +0.31; public floor on the 37-q line | largest |
+| DQI | `6f78ecdd` 900 q | 305.03e9 clean | 5.78 % conditional skip; 267,934 hard-floor Toffolis; 900→882 q ⇒ +0.45 GM | largest |
+| chemistry | `573d10be` + 3,334-T loaders | 250,195,979.354 | H39 (per-pass max discovery), H40 (weight refit ≈ +0.003) | small |
+
+**Ranked goals**
+1. **DQI width / skip-rate** — the only ≥+0.1 GM lever left.  H22 (width lane)
+   closed on 0 disjoint pairs; the open route is a new stage design (H32-m6 is
+   stage-blocked on `T = y >> 9`) or converting depth-0 Toffolis into
+   conditional work (H38 proved measure-first cannot do it).
+2. **invsqrt Q=37→36** — needs a live-wire count of 36 at H1; every relabeller
+   confirms peak busy 37.  Needs a *different square-root construction* (H32).
+3. **H39 chemistry per-pass max** — new, cheap: the 3,334 figure is a max over
+   the *invoked* banks, and 5 loaders are dead weight.  −10 T/pass ≈ −0.007 GM.
+4. **H40 chemistry weight refit at fixed words** — ceiling +0.003 GM (NR-0207).
+5. **Public-release radar** — 88-row queue; 21 rows adjudicated by measurement
+   this wake; nothing beats v148.
+
+## 2026-11-25 12:0x UTC — leverage refresh after v149 (33.21179)
+
+The chemistry score is `lambda_eff * T_total * Q_total`, and with the shipped
+tree the three factors are now *fully* accounted for:
+
+| component | value | lever? |
+|---|---:|---|
+| `lambda_eff` | 46.914325 | pinned: error_1 = error_2 = 20.000 mHa and E_gap = 3.914898 sit exactly on the gates (H43 killed the `brot` trade) |
+| ANGLE Toffolis (both passes) | 6666 = 2 × 3333 | **the live chemistry lever** — 5 old loaders still cost 240–245 each |
+| state-prep heuristic | 4550 | C-sensitive (C=16 → 2101) but blocked: C is pinned by error_2 and any change rebuilds all 15 loaders (H44) |
+| Givens rotations | 1950 = 2·75·(2·7−1) | fixed by N=76 and brot=7 |
+| `Q_total` | 405 = 83 persistent + 35 word regs + 287 inner temp | angles_temp = 82 is below inner_temp = 287, so **shaving loader ancillas buys nothing in Q** |
+
+| leg | shipped | measured score | remaining public/known headroom | GM per unit |
+|---|---|---:|---|---|
+| invsqrt | `bb676b95` 37 q | 60,927.577399 | Q=36 ⇒ GM +0.31; needs a new square-root construction (H32/H41) | largest single lever |
+| DQI | `6f78ecdd` 900 q | 305.03e9 clean | public DQI frontier closed (38 files scanned); 900→882 q ⇒ +0.45 GM | largest total, blocked |
+| chemistry | v149 loaders + `573d10be` | 250,157,973.261 | **5 loaders at 240–245 → 215 would be +0.21 GM** (H42); H44 (shape C) and H40 (refit +0.003) | now the best-understood lever |
+
+**Ranked goals**
+
+1. **H42 — chemistry plan search for k = 0,1,5,7,11.** The plan machinery is now
+   exact and machine-checked (`chem_plan.py` / `chem_rec.py` / `chem_struct.py`),
+   the targets are reachable in principle (all 15 batches have the same
+   dimension profile), and goodpjw's own 123–132 products per loader are far
+   above the rank bound (≈8 products per output) — so the scheme is not
+   exhausted.  Needs a *structured* product search; a random one is dead on
+   arrival (probability ≈ 2^-905 per product).
+2. **H41 / H32 — invsqrt 37 → 36 q** (+0.307 GM).  Unchanged; 185 leader tools
+   confirm 37 is the peak busy width of the published construction.
+3. **H44 — factorization shape C** (potentially +2 GM, but only after H42 can
+   rebuild the loaders for a new table).
+4. **DQI width / skip-rate** (+0.45 GM) — H22 closed, H32-m6 blocked on
+   `T = y >> 9`.
+5. **H40 — weight refit at fixed words** (+0.003 GM ceiling, CPU-only).
+6. **Public-release radar** — the queue tool's kernel/dataset bug is fixed; the
+   19 wrongly-closed kernel rows are being re-adjudicated by measurement.
+
+---
+
+# 2026-11-26 01:1x UTC refresh (post v150 = 33.25564, goodpjw v21 chemistry)
+
+**Frontier moved by adoption, not by our own build:** the public line
+(goodpjw2008) reached 33.25564 and we adopted it the same wake (v150, ref
+58918753).  Board top is still far ahead (Entangled Team 33.85279); the
+harvestable public frontier is the 33.25xxx line.
+
+**Leverage map (updated at GM 33.25564, chemistry T 13,114):**
+
+| lever | unit | GM per unit | note |
+|---|---|---|---|
+| chemistry | 1 loader-Toffoli | **+0.00169** | loaders run twice; 5 group-start loaders at 240–245 vs 205–214 |
+| chemistry | 1 heuristic/state-prep T | +0.000845 | 6,500 T, C-sensitive, blocked by error_2 |
+| invsqrt | 1 qubit (37→36) | **+0.31** | unchanged construction needed |
+| invsqrt | 1 Toffoli | +0.0079 | |
+| DQI | 1 qubit (900→882) | +0.45 | blocked |
+| DQI | 1 Toffoli | +3.5e-5 | |
+
+**Ranked goals**
+
+1. **H48 — group-start chemistry loaders k = 0,1,5,7,11.**  Now the only
+   chemistry headroom: 5 × ~28 loader-Toffolis = **+0.24 GM**.  We have
+   goodpjw's decoded plan format (PACK blob + `build_loader`/`build_window`),
+   the exact dead-word budget per batch (k11 = 240, k7 = 131; k0 = 5, k1 = 67,
+   k5 = 60), and a measured structural difference: wired = 82 features
+   (68 bank-only + 14 low/mixed) + 123–132 products; group-start = 144
+   features (5 bank-only + 139 low/mixed) + 96 products.  Attack k11 first;
+   pre-registered: nP ≤ 157 within one build day or the 82-feature approach for
+   group starts is killed.
+2. **H41 / H32 — invsqrt 37 → 36 q** (+0.31 GM).  Unchanged.
+3. **H44 — factorization shape C** (+ up to 2 GM) — blocked on the 20 mHa gate.
+4. **DQI width / skip-rate** (+0.45 GM) — blocked.
+5. **H40 — weight refit** (≤ +0.003 GM).
+6. **Public-release radar** — v150 came straight out of the queue within one
+   wake; keep 4 detached adjudicators running every wake.

@@ -25,6 +25,7 @@ Usage:
 """
 from __future__ import annotations
 
+import fcntl
 import pathlib
 import sys
 import time
@@ -32,6 +33,27 @@ import time
 H = pathlib.Path('/home/bandoc/Downloads/opencode/work/harvest')
 PENDING = H / 'PENDING.tsv'
 ADOPTED = H / 'ADOPTED.tsv'
+LOCK = H / '.queue.lock'
+
+
+class _QueueLock:
+    """An exclusive lock on the queue's read-modify-write cycle.
+
+    Several adjudicators may run in parallel (the queue is far too big for
+    one worker), so the "read rows -> drop one -> write rows" sequence must
+    be atomic or a concurrent writer resurrects the row we just closed.
+    """
+
+    def __enter__(self):
+        LOCK.parent.mkdir(parents=True, exist_ok=True)
+        self.fh = open(LOCK, 'a+')
+        fcntl.flock(self.fh.fileno(), fcntl.LOCK_EX)
+        return self
+
+    def __exit__(self, *exc):
+        fcntl.flock(self.fh.fileno(), fcntl.LOCK_UN)
+        self.fh.close()
+        return False
 
 
 def read_pending() -> list[list[str]]:
@@ -67,11 +89,13 @@ def main(argv: list[str]) -> int:
 
     if cmd == 'take':
         ref = argv[2]
-        keep = [r for r in rows if len(r) < 2 or r[1] != ref]
-        if len(keep) == len(rows):
-            print(f'ref not in queue: {ref}')
-            return 1
-        write_pending(keep)
+        with _QueueLock():
+            rows = read_pending()
+            keep = [r for r in rows if len(r) < 2 or r[1] != ref]
+            if len(keep) == len(rows):
+                print(f'ref not in queue: {ref}')
+                return 1
+            write_pending(keep)
         print(f'taken: {ref}  (queue now {len(keep)})')
         return 0
 
@@ -79,23 +103,30 @@ def main(argv: list[str]) -> int:
         ref, verdict = argv[2], argv[3]
         note = argv[4] if len(argv) > 4 else ''
         ts = time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime())
+        with _QueueLock():
+            rows = read_pending()
+            keep = [r for r in rows if len(r) < 2 or r[1] != ref]
+            write_pending(keep)
         with open(ADOPTED, 'a') as f:
             f.write(f'{ts}\t{ref}\t{verdict}\t{note}\n')
-        keep = [r for r in rows if len(r) < 2 or r[1] != ref]
-        write_pending(keep)
         print(f'done: {ref} -> {verdict}  (logged in {ADOPTED.name})')
         return 0
 
     if cmd == 'add':
         ref = argv[2]
         note = argv[3] if len(argv) > 3 else ''
-        if any(len(r) > 1 and r[1] == ref for r in rows):
-            print(f'already queued: {ref}')
-            return 1
-        ts = time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime())
-        rows.append(['manual', ref, ts, note, '', 'manual', 'manual'])
-        write_pending(rows)
-        print(f'queued: {ref}')
+        kind = argv[4] if len(argv) > 4 else 'manual'
+        if kind not in ('kernel', 'dataset'):
+            kind = 'manual'
+        with _QueueLock():
+            rows = read_pending()
+            if any(len(r) > 1 and r[1] == ref for r in rows):
+                print(f'already queued: {ref}')
+                return 1
+            ts = time.strftime('%Y-%m-%d %H:%M:%S', time.gmtime())
+            rows.append([kind, ref, ts, note, '', 'manual', 'manual'])
+            write_pending(rows)
+        print(f'queued: {ref} ({kind})')
         return 0
 
     print(__doc__)
