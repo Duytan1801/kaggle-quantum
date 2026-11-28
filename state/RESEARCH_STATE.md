@@ -1524,3 +1524,79 @@ disjoint slices (detached with `setsid`, unbuffered logs in
    a full 15-loader rebuild.
 4. **DQI width** — +0.45 GM, blocked (H22 closed, H32-m6 blocked).
 5. **H40 (weight refit)** — ≤ +0.003 GM.
+
+### H48 probe this wake: the product span of the 82-feature scheme is almost full
+
+`work/tools/chem_span.py` (new) answers, exactly and with no search, whether a
+target batch is representable with a given feature space F.  Because AND is
+bilinear over GF(2), the span of *all* products `u AND v` (u,v in F) is exactly
+`span{f_a AND f_b}` over a basis of F.  Measured with batch 2's 82-feature
+space (dim F = 99):
+
+```
+feature k=2: |F| = 99, |span(F + products)| = 1217 of 1219
+  target k= 2: D_i outside span:  0/35   <- control: batch 2 is representable
+  target k=11: D_i outside span: 27/35
+  target k= 7: D_i outside span: 25/35
+  target k= 1: D_i outside span: 23/35
+  target k= 5: D_i outside span: 25/35
+  target k= 0: D_i outside span: 26/35
+```
+
+Two conclusions:
+
+1. The product span of a *fixed* 82-feature space is only **2 dimensions short
+   of the whole 1219-dim function space**.  The group-start targets fall in
+   that 2-dim complement, which is why a fixed feature set from another batch
+   cannot load them.
+2. The dead-word freedom (240 free entries for k11) is enough to move the
+   target into the span *in principle* (the complement is 2-dim and the free
+   sets have 4–113 coordinates per column).  So the 82-feature scheme is not
+   algebraically impossible for group starts; the obstruction is purely the
+   **product count** (nP ≤ 157 to beat 240).
+
+Next experiment (pre-registered, next wake): with the feature space chosen for
+k11 itself (68 bank ANDs + 6 low + 8 mixed, searched as goodpjw does), compute
+the 2-dim complement Z and check whether the *dead-word-adjusted* target is in
+the span; then run the planting search for nP ≤ 157.  The complement being
+2-dimensional also suggests a cheap certificate: any candidate plan can be
+checked exactly by `chem_span.py` before costing it.
+
+## 2026-11-28 — ADOPTED: goodpjw2008 V33 public frontier (v153), +0.0328 GM
+
+The public frontier moved 33.25733 -> **33.29012** in ~36 h.  V33
+(`goodpjw2008/qcc-shorter-chemistry-loaders-lb-33-29012`, 2026-11-27 23:35)
+ships the whole 18-file tree plus its own official-verifier receipt.  All
+three legs were re-measured locally with the unchanged verifiers:
+
+| leg | bytes | measured |
+|---|---|---|
+| invsqrt | b08370f271ba8f17 (evgendvorkin V86; rewrite of maoxin123 75e43352) | PASS 60,769.42127769003 (37 q, 1405.375 Toffoli) |
+| dqi | b183c793b6b7c7a2 (logiclab; same bytes as v152) | PASS, clean board draw |
+| chem | npz f2b6cc37ce87b0d8 + 15 re-solved loaders | PASS 249,043,677.36582175 (T 13,108, Q 405, lambda_eff 46.912012524) |
+
+Prediction 33.29012 reproduces the release's measured LB.  v153 is in the
+two-receipt gate (snapshot dataset `qcc-release-v153` + moat-lab receipt).
+
+**Other releases measured this wake (all dominated by V33):**
+* areebbb 33.29008: chem 249,044,466.68 (lambda_eff 46.912161206) -> +789 cost.
+* rishabhbafnaiiitd "33.2905": chem 249,055,638.42 = the V29 table (+11,961).
+* yalickj 33.28959 / dennis6886 V29 fork: chem 249,055,638.49 (+11,961).
+* darkgobelin gated submission: invsqrt bb676b95 (60,927.58), DQI dbb2ada3
+  (the known 2-error draw), chem 25ac10da -> strictly below V33.
+* maoxin123 75e43352 invsqrt (60,774) is dominated by b08370f2 (60,769.42).
+
+**Negative results confirmed this wake (do not re-run):**
+* The deterministic "reuse a cached product" family is DEAD: an exhaustive
+  exact sweep over every duplicate (control, control) pair in all 15 loaders
+  (`sweep_reuse.py`, 0-44 candidates per loader) found **0 accepted rewrites**
+  for the CCX->CX or drop-both edits.  This independently reproduces
+  `chem_share.py`'s 0-Toffoli result and closes the cheapest edit family in the
+  new CodeEvolve search space.
+* dennis6886's fused-DQI refit is a no-op: coefficients [0,0,0], old and new
+  lambda identical (their own audit).
+
+**Open lane:** the chemistry CodeEvolve bundle is now runnable
+(`work/evo/qcc_chem_codeevolve`: exact evaluator, init program, config).  Its
+useful search space is NOT the reuse family above; it must propose structural
+rewrites (move a product earlier to unlock a later CX, drop XOR pairs).

@@ -1185,3 +1185,394 @@ kaggle datasets download: error: argument -d/--dataset: expected one argument
 2026-11-26 00:55:39	rishabhbafnaiiitd/qcc-33-2506-3-task-sota-portfolio-visual-guide	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
 2026-11-26 00:55:41	asteriospanoras/qcc-33-25229-best-public-merge-and-credits	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
 2026-11-26 01:06:04	goodpjw2008/qcc-shorter-chemistry-loaders-lb-33-25564	adopted	ADOPTED AS v150: official local chemistry PASS 249169842.41339546 (T 13114, lambda_eff 46.91430370584927, Q 405, per-pass 3307; our v149 250157973.26/T 13166) => predicted GM 33.25563. Generator source harvested to work/gens/goodpjw2008_chem_v21_2026-11-26/. Submission ref 58918753.
+2026-11-26 01:25:51	areebbb/qai-cut-the-gates-keep-the-chemistry-33-25060	adopted	complete tree beats chemistry by +0.03873 GM (>= 0.001): 249283844.17 < 250157973.26
+2026-11-26 01:25:54	goodpjw2008/qcc-shorter-chemistry-loaders-lb-33-25564	adopted	complete tree beats chemistry by +0.04379 GM (>= 0.001): 249169842.41 < 250157973.26
+2026-11-26 01:26:28	ghazarosbarseghyan91/vqcc-28-23441-verified-portfolio	dqi-candidate	complete tree beats DQI by +0.16753 GM per its own receipt: 305,031,836,855.83 < 309,694,874,626.04 -- needs the full two-receipt gate (DQI cannot be verified locally)
+2026-11-26 01:26:31	ishankarnick/santa-2026-frontier-programs	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 01:26:41	manwithacat/vqcc-private-dqi-candidates	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:27:12	aiokajima/quantum-goodpjw-3324213-reproduction-public	adopted	complete tree beats chemistry by +0.03030 GM (>= 0.001): 249473887.97 < 250157973.26
+2026-11-26 01:27:27	ghazarosbarseghyan91/vqcc-33-21180-verified-public-set	dqi-candidate	complete tree beats DQI by +0.16753 GM per its own receipt: 305,031,836,855.83 < 309,694,874,626.04 -- needs the full two-receipt gate (DQI cannot be verified locally)
+2026-11-26 01:27:27	ghazarosbarseghyan91/vqcc-33-24213-verified-public-set	dqi-candidate	complete tree beats DQI by +0.16753 GM per its own receipt: 305,031,836,855.83 < 309,694,874,626.04 -- needs the full two-receipt gate (DQI cannot be verified locally)
+2026-11-26 01:27:31	georgymamarin/santa-2026-two-program-lineages	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 01:27:36	anglolodorf/quantum-ai-frontier-v10	dominated	complete 18-file tree, measured legs: chem PASS 355183814.18 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:27:41	asteriospanoras/santa-2026-early-gifts-shorter-programs	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 01:27:58	dennis6886/quantum-circuits-21-37712-fused-dqi-reproduction	adopted	complete tree beats chemistry by +0.03030 GM (>= 0.001): 249473888.32 < 250157973.26
+2026-11-26 01:28:01	ozertuu/google-quantum-ai-vqcc-33-2101-sota-apex	dqi-candidate	complete tree beats DQI by +29.03131 GM per its own receipt: 617,641,532.00 < 309,694,874,626.04 -- needs the full two-receipt gate (DQI cannot be verified locally)
+2026-11-26 01:28:02	kindasomethin/santa-2026-exact-portfolio-checkpoints	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 01:28:04	attabeezy/gq-portfolio-frontier	dominated	complete 18-file tree, measured legs: chem PASS 297237077.47 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:28:09	okosdoqwjqn/shorts-25d-staging	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 01:28:14	ghazarosbarseghyan91/vqcc-combo-candidates	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 01:28:20	manwithacat/vqcc-chemistry-negative-results	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:28:25	rithvikredrouthu/qcc-milestone-generators	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:28:45	avazaku/column-epigraph-889-qubit-dqi	dominated	complete 18-file tree, measured legs: chem PASS 337797789.97 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:29:05	anazemcev/quantum-circuits-signed-digit-memory	dominated	complete 18-file tree, measured legs: chem PASS 2330530178.35 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:29:25	avazaku/gauge-amplitude-cycle-888-qubit-dqi	dqi-candidate	complete tree beats DQI by +29.70673 GM per its own receipt: 364,036,151.00 < 309,694,874,626.04 -- needs the full two-receipt gate (DQI cannot be verified locally)
+2026-11-26 01:29:27	arzarei/23-910-local-gm-exact-dqi-rewrites-892-qubits-pro	dominated	complete 18-file tree, measured legs: chem PASS 326801702.15 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:29:33	attabeezy/gq-invsqrt-precision-retune	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:29:36	avazaku/spectral-trust-epigraph-889-qubit-dqi	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:30:17	alancanto/quantum-circuit-compilation-alan-canto	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:30:40	apihpih/qcc-baseline-copy-of-yoyobar-portfolio-lb-24-94	dominated	complete 18-file tree, measured legs: chem PASS 299667305.06 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:30:44	asteriospanoras/squares-in-squares-live-frontier-atlas	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 01:31:03	benadictinfanta/vqcc-milestone-verification-sota-portfolio	dominated	complete 18-file tree, measured legs: chem PASS 255327789.29 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:31:11	auqib92/qvcc-own-circuits-submission	dominated	complete 18-file tree, measured legs: chem PASS 2349772265.66 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:31:20	chaitanyajamble/google-quantum-ai-verifiable-quantum-circuit-3	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 01:31:36	avazaku/dqi-exact-42-and-arithmetic-full-verification	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 01:32:17	avazaku/probe-ranked-jacobi-889-qubit-dqi	dqi-candidate	complete tree beats DQI by +29.70667 GM per its own receipt: 364,055,510.00 < 309,694,874,626.04 -- needs the full two-receipt gate (DQI cannot be verified locally)
+2026-11-26 01:33:05	avazaku/c60-gauge-descent-full-xor-qrom	dominated	complete 18-file tree, measured legs: chem PASS 344957009.41 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:33:33	chaitanyajamble/google-quantum-ai-verifiable-quantum-circuit-8	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra | dir submission: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 01:33:37	clarelaurent/molecular-xor-reversible-parity-compiler	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:33:42	clarelaurent/syndrome-forge-verified-metric	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:33:43	avazaku/free-gap-sqp-889-qubit-dqi	dominated	complete 18-file tree, measured legs: chem PASS 338242238.24 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:34:25	avazaku/slack-homotopy-897-qubit-dqi	dominated	complete 18-file tree, measured legs: chem PASS 341342227.75 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:34:31	avikdas567/fault-tolerant-kickmix-quantum-circuit-synthesis	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra | dir submission_payload: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 01:34:48	chaitanyajamble/google-quantum-ai-verifiable-quantum-circuit-1	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 01:34:59	bandlapallisudharani/quantum-circuit-optimization-31-679478	dominated	complete 18-file tree, measured legs: chem PASS 255384620.97 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:35:27	chaitanyajamble/google-quantum-ai-verifiable-quantum-circuit-4	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 01:35:36	cosmorin/quantum-combined-portfolio-lb-12-12851	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 11 files, 11/18 of ours present, 11 changed, 0 extra | dir selected: 11 files, 11/18 of ours present, 11 changed, 0 extra
+2026-11-26 01:37:13	chetanamachireddy/quantum-circuit-compilation-from-source	dominated	complete 18-file tree, measured legs: chem PASS 299656901.22 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:37:58	clarelaurent/observatory-three-audited-circuit-studies	dqi-candidate	complete tree beats DQI by +31.30850 GM per its own receipt: 58,287,019.00 < 309,694,874,626.04 -- needs the full two-receipt gate (DQI cannot be verified locally)
+2026-11-26 01:38:39	dariushafshar/vqcc-verified-portfolio-and-cost-anatomy	dominated	complete 18-file tree, measured legs: chem PASS 2325007545.83 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:39:05	chaitanyajamble/google-quantum-ai-verifiable-quantum-circuit-2	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra | dir best_submission: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 01:39:08	dcvxzyk/gvqcc-verify-portfolio-v1	dominated	complete 18-file tree, measured legs: chem PASS 326790381.55 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:39:35	dmitrybatow/qcc-v27-frontier-live-assembly	dominated	complete 18-file tree, measured legs: chem PASS 295130763.04 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:39:44	ehanmallick/invsqrt-20-65-two-3-to-2-and-merges-on-y6225	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:40:33	clarelaurent/three-verified-circuits-a-reproducible-entry	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra | dir entry: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 01:40:37	cosmorin/why-1-is-1-quantum-circuits-gap-analysis	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:40:51	davidpiln/vqcc-sat-certificates-and-dqi-failure-classes	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:41:05	manwithacat/vqcc-apache-public-circuits	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 01:41:19	ozertuu/quantum-sim-linalg-cache	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 01:41:28	chaitanyajamble/google-quantum-ai-verifiable-quantum-circuit-7	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra | dir submission: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 01:41:33	farhanazahra/quantum-quake-chemistry-gauge	dominated	complete 18-file tree, measured legs: chem PASS 299666607.45 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:41:34	clarelaurent/molecular-lookup-verified-metric	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:41:37	ghazarosbarseghyan91/vqcc-chemistry-loader-splice-matrix-25057-base	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 01:41:39	clarelaurent/reciprocal-root-exact-gate-rewrite-study	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:41:43	cosmorin/1-1-quantum-circuits-japanese	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:41:47	dariushafshar/quantum-circuits-silver-line-is-a-113-team-tie	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:41:50	alexchilton/33-25-lb-which-circuits-survive-private-salt	adopted	complete tree beats chemistry by +0.04041 GM (>= 0.001): 249245843.59 < 250157973.26
+2026-11-26 01:41:54	haideptry/qcc-verified-portfolio-modern-dqi-study	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 28 files, 18/18 of ours present, 18 changed, 10 extra
+2026-11-26 01:41:56	arsen123/soil-photos-fourier-spectrum-vs-camera-shift	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 01:41:58	harshitsama/quantum-circuits-marginal-value-calculator	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 01:42:32	atakanaldemir/qcc-shared-products-and-controlled-refits	adopted	complete tree beats chemistry by +0.04040 GM (>= 0.001): 249246255.76 < 250157973.26
+2026-11-26 01:42:50	dedquoc/quantum-circuit-synthesis-loop	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra | dir out: 5 files, 2/18 of ours present, 2 changed, 3 extra
+2026-11-26 01:42:52	dcarrieri73/quantum-circuit-compilation-from-source-6-74x	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 28 files, 18/18 of ours present, 18 changed, 10 extra
+2026-11-26 01:42:57	devyanshchaudhary/quantum-circuit-compilation-from-source	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:43:17	avazaku/active-face-sqp-895-qubit-dqi	dqi-candidate	complete tree beats DQI by +29.70857 GM per its own receipt: 363,463,514.00 < 309,694,874,626.04 -- needs the full two-receipt gate (DQI cannot be verified locally)
+2026-11-26 01:43:27	dzung271828/vqcc-frontier-portfolio-verification	dominated	complete 18-file tree, measured legs: chem PASS 294762512.86 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:44:02	avazaku/epigraph-rank-scales-889-qubit-dqi	dominated	complete 18-file tree, measured legs: chem PASS 338242226.82 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:44:04	evgendvorkin/google-quantum-ai-deep-eda-with-analogies	adopted	complete tree beats chemistry by +0.04041 GM (>= 0.001): 249245843.52 < 250157973.26
+2026-11-26 01:44:09	ghazarosbarseghyan91/vqcc-33-25057-verified-public-set	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 01:44:18	avazaku/quantum-circuits-7-bit-bounds	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:44:59	bandlapallisudharani/quantum-circuit-optimization-31-679458	dominated	complete 18-file tree, measured legs: chem PASS 255384620.97 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:45:16	dngvmnh/quantum-ai-verified-milestone-submission	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip milestone-v1.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra | dir milestone-v1: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 01:45:49	emmanuelmirekumensah/ax-24-72-portfolio	dominated	complete 18-file tree, measured legs: chem PASS 306708201.96 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:46:04	ghazarosbarseghyan91/vqcc-submit-salt-battery	adopted	complete tree beats chemistry by +0.03030 GM (>= 0.001): 249473887.97 < 250157973.26
+2026-11-26 01:46:05	igorholt/vqcc-28-11x-portfolio-28-cluster-public-members	dqi-candidate	complete tree beats DQI by +29.36718 GM per its own receipt: 480,411,479.00 < 309,694,874,626.04 -- needs the full two-receipt gate (DQI cannot be verified locally)
+2026-11-26 01:46:09	hansleestahl/verifiable-circuit-compilation-round-8	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:46:10	jessehermes840/tuannm3812-chem-verify-both-configs-interim-sweep	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 01:46:16	kadirov0/the-atlas-of-dead-ends-141-hypotheses-we-tested	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:46:39	kawh1111/qcomp-hybrid-submit	dominated	complete 18-file tree, measured legs: chem PASS 1813981079.21 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:46:45	kindasomethin/santa-2026-exact-portfolio-frontier-128173	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 01:46:50	leoprovorov/the-unbearable-lightness-of-quantum-circuits	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:46:59	chaitanyajamble/google-quantum-ai-verifiable-quantum-circuit-10	dominated	complete 18-file tree, measured legs: chem PASS 347361565.96 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:47:09	liuzewen123/casmi-np-spec-v14	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 01:47:39	logiclab/quantum-circuit-compilation-v58-submission	adopted	complete tree beats chemistry by +0.03030 GM (>= 0.001): 249473887.97 < 250157973.26
+2026-11-26 01:48:05	mahmouednemer/google-quantum-ai-sota-vqcc-portfolio-elnemer	dominated	complete 18-file tree, measured legs: chem PASS 296635967.59 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:48:11	manwithacat/chemistry-negative-results-what-fails-and-why	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:48:29	manwithacat/hello-world-quantum-circuit-compilation	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 01:48:39	farhanazahra/quantum-quake-fast-invsqrt	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra | dir submission: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 01:49:15	chaitanyajamble/google-quantum-ai-verifiable-quantum-circuit-5	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra | dir submission: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 01:49:20	clarelaurent/a-quarter-turn-your-first-circuit-zip	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:49:26	manwithacat/one-chemistry-copy-a-verified-dfthc-perturbation	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 28 files, 18/18 of ours present, 18 changed, 10 extra
+2026-11-26 01:49:28	clarelaurent/quantum-observatory-verified-metric	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:49:55	maoxin123/lb-24-94-chem-weight-refit-on-syed-loaders	dominated	complete 18-file tree, measured legs: chem PASS 299667341.53 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:50:17	mizeroluckygall/quantum-circuits-rotation-calibration	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 28 files, 18/18 of ours present, 18 changed, 10 extra
+2026-11-26 01:50:25	igorholt/vqcc-24-94x-portfolio-phase-0-live-circuits-ver	dqi-candidate	complete tree beats DQI by +29.24110 GM per its own receipt: 529,241,550.00 < 309,694,874,626.04 -- needs the full two-receipt gate (DQI cannot be verified locally)
+2026-11-26 01:50:27	ghazarosbarseghyan91/vqcc-chemistry-loader-splice-matrix-zhuang-base	dominated	complete 18-file tree, measured legs: chem PASS 251069964.09 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:50:29	jesse840/vqcc-milestone-notebook-v79	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:50:32	hansleestahl/verifiable-circuit-compilation-round-1	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:50:34	juventininizar/quantum-circuit-compilation-phase-0-baseline	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:50:49	coralfil/atlantis-vqcc-apex-quantum-circuit-portfolio	dqi-candidate	complete tree beats DQI by +29.23993 GM per its own receipt: 529,710,482.00 < 309,694,874,626.04 -- needs the full two-receipt gate (DQI cannot be verified locally)
+2026-11-26 01:50:53	hirokikanotmc/invsqrt-removing-166-toffolis-that-never-fire	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 01:51:04	ishankarnick/santa-2026-frontier-programs-128-090	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 01:51:08	kawh1111/qcomp-hybrid-1118	dominated	complete 18-file tree, measured legs: chem PASS 294642299.76 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:51:37	jtheyogi/exp3-orthogonal-gauge-descent-sota-portfolio	dominated	complete 18-file tree, measured legs: chem PASS 326788128.83 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:52:51	muchat007/c44-universal-xor-chemistry-clean-workspace	dominated	complete 18-file tree, measured legs: chem PASS 311352046.12 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:53:03	kchuang/vqc-reproducible-build-invsqrt-dqi-dfthcsos	dominated	complete 18-file tree, measured legs: chem PASS 294642169.51 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:53:08	leoprovorov/full-xor-chemistry-no-borrowed-bits	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:53:19	nilanjansaha123/auto-assemble-the-best-qcc-portfolio-22-70	dqi-candidate	complete tree beats DQI by +32.22663 GM per its own receipt: 8,083,195.00 < 309,694,874,626.04 -- needs the full two-receipt gate (DQI cannot be verified locally)
+2026-11-26 01:53:24	nisargdavem/quantum-circuit-unified-optimization-pipeline	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:53:26	liuzewen123/casmi-np-spec-v12	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 01:53:34	olekis/verifiable-quantum-circuit-optimization-h14	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:53:37	karthikyaddanapudix/quantum-dqi-matched-holdout-audit	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 01:54:05	philiplinhan/veripress-milestone-repro-v1	dominated	complete 18-file tree, measured legs: chem PASS 296632620.70 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:54:11	kawh1111/qcomp-hybrid-v44	dominated	complete 18-file tree, measured legs: chem PASS 338130691.00 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:55:27	prvsiyan/cfp-quantum-frontier-v4	dominated	complete 18-file tree, measured legs: chem PASS 299671051.22 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:55:27	liuzewen123/qcc-three-task-portfolio-v1	dqi-candidate	complete tree beats DQI by +29.24110 GM per its own receipt: 529,241,631.00 < 309,694,874,626.04 -- needs the full two-receipt gate (DQI cannot be verified locally)
+2026-11-26 01:57:28	qwertykeypadapple/qcc-kernel-search-24-65	dominated	complete 18-file tree, measured legs: chem PASS 309209296.10 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:57:56	knowautumnlarch/quantum-circuit-compilation-from-source	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 31 files, 18/18 of ours present, 18 changed, 13 extra | dir submission: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 01:58:00	letusassume/verifiable-quantum-circuit-compilation-three-smal	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:58:17	liuzewen123/casmi-np-spec-v15	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 01:58:22	maazrahimkhan/google-quantum-ai-quantum-circuits-optimization	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:58:27	magmacot/quantum-circuits-clean-workspace-reuse	dominated	complete 18-file tree, measured legs: chem PASS 513441872.66 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:58:41	manwithacat/9-12718-a-credited-circuit-portfolio	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 28 files, 18/18 of ours present, 18 changed, 10 extra
+2026-11-26 01:58:51	manwithacat/dqi-salt-check-public-frontier	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:58:55	malyshevdanil/squares-in-squares-living-atlas-of-tight-packings	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:59:22	manwithacat/limbo-ii-c120-portfolio	dominated	complete 18-file tree, measured legs: chem PASS 421271524.00 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:59:22	manwithacat/composite-somejoint-dqi-limbo-c120	dominated	complete 18-file tree, measured legs: chem PASS 421271524.00 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:59:23	rishabhbafnaiiitd/quantum-circuit-compilation-rank-1-breakthrough	dominated	complete 18-file tree, measured legs: chem PASS 299654755.44 (ours 250157973.26); invsqrt FAIL
+2026-11-26 01:59:26	manwithacat/vqcc-negative-results	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 01:59:43	mizeroluckygall/quantum-circuits-chemistry-weight-refit-41-char	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 11 files, 11/18 of ours present, 11 changed, 0 extra
+2026-11-26 01:59:50	rudrabhaskar/quantum-compilation-r113-verified-portfolio	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission_ORIGINAL_COMPILER.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 02:00:05	rushikeshpundkar/qcc-verified-portfolio-df-thc-retraining-study	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 28 files, 18/18 of ours present, 18 changed, 10 extra
+2026-11-26 02:00:08	mohanrajvelu/quantum-circuit-compilation-baseline	dominated	complete 18-file tree, measured legs: chem PASS 326788128.83 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:00:30	saddamaditya/fused-decoder-c59-architecture-qcc-sota	dominated	complete 18-file tree, measured legs: chem PASS 377049552.61 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:01:29	manwithacat/how-public-15-75-circuits-gain	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 22 files, 18/18 of ours present, 18 changed, 4 extra | dir candidate: 22 files, 18/18 of ours present, 18 changed, 4 extra
+2026-11-26 02:01:43	samanyu1808/credited-public-portfolio-v2	dominated	complete 18-file tree, measured legs: chem PASS 299666272.97 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:01:51	saurabhkumar234/quantum-portfolio-ledger	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip fixture_gap.zip: 6 files, 6/18 of ours present, 6 changed, 0 extra | zip fixture_good.zip: 7 files, 7/18 of ours present, 7 changed, 0 extra | zip fixture_bad_keys.zip: 7 files, 7/18 of ours present, 7 changed, 0 extra | zip fixture_no_npz.zip: 6 files, 6/18 of ours present, 6 changed, 0 extra
+2026-11-26 02:02:10	shadab80k/kickmix-quantum-circuit-optimization	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 02:02:14	sheroleg/quantum-circuits-from-zero-2-the-dqi-decoder	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 02:04:11	songoku2005/google-quantum-ai-verifiable-quantum-circuit-com	dominated	complete 18-file tree, measured legs: chem PASS 331076721.75 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:04:15	tobeetaylor/constseed-invsqrt-reconstruction	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 02:04:29	username1357/qcc-portfolio-20-42	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 22 files, 18/18 of ours present, 18 changed, 4 extra
+2026-11-26 02:04:58	varianceofx/vqcc-verified-3333-loader-portfolio	dominated	complete 18-file tree, measured legs: chem PASS 250157973.26 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:06:47	vincentadithya/vqc-v11-verified-portfolio	dominated	complete 18-file tree, measured legs: chem PASS 2348537554.59 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:08:20	danielwycoff/circuit-diagnostic-baseline	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 02:08:25	davidrolandpalsson/invsqrt-verifiable-quantum-circuit-compilation	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 02:08:30	derrickirons/invsqrt-precision-trimming-a-verifiable-quantum	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 02:08:48	vincentadithya/vqc-v15-verified-portfolio	dominated	complete 18-file tree, measured legs: chem PASS 2345104493.65 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:08:54	dungluongtuan/22-34-lb-reproducible-best-of-public-portfolio	dominated	complete 18-file tree, measured legs: chem PASS 349339717.33 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:09:16	emmanuelmirekumensah/q-busya-23-909-portfolio	dominated	complete 18-file tree, measured legs: chem PASS 326821497.37 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:09:42	gedouluhui/qcc-22-67-local-gm-full-xor-chem-verified-fork	dominated	complete 18-file tree, measured legs: chem PASS 343172572.78 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:11:46	vincentadithya/vqc-v20-verified-portfolio	dominated	complete 18-file tree, measured legs: chem PASS 2345104493.65 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:13:21	ghazarosbarseghyan91/vqcc-dqi-failshot-replay	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 02:13:25	hansleestahl/verifiable-circuit-compilation-round-3	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 02:14:27	zhuangbility/qcc-v18-dead-word-refit	dqi-candidate	complete tree beats DQI by +0.16747 GM per its own receipt: 305,033,681,034.67 < 309,694,874,626.04 -- needs the full two-receipt gate (DQI cannot be verified locally)
+2026-11-26 02:16:39	hypery11/invsqrt-prototype-packaged-submission	dqi-candidate	complete tree beats DQI by +29.06057 GM per its own receipt: 604,761,495.00 < 309,694,874,626.04 -- needs the full two-receipt gate (DQI cannot be verified locally)
+2026-11-26 02:17:07	itshimanshu666/google-quantum-ai-apex-35-frontier	dominated	complete 18-file tree, measured legs: chem PASS 326934192.97 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:17:38	junthewise/verified-portfolio-bounded-chemistry-search	dominated	complete 18-file tree, measured legs: chem PASS 294823194.36 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:18:07	kawh1111/qcomp-harvest-sota	dominated	complete 18-file tree, measured legs: chem PASS 303866734.23 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:18:26	manwithacat/quantum-voodoo-2-electric-boogaloo	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 18 files, 3/18 of ours present, 3 changed, 15 extra
+2026-11-26 02:19:03	marsyas/vqcc-invsqrt-13-94x-full-source	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 02:19:31	mizeroluckygall/quantum-circuits-rotation-calibration-39-char	dominated	complete 18-file tree, measured legs: chem PASS 2330530178.35 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:19:56	kchuang/quantum-ai-verifiable-circuit-compilation	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 02:21:51	ndaedzomukhuba/quantum-chem-refit	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 02:22:16	koushikkumardinda/verifiable-quantum-circuit-compilation	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra | dir submission_stage: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 02:22:20	lifeofmorr/vqcc-baseline-invsqrt	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 02:22:38	liuzewen123/casmi-np-spec-v16	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 02:25:20	magmacot/qcc-76q-881q-dqi-verified-blend	dominated	complete 18-file tree, measured legs: chem PASS 545371186.43 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:25:38	manderson240/vqcc-v1-invsqrt-linear-guess	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 02:26:32	manwithacat/df-thc-weight-refit-demo	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 02:26:50	manwithacat/how-the-public-19-3-portfolio-works	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 28 files, 18/18 of ours present, 18 changed, 10 extra
+2026-11-26 02:27:52	manwithacat/the-real-150k-was-the-friends-we-made	adopted	complete tree beats chemistry by +0.04379 GM (>= 0.001): 249169842.35 < 250157973.26
+2026-11-26 02:28:06	mizeroluckygall/quantum-circuits-branch-aware-calibration	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 28 files, 18/18 of ours present, 18 changed, 10 extra
+2026-11-26 02:28:38	mizeroluckygall/quantum-circuits-shorter-chem-loaders	adopted	complete tree beats chemistry by +0.03873 GM (>= 0.001): 249283844.17 < 250157973.26
+2026-11-26 02:29:12	nilanjansaha123/21-87-fused-dqi-c46-chemistry-gold	dominated	complete 18-file tree, measured legs: chem PASS 341375039.58 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:29:41	nilanjansaha123/quantum-circuits-24-59-chem-gauge-refit	dominated	complete 18-file tree, measured legs: chem PASS 311465252.20 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:29:57	olekis/dqi-quantum-decoder-optimization	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 02:30:27	neoluxlee/vqcc-verified-portfolio-reproduce-20261116-v2	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 42 files, 18/18 of ours present, 18 changed, 24 extra | dir extracted: 42 files, 18/18 of ours present, 18 changed, 24 extra
+2026-11-26 02:30:46	pablodiegoo/google-quantum-compilation-starter-notebook	dqi-candidate	complete tree beats DQI by +0.16747 GM per its own receipt: 305,033,672,024.33 < 309,694,874,626.04 -- needs the full two-receipt gate (DQI cannot be verified locally)
+2026-11-26 02:31:11	practricia/qcc-v5-frontier-assembly	dominated	complete 18-file tree, measured legs: chem PASS 294642169.51 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:31:40	qiuqiuh/qcc-verified-baseline-20261103	dominated	complete 18-file tree, measured legs: chem PASS 317572833.22 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:31:54	nilanjansaha123/auto-updating-verified-quantum-portfolio-picker	dominated	complete 18-file tree, measured legs: chem PASS 376139673.72 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:32:20	okanfx/task-1-fusion-invsqrt-lab	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 02:32:28	pablodiegoo/casmi26-forensic-mass-spec-shift-adduct-physics	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 02:32:45	phucthaiv02/qcc-verified-portfolio-df-thc-retraining-study	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 28 files, 18/18 of ours present, 18 changed, 10 extra
+2026-11-26 02:33:14	qiuqiuh/qcc-refresh-v70z-k5-ay3-bound-dqi	dominated	complete 18-file tree, measured legs: chem PASS 306708201.96 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:33:38	rishabhbafnaiiitd/quantum-circuit-compilation-multi-task-sota	dominated	complete 18-file tree, measured legs: chem PASS 303862990.13 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:33:45	royalacecat/santa-2026-public-frontier-score-128-219	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 02:34:16	ruijiezhao666/vqcc-source-built-arithmetic-and-chemistry	dominated	complete 18-file tree, measured legs: chem PASS 262850177.07 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:34:30	saddamaditya/apex-portfolio-fused-dqi-c46-chemistry	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 22 files, 18/18 of ours present, 18 changed, 4 extra
+2026-11-26 02:35:13	ranjeet258/qcc-verified-portfolio-improvement	dominated	complete 18-file tree, measured legs: chem PASS 299454243.65 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:35:18	romakulichkin/dqi-reed-solomon-decoding-from-scratch	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 02:35:45	samanyu1808/credited-public-portfolio	dominated	complete 18-file tree, measured legs: chem PASS 299666607.45 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:35:48	ruijiezhao666/vqcc-constrained-chemistry-and-verified-circuits	dqi-candidate	complete tree beats DQI by +0.07408 GM per its own receipt: 307,627,073,489.02 < 309,694,874,626.04 -- needs the full two-receipt gate (DQI cannot be verified locally)
+2026-11-26 02:35:52	rustambazarbayev/quantum-circuit-compilation-physics-from-zero	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 02:36:04	saurabhkumar234/quantum-baseline-milestone-entry	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 02:36:20	saddamaditya/quantum-compiler-lab-taylor-dqi-j5-chemistry	dominated	complete 18-file tree, measured legs: chem PASS 383267019.22 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:36:25	saurabhkumar234/dqi-width-anatomy-897-qubits	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 02:36:51	seyitkaangunes/verified-circuit-quick-wins	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 02:38:07	seyitkaangunes/verified-portfolio-best-public-circuit-per-task	dominated	complete 18-file tree, measured legs: chem PASS 2360486450.06 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:38:57	shedrackaji/vqcc-portfolio-23-42	dominated	complete 18-file tree, measured legs: chem PASS 331025488.43 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:39:15	sohier/verifiable-circuit-compilation-starter	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 14 files, 3/18 of ours present, 3 changed, 11 extra
+2026-11-26 02:39:25	srinath2495/dfthc-r8-b127-c46-brot6-gpu-train	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 02:40:10	shedrackaji/vqcc-portfolio-24-9	dominated	complete 18-file tree, measured legs: chem PASS 299671051.22 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:40:35	somejoint/quantum-circuits-24-65-local-gm-chem-refit	dominated	complete 18-file tree, measured legs: chem PASS 309207580.14 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:40:59	syedinayatullah/verifiable-circuits-field-isomorphism-dqi-port	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 02:41:26	tuannm3812/verifiable-quantum-circuit-compilation-portfolio	dominated	complete 18-file tree, measured legs: chem PASS 304183960.38 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:41:55	username1357/qcc-portfolio-manifest	dominated	complete 18-file tree, measured legs: chem PASS 424162731.17 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:42:01	vijaikm/quantum-ai-verifiable-circuit-sota-masterclass	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 02:42:55	tuantran225/vqcc-portfolio-2814	dominated	complete 18-file tree, measured legs: chem PASS 294643137.73 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:43:19	nilanjansaha123/auto-portfolio-drop-in-best-of-all-circuits	dominated	complete 18-file tree, measured legs: chem PASS 337566911.14 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:43:26	username1357/qcc-verified-15-05-portfolio	dqi-candidate	complete tree beats DQI by +32.22663 GM per its own receipt: 8,083,195.00 < 309,694,874,626.04 -- needs the full two-receipt gate (DQI cannot be verified locally)
+2026-11-26 02:43:35	obstacledeveloper/qcc-9-12718-verified-three-task-walkthrough	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 28 files, 18/18 of ours present, 18 changed, 10 extra
+2026-11-26 02:43:44	ozertuu/santa-2026-multi-engine-frontier-lb-128-086	out-of-scope	no QCC circuit candidate; release text has no VQCC/dfthcsos/kickmix content
+2026-11-26 02:44:11	vincentadithya/vqc-v13-verified-portfolio	dominated	complete 18-file tree, measured legs: chem PASS 2345104493.65 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:44:16	philiplinhan/veripress-milestone-repro-v2	dominated	complete 18-file tree, measured legs: chem PASS 296633016.75 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:44:40	vincentadithya/vqc-v18-pair-rotation-search	dominated	complete 18-file tree, measured legs: chem PASS 2345104493.65 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:45:07	wcao24/vqcc-deterministic-open-portfolio	dominated	complete 18-file tree, measured legs: chem PASS 297557548.71 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:45:37	zongaobian/quantum-circuits-signed-digits-bm-psi-qrom	dominated	complete 18-file tree, measured legs: chem PASS 343477342.01 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:45:37	vincentadithya/vqc-v10-verified-portfolio	dominated	complete 18-file tree, measured legs: chem PASS 2348537554.59 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:45:38	prvsiyan/cfp-quantum-frontier-v5	dominated	complete 18-file tree, measured legs: chem PASS 299671051.22 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:46:02	ranjeet258/qcc-final-verified-portfolio	dominated	complete 18-file tree, measured legs: chem PASS 298600703.93 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:46:06	rodrigotejos/google-quantum-ai-circuit-profiler-auditor	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 02:46:36	ruijiezhao666/vqcc-compiler-validation	dqi-candidate	complete tree beats DQI by +0.07410 GM per its own receipt: 307,626,591,288.81 < 309,694,874,626.04 -- needs the full two-receipt gate (DQI cannot be verified locally)
+2026-11-26 02:47:45	vincentadithya/vqc-v14-verified-portfolio	dominated	complete 18-file tree, measured legs: chem PASS 2345104493.65 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:49:48	rushikeshpundkar/the-unbearable-lightness-of-quantum-circuits	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 28 files, 18/18 of ours present, 18 changed, 10 extra | dir candidate: 28 files, 18/18 of ours present, 18 changed, 10 extra
+2026-11-26 02:50:15	saddamaditya/quantum-circuit-profiler-flame-charts-anatomy	dominated	complete 18-file tree, measured legs: chem PASS 377049552.61 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:50:19	saurabhkumar234/chemistry-brot-cliff-measured-and-closed	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 02:50:24	saurabhkumar234/quantum-v2-assembled-frontier-portfolio	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 02:50:29	vincentadithya/vqc-v19-dynamic-mask-dqi-portfolio	dominated	complete 18-file tree, measured legs: chem PASS 2345104493.65 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:52:29	shedrackaji/vqcc-portfolio-22-68	dominated	complete 18-file tree, measured legs: chem PASS 347705355.95 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:52:34	shivajigshinde/verified-three-task-portfolio-notes	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested
+2026-11-26 02:52:47	zhongerdejie/qcc-portfolio-24p74915	dominated	complete 18-file tree, measured legs: chem PASS 305652489.65 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:53:39	soukeaizenz/vqcc-from-source-gf2-banked-chemistry	dominated	complete 18-file tree, measured legs: chem PASS 2330530178.35 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:54:13	tokenjunkielabs/quantum-circuit-submission-packager	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip reference_submission.zip: 13 files, 13/18 of ours present, 13 changed, 0 extra
+2026-11-26 02:54:43	username1357/qcc-portfolio-21-34	dominated	complete 18-file tree, measured legs: chem PASS 377049552.61 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:55:32	vibhanshus/quantum-circuit-every-gate-counts	research-ledger	about VQCC but ships no complete 18-file tree; public research/notes harvested | zip submission.zip: 22 files, 18/18 of ours present, 18 changed, 4 extra
+2026-11-26 02:57:40	vincentadithya/vqc-v12-verified-portfolio	dominated	complete 18-file tree, measured legs: chem PASS 2345104493.65 (ours 250157973.26); invsqrt FAIL
+2026-11-26 02:58:08	vincentadithya/vqc-v17-single-rotation-search	dominated	complete 18-file tree, measured legs: chem PASS 2345104493.65 (ours 250157973.26); invsqrt FAIL
+2026-11-26 03:01:32	vyassenthilkumar/verified-assembly-of-public-qcc-circuits	dominated	complete 18-file tree, measured legs: chem PASS 341384301.85 (ours 250157973.26); invsqrt FAIL
+2026-11-26 03:04:44	zhuangbility/vqcc-v18-refit	dqi-candidate	complete tree beats DQI by +0.16747 GM per its own receipt: 305,033,681,034.67 < 309,694,874,626.04 -- needs the full two-receipt gate (DQI cannot be verified locally)
+2026-11-26 11:39:08	areebbb/qai-cut-the-gates-keep-the-chemistry-33-25733	adopted	tree = our v151 exactly: invsqrt 6b592145 + DQI 6f78ecdd + chem npz 25ac10da + V22 loaders; measured chemistry PASS 249,131,841.8273937
+2026-11-26 11:39:08	ishankarnick/santa-2026-frontier-programs	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:08	muhammedveyselerin/nicker-horse-red-light-spec-index-2026	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:08	royalacecat/santa-2026-verified-frontier-128070	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:08	manwithacat/the-real-150k-was-the-friends-we-made	research-ledger	public write-up of the QCC release history; harvested, no candidate tree
+2026-11-26 11:39:08	goodpjw2008/qcc-shorter-chemistry-loaders-lb-33-25737	adopted	SOURCE of our v151 (npz 25ac10da + 5 re-solved loaders, T 13112); board 33.25733
+2026-11-26 11:39:08	asteriospanoras/santa-2026-early-gifts-shorter-programs	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	manwithacat/vqcc-apache-public-circuits	research-ledger	dataset: the Apache-2.0 public circuit catalogue (704+ scored circuits); harvested and mined for the public floor and the negative-results ledger
+2026-11-26 11:39:09	zhuangbility/qcc-v23-our-refit-b183c793-lb-33-25737	adopted	SOURCE of our v152: its notebook states the DQI b183c793 board draw is clean and ~0.82M cheaper than 6f78ecdd (evgendvorkin V81 33.25229 vs 33.25226, ~+3e-5 GM); its claimed LB 33.25737 reproduces our independent prediction 33.257375 for invsqrt 6b592145 + DQI b183 + chem 3cc6a37a. kernel output ships no submission.zip
+2026-11-26 11:39:09	shiraleesakaria/nanobody-polyreactivity-short-cdr3-train	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	orel1986/qcc-33257-fork	adopted	tree = our v152 exactly: invsqrt 6b592145 + DQI b183c793 + chem npz 3cc6a37a + goodpjw V22 loaders; measured chemistry PASS 249,131,640.8997796
+2026-11-26 11:39:09	toshiaki517/qcc-chem-refit-dqi-rewrites-dir-run	adopted	tree = our v152 exactly: invsqrt 6b592145 + DQI b183c793 + chem npz 3cc6a37a + goodpjw V22 loaders; measured chemistry PASS 249,131,640.8997796
+2026-11-26 11:39:09	alexchilton/33-25-lb-which-circuits-survive-private-salt	adopted	tree = our v152 exactly: invsqrt 6b592145 + DQI b183c793 + chem npz 3cc6a37a + goodpjw V22 loaders; measured chemistry PASS 249,131,640.8997796
+2026-11-26 11:39:09	ozertuu/santa-2026-multi-engine-frontier-lb-128-002	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	mizeroluckygall/qcc-chemistry-weight-refit-dqi-rewrites	adopted	tree = our v152 exactly: invsqrt 6b592145 + DQI b183c793 + chem npz 3cc6a37a + goodpjw V22 loaders; measured chemistry PASS 249,131,640.8997796
+2026-11-26 11:39:09	georgymamarin/santa-2026-two-program-lineages	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	royalacecat/santa-2026-public-frontier-score-128-026	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	ratnachand/vqcc-verified-floor-and-circuit-anatomy	research-ledger	public circuit-anatomy notes for the VQCC floor; harvested, no candidate tree
+2026-11-26 11:39:09	ratnachand/vqcc-verified-public-floor	research-ledger	dataset: the public VQCC floor; harvested into the Apache catalogue comparison
+2026-11-26 11:39:09	malyshevdanil/squares-in-squares-living-atlas-of-tight-packings	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	ozertuu/santa-2026-multi-engine-frontier-lb-128-024	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	pablodiegoo/google-quantum-compilation-starter-notebook	adopted	tree = our v152 exactly: invsqrt 6b592145 + DQI b183c793 + chem npz 3cc6a37a + goodpjw V22 loaders; measured chemistry PASS 249,131,640.8997796
+2026-11-26 11:39:09	cosmorin/qcc-33-25733-verified-reproduction	adopted	tree = our v151 exactly: invsqrt 6b592145 + DQI 6f78ecdd + chem npz 25ac10da + V22 loaders; measured chemistry PASS 249,131,841.8273937
+2026-11-26 11:39:09	ishankarnick/santa-2026-frontier-programs-128-025	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	harshitab3030/kgatlastfm	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	ozertuu/santa-2026-multi-engine-frontier-lb-128-025	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	goodpjw2008/qcc-shorter-chemistry-loaders-lb-33-25733	adopted	SOURCE of our v151 (npz 25ac10da + 5 re-solved loaders, T 13112); board 33.25733
+2026-11-26 11:39:09	ishankarnick/santa-2026-frontier-programs-128-030	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	specstream/saas-subprocessor-changes-sample	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	specstream/us-new-business-registrations-sample	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	specstream/warn-act-layoff-notices-sample	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	specstream/us-private-funds-form-adv-sample	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	specstream/saas-subprocessors-directory-sample	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	specstream/us-public-companies-financials-sample	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	specstream/osha-workplace-citations-sample	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	specstream/new-california-health-providers-npi-sample	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	specstream/clinical-trials-sponsors-sample	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	specstream/fda-510k-pma-device-decisions-sample	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	specstream/va-federal-contract-awards-sample	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	uniquedomains/one-word-domain-lists	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	ozertuu/santa-2026-multi-engine-frontier-lb-128-032	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	ishankarnick/santa-2026-frontier-programs-128-033	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	royalacecat/santa-2026-public-frontier-score-128-070	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	mizeroluckygall/quantum-circuits-the-eight-salt-stress-test	no-candidate	kernel output ships no submission.zip (salt stress-test only)
+2026-11-26 11:39:09	linxinshihuang/atlascat-identities-and-exposure-grains	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	liuzewen123/casmi-np-spec-v18	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	linxinshihuang/atlascat-identities-exposure-and-dateline-audit	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	srinath2495/dfthc-r8-b127-c46-brot6-gpu-train	no-candidate	kernel output ships no submission.zip (training run only)
+2026-11-26 11:39:09	royalacecat/santa-2026-public-frontier-score-128-219	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:09	dennis6886/quantum-circuits-21-37712-fused-dqi-reproduction	adopted	tree = our v151 exactly: invsqrt 6b592145 + DQI 6f78ecdd + chem npz 25ac10da + V22 loaders; measured chemistry PASS 249,131,841.8273937
+2026-11-26 11:39:09	zhuangbility/vqcc-v22-refit-b183	dominated	invsqrt 6b592145 + DQI b183c793 + chem npz fc83e9ff; chemistry on our loaders 249,131,840.18 vs our v152's 249,131,640.90 (3cc6a37a) -> dominated by v152
+2026-11-26 11:39:09	areebbb/qai-cut-the-gates-keep-the-chemistry-33-25060	adopted	tree = our v151 exactly: invsqrt 6b592145 + DQI 6f78ecdd + chem npz 25ac10da + V22 loaders; measured chemistry PASS 249,131,841.8273937
+2026-11-26 11:39:10	ozertuu/santa-2026-multi-engine-frontier-lb-128-040	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:10	ishankarnick/santa-2026-frontier-programs-128-068	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:10	royalacecat/santa-2026-public-frontier-score-128-071	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:10	varianceofx/vqcc-verified-v22-chem-portfolio	dominated	invsqrt bb676b95 (60,927.57739905387, worse than ours 60,927.54794503887) + DQI 1e6787a0 (zero-fail 305,041,576,300.78, worse) + chem npz 25ac10da (= our v151)
+2026-11-26 11:39:10	royalacecat/santa-2026-verified-frontier-128071	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:10	ruijiezhao666/vqcc-source-built-arithmetic-and-chemistry	dominated	invsqrt b4ba2126 (39 q, worse) + DQI 3c03fa53 (889 q, zero-fail 313,736,311,904, 8.7e9 worse than ours) + chem npz e317ab1c
+2026-11-26 11:39:10	aiokajima/quantum-goodpjw-3325226-reproduction-public	dominated	invsqrt 6b592145 + DQI 6f78ecdd + chem npz 0043d423 (older table, dominated by 25ac10da/3cc6a37a)
+2026-11-26 11:39:10	ozertuu/santa-2026-multi-engine-frontier-lb-128-078	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:10	nonamecode/heritage-short	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:10	ozertuu/santa-2026-multi-engine-frontier-lb-128-079	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:10	ishankarnick/santa-2026-frontier-programs-128-079	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:10	liuzewen123/casmi-np-spec-v18-loss-fallback	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-26 11:39:10	muhammedveyselerin/horse-light-products-specs-and-evidence	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-28 02:38:08	hillsidecollective/hillside-santa-2026-frontier	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-28 02:38:08	ishankarnick/santa-2026-frontier-programs	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-28 02:38:08	royalacecat/santa-2026-verified-frontier-inputs-126963	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-28 02:38:08	alexchilton/33-29-lb-which-circuits-survive-private-salt	research-ledger	private-salt survival study of the 33.29 trees; no new bytes.
+2026-11-28 02:38:08	georgymamarin/santa-2026-two-program-lineages	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-28 02:38:08	asteriospanoras/qcc-33-25229-best-public-merge-and-credits	dominated	33.25229 milestone, below V33.
+2026-11-28 02:38:08	ozertuu/google-quantum-ai-vqcc-33-25906-sota-apex	dominated	33.25906 milestone, below V33.
+2026-11-28 02:38:08	ozertuu/quantum-sim-linalg-cache	research-ledger	simulator linear-algebra cache; tooling, no tree.
+2026-11-28 02:38:08	goodpjw2008/qcc-shorter-chemistry-loaders-lb-33-29012	adopted	SOURCE of v153: public frontier LB 33.29012 (2026-11-27 23:35). Official local PASS on all three legs (invsqrt 60,769.4213, chem 249,043,677.37, DQI b183c793); its own receipt.json reports the same.
+2026-11-28 02:38:08	bigbag1983/vqcc-v28-eligible-b	research-ledger	V28 eligibility pack; no tree.
+2026-11-28 02:38:08	bigbag1983/vqcc-v28-eligible-a	research-ledger	V28 eligibility pack; no tree.
+2026-11-28 02:38:08	hillsidecollective/santa-2026-elf-r27-frontier	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-28 02:38:08	evgendvorkin/squares-in-squares-dataset-v1	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-28 02:38:08	areebbb/qai-trim-the-loader-tune-the-circuit-33-29008	dominated	measured 249,044,466.68 (lambda_eff 46.912161206, T 13,108); 789.3 cost units above V33. Its LB 33.29008 matches.
+2026-11-28 02:38:08	ranjeet258/qcc-final-v32	dominated	V32 family (LB 33.29008 at best), below V33.
+2026-11-28 02:38:08	teddybrown414/where-the-points-are-vqcc-score-exchange-rates	research-ledger	score exchange-rate analysis; no tree.
+2026-11-28 02:38:08	rishabhbafnaiiitd/qcc-33-2905-3-task-sota-portfolio-visual-guide	dominated	despite the title, its chemistry is the V29 table: measured 249,055,638.42 (lambda_eff 46.914265612, T 13,108), 11,961 above V33.
+2026-11-28 02:38:08	ranjeet258/qcc-final-verified-v31	dominated	V31 (LB 33.29000), below V33.
+2026-11-28 02:38:08	mizeroluckygall/qcc-chemistry-word-descent-inverse-sqrt-phase	research-ledger	word-descent + invsqrt phase notes; the V33 release already implements the descent (lambda_eff 46.9120125).
+2026-11-28 02:38:08	manwithacat/vqcc-chemistry-negative-results	research-ledger	negative-results ledger; harvested (it agrees with our chem_share/chem_demote/chem_feature_dup zero-savings measurements).
+2026-11-28 02:38:08	darkgobelin/qc-dqi-salt-robustness	research-ledger	DQI salt-robustness study; no candidate tree.
+2026-11-28 02:38:09	kozykappa/vqcc-tests	no-candidate	test notebook; no tree.
+2026-11-28 02:38:09	yalickj/qcc-shorter-chemistry-loaders-lb-33-28959	dominated	measured on the release's own loaders: 249,055,638.49 (lambda_eff 46.914265624, T 13,108) = the V29 table, 11,961 cost units above V33; its LB 33.28959 is below V33's 33.29012.
+2026-11-28 02:38:09	evgendvorkin/google-quantum-ai-deep-eda-with-analogies	component-adopted	SOURCE of the v153 invsqrt b08370f2 (V86): evgendvorkin's rewrite of maoxin123's 75e43352 (4 T gates -> 3 + Clifford corrections). Local official PASS 60,769.42127769003, 37 q, 1405.375 Toffoli.
+2026-11-28 02:38:09	ghazarosbarseghyan91/vqcc-goodpjw-13106-t-clean-dqi-v30-gate	research-ledger	kernel ships NO output zip (scan: NO_ZIP), so there is no tree to verify; the 13106-T claim (2 fewer Toffolis than V33) is a pointer for the loader lane, not an adoptable artifact.
+2026-11-28 02:38:09	pablodiegoo/google-quantum-compilation-starter-notebook	dominated	starter notebook; no tree above the frontier.
+2026-11-28 02:38:09	evgendvorkin/proba-2	out-of-scope	SOL circuit atlas, not a QCC tree.
+2026-11-28 02:38:09	evgendvorkin/santa-2026-arithmetic-program-atlas	out-of-scope	Santa 2026 dataset.
+2026-11-28 02:38:09	dennis6886/quantum-circuits-21-37712-fused-dqi-reproduction	adopted	fork of goodpjw2008 V29; its tree measured 249,055,638.49 on its own loaders (V29 chemistry), superseded by V33. Its fused-DQI refit is a no-op (coefficients [0,0,0]) -- recorded as a negative result.
+2026-11-28 02:38:09	bigbag1983/vqcc-maoxin-v4-pack	research-ledger	maoxin123 v4 chemistry pack (3,357-T family); dominated by the V33 loaders (T 13,108 for the whole pass).
+2026-11-28 02:38:09	bigbag1983/vqcc-v28-circuit-generator	research-ledger	generator source bundle; harvested, no tree.
+2026-11-28 02:38:09	ghazarosbarseghyan91/vqcc-33-28872-goodpjw-13108-t-clean-dqi	dominated	13108-T goodpjw chemistry with the clean DQI: this is V29's 249,055,638.49, 11,961 above V33; its LB 33.28872 is below 33.29012.
+2026-11-28 02:38:09	taylorclark637/vqcc-submission-notebook-v1-v16-assemblies	no-candidate	scan: NO_ZIP (assemblies notebook ships no submission.zip).
+2026-11-28 02:38:09	royalacecat/santa-2026-public-frontier-score-127-359	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-28 02:38:09	suravimandalgmail/vqcc-chem-kit	research-ledger	chemistry toolkit dataset; no full tree.
+2026-11-28 02:38:09	ghazarosbarseghyan91/vqcc-28-23441-verified-portfolio	dominated	a 28.23 portfolio, far below the 33.29 frontier.
+2026-11-28 02:38:09	ghazarosbarseghyan91/vqcc-combo-candidates	research-ledger	candidate-combination dataset; every combination is a three-leg product and the legs are measured individually -- nothing above V33.
+2026-11-28 02:38:09	royalacecat/santa-2026-verified-frontier-127460	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-28 02:38:09	rdaccel/qcc-33-25906-reproduction-goodpjw2008	dominated	reproduction of the 33.25906 milestone (13110-T family), below V33.
+2026-11-28 02:38:09	rdaccel/qcc-33-25906-bundle-goodpjw2008	dominated	dataset of the same 33.25906 bundle; below V33.
+2026-11-28 02:38:09	letusassume/verifiable-quantum-circuit-compilation-three-smal	research-ledger	three small-optimisation notes; no tree.
+2026-11-28 02:38:09	uniquedomains/one-word-domain-lists	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-28 02:38:09	maoxin123/qcc-33-287-37-qubit-invsqrt-at-60-774	dominated	its invsqrt 75e43352 costs 60,774; evgendvorkin's b08370f2 (measured 60,769.4213, PASS) is 4.58 cheaper and is what v153 ships.
+2026-11-28 02:38:09	toshiaki517/qcc-prv-h8-live-search-v3	no-candidate	loader search v3; no tree.
+2026-11-28 02:38:09	manwithacat/the-real-150k-was-the-friends-we-made	research-ledger	release-history write-up; no tree.
+2026-11-28 02:38:09	manwithacat/vqcc-apache-public-circuits	research-ledger	Apache-2.0 public circuit catalogue; harvested for the floor.
+2026-11-28 02:38:09	toshiaki517/qv2-beat-1-h8-search-private-dqi-q831	no-candidate	private-DQI Q831 experiment; no tree.
+2026-11-28 02:38:09	royalacecat/santa-2026-verified-frontier-128070	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-28 02:38:09	darkgobelin/qc-frontier-gated-submission	dominated	measured tree: invsqrt bb676b95 (60,927.5774, worse than b08370f2's 60,769.4213) + DQI dbb2ada3 (the known 2-error board draw, 33.16196) + chem 25ac10da (v151); strictly below V33.
+2026-11-28 02:38:09	darkgobelin/qc-multi-salt-verified-baseline	research-ledger	multi-salt baseline study; no candidate tree.
+2026-11-28 02:38:09	dariushafshar/quantum-circuits-silver-line-is-a-113-team-tie	research-ledger	leaderboard analysis (113-team tie); no tree.
+2026-11-28 02:38:09	dariushafshar/kaggle-board-snapshots-santa-quantum-ntl-ptcg	research-ledger	board snapshots dataset; no tree.
+2026-11-28 02:38:09	hermesrmtupinamba/notebook6c1f027398	no-candidate	no QCC tree in output.
+2026-11-28 02:38:09	mos3santos/circuit-optimization-test	no-candidate	test notebook; no tree.
+2026-11-28 02:38:09	muhakabartay/vqcc-salt-lottery-unit-prices-width-maps	research-ledger	salt-lottery / unit-price analysis; no tree.
+2026-11-28 02:38:09	toshiaki517/qcc-h8-live-loader-search	no-candidate	loader search; no tree.
+2026-11-28 02:38:09	leadchangegroup/us-employer-cost-2026-2027-hiring-cost-atlas	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-28 02:38:09	ghazarosbarseghyan91/vqcc-dennis-fused-dqi-25735-clean-pick	dominated	the 25735 family again (13112-T); below V33.
+2026-11-28 02:38:09	ghazarosbarseghyan91/vqcc-33-25735-13112-t-chemistry-clean-dqi	dominated	13112-T chemistry (v151/v152 family), 200.9 cost above V33 at best; LB 33.25735 is below 33.29012.
+2026-11-28 02:38:09	toshiaki517/qcc-chem-loader-scan	no-candidate	scan-only loader analysis.
+2026-11-28 02:38:09	toshiaki517/qcc-dqi-camp5-16-salts	research-ledger	16-salt DQI study; no tree.
+2026-11-28 02:38:09	toshiaki517/qcc-dqi-motif-scan	no-candidate	motif scan; no tree.
+2026-11-28 02:38:09	toshiaki517/qcc-invsqrt-splice-campaign	no-candidate	invsqrt splice search; no tree.
+2026-11-28 02:38:09	nonamecode/heritage-shorts	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-28 02:38:09	toshiaki517/qcc-dqi-frontier-row-measure	no-candidate	scan: NO_ZIP (measurement kernel).
+2026-11-28 02:38:10	maialghadhouri/autism-spectrum-disorder-arff-file	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-28 02:38:10	ishankarnick/santa-2026-frontier-programs-127-985	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-28 02:38:10	toshiaki517/qcc-dqi-salt-failure-campaign	no-candidate	scan: NO_ZIP (salt campaign kernel).
+2026-11-28 02:38:10	toshiaki517/qcc-input-diag	no-candidate	scan: NO_ZIP (diagnostic kernel).
+2026-11-28 02:38:10	ozertuu/santa-2026-multi-engine-frontier-lb-127-984	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-28 02:38:10	orel1986/qcc-v23-refit-fork	dominated	V23 family (33.25737), below V33.
+2026-11-28 02:38:10	ozertuu/santa-2026-multi-engine-frontier-lb-127-991	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-28 02:38:10	ishankarnick/santa-2026-frontier-programs-127-994	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-28 02:38:10	royalacecat/santa-2026-public-frontier-score-128-023	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-28 02:38:10	ishankarnick/santa-2026-frontier-programs-128-004	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-28 02:38:10	specstream/sec-investment-advisers-sample	out-of-scope	not a QCC release (other competition / unrelated dataset)
+2026-11-28 02:38:10	topeseun100/quantum-circuit-compilation-original-work-sprint	no-candidate	sprint notebook; no 18-file tree.
+2026-11-28 02:38:10	maialghadhouri/autism-spectrum-disorder-arff-files	out-of-scope	not a QCC release (other competition / unrelated dataset)

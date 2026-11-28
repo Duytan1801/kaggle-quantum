@@ -17,40 +17,40 @@
    "size": 41717
   },
   "state/KERNEL_WATCH.md": {
-   "sha256": "78663b19b76c06400c26efd9dbcdfae4c2071c3d269affe725e0794316d6a1a5",
-   "size": 104891
+   "sha256": "b7753fe3430f7ce135adfb76eda877d2e9d0ce0ff19d854c11d59bd893d501bf",
+   "size": 108457
   },
   "state/RESEARCH_STATE.md": {
-   "sha256": "ab4d7c83fc13ee2bd4e710bde6f55894a1701297b2fedd04edb1a70c7f00f6fb",
-   "size": 101535
+   "sha256": "41a580c4a5e7502f841073156b578412162d17f6abbd14935156313cf807b2b4",
+   "size": 105641
   },
   "state/CALIBRATION.md": {
-   "sha256": "82c4fee004b217193dde5da8294d2a45edc2545d4bd7bfb5a6ab7d260f1a356d",
-   "size": 30395
+   "sha256": "3151605f7e5fc83888daf1fe6cae7fdce9f747477c6fc55ab89a25e85914e166",
+   "size": 31872
   },
   "state/GOALS.md": {
-   "sha256": "1652394e24e6e759902452be0518f7424ff28732df3023d9c4d3e32e60bbc17e",
-   "size": 27612
+   "sha256": "9fe7d7f50845a83b53d91068546b5a7c8e5e3a0e86a7d6d16f02c3ab07f3aa05",
+   "size": 29141
   },
   "harvest/ADOPTED.tsv": {
-   "sha256": "3ee80d831aa247572d32efb55c6dd79f9e22630875669f612cf978ad67ef92b5",
-   "size": 181446
+   "sha256": "9a66c109a2c16b92250dbeaa291ad0ef5ad73fdef549debeb74047cf5fe8fc8e",
+   "size": 251133
   },
   "harvest/watch.log": {
-   "sha256": "324f151489d217ea09e9eed85c97ff62584e69446c77e1837d482006e3533480",
-   "size": 425275
+   "sha256": "78046b312a61b22c96ac86cfe0e2f131127ab34e60969e3fb74a117949dddf6e",
+   "size": 448457
   },
   "harvest/PENDING.tsv": {
-   "sha256": "234c79f4ee277e1c5a044f1f6f2ea448e809a54fe8513d538ac9824ad69b0850",
-   "size": 39864
+   "sha256": "47df0b18459374c29ea3343a500b918dcbfbd66a84b67924429adec63e23294c",
+   "size": 325
   },
   "harvest/SEEN.tsv": {
-   "sha256": "494f9cb3e8f00ebed16272a638a13fba82335ab6582ff57a87564260a375bc2c",
-   "size": 95395
+   "sha256": "6d57ce3458eeb1a58ccb1160489ad614f5bd05b535cbbe4dd1aeeb19e8a33147",
+   "size": 111710
   },
   "harvest/AUTHORS.txt": {
-   "sha256": "4e85ab775c57c22d1683d7c1596408a90253a2a4e0421a884a8349c8b30b93af",
-   "size": 2385
+   "sha256": "89b670b7b6821ebe67bdf7ef3116d96acbe6c0a23911f5202d4b7042dc1e0c4b",
+   "size": 2626
   },
   "harness/harvest_kernels.sh": {
    "sha256": "ff9d79fdbe96071916fd4b2eb214139178ee9b41bfd9782049fafc62a52e9a21",
@@ -204,6 +204,10 @@
    "sha256": "6bcbd894900123e26afa802b3195430182485c8900cf368810469a5278b8380c",
    "size": 6745
   },
+  "tools/chem_demote.py": {
+   "sha256": "7ca9fc7788fa4d0e131c873e90ed3a59d26bb7e85b4ebe9ae0e1018500c09b0b",
+   "size": 6629
+  },
   "tools/build_moat_v140.py": {
    "sha256": "488dde89011b7643f9dfde4f77cad8695a18cdc4f0e14c2e1e23d10459330822",
    "size": 1712
@@ -219,6 +223,10 @@
   "tools/merge_scan_kmx.py": {
    "sha256": "6b4debfd30fda42a8b1197e53d490a8b34b7b134ea68de50a34defcc2089ce0c",
    "size": 2781
+  },
+  "tools/chem_h48.py": {
+   "sha256": "1176efd4c8439d92a6e7dd3d4749cbe63ceb17484a0af5ce039a5a5539eb6352",
+   "size": 6703
   },
   "tools/invsqrt_fit.py": {
    "sha256": "cae40e245dce80a3912911bd185426349c17517f6dba47ede2282179456fc6a5",
@@ -279,6 +287,14 @@
   "tools/chem_new_tables.py": {
    "sha256": "378aaa1a95007c443ae1a8b13062093c3c4b908124ff1b3e65c12cccfbddbeaf",
    "size": 2609
+  },
+  "tools/build_moat_v151.py": {
+   "sha256": "53d0d511efbe84d07c0666f5a6617e3a3041e017eb10b8db121f048b184e7e67",
+   "size": 13321
+  },
+  "tools/chem_bankrank.py": {
+   "sha256": "e7b205b11e27e3c9bb02d9444ea147151647f6522e5f8044e372bf5d185309bf",
+   "size": 2640
   },
   "tools/harvest_moat_receipt.py": {
    "sha256": "17e6c24e4e5aea8816c9be357d66f5a54cea7bbfe55eb07d7861b0ade9721f3b",
@@ -392,6 +408,10 @@
    "sha256": "0ad071a0244072a9f550b8b54d1f447778500b7c86a4db46dc2841f7a04359b9",
    "size": 5059
   },
+  "tools/build_codeevolve_chem_bundle.py": {
+   "sha256": "b86cf2a15cadcc91247a3454b67750e965a4e65bfd0585d29bed139c07f81381",
+   "size": 4435
+  },
   "tools/build_snapshot_v148.py": {
    "sha256": "addcd8b92e90d03cf0a27ad05318a322c8936365c0b65c2d42af499ae15af62b",
    "size": 4461
@@ -407,6 +427,10 @@
   "tools/gh_push.py": {
    "sha256": "71b1cb28acaa8f3567ceae3a7610887445b2e0bc29976a18e2255f3ff1229798",
    "size": 7390
+  },
+  "tools/adjudicate_wake_2026-11-28.py": {
+   "sha256": "2e082383c1b074d0ccd32e91868df7bbcbef00c6ccc71115af9e7797ef2a7c62",
+   "size": 13038
   },
   "tools/build_moat_v141.py": {
    "sha256": "c25ff3304a893f104daf5c0febe2e04c1b5ea0d7321e9aef9c70f1a1c670b723",
@@ -568,6 +592,10 @@
    "sha256": "20493466b394cdf36fd4dcbe22f384592ad68a8d4aa47f04633a23683bbbb816",
    "size": 7898
   },
+  "tools/build_moat_v153.py": {
+   "sha256": "c808bd22e09e117c4d4655fb50eefd969e5a9d934a88e4f0148e69c0bec787cb",
+   "size": 15810
+  },
   "tools/build_moat_v147b.generated.py": {
    "sha256": "6ab24c232e9f702b73f173b2a89250c6909539771441918249cd6cbce9351523",
    "size": 13544
@@ -636,13 +664,25 @@
    "sha256": "2d5c704e2e235951211ec2a45334103a8eccb254faa634f85b445ea68d4a5536",
    "size": 3368
   },
+  "tools/publish_codeevolve_chem_bundle.py": {
+   "sha256": "3a000649fcbb18d543e4b87c6f030cccbf2a3ff88277371b16a5bc33b23e62fd",
+   "size": 3601
+  },
   "tools/dqi_cmerge_fast.py": {
    "sha256": "c98096ad15d9dbce990a1fc03127dd0101b87e5cba5d39f683ac1a43f64331e2",
    "size": 13184
   },
+  "tools/gline_build.py": {
+   "sha256": "c8409abc4ff0741d650a1fbac6168c39fdbe8603231ceea58cc016ea1bfabe4f",
+   "size": 6512
+  },
   "tools/probe_chain.py": {
    "sha256": "77f2c85df3131a442ea8fc3aa716d2147ef4de508d302d601b5f8023a457a150",
    "size": 1436
+  },
+  "tools/build_moat_v152.py": {
+   "sha256": "626ad93414f8ba767935afc5bc2e4bf12d12924b6698a8f0f76735b3b408f82e",
+   "size": 14691
   },
   "tools/qcc_cfg_patch.py": {
    "sha256": "c27d19f3e48e6d3cbe93ff6dc83e1852d39f4db62b64bc74d3f3a69534684308",
@@ -679,6 +719,10 @@
   "tools/chem_j_sweep.py": {
    "sha256": "ab877063001f04c81ae92732d7cdfe11aa2ab8863be6662c508a265d3a57bec8",
    "size": 10270
+  },
+  "tools/snapshot_dataset.py": {
+   "sha256": "94ce748f075f65d1a07db54bfbf3c36d0b59a5e2f4d852d9ed6fa564f5259a45",
+   "size": 5999
   },
   "tools/invsqrt_basis_lp.py": {
    "sha256": "761c9da1e51d2afcbeee81da4f1c9e309568be51f9ea238725365223ffc4ee9e",
@@ -813,8 +857,8 @@
    "size": 8745
   },
   "tools/build_sha_table.py": {
-   "sha256": "b206a6159cbfb1fb8c4039989e7a9d07c3d7b8ae7bc3574509472fab19c3b455",
-   "size": 1626
+   "sha256": "45804636e542d1807c034c9f44b930e9caa29e0bf0b77c6afaf842bc798d141f",
+   "size": 1660
   },
   "tools/invsqrt_affine.py": {
    "sha256": "c642d4d1d6972f1ad23144cb97fd3bd2a0052d708b1ef648a160df2c3214aec4",
@@ -876,6 +920,10 @@
    "sha256": "d3a84aa29f9bb02cc738e5e3855f769d1feb2a7e5548d6bf2da42284aef14818",
    "size": 2035
   },
+  "tools/apache_list.py": {
+   "sha256": "abf6aaa8fcb87a564d53fd12837a255e76fe202e674918a7c2e923d10034b640",
+   "size": 5037
+  },
   "tools/h32_m6_stage_screen2.py": {
    "sha256": "89ad3219145968ed40da159222acdb12ac779f419d77d90575e07d5ed9403fba",
    "size": 3378
@@ -896,13 +944,21 @@
    "sha256": "325e6ab4256a9e722704c2351d63561ff432731584e79c5089ec8b526f8b2889",
    "size": 4914
   },
+  "tools/scan_releases.py": {
+   "sha256": "ce43c71a9f0426dbf7e3fa794e7b3fee082b0d6f45edddf44c5e6b1e5605d58c",
+   "size": 3718
+  },
   "tools/chem_quad.py": {
-   "sha256": "67edee1d9a57eca964255895ea7a9f7a80c14a11afdfc49c92f17b92081e4fc5",
-   "size": 6262
+   "sha256": "283eb8465eca8919e91f018cf2d0181e4ee93cea507a3ed80c17b48da1c5d608",
+   "size": 10362
   },
   "tools/build_dqi_probe.py": {
    "sha256": "1b0886ccef7dd32d240d2c2cc1bea7c52849012e1c86d9be150eb59d94e05f28",
    "size": 9927
+  },
+  "tools/adjudicate_wake_2026-11-26.py": {
+   "sha256": "53884bb83aed93cfc26e3fd8f07a9ce82e2bf42c2a10194d1a753275bb3fa02c",
+   "size": 9326
   },
   "tools/radar_repair.py": {
    "sha256": "4eb31717f76101da38d12ab057ebc998b2f61991d8616c3148b4366f7efa5e26",
@@ -935,6 +991,10 @@
   "tools/invsqrt_refit.py": {
    "sha256": "5d6940b1cd364ac68470d9ff9f690a550061a5ddfea916746197a8ca71d0b5d4",
    "size": 10254
+  },
+  "tools/make_codeevolve_chem_kernel.py": {
+   "sha256": "1f258b38666079146b1d04c37ec6e3cde75b4cae4f05e45be8b4b731f3f15333",
+   "size": 15539
   },
   "tools/build_receipt_v139.py": {
    "sha256": "8b5eb64d1be2a3929d3d4bbe4449ffd9f201747970e56a2d0d3b1b1baa31c77e",
@@ -1033,8 +1093,12 @@
    "size": 4541
   },
   "tools/auto_adjudicate.py": {
-   "sha256": "58f1e280399de9eb6fdc5505176f22e51367ed36573c428d4a5f33fa9005e209",
-   "size": 18868
+   "sha256": "68c9bf1a89a2910f1fdde559695820e65cb297eb4bfd60371d558bf7a52e33b7",
+   "size": 19152
+  },
+  "tools/chem_feature_dup.py": {
+   "sha256": "c466ff112c02ae374f336f42ad76840e6d8fb6dee948060bce666c63b048a73a",
+   "size": 6159
   },
   "tools/build_moat_v128.py": {
    "sha256": "19ef17a848b351e46eb127992e6afaaf5101d4e00e53001a3a45a87e0f69e683",
@@ -1064,9 +1128,17 @@
    "sha256": "8e19d195917d34c3935131423a5204b1ede0418d81d563aa9fd30d6647d2885c",
    "size": 12302
   },
+  "tools/gap_attr.py": {
+   "sha256": "31701a7e7114eb940474b43c3cd3cefd79a31881fae2b65a76a55ae9c01c06f7",
+   "size": 8814
+  },
   "tools/build_receipt_v146.py": {
    "sha256": "8da4a1beee958ee5d7910d83f6de7dcd25cb3f4846f39fa7df710bb726f26298",
    "size": 9106
+  },
+  "tools/chem_share.py": {
+   "sha256": "ebbfc27f0293677d54431df075c1d54c7577fd01ac1312ad3e90de879793009c",
+   "size": 8000
   },
   "tools/chem_oldops.py": {
    "sha256": "9394e72f84c9f01b4ce11019ffbcad27d8eede927a2bfb4153191a4af084fed1",
@@ -1120,6 +1192,10 @@
    "sha256": "fa3321ea682d9218d0cdc1e97bb95861d58393715f322eaa84e4c1f921dd1ef0",
    "size": 5596
   },
+  "tools/chem_span.py": {
+   "sha256": "fdac5e204770caaa19a75d4506f8a5770cfe82d3cdac43135f83090990230ccc",
+   "size": 4475
+  },
   "tools/radar_check.py": {
    "sha256": "7fbd3494c53bdeaf4c6259aaeb18329a09f192f15b88f4ca8ceb7c4031f9aeea",
    "size": 2596
@@ -1127,6 +1203,10 @@
   "tools/chem_pairing_sweep.py": {
    "sha256": "c0da5fb3b194b4eb63634023ae150a4a652231b86e5261e6fa6b67ee44a68023",
    "size": 4472
+  },
+  "tools/build_codeevolve_bundle2.py": {
+   "sha256": "e040490b23034c0e48c0e47700d1e6ba148943dd2b6cded624b1af1982addbab",
+   "size": 7074
   },
   "tools/atlas_tools/atlas_family.py": {
    "sha256": "19fe95cfff405fe4e83203db73cbebd882503d4d8e28bb4eeccdc7d4d46551af",
@@ -1356,20 +1436,20 @@
    "sha256": "15a65f8ebcb7053c0dea85e5023d77805ba88359e0ce78ad40f5a80f8798c522",
    "size": 2826
   },
-  "trees/v150/SHA_TABLE.json": {
-   "sha256": "9f8ff8dcf5d23495c0fac6f6974930e8d82ef507d511e3de625f951c2f2034cb",
-   "size": 2438
+  "trees/v153/SHA_TABLE.json": {
+   "sha256": "e17bd2f7f919240889375ee0be65513e17a6b21458dea8cf8c8509e3771cb119",
+   "size": 2472
   },
-  "trees/v150/RECEIPT.json": {
-   "sha256": "cbe20c406d14fbf28bf606d4eaf325d08e5f4d3ee794843109af84026a3f2c2b",
-   "size": 4038
+  "trees/v153/RECEIPT.json": {
+   "sha256": "88d83cf5740feb8753b445420e2c7152f585d333595f8ce4637859f4439ac9ab",
+   "size": 3257
   },
-  "trees/v150/submission.zip": {
-   "sha256": "0269bb6a1aa0e404ca65965c3305d12832ac37c1b2ab455a659cf4174cb2d84b",
-   "size": 78063651
+  "trees/v153/submission.zip": {
+   "sha256": "ef8fe4f7a5b25ee1dd9ad2123ac359ce018e8a22269dc7066ee722e2af46767a",
+   "size": 78027850
   },
-  "trees/v150/README.txt": {
-   "sha256": "44a2eeabfedfd806c66693de0fc7ece5b36fc56a84d6357a07c9d6e9e96dc944",
+  "trees/v153/README.txt": {
+   "sha256": "defb3e2502050e9fabda488ced845d349adb56c042a8ab3a5a5df8d0b120e677",
    "size": 81
   }
  }

@@ -448,3 +448,31 @@ harvestable public frontier is the 33.25xxx line.
 5. **H40 — weight refit** (≤ +0.003 GM).
 6. **Public-release radar** — v150 came straight out of the queue within one
    wake; keep 4 detached adjudicators running every wake.
+
+## 2026-11-28 leverage refresh (after v153 adoption)
+
+The public frontier is now **33.29012** (V33).  The leaderboard top is
+**34.77295**, so the public floor is ~1.48 GM below the leader and the gap is
+still 100% unpublished.
+
+Measured leg values at v153 (the numbers any new idea must beat):
+
+| leg | cost | marginal value |
+|---|---|---|
+| invsqrt b08370f2 | 60,769.42127769003 (37 q, 1405.375 Toff) | +0.3051 / qubit, +0.00789 / Toffoli |
+| DQI b183c793 | 305,031.4e6 (board draw) | +0.0247 / qubit |
+| chemistry f2b6cc37 | 249,043,677.37 (T 13,108, Q 405, lambda 46.9120125) | +0.00085 / loader Toffoli |
+
+**Ranked goals (updated):**
+1. **Chemistry loader Toffolis.**  T 13,108 -> the V33 release itself shows the
+   lever: 257 live words moved + 3 loaders re-solved = lambda 46.91427 ->
+   46.91201 (+0.0039).  The next step is the group-start loaders (k0,k1,k5,k7,k11
+   are still 240-245 CCX each) = up to +0.24 GM.  CodeEvolve chemistry bundle
+   is ready; the deterministic reuse family is measured dead, so the search must
+   do structural rewrites.
+2. **invsqrt 37 -> 36 q** (+0.31 GM) — unchanged, construction-bound.
+3. **DQI width** (+0.45 GM) — blocked (no generator for our 900 q family).
+4. **Word descent** (adopt V33's method: move live words, refit, re-solve the
+   affected loaders) — each round is ~+0.0005-0.002 GM and V33 did three rounds.
+5. **Public-release radar** — the frontier moved +0.033 GM in 36 h; the queue is
+   the highest-expected-value channel and must be adjudicated every wake.

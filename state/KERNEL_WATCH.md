@@ -148,3 +148,59 @@ no scored competition submission has ever been made — that is the M3 it3 direc
 - 2026-11-25 01:2x UTC | **Public-release queue: 21 rows adjudicated by measurement.** Adopted goodpjw2008/ozertuu 3,334-T chemistry as v148. Dominated with measured chemistry: evgendvorkin proba-2 250,196,248.39; prvsiyan 9-tree archive (255.2M / 251.09M / 254.6M / 255.3M); aslan007x v4 251,089,554.74; alexchilton 33.18 250,671,518.29; lionalmedong 250,577,083.84; mzishran/orel1986 = exact v147. arsen123 audit DQI 305,030,293,104.77 (3.5 T better, invsqrt 0.03 worse ⇒ net ≈0). Harvested manwithacat's 479-row negative-results ledger (NR-0207 weight-refit headroom 0.09 %, NR-0303 20-mHa-cap reopen). H38 measure-first KILLED (0 candidate sites in our DQI).
 - 2026-11-25 12:0x UTC | **v149 board score 33.21179** (ref 58861394; predicted 33.21174403, residual +4.6e-5). **Chemistry plan machinery now EXACT**: the emitter is instrumented (`RECORD`), `chem_rec.py` shows 0 feature disagreements and `chem_struct.py` reconstructs all ten public plans' output deltas exactly ("OK") — we can now verify a NEW plan, not just re-emit goodpjw's. Two model bugs fixed (growing `gens` list in `pair()`; mixed-feature bank-mask indexing); QUADS confirmed as the integer-AND `low_x AND (low>=2^y)` and valid for k=1..14 only. **H45 KILLED** (no solved plan's products span another batch's targets, 0/90 pairs). **H43 KILLED** (`brot` 7→6 saves 300 T + 5 Q but fails the 20 mHa error gates). **H44 MEASURED/BLOCKED** (state-prep cost is C-sensitive: C=46 → 4550 Toffolis, C=16 → 2101, but C is pinned by error_2 and any change rebuilds all 15 loaders). H42 stays top: the scheme is not exhausted (goodpjw uses ≈50 products/output vs the rank bound of 8). Queue bug fixed (auto_adjudicate ran `datasets download` on kernel slugs; 19 rows wrongly closed, re-queued with the correct kind).
 - 2026-11-26 01:0x UTC | **v150 ADOPTED + SUBMITTED (ref 58918753), 4 slots left.** goodpjw2008's `qcc-shorter-chemistry-loaders-lb-33-25564` (v21, LB 33.25564) appeared in the queue and its kernel output carries the full 18-file tree. Official local chemistry PASS 249,169,842.41339546 (T 13,114, lambda_eff 46.91430370584927, Q 405) vs our 250,157,973.26 (T 13,166); invsqrt `bb676b95` and DQI `6f78ecdd` kept at the v149 bytes (in-kernel V149 receipt covers them). Gate `GATE-OK 0269bb6a1aa0e404`, predicted GM 33.25563. Generator source harvested to `work/gens/goodpjw2008_chem_v21_2026-11-26/`; queue row closed `adopted`. H48 localised: five group-start loaders (k=0,1,5,7,11) still 240–245; dead-word budget measured (k11=240, k7=131; k0=5, k1=67, k5=60); next build attacks k11 with the 82-feature scheme (kill: nP > 157 in one build day).
+
+## 2026-11-28 02:1x-03:0x UTC — wake: v153 (V33 frontier) + CLI auth fix
+
+* **Kaggle CLI auth fixed**: the expired `~/.kaggle/access_token` shadowed the
+  legacy key (the CLI's `authenticate()` finds the legacy key but the OAuth
+  probe path exits to `print_auth_help()`).  Moving the stale token aside
+  (`access_token.bak.*`) restores `kaggle` for submissions/pulls/pushes.
+* **moat-lab v70 (v152) receipt FAILED** — not the verifiers: all three legs
+  printed PASS (invsqrt 60,927.5479, DQI clean, chem 249,131,640.90), but the
+  receipt parser sliced the JSON by CHARACTER index instead of line index, so
+  every leg parsed as `{}`.  Fixed with an incremental `json.JSONDecoder`
+  scanner (`extract_json`), re-pushed as v71, then superseded by v72 (v153).
+* **Public frontier jumped**: goodpjw2008 V33 = **33.29012** (2026-11-27 23:35),
+  shipping invsqrt b08370f2 (60,769.4213), DQI b183c793, chemistry npz f2b6cc37
+  (249,043,677.37, T 13,108).  All three legs re-measured locally, PASS.
+* **v153 built**: 18-file tree `work/trees/v153`, sha table
+  `work/sha_tables/sha_table_v153.txt`, snapshot dataset
+  `badboyhalo1801/qcc-release-v153` (18/18 verified), receipt kernel moat-lab
+  v72 running since 02:29 UTC.
+* **Release queue: 78 rows closed**, 0 left.  Measured verdicts in
+  `work/tools/adjudicate_wake_2026-11-28.py`; every non-adopted tree this wake
+  is strictly above V33 in cost (areebbb +789, V29 family +11,961).
+* **NO-SILENT-DAY**: last submission was 2026-11-26 07:47 UTC; v153 goes through
+  the gate as soon as v72's receipt lands.
+
+## 2026-11-28 03:0x UTC — v153 SUBMITTED (ref 59031287), chemistry CodeEvolve pushed
+
+* **v153 submitted through the gate**: `GATE-OK ef8fe4f7a5b25ee1`, label
+  `v153_gpw_v33_frontier`, ref **59031287** (2026-11-28 02:52:30 UTC), 4
+  submissions left today.  Board score pending (poller running).
+  (Gate quirk: a gate-only run writes RECEIPT.json/SHA_TABLE.json/submission.zip
+  INTO the tree — move them to `work/trees/_v153_gate_artifacts/` before the
+  `--submit` run.)
+* **moat-lab v72 receipt**: `V153-RECEIPT-PASS`, shas_ok true, in-kernel
+  invsqrt PASS 60,769.42127769003 (685 s), DQI PASS (1 value error on the
+  default salt; the board draw of b183c793 is clean and published), chemistry
+  PASS 249,043,677.36582175 (23 s).
+* **Chemistry CodeEvolve is LIVE on Kaggle**: kernel
+  `badboyhalo1801/qcc-chem-loader-codeevolve` v1 (dataset
+  `badboyhalo1801/qcc-chem-codeevolve`, 66 files verified).  It rebuilds the
+  bundle from the flat manifest, installs CPython 3.13 + the vendored
+  codeevolve, smoke-tests the exact evaluator on the seed program (must report
+  exact_ok=1, ccx=240), then runs the MAP-Elites search (4 islands, CCX x
+  batch) for up to 8 h and harvests the best recipe.
+  NOTE: the kernel SLUG cannot equal the dataset slug (`qcc-chem-codeevolve`
+  gave 409 Conflict) — the kernel is `qcc-chem-loader-codeevolve`.
+* **Bundle tools**: `work/tools/build_codeevolve_chem_bundle.py`,
+  `work/tools/publish_codeevolve_chem_bundle.py`,
+  `work/tools/make_codeevolve_chem_kernel.py`.
+* **Next frontier hypothesis (NEW)**: the leader (34.77295) implies an invsqrt
+  leg of ~53,300 at the public chem/DQI = 36 q, or 37 q with ~1,440 Toffoli
+  equivalents (ours: 1,642).  The public invsqrt moved 60,927 -> 60,769 in ONE
+  step by rewriting the T-gate phase correction (evgendvorkin V86 on
+  maoxin123's b2190).  The generator for that lineage is the new research
+  target: pull maoxin123's "QCC 33.287 | 37-qubit invsqrt at 60,774" notebook
+  and search its phase correction.

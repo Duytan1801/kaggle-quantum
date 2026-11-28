@@ -174,7 +174,12 @@ def verify_invsqrt(path):
     rc, out, err = run(
         f'cd "{ROOT}" && export PYTHONPATH=$PWD/work/toolchain/kickmix && '
         f'bash harness/run_capped.sh 3G work/toolchain/venv/bin/python '
-        f'work/toolchain/verifiers/invsqrt/verify_submission_invsqrt.py "{path}"', timeout=3600)
+        # 1 shot per x: the SCORE (Q x T_eq) is exact and shot-independent;
+        # the 200M-shot default costs ~14 min per candidate and the queue has
+        # ~250 rows.  A candidate that matters is re-verified in full at the
+        # adoption gate.
+        f'work/toolchain/verifiers/invsqrt/verify_submission_invsqrt.py "{path}" '
+        f'--shots-per-x 1', timeout=3600)
     txt = out + err
     i, j = txt.find('{'), txt.rfind('}')
     if i < 0 or j < 0:

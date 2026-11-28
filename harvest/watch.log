@@ -4877,3 +4877,211 @@ You have been rate limited. Wait a little while before retrying.
 2026-11-26 00:36:21 pass done: pending=238 (new 0) authors=195
 2026-11-26 00:53:21 pass done: pending=232 (new 1) authors=195
 2026-11-26 01:01:48 pass done: pending=249 (new 19) authors=195
+2026-11-26 01:12:17 pass done: pending=249 (new 2) authors=195
+2026-11-26 01:22:43 pass done: pending=249 (new 1) authors=195
+2026-11-26 01:33:04 pass done: pending=218 (new 3) authors=195
+2026-11-26 01:43:31 pass done: pending=178 (new 2) authors=196
+2026-11-26 01:53:56 pass done: pending=132 (new 0) authors=196
+2026-11-26 02:18:06 pass done: pending=91 (new 5) authors=196
+2026-11-26 02:28:30 pass done: pending=76 (new 1) authors=196
+2026-11-26 02:32:02 pass done: pending=69 (new 2) authors=196
+2026-11-26 02:38:53 pass done: pending=51 (new 1) authors=196
+2026-11-26 02:49:13 pass done: pending=25 (new 0) authors=196
+2026-11-26 02:59:36 pass done: pending=12 (new 1) authors=196
+2026-11-26 03:10:00 pass done: pending=13 (new 4) authors=196
+2026-11-26 03:34:01 pass done: pending=19 (new 7) authors=196
+2026-11-26 03:44:23 pass done: pending=25 (new 6) authors=196
+2026-11-26 03:54:48 pass done: pending=25 (new 1) authors=197
+2026-11-26 04:05:10 pass done: pending=26 (new 1) authors=197
+2026-11-26 04:15:33 pass done: pending=28 (new 2) authors=197
+2026-11-26 04:25:56 pass done: pending=29 (new 2) authors=197
+2026-11-26 04:49:26 pass done: pending=46 (new 17) authors=197
+2026-11-26 04:59:46 pass done: pending=47 (new 1) authors=197
+2026-11-26 05:10:09 pass done: pending=46 (new 0) authors=197
+2026-11-26 05:20:29 pass done: pending=46 (new 0) authors=197
+2026-11-26 05:30:55 pass done: pending=46 (new 0) authors=197
+2026-11-26 05:41:18 pass done: pending=48 (new 2) authors=197
+2026-11-26 06:03:51 pass done: pending=52 (new 6) authors=197
+2026-11-26 06:14:10 pass done: pending=52 (new 2) authors=198
+2026-11-26 06:24:30 pass done: pending=54 (new 3) authors=198
+2026-11-26 06:34:52 pass done: pending=55 (new 2) authors=198
+2026-11-26 06:45:14 pass done: pending=55 (new 1) authors=198
+2026-11-26 06:55:34 pass done: pending=55 (new 0) authors=198
+2026-11-26 07:17:48 pass done: pending=59 (new 4) authors=198
+2026-11-26 07:28:07 pass done: pending=58 (new 1) authors=198
+2026-11-26 07:38:25 pass done: pending=62 (new 5) authors=199
+2026-11-26 07:48:45 pass done: pending=61 (new 3) authors=200
+2026-11-26 07:59:03 pass done: pending=60 (new 1) authors=200
+2026-11-26 08:09:21 pass done: pending=61 (new 1) authors=200
+2026-11-26 08:31:16 pass done: pending=67 (new 7) authors=200
+2026-11-26 08:41:35 pass done: pending=67 (new 3) authors=200
+2026-11-26 08:51:55 pass done: pending=66 (new 1) authors=201
+2026-11-26 09:02:13 pass done: pending=67 (new 1) authors=201
+2026-11-26 09:12:33 pass done: pending=68 (new 1) authors=201
+2026-11-26 09:22:52 pass done: pending=67 (new 0) authors=201
+2026-11-26 09:44:42 pass done: pending=75 (new 8) authors=201
+2026-11-26 09:55:01 pass done: pending=70 (new 0) authors=201
+2026-11-26 10:05:23 pass done: pending=71 (new 1) authors=201
+2026-11-26 10:15:42 pass done: pending=73 (new 2) authors=201
+2026-11-26 10:26:03 pass done: pending=71 (new 0) authors=201
+2026-11-26 10:36:27 pass done: pending=71 (new 0) authors=201
+2026-11-26 10:59:43 pass done: pending=78 (new 7) authors=201
+2026-11-26 11:10:03 pass done: pending=78 (new 2) authors=202
+2026-11-26 11:20:25 pass done: pending=79 (new 2) authors=202
+2026-11-26 11:30:45 pass done: pending=80 (new 2) authors=202
+2026-11-26 11:41:06 pass done: pending=15 (new 1) authors=202
+2026-11-28 02:03:03 POLL-FAILED (rc=1): kaggle kernels list --competition google-verifiable-quantum-circuit-compilation --sort-by dateRun --page-size 40 --format json :: 
+2026-11-28 02:03:25 POLL-FAILED (rc=1): kaggle kernels list --user aakashhowlader --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:03:29 POLL-FAILED (rc=1): kaggle kernels list --user abcode80 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:03:33 POLL-FAILED (rc=1): kaggle kernels list --user abdelghanicharouiti --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:03:37 POLL-FAILED (rc=1): kaggle kernels list --user abdelrazeksheta --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:03:41 POLL-FAILED (rc=1): kaggle kernels list --user adilshamim8 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:03:45 POLL-FAILED (rc=1): kaggle kernels list --user ahmedberatozer --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:03:50 POLL-FAILED (rc=1): kaggle kernels list --user ahoirg --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:03:52 POLL-FAILED (rc=1): kaggle kernels list --user aimanalshalfi --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:03:57 POLL-FAILED (rc=1): kaggle kernels list --user aiokajima --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:04:01 POLL-FAILED (rc=1): kaggle kernels list --user alexahern --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:04:05 POLL-FAILED (rc=1): kaggle kernels list --user alexchilton --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:04:08 POLL-FAILED (rc=1): kaggle kernels list --user almondlabs --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:04:10 POLL-FAILED (rc=1): kaggle kernels list --user amarkum --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:04:14 POLL-FAILED (rc=1): kaggle kernels list --user andrea0106 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:04:18 POLL-FAILED (rc=1): kaggle kernels list --user ankiteshtiwari --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:04:22 POLL-FAILED (rc=1): kaggle kernels list --user apogean --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:04:26 POLL-FAILED (rc=1): kaggle kernels list --user areebbb --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:04:29 POLL-FAILED (rc=1): kaggle kernels list --user ariear --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:04:33 POLL-FAILED (rc=1): kaggle kernels list --user arizalfirdaus123 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:04:37 POLL-FAILED (rc=1): kaggle kernels list --user arsen123 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:04:41 POLL-FAILED (rc=1): kaggle kernels list --user arthjshah --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:04:44 POLL-FAILED (rc=1): kaggle kernels list --user arumpuri --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:04:47 POLL-FAILED (rc=1): kaggle kernels list --user ashmitachakraborty21 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:04:52 POLL-FAILED (rc=1): kaggle kernels list --user ashtonpeng --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:04:56 POLL-FAILED (rc=1): kaggle kernels list --user aslan007x --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:04:59 POLL-FAILED (rc=1): kaggle kernels list --user aslanahmedov --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:05:03 POLL-FAILED (rc=1): kaggle kernels list --user asteriospanoras --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:05:06 POLL-FAILED (rc=1): kaggle kernels list --user atakanaldemir --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:05:11 POLL-FAILED (rc=1): kaggle kernels list --user auriclee --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:05:15 POLL-FAILED (rc=1): kaggle kernels list --user aviral342 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:05:19 POLL-FAILED (rc=1): kaggle kernels list --user ayman0al0araishi --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:05:23 POLL-FAILED (rc=1): kaggle kernels list --user balramsrinivasan --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:05:25 POLL-FAILED (rc=1): kaggle kernels list --user banwait13 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:05:29 POLL-FAILED (rc=1): kaggle kernels list --user bhaviklimani --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:05:33 POLL-FAILED (rc=1): kaggle kernels list --user bhavinmoriya --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:05:36 POLL-FAILED (rc=1): kaggle kernels list --user bigbag1983 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:05:40 POLL-FAILED (rc=1): kaggle kernels list --user billedenfield --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:05:43 POLL-FAILED (rc=1): kaggle kernels list --user bingchenzhao --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:05:46 POLL-FAILED (rc=1): kaggle kernels list --user bobber --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:05:55 POLL-FAILED (rc=1): kaggle kernels list --user boristown --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:05:59 POLL-FAILED (rc=1): kaggle kernels list --user busyaprime --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:06:01 POLL-FAILED (rc=1): kaggle kernels list --user c6519219f598 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:06:07 POLL-FAILED (rc=1): kaggle kernels list --user caffeinemiller --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:06:11 POLL-FAILED (rc=1): kaggle kernels list --user capecora --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:06:16 POLL-FAILED (rc=1): kaggle kernels list --user carsonrodrigues --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:06:19 POLL-FAILED (rc=1): kaggle kernels list --user chinnachundu --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:06:23 POLL-FAILED (rc=1): kaggle kernels list --user chunhsn --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:06:28 POLL-FAILED (rc=1): kaggle kernels list --user codeatlantis --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:06:32 POLL-FAILED (rc=1): kaggle kernels list --user colabprober --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:06:36 POLL-FAILED (rc=1): kaggle kernels list --user cosmorin --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:06:39 POLL-FAILED (rc=1): kaggle kernels list --user cpscub --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:06:42 POLL-FAILED (rc=1): kaggle kernels list --user danielaijdkx --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:06:46 POLL-FAILED (rc=1): kaggle kernels list --user danishlynxthembones --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:06:50 POLL-FAILED (rc=1): kaggle kernels list --user dariushafshar --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:06:54 POLL-FAILED (rc=1): kaggle kernels list --user dataset066 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:06:56 POLL-FAILED (rc=1): kaggle kernels list --user deba10106 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:07:00 POLL-FAILED (rc=1): kaggle kernels list --user dehaiwang --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:07:02 POLL-FAILED (rc=1): kaggle kernels list --user dennis6886 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:07:06 POLL-FAILED (rc=1): kaggle kernels list --user dfenglei --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:07:08 POLL-FAILED (rc=1): kaggle kernels list --user dmitriigluzdov --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:07:13 POLL-FAILED (rc=1): kaggle kernels list --user drpatrickchan --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:07:16 POLL-FAILED (rc=1): kaggle kernels list --user dziyanavalenta --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:07:20 POLL-FAILED (rc=1): kaggle kernels list --user evgendvorkin --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:07:24 POLL-FAILED (rc=1): kaggle kernels list --user geobrando --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:07:28 POLL-FAILED (rc=1): kaggle kernels list --user geocables --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:07:31 POLL-FAILED (rc=1): kaggle kernels list --user georgymamarin --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:07:34 POLL-FAILED (rc=1): kaggle kernels list --user getfreecarcheck --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:07:39 POLL-FAILED (rc=1): kaggle kernels list --user ghazarosbarseghyan91 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:07:43 POLL-FAILED (rc=1): kaggle kernels list --user goodpjw2008 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:07:46 POLL-FAILED (rc=1): kaggle kernels list --user grantprater --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:07:50 POLL-FAILED (rc=1): kaggle kernels list --user haomingyang0629 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:07:55 POLL-FAILED (rc=1): kaggle kernels list --user harshitab3030 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:07:57 POLL-FAILED (rc=1): kaggle kernels list --user hassanabdulhafid --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:08:01 POLL-FAILED (rc=1): kaggle kernels list --user hayatohikawa --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:08:04 POLL-FAILED (rc=1): kaggle kernels list --user heliosli --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:08:07 POLL-FAILED (rc=1): kaggle kernels list --user henritonnang --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:08:11 POLL-FAILED (rc=1): kaggle kernels list --user hillsidecollective --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:08:15 POLL-FAILED (rc=1): kaggle kernels list --user hosen42 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:08:18 POLL-FAILED (rc=1): kaggle kernels list --user hubertsidorowicz --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:08:22 POLL-FAILED (rc=1): kaggle kernels list --user huynhtanphucb2303893 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:08:27 POLL-FAILED (rc=1): kaggle kernels list --user infnitycoder2009 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:08:31 POLL-FAILED (rc=1): kaggle kernels list --user ishankarnick --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:08:35 POLL-FAILED (rc=1): kaggle kernels list --user issacizrealdavis --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:08:39 POLL-FAILED (rc=1): kaggle kernels list --user iwanttorungemma9b --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:08:43 POLL-FAILED (rc=1): kaggle kernels list --user jeffemerson --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:08:47 POLL-FAILED (rc=1): kaggle kernels list --user jeffryjames --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:08:50 POLL-FAILED (rc=1): kaggle kernels list --user jezzlin --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:08:55 POLL-FAILED (rc=1): kaggle kernels list --user jiaobinliu --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:08:59 POLL-FAILED (rc=1): kaggle kernels list --user jingjiehuang88 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:09:02 POLL-FAILED (rc=1): kaggle kernels list --user junmiaotiao --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:09:06 POLL-FAILED (rc=1): kaggle kernels list --user kadirov0 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:09:11 POLL-FAILED (rc=1): kaggle kernels list --user kamali2727 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:09:14 POLL-FAILED (rc=1): kaggle kernels list --user karel22 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:09:18 POLL-FAILED (rc=1): kaggle kernels list --user kawh1111 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:09:22 POLL-FAILED (rc=1): kaggle kernels list --user kindasomethin --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:09:27 POLL-FAILED (rc=1): kaggle kernels list --user kirderf --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:09:30 POLL-FAILED (rc=1): kaggle kernels list --user kirilltym --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:09:34 POLL-FAILED (rc=1): kaggle kernels list --user koushikrudra --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:09:38 POLL-FAILED (rc=1): kaggle kernels list --user kozykappa --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:09:42 POLL-FAILED (rc=1): kaggle kernels list --user leadchangegroup --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:09:46 POLL-FAILED (rc=1): kaggle kernels list --user leotang09 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:09:50 POLL-FAILED (rc=1): kaggle kernels list --user linxinshihuang --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:09:53 POLL-FAILED (rc=1): kaggle kernels list --user lionalmedong --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:09:57 POLL-FAILED (rc=1): kaggle kernels list --user liuzewen123 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:10:02 POLL-FAILED (rc=1): kaggle kernels list --user logiclab --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:10:06 POLL-FAILED (rc=1): kaggle kernels list --user loiskleinner --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:10:10 POLL-FAILED (rc=1): kaggle kernels list --user loxigicck --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:10:15 POLL-FAILED (rc=1): kaggle kernels list --user lucifer19 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:10:18 POLL-FAILED (rc=1): kaggle kernels list --user maialghadhouri --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:10:24 POLL-FAILED (rc=1): kaggle kernels list --user malachiwmoody --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:10:28 POLL-FAILED (rc=1): kaggle kernels list --user malyshevdanil --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:10:32 POLL-FAILED (rc=1): kaggle kernels list --user manvenderraparia --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:10:35 POLL-FAILED (rc=1): kaggle kernels list --user manwithacat --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:10:39 POLL-FAILED (rc=1): kaggle kernels list --user maoxin123 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:10:41 POLL-FAILED (rc=1): kaggle kernels list --user marculera --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:10:46 POLL-FAILED (rc=1): kaggle kernels list --user marupibneyalid --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:10:49 POLL-FAILED (rc=1): kaggle kernels list --user masumhuq --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:10:53 POLL-FAILED (rc=1): kaggle kernels list --user matousakura --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:10:57 POLL-FAILED (rc=1): kaggle kernels list --user mdyousuf38125 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:10:59 POLL-FAILED (rc=1): kaggle kernels list --user mendaparameet --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:11:02 POLL-FAILED (rc=1): kaggle kernels list --user mh0386 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:11:08 POLL-FAILED (rc=1): kaggle kernels list --user michaelrustad --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:11:12 POLL-FAILED (rc=1): kaggle kernels list --user mizeroluckygall --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:11:15 POLL-FAILED (rc=1): kaggle kernels list --user mliston --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:11:18 POLL-FAILED (rc=1): kaggle kernels list --user mohamedthoufhiq --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:11:22 POLL-FAILED (rc=1): kaggle kernels list --user mos3santos --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:11:25 POLL-FAILED (rc=1): kaggle kernels list --user mrmeows --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:11:29 POLL-FAILED (rc=1): kaggle kernels list --user muhammedveyselerin --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:11:33 POLL-FAILED (rc=1): kaggle kernels list --user mzingayeben --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:11:36 POLL-FAILED (rc=1): kaggle kernels list --user mzishran --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:11:41 POLL-FAILED (rc=1): kaggle kernels list --user nathanchandrasekar --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:11:45 POLL-FAILED (rc=1): kaggle kernels list --user nguynlmtnlc --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:11:50 POLL-FAILED (rc=1): kaggle kernels list --user nightelfdavid --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:11:52 POLL-FAILED (rc=1): kaggle kernels list --user nonamecode --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:11:56 POLL-FAILED (rc=1): kaggle kernels list --user nswitzer --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:11:59 POLL-FAILED (rc=1): kaggle kernels list --user nursrijan --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:12:02 POLL-FAILED (rc=1): kaggle kernels list --user nyaksrio --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:12:06 POLL-FAILED (rc=1): kaggle kernels list --user okosdoqwjqn --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:12:11 POLL-FAILED (rc=1): kaggle kernels list --user olaflundstrom --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:12:14 POLL-FAILED (rc=1): kaggle kernels list --user omvare --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:12:17 POLL-FAILED (rc=1): kaggle kernels list --user orecord --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:12:21 POLL-FAILED (rc=1): kaggle kernels list --user orel1986 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:12:25 POLL-FAILED (rc=1): kaggle kernels list --user ozertuu --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:12:29 POLL-FAILED (rc=1): kaggle kernels list --user pablodiegoo --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:12:32 POLL-FAILED (rc=1): kaggle kernels list --user paritoshtripathi5 --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:12:36 POLL-FAILED (rc=1): kaggle kernels list --user planindex --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:12:40 POLL-FAILED (rc=1): kaggle kernels list --user prami --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:12:43 POLL-FAILED (rc=1): kaggle kernels list --user pramitdas --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:12:46 POLL-FAILED (rc=1): kaggle kernels list --user pranavmudgal --sort-by dateRun --page-size 10 --format json :: 
+2026-11-28 02:15:00 pass done: pending=52 (new 37) authors=206
+2026-11-28 02:25:13 pass done: pending=81 (new 32) authors=212
+2026-11-28 02:35:27 pass done: pending=79 (new 1) authors=212
+2026-11-28 02:45:42 pass done: pending=2 (new 2) authors=212
+2026-11-28 02:55:57 pass done: pending=3 (new 1) authors=212

@@ -1,0 +1,83 @@
+{
+ "portfolio": "v153_gpw_v33_frontier",
+ "shas_ok": true,
+ "verifiers": [
+  "verify_submission_invsqrt.py",
+  "verify_submission_dqi.py",
+  "dfthcsos/verify.py"
+ ],
+ "verifies": {
+  "invsqrt": {
+   "status": "PASS",
+   "score": 60769.42127769003,
+   "num_qubits": 37,
+   "toffoli_count": 1405.3751505777414,
+   "toffoli_equivalent": 1642.4167912889197,
+   "rotation_count": 33.0,
+   "rotation_eps": 2.783547271556754e-13,
+   "verified_shots": 200540928,
+   "worst_error_over_tolerance": 0.9989875177643798,
+   "worst_x": 426,
+   "circuit_sha256": "b08370f271ba8f17457f4704cd46d8f9a71310a094af8bb0ee16a62b01f0e48b"
+  },
+  "dqi": {
+   "status": "PASS",
+   "score": 306435642981.16064,
+   "num_qubits": 900,
+   "toffoli_count": 316124.05028320313,
+   "value_errors": 1,
+   "phase_errors": 0,
+   "verified_shots": 102400,
+   "effective_error_rate": 0.0009104197583220583,
+   "repetition_factor": 1.1967314991687559,
+   "circuit_sha256": "b183c793b6b7c7a2a246b7756958cbdad943abc3350dcf0ff61c8857bb441e3d"
+  },
+  "dfthcsos": {
+   "status": "PASS",
+   "score": 249043677.36582175,
+   "num_qubits": 405,
+   "toffoli_count": 13108.0,
+   "lambda_eff": 46.912012523842144,
+   "batch_size": 5
+  }
+ },
+ "leg_timings": {
+  "invsqrt": 684.8,
+  "dqi": 174.2,
+  "dfthcsos": 23.0
+ },
+ "public_dqi_evidence": [
+  {
+   "release": "goodpjw2008/qcc-shorter-chemistry-loaders-lb-33-29012 (V33)",
+   "public_lb": 33.29012,
+   "dqi_sha256": "b183c793b6b7c7a2a246b7756958cbdad943abc3350dcf0ff61c8857bb441e3d",
+   "note": "the public-frontier tree that ships these exact DQI bytes; its own in-kernel receipt ran the unchanged official verifier (PASS, 1 value error on the default salt) and the tree scored 33.29012 on the board"
+  },
+  {
+   "release": "zhuangbility/qcc-v23-our-refit-b183c793-lb-33-25737",
+   "public_lb": 33.25737,
+   "dqi_sha256": "b183c793b6b7c7a2a246b7756958cbdad943abc3350dcf0ff61c8857bb441e3d",
+   "note": "the release that ships these exact DQI bytes together with invsqrt 6b592145 and the V23 chemistry table; its notebook states the board draw of b183c793 is clean and about 0.82M cheaper than 6f78ecdd, and the tree scored 33.25737"
+  },
+  {
+   "release": "evgendvorkin V81 (same circuits, public release)",
+   "public_lb": 33.25229,
+   "dqi_sha256": "b183c793b6b7c7a2a246b7756958cbdad943abc3350dcf0ff61c8857bb441e3d",
+   "note": "an independent public submission of the same DQI bytes; the notebook quotes 33.25229 vs 33.25226 for the 6f78ecdd tree with the same circuits (~+3e-5 GM)"
+  }
+ ],
+ "dqi_default_salt_failed_shots": 1,
+ "ratios": {
+  "invsqrt": 34.174658735440644,
+  "dqi": 79.75398470593528,
+  "dfthcsos": 13.473940088775983
+ },
+ "gm": 33.23918727288997,
+ "dataset": "badboyhalo1801/qcc-release-v153",
+ "source": {
+  "release": "goodpjw2008/qcc-shorter-chemistry-loaders-lb-33-29012",
+  "public_lb": 33.29012,
+  "note": "the public frontier tree (V33, 2026-11-27 23:35 UTC): invsqrt b08370f2 (37 q, 60,769.4213), DQI b183c793, and chemistry npz f2b6cc37 with 15 re-solved loaders (T 13,108, lambda_eff 46.912012524, cost 249,043,677.37). Its shipped receipt.json reports the same three official verifier PASSes and GM 33.239187 on the DEFAULT salt; the board draw of b183c793 is the clean one (33.29012)."
+ },
+ "verdict": "V153-RECEIPT-PASS"
+}

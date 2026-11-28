@@ -519,3 +519,28 @@ been observed publicly for a tree that scored cleanly.
 * **Lesson:** the chemistry leg is now a pure adoption race on the goodpjw2008
   line; their version cadence is ~1/day and each version is worth +0.003 to
   +0.044 GM.  Check the queue for their slug every wake.
+
+## 2026-11-26 07:47 UTC — v151 (goodpjw2008 v22 chemistry) measured
+
+* **Prediction:** GM 33.257336 (invsqrt 60,927.54794503887, DQI 6f78ecdd
+  board draw 305,032,258,732.73, chemistry 249,131,841.8273937).
+* **Actual board:** ref 58934966, COMPLETE, **33.25733**.
+* **Residual:** -6e-6, inside the ±5e-5 public-salt band.  The prediction model
+  (three measured leg costs + the known board draw) is calibrated.
+
+## 2026-11-28 02:xx UTC — v153 (goodpjw2008 V33 public frontier) built
+
+* **Legs (all measured locally with the unchanged official verifiers):**
+  invsqrt b08370f2 **PASS 60,769.42127769003** (37 q, 1405.375 Toffoli,
+  200,540,928 shots); chemistry npz f2b6cc37 + 15 loaders **PASS
+  249,043,677.36582175** (T 13,108, Q 405, lambda_eff 46.912012523842144);
+  DQI b183c793 = the same bytes as v152 (default-salt draw property of the
+  file's own SHA-256).
+* **Prediction:** GM = (2,076,774.233715282/60,769.4213 ×
+  24,439,463,583,672.93/305,031.4e6 × 3,355,599,588.3155375/249,043,677.37)^(1/3)
+  = **33.29012**, which reproduces the release's measured public LB 33.29012.
+* **Expected board:** 33.29012 (+0.03279 over v151's measured 33.25733).
+* **Lesson:** the public frontier moved 33.25733 -> 33.29012 in ~36 h, driven
+  by (a) a new invsqrt (60,927.55 -> 60,769.42, +0.0289 GM) and (b) a 257-word
+  descent + loader re-solve (lambda_eff 46.91427 -> 46.91201, +0.0039 GM).
+  Both are adoption-visible: the V33 notebook ships its own tree and receipt.
